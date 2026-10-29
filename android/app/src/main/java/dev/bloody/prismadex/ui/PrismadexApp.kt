@@ -33,6 +33,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 import android.app.Activity
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.contentDescription
@@ -179,7 +180,7 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
                                     val active=screen==key
                                     val tint by animateColorAsState(if(active)accent else MaterialTheme.colorScheme.onSurfaceVariant,label="nav tint")
                                     val navInteraction=remember{MutableInteractionSource()};val pressed by navInteraction.collectIsPressedAsState();val size by animateFloatAsState(if(pressed).94f else 1f,spring(stiffness=600f),label="nav press")
-                                    Column(Modifier.weight(1f).fillMaxHeight().graphicsLayer{scaleX=size;scaleY=size}.clip(RoundedCornerShape(24.dp)).background(if(active)accent.copy(.17f) else Color.Transparent).clickable(navInteraction,null){screen=key}.padding(vertical=7.dp),horizontalAlignment=Alignment.CenterHorizontally,verticalArrangement=Arrangement.Center){Icon(icon,label,tint=tint,modifier=Modifier.size(23.dp));Spacer(Modifier.height(3.dp));Text(label,fontSize=12.sp,color=tint,maxLines=1,overflow=TextOverflow.Ellipsis)}
+                                    Column(Modifier.weight(1f).fillMaxHeight().graphicsLayer{scaleX=size;scaleY=size}.clip(RoundedCornerShape(24.dp)).background(if(active)accent.copy(.17f) else Color.Transparent).clickable(navInteraction,null){screen=key}.padding(vertical=7.dp),horizontalAlignment=Alignment.CenterHorizontally,verticalArrangement=Arrangement.Center){Icon(icon,label,tint=tint,modifier=Modifier.size(23.dp));Spacer(Modifier.height(3.dp));Text(label,modifier=Modifier.fillMaxWidth().padding(horizontal=4.dp),fontSize=12.sp,lineHeight=16.sp,textAlign=androidx.compose.ui.text.style.TextAlign.Center,color=tint,maxLines=1,overflow=TextOverflow.Ellipsis)}
                                 }
                             }
                         }
@@ -283,12 +284,23 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
                 Column(Modifier.weight(1f)){Text("#${p.baseId.toString().padStart(4,'0')}",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant);Text(p.name,fontSize=16.sp,fontWeight=FontWeight.SemiBold,modifier=Modifier.padding(vertical=5.dp));Row(horizontalArrangement=Arrangement.spacedBy(4.dp)){p.types.forEach{TypePill(it,true)}};if(!p.champions)Text("Compatibilidade por verificar",fontSize=13.sp,color=Color(0xFFE6BE99),modifier=Modifier.padding(top=5.dp))}
             }
         }else{
-            Column(Modifier.fillMaxWidth().clickable(interaction,null,onClick=onOpen).padding(14.dp)){
-                Text("#${p.baseId.toString().padStart(4,'0')}",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant,modifier=Modifier.padding(top=4.dp))
-                PokemonArt(p.id,Modifier.fillMaxWidth().height(131.dp),p.name)
-                Text(p.name,fontSize=15.sp,lineHeight=18.sp,fontWeight=FontWeight.SemiBold,minLines=2,maxLines=2,overflow=TextOverflow.Ellipsis)
-                FlowRow(horizontalArrangement=Arrangement.spacedBy(4.dp),verticalArrangement=Arrangement.spacedBy(4.dp)){p.types.forEach{TypePill(it,true)}}
-                if(!p.champions)Text("Compatibilidade por verificar",fontSize=13.sp,color=Color(0xFFE6BE99),modifier=Modifier.padding(top=6.dp))
+            // Reserve the same two type rows for every card. FlowRow made card height
+            // depend on label width, font scale and whether a Pokémon had one or two types.
+            val typeRowHeight=with(LocalDensity.current){maxOf(17.dp,16.sp.toDp())+12.dp}
+            Column(Modifier.fillMaxWidth().clickable(interaction,null,onClick=onOpen).padding(12.dp)){
+                Row(Modifier.padding(top=4.dp,end=28.dp).heightIn(min=24.dp),verticalAlignment=Alignment.CenterVertically,horizontalArrangement=Arrangement.spacedBy(4.dp)){
+                    Text("#${p.baseId.toString().padStart(4,'0')}",fontSize=13.sp,lineHeight=18.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
+                    if(!p.champions)Icon(Icons.Rounded.Info,"Compatibilidade com Champions por verificar",Modifier.size(16.dp),tint=MaterialTheme.colorScheme.primary)
+                }
+                PokemonArt(p.id,Modifier.fillMaxWidth().heightIn(max=116.dp).aspectRatio(1.35f),p.name)
+                Text(p.name,fontSize=15.sp,lineHeight=20.sp,fontWeight=FontWeight.SemiBold,minLines=2,maxLines=2,overflow=TextOverflow.Ellipsis,modifier=Modifier.padding(top=4.dp,bottom=8.dp))
+                Column(verticalArrangement=Arrangement.spacedBy(4.dp)){
+                    repeat(2){slot->
+                        Box(Modifier.fillMaxWidth().height(typeRowHeight),contentAlignment=Alignment.CenterStart){
+                            p.types.getOrNull(slot)?.let{TypePill(it,true)}
+                        }
+                    }
+                }
             }
         }
         IconButton(onClick=onFavorite,modifier=Modifier.align(Alignment.TopEnd).size(48.dp)){Icon(if(favorite)Icons.Rounded.Favorite else Icons.Rounded.FavoriteBorder,"Favoritar ${p.name}",tint=if(favorite)MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,modifier=Modifier.size(19.dp))}

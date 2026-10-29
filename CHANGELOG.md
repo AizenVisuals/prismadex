@@ -1,5 +1,12 @@
 # Novidades
 
+## 0.4.1-preview — 29/10/2026
+
+- Grade com estrutura uniforme: duas posições fixas para tipagens, nomes alinhados e artes proporcionais à largura do card.
+- Altura das tipagens acompanha a fonte do Android, sem alterar o alinhamento entre Pokémon de um ou dois tipos.
+- Rótulos da barra inferior com altura de linha e margem lateral definidas.
+- Aviso de compatibilidade no cabeçalho do card, com descrição acessível e detalhe completo na ficha.
+
 ## 0.4.0-preview — 29/10/2026
 
 Primeira prévia pública do PrismaDex, segundo app da Aizen Visuals.

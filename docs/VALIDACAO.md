@@ -1,4 +1,14 @@
-# Validação da prévia 0.4.0
+# Validação das prévias
+
+## 0.4.1-preview
+
+- Build otimizado e lint concluídos, sem erros. Atualização instalada por cima da anterior, com o mesmo certificado.
+- Grade inspecionada no Redmi Note 10S: Charizard/Mega Charizard e Mega Charizard Y/Blastoise alinhados. Diferença máxima de um pixel entre as colunas, decorrente do arredondamento de largura.
+- Grade conferida com fonte normal (0,92) e ampliada (1,3); configuração original restaurada. Duas posições de tipagem e duas linhas de nome reservadas em cada card.
+- Tipagens compactas e rótulos da navegação receberam altura de linha explícita; rótulos da navegação têm margem lateral e truncamento.
+- Alteração de apresentação; os 18 testes de domínio abaixo pertencem à versão 0.4.0 e não foram repetidos nesta correção.
+
+## 0.4.0-preview
 
 Verificada em Redmi Note 10S, Android 13, em 29/10/2026.
 

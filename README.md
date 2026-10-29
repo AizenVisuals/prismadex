@@ -8,7 +8,7 @@ O PrismaDex é o segundo app da **[Aizen Visuals](https://github.com/AizenVisual
 
 Catálogo, artes, golpes, favoritos, equipes e calculadora funcionam offline desde a instalação. A aba Meta usa internet para consultar relatórios e mantém a última consulta em cache.
 
-**[Baixar PrismaDex 0.4.0 — prévia Android](https://github.com/AizenVisuals/prismadex/releases/tag/v0.4.0-preview)** · [Novidades](CHANGELOG.md) · [Privacidade](PRIVACY.md)
+**[Baixar PrismaDex 0.4.1 — prévia Android](https://github.com/AizenVisuals/prismadex/releases/tag/v0.4.1-preview)** · [Novidades](CHANGELOG.md) · [Privacidade](PRIVACY.md)
 
 ## No seu celular
 
@@ -17,7 +17,7 @@ Catálogo, artes, golpes, favoritos, equipes e calculadora funcionam offline des
 <img src="docs/images/pokedex-clara.png" width="260" alt="Busca, destaque e grade no tema Aurora claro">
 </p>
 
-Capturas reais da versão 0.4.0 em um Redmi Note 10S com Android 13.
+Capturas reais em Redmi Note 10S com Android 13: tema escuro na versão 0.4.1 e tema claro na 0.4.0.
 
 ## O que você encontra
 
@@ -32,8 +32,8 @@ Capturas reais da versão 0.4.0 em um Redmi Note 10S com Android 13.
 
 ## Instalar e atualizar
 
-1. Abra a [release de prévia](https://github.com/AizenVisuals/prismadex/releases/tag/v0.4.0-preview).
-2. Baixe `PrismaDex-0.4.0-preview.apk`.
+1. Abra a [release de prévia](https://github.com/AizenVisuals/prismadex/releases/tag/v0.4.1-preview).
+2. Baixe `PrismaDex-0.4.1-preview.apk`.
 3. Abra no Android e autorize a instalação pelo navegador ou gerenciador de arquivos quando solicitado.
 
 Requer **Android 8 ou superior**. A distribuição atual é de teste, pelo GitHub; não é uma publicação na Play Store. O APK usa assinatura de desenvolvimento. Atualize por cima da instalação anterior quando a assinatura for a mesma; desinstalar ou limpar dados pode apagar suas equipes.
@@ -44,7 +44,7 @@ A conta por e-mail/senha desta versão existe **somente neste aparelho**. Ainda 
 
 PrismaDex está em desenvolvimento. Outros jogos permitem planejamento por catálogo/golpes; treinamento histórico e itens específicos ainda estão incompletos. A seleção Champions e o motor são versionados; nem toda regra competitiva de equipe ou cenário está validada.
 
-A versão 0.4.0 passou por build, lint e 18 testes instrumentados no Redmi, além de verificação de rascunho após reiniciar o app, tema claro e texto ampliado. Isso não estabelece paridade integral com outras ferramentas nem desempenho universal. [Validação e limitações](docs/VALIDACAO.md).
+A versão 0.4.0 passou por build, lint e 18 testes instrumentados no Redmi, além de verificação de rascunho após reiniciar o app, tema claro e texto ampliado. A 0.4.1 corrigiu o alinhamento da grade, com inspeção no mesmo aparelho em fonte normal e ampliada. Isso não estabelece paridade integral com outras ferramentas nem desempenho universal. [Validação e limitações](docs/VALIDACAO.md).
 
 ## Compilar
 
