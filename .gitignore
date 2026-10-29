@@ -9,6 +9,7 @@
 !/android/
 !/docs/
 !/vendor/
+!/scripts/
 !/.github/
 
 # Device, local SDK and signing material never belong in Git.

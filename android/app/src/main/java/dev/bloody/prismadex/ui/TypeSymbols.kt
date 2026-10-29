@@ -40,6 +40,6 @@ fun typeColor(t:String)=when(t){"fire"->Color(0xFFF5A17D);"water"->Color(0xFF82B
         "water"->dev.bloody.prismadex.R.drawable.type_water
         else->dev.bloody.prismadex.R.drawable.type_normal
     }
-    androidx.compose.material3.Icon(androidx.compose.ui.res.painterResource(resource),typeNames[type],modifier.size(18.dp),tint=Color.Unspecified)
+    androidx.compose.material3.Icon(androidx.compose.ui.res.painterResource(resource),typeNames[type]?.let{LocalUiStrings.current.text(it)},modifier.size(18.dp),tint=Color.Unspecified)
 }
-@Composable fun TypePill(type:String, compact:Boolean=false){val c=typeColor(type);Row(Modifier.background(c.copy(alpha=.12f),RoundedCornerShape(12.dp)).padding(horizontal=if(compact)8.dp else 12.dp,vertical=6.dp),horizontalArrangement=Arrangement.spacedBy(5.dp),verticalAlignment=androidx.compose.ui.Alignment.CenterVertically){TypeSymbol(type,Modifier.size(if(compact)17.dp else 20.dp));Text(typeNames[type]?:type,color=androidx.compose.material3.MaterialTheme.colorScheme.onSurface,fontSize=if(compact)12.sp else 13.sp,lineHeight=if(compact)16.sp else 18.sp,maxLines=1)}}
+@Composable fun TypePill(type:String, compact:Boolean=false){val c=typeColor(type);Row(Modifier.background(c.copy(alpha=.12f),RoundedCornerShape(12.dp)).padding(horizontal=if(compact)8.dp else 12.dp,vertical=6.dp),horizontalArrangement=Arrangement.spacedBy(5.dp),verticalAlignment=androidx.compose.ui.Alignment.CenterVertically){TypeSymbol(type,Modifier.size(if(compact)17.dp else 20.dp));LText(typeNames[type]?:type,color=androidx.compose.material3.MaterialTheme.colorScheme.onSurface,fontSize=if(compact)12.sp else 13.sp,lineHeight=if(compact)16.sp else 18.sp,maxLines=1)}}

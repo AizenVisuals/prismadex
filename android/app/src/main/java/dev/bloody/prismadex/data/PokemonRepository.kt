@@ -15,12 +15,14 @@ class PokemonRepository(context: Context) {
     private val assets = context.applicationContext.assets
     private val rawCatalog: JSONArray by lazy { JSONArray(text("data.json")) }
     private val metadata:JSONObject by lazy { JSONObject(text("pokemon-metadata.json")) }
+    private val historicalMoves=HistoricalMoveData(context)
     private val rawMoves: JSONObject by lazy { JSONObject(text("moves.json")) }
     private val identities:JSONObject by lazy { JSONObject(text("pokemon-identities.json")) }
     private val roster:JSONObject by lazy { JSONObject(text("champions-roster.json")).getJSONObject("forms") }
     private val championsLearnsets:JSONObject by lazy { JSONObject(text("champions-learnsets.json")) }
     private val championsMoveData:JSONObject by lazy { JSONObject(text("champions-move-data.json")) }
     private val rawItems: JSONObject by lazy { JSONObject(text("items.json")) }
+    private val moveDetails: JSONObject by lazy { JSONObject(text("move-details.json")) }
     private fun text(path: String): String = assets.open(path).bufferedReader().use { it.readText() }
 
     private val catalog: List<Pokemon> by lazy {
@@ -42,7 +44,8 @@ class PokemonRepository(context: Context) {
         }
     }
 
-    suspend fun loadCatalog(): List<Pokemon> = withContext(Dispatchers.IO) { catalog }
+    private val additionalForms=AdditionalFormsRepository(context)
+    suspend fun loadCatalog(): List<Pokemon> = withContext(Dispatchers.IO) { catalog+additionalForms.catalogEntries() }
 
     private val speciesById: Map<Int, Int> by lazy {
         (0 until rawCatalog.length()).associate { rawCatalog.getJSONObject(it).let { row -> row.getInt("id") to row.optInt("species", row.optInt("baseId", row.getInt("id"))) } }
@@ -59,10 +62,17 @@ class PokemonRepository(context: Context) {
         if (game == 25 && !p.champions) return@withContext emptyList()
         var ids = if(game==25)championsLearnsets.optJSONArray(p.id.toString())?.ints()?:emptyList() else moveIds(learnset(p.id), game)
         if (game!=25 && p.isMega && ids.isEmpty()) ids = moveIds(learnset(p.baseId), game)
+        if(game!=25)historicalMoves.load()
         ids.distinct().mapNotNull { id ->
             val row = (if(game==25)championsMoveData else rawMoves).optJSONObject(id.toString()) ?: return@mapNotNull null
+            val details = moveDetails.optJSONObject(id.toString())
+            val flags = details?.optJSONObject("flags")
             Move(id, row.getString("name"), row.optString("type"), row.optString("category"),
-                row.nullableInt("power"), row.nullableInt("accuracy"), row.nullableInt("pp"))
+                row.nullableInt("power"), row.nullableInt("accuracy"), row.nullableInt("pp"),
+                details?.optString(if(game==25)"championsDescription" else "description") ?: "",
+                details?.optString(if(game==25)"championsSummary" else "summary") ?: "",
+                details?.optInt("priority") ?: 0, details?.optString("target") ?: "normal",
+                flags?.keys()?.asSequence()?.filter { flags.optInt(it) > 0 }?.toSet() ?: emptySet(), game).let{if(game==25)it else historicalMoves.applyHistoricalMove(it,game)}
         }.sortedBy { it.name }
     }
 
@@ -70,7 +80,7 @@ class PokemonRepository(context: Context) {
         if (game!=25 || !p.champions) return@withContext emptyList()
         val species = speciesById[p.id] ?: p.baseId
         rawItems.keys().asSequence().map { rawItems.getJSONObject(it) }.filter { it.optBoolean("champions") && it.optBoolean("held") }.map { item ->
-            HeldItem(item.getInt("id"), item.getString("name"), item.optString("description"), item.optJSONArray("compatibleSpecies")?.ints(),item.optJSONArray("compatiblePokemonIds")?.ints())
+            HeldItem(item.getInt("id"), item.getString("name"), item.optString("description"), item.optJSONArray("compatibleSpecies")?.ints(),item.optJSONArray("compatiblePokemonIds")?.ints(),item.optString("icon").takeIf{it.isNotBlank()})
         }.filter { (it.compatibleSpecies == null || species in it.compatibleSpecies) && (it.compatiblePokemonIds==null || p.id in it.compatiblePokemonIds) && (!p.isMega || it.compatiblePokemonIds!=null) }.toList().sortedBy { it.name }
     }
 

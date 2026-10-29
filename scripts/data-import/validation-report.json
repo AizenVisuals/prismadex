@@ -1,0 +1,12 @@
+{
+  "catalogRecords": 1357,
+  "species": 1025,
+  "additionalForms": 51,
+  "profileForeignKeys": "passed",
+  "sourceDigests": "passed",
+  "unknownExactProfiles": 4,
+  "usedAbilityEffects": "313/313",
+  "exactAdditionalArt": 47,
+  "neutralAdditionalArt": 4,
+  "flavorTextImported": false
+}

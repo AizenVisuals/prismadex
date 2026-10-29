@@ -15,11 +15,15 @@ class NativeDataTest {
     @Test fun bundledCatalogArtAndChampionsLearnsets() = runBlocking {
         val repository = PokemonRepository(context)
         val catalog = repository.loadCatalog()
-        assertEquals(1306, catalog.size)
-        assertEquals(1306, catalog.map { it.id }.toSet().size)
+        val additional=AdditionalFormsRepository(context).catalogEntries()
+        assertEquals(1306+additional.size, catalog.size)
+        assertEquals(catalog.size, catalog.map { it.id }.toSet().size)
+        assertTrue(additional.all{!it.champions&&it.games.isEmpty()})
         // Every catalog record must have a decodable bundled art entry, not just a filename.
-        assertEquals(1306, context.assets.list("art")!!.size)
-        catalog.forEach { p ->
+        assertEquals(1353, context.assets.list("art")!!.size)
+        val unavailableArt=setOf(310264,310266,310268,310270)
+        assertEquals(unavailableArt,additional.filter{p->context.assets.list("art")!!.none{it=="${p.id}.webp"}}.map{it.id}.toSet())
+        catalog.filter{it.id !in unavailableArt}.forEach { p ->
             val path = "art/${p.id}.webp"
             context.assets.open(path).use { input ->
                 val bitmap = android.graphics.BitmapFactory.decodeStream(input)

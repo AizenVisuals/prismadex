@@ -1,0 +1,119 @@
+{
+  "On switch-in, this Pokemon lowers the Attack of opponents by 1 stage.": {
+    "pt": "Ao entrar em campo, reduz o Ataque dos Pokémon adversários em 1 estágio.",
+    "es": "Al entrar al campo, reduce el Ataque de los Pokémon rivales en 1 nivel."
+  },
+  "This Pokemon is immune to Ground; Gravity/Ingrain/Smack Down/Iron Ball nullify it.": {
+    "pt": "Concede imunidade a golpes do tipo Terra. Gravity, Ingrain, Smack Down e Iron Ball anulam essa imunidade.",
+    "es": "Otorga inmunidad a movimientos de tipo Tierra. Gravity, Ingrain, Smack Down e Iron Ball anulan esta inmunidad."
+  },
+  "On switch-in, this Pokemon summons Grassy Terrain.": {
+    "pt": "Ao entrar em campo, ativa Grassy Terrain por 5 turnos.",
+    "es": "Al entrar al campo, activa Grassy Terrain durante 5 turnos."
+  },
+  "On switch-in, this Pokemon summons Electric Terrain.": {
+    "pt": "Ao entrar em campo, ativa Electric Terrain por 5 turnos.",
+    "es": "Al entrar al campo, activa Electric Terrain durante 5 turnos."
+  },
+  "On switch-in, this Pokemon summons Psychic Terrain.": {
+    "pt": "Ao entrar em campo, ativa Psychic Terrain por 5 turnos.",
+    "es": "Al entrar al campo, activa Psychic Terrain durante 5 turnos."
+  },
+  "On switch-in, this Pokemon summons Misty Terrain.": {
+    "pt": "Ao entrar em campo, ativa Misty Terrain por 5 turnos.",
+    "es": "Al entrar al campo, activa Misty Terrain durante 5 turnos."
+  },
+  "This Pokemon's Attack is doubled.": {
+    "pt": "Dobra o Ataque do Pokémon.",
+    "es": "Duplica el Ataque del Pokémon."
+  },
+  "This Pokemon's Speed is raised 1 stage at the end of each full turn on the field.": {
+    "pt": "Aumenta a Velocidade em 1 estágio ao fim de cada turno.",
+    "es": "Aumenta la Velocidad en 1 nivel al final de cada turno."
+  },
+  "This Pokemon's Status moves have priority raised by 1, but Dark types are immune.": {
+    "pt": "Aumenta em 1 a prioridade dos golpes de status. Falha contra adversários do tipo Sombrio.",
+    "es": "Aumenta en 1 la prioridad de los movimientos de estado. Falla contra rivales de tipo Siniestro."
+  },
+  "This Pokemon's same-type attack bonus (STAB) is 2 instead of 1.5.": {
+    "pt": "O bônus de golpes do mesmo tipo do Pokémon (STAB) passa de 1,5× para 2×.",
+    "es": "La bonificación por movimientos del mismo tipo del Pokémon (STAB) pasa de 1,5× a 2×."
+  },
+  "This Pokemon heals 1/4 of its max HP when hit by Water moves; Water immunity.": {
+    "pt": "Ao receber um golpe do tipo Água, recupera 1/4 dos PS máximos em vez de sofrer dano.",
+    "es": "Al recibir un movimiento de tipo Agua, recupera 1/4 de los PS máximos en lugar de sufrir daño."
+  },
+  "This Pokemon heals 1/4 of its max HP when hit by Electric moves; Electric immunity.": {
+    "pt": "Ao receber um golpe do tipo Elétrico, recupera 1/4 dos PS máximos em vez de sofrer dano.",
+    "es": "Al recibir un movimiento de tipo Eléctrico, recupera 1/4 de los PS máximos en lugar de sufrir daño."
+  },
+  "This Pokemon's Fire attacks do 1.5× damage if hit by one Fire move; Fire immunity.": {
+    "pt": "Concede imunidade a golpes do tipo Fogo. Após receber um, aumenta em 1,5× o poder dos próprios golpes de Fogo.",
+    "es": "Otorga inmunidad a movimientos de tipo Fuego. Tras recibir uno, aumenta en 1,5× la potencia de los propios movimientos de Fuego."
+  },
+  "This Pokemon can only be damaged by supereffective moves and indirect damage.": {
+    "pt": "Só recebe dano direto de golpes superefetivos.",
+    "es": "Solo recibe daño directo de movimientos supereficaces."
+  },
+  "If this Pokemon is the target of a foe's move, that move loses one additional PP.": {
+    "pt": "Golpes adversários direcionados a este Pokémon gastam 1 PP adicional.",
+    "es": "Los movimientos rivales dirigidos a este Pokémon consumen 1 PP adicional."
+  },
+  "This Pokemon cannot be made to flinch. Immune to Intimidate.": {
+    "pt": "Impede que o Pokémon recue e bloqueia Intimidate.",
+    "es": "Impide que el Pokémon retroceda y bloquea Intimidate."
+  },
+  "Fighting, Normal moves hit Ghost. Immune to Intimidate.": {
+    "pt": "Golpes dos tipos Normal e Lutador podem atingir Pokémon do tipo Fantasma. Bloqueia Intimidate.",
+    "es": "Los movimientos de tipo Normal y Lucha pueden golpear a Pokémon de tipo Fantasma. Bloquea Intimidate."
+  },
+  "This Pokemon cannot be confused. Immune to Intimidate.": {
+    "pt": "Impede confusão e bloqueia Intimidate.",
+    "es": "Impide la confusión y bloquea Intimidate."
+  },
+  "Combination of the Unnerve and Chilling Neigh Abilities.": {
+    "pt": "Combina os efeitos das habilidades Unnerve e Chilling Neigh.",
+    "es": "Combina los efectos de las habilidades Unnerve y Chilling Neigh."
+  },
+  "Combination of the Unnerve and Grim Neigh Abilities.": {
+    "pt": "Combina os efeitos das habilidades Unnerve e Grim Neigh.",
+    "es": "Combina los efectos de las habilidades Unnerve y Grim Neigh."
+  },
+  "The effect depends on Ogerpon's mask: Teal raises Speed, Wellspring Special Defense, Hearthflame Attack, and Cornerstone Defense on switch-in.": {
+    "pt": "O efeito depende da máscara de Ogerpon: Teal aumenta a Velocidade, Wellspring a Defesa Especial, Hearthflame o Ataque e Cornerstone a Defesa ao entrar em campo.",
+    "es": "El efecto depende de la máscara de Ogerpon: Teal aumenta la Velocidad, Wellspring la Defensa Especial, Hearthflame el Ataque y Cornerstone la Defensa al entrar al campo."
+  },
+  "Seed Pokémon": {
+    "pt": "Pokémon Semente"
+  },
+  "Flame Pokémon": {
+    "pt": "Pokémon Chama"
+  },
+  "Mouse Pokémon": {
+    "pt": "Pokémon Rato"
+  },
+  "Tiny Turtle Pokémon": {
+    "pt": "Pokémon Tartaruguinha"
+  },
+  "Shellfish Pokémon": {
+    "pt": "Pokémon Marisco"
+  },
+  "Lizard Pokémon": {
+    "pt": "Pokémon Lagarto"
+  },
+  "Turtle Pokémon": {
+    "pt": "Pokémon Tartaruga"
+  },
+  "Bat Pokémon": {
+    "pt": "Pokémon Morcego"
+  },
+  "Fox Pokémon": {
+    "pt": "Pokémon Raposa"
+  },
+  "Dragon Pokémon": {
+    "pt": "Pokémon Dragão"
+  },
+  "Flower Pokémon": {
+    "pt": "Pokémon Flor"
+  }
+}

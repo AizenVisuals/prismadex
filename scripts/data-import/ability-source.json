@@ -1,0 +1,8 @@
+{
+  "commit": "1242c1e2d9763ba5b85d33f13aecb89bae19ae3d",
+  "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown/1242c1e2d9763ba5b85d33f13aecb89bae19ae3d/data/text/abilities.ts",
+  "sha256": "f6f2a0d4fc8be06cc6051d39e11f5f0a3d3d9d11020d5855b09c9b2f34a00568",
+  "license": "MIT; bundled Showdown license",
+  "extraction": "Static literal top-level names and effect summaries only; no callbacks or source execution",
+  "entries": 322
+}

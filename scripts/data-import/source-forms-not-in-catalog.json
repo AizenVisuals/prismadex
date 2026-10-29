@@ -1,0 +1,512 @@
+[
+  {
+    "id": "10093",
+    "identifier": "raticate-totem-alola",
+    "species_id": "20",
+    "height": "14",
+    "weight": "1050",
+    "base_experience": "145",
+    "order": "29",
+    "is_default": "0"
+  },
+  {
+    "id": "10094",
+    "identifier": "pikachu-original-cap",
+    "species_id": "25",
+    "height": "4",
+    "weight": "60",
+    "base_experience": "112",
+    "order": "42",
+    "is_default": "0"
+  },
+  {
+    "id": "10095",
+    "identifier": "pikachu-hoenn-cap",
+    "species_id": "25",
+    "height": "4",
+    "weight": "60",
+    "base_experience": "112",
+    "order": "43",
+    "is_default": "0"
+  },
+  {
+    "id": "10096",
+    "identifier": "pikachu-sinnoh-cap",
+    "species_id": "25",
+    "height": "4",
+    "weight": "60",
+    "base_experience": "112",
+    "order": "44",
+    "is_default": "0"
+  },
+  {
+    "id": "10097",
+    "identifier": "pikachu-unova-cap",
+    "species_id": "25",
+    "height": "4",
+    "weight": "60",
+    "base_experience": "112",
+    "order": "45",
+    "is_default": "0"
+  },
+  {
+    "id": "10098",
+    "identifier": "pikachu-kalos-cap",
+    "species_id": "25",
+    "height": "4",
+    "weight": "60",
+    "base_experience": "112",
+    "order": "46",
+    "is_default": "0"
+  },
+  {
+    "id": "10099",
+    "identifier": "pikachu-alola-cap",
+    "species_id": "25",
+    "height": "4",
+    "weight": "60",
+    "base_experience": "112",
+    "order": "47",
+    "is_default": "0"
+  },
+  {
+    "id": "10116",
+    "identifier": "greninja-battle-bond",
+    "species_id": "658",
+    "height": "15",
+    "weight": "400",
+    "base_experience": "239",
+    "order": "789",
+    "is_default": "0"
+  },
+  {
+    "id": "10118",
+    "identifier": "zygarde-10-power-construct",
+    "species_id": "718",
+    "height": "12",
+    "weight": "335",
+    "base_experience": "243",
+    "order": "860",
+    "is_default": "0"
+  },
+  {
+    "id": "10119",
+    "identifier": "zygarde-50-power-construct",
+    "species_id": "718",
+    "height": "50",
+    "weight": "3050",
+    "base_experience": "300",
+    "order": "861",
+    "is_default": "0"
+  },
+  {
+    "id": "10121",
+    "identifier": "gumshoos-totem",
+    "species_id": "735",
+    "height": "14",
+    "weight": "600",
+    "base_experience": "146",
+    "order": "882",
+    "is_default": "0"
+  },
+  {
+    "id": "10122",
+    "identifier": "vikavolt-totem",
+    "species_id": "738",
+    "height": "26",
+    "weight": "1475",
+    "base_experience": "225",
+    "order": "886",
+    "is_default": "0"
+  },
+  {
+    "id": "10128",
+    "identifier": "lurantis-totem",
+    "species_id": "754",
+    "height": "15",
+    "weight": "580",
+    "base_experience": "168",
+    "order": "912",
+    "is_default": "0"
+  },
+  {
+    "id": "10129",
+    "identifier": "salazzle-totem",
+    "species_id": "758",
+    "height": "21",
+    "weight": "810",
+    "base_experience": "168",
+    "order": "917",
+    "is_default": "0"
+  },
+  {
+    "id": "10130",
+    "identifier": "minior-orange-meteor",
+    "species_id": "774",
+    "height": "3",
+    "weight": "400",
+    "base_experience": "154",
+    "order": "934",
+    "is_default": "0"
+  },
+  {
+    "id": "10131",
+    "identifier": "minior-yellow-meteor",
+    "species_id": "774",
+    "height": "3",
+    "weight": "400",
+    "base_experience": "154",
+    "order": "935",
+    "is_default": "0"
+  },
+  {
+    "id": "10132",
+    "identifier": "minior-green-meteor",
+    "species_id": "774",
+    "height": "3",
+    "weight": "400",
+    "base_experience": "154",
+    "order": "936",
+    "is_default": "0"
+  },
+  {
+    "id": "10133",
+    "identifier": "minior-blue-meteor",
+    "species_id": "774",
+    "height": "3",
+    "weight": "400",
+    "base_experience": "154",
+    "order": "937",
+    "is_default": "0"
+  },
+  {
+    "id": "10134",
+    "identifier": "minior-indigo-meteor",
+    "species_id": "774",
+    "height": "3",
+    "weight": "400",
+    "base_experience": "154",
+    "order": "938",
+    "is_default": "0"
+  },
+  {
+    "id": "10135",
+    "identifier": "minior-violet-meteor",
+    "species_id": "774",
+    "height": "3",
+    "weight": "400",
+    "base_experience": "154",
+    "order": "939",
+    "is_default": "0"
+  },
+  {
+    "id": "10137",
+    "identifier": "minior-orange",
+    "species_id": "774",
+    "height": "3",
+    "weight": "3",
+    "base_experience": "175",
+    "order": "941",
+    "is_default": "0"
+  },
+  {
+    "id": "10138",
+    "identifier": "minior-yellow",
+    "species_id": "774",
+    "height": "3",
+    "weight": "3",
+    "base_experience": "175",
+    "order": "942",
+    "is_default": "0"
+  },
+  {
+    "id": "10139",
+    "identifier": "minior-green",
+    "species_id": "774",
+    "height": "3",
+    "weight": "3",
+    "base_experience": "175",
+    "order": "943",
+    "is_default": "0"
+  },
+  {
+    "id": "10140",
+    "identifier": "minior-blue",
+    "species_id": "774",
+    "height": "3",
+    "weight": "3",
+    "base_experience": "175",
+    "order": "944",
+    "is_default": "0"
+  },
+  {
+    "id": "10141",
+    "identifier": "minior-indigo",
+    "species_id": "774",
+    "height": "3",
+    "weight": "3",
+    "base_experience": "175",
+    "order": "945",
+    "is_default": "0"
+  },
+  {
+    "id": "10142",
+    "identifier": "minior-violet",
+    "species_id": "774",
+    "height": "3",
+    "weight": "3",
+    "base_experience": "175",
+    "order": "946",
+    "is_default": "0"
+  },
+  {
+    "id": "10143",
+    "identifier": "mimikyu-busted",
+    "species_id": "778",
+    "height": "2",
+    "weight": "7",
+    "base_experience": "167",
+    "order": "952",
+    "is_default": "0"
+  },
+  {
+    "id": "10144",
+    "identifier": "mimikyu-totem-disguised",
+    "species_id": "778",
+    "height": "4",
+    "weight": "28",
+    "base_experience": "167",
+    "order": "953",
+    "is_default": "0"
+  },
+  {
+    "id": "10145",
+    "identifier": "mimikyu-totem-busted",
+    "species_id": "778",
+    "height": "4",
+    "weight": "28",
+    "base_experience": "167",
+    "order": "954",
+    "is_default": "0"
+  },
+  {
+    "id": "10146",
+    "identifier": "kommo-o-totem",
+    "species_id": "784",
+    "height": "24",
+    "weight": "2075",
+    "base_experience": "270",
+    "order": "961",
+    "is_default": "0"
+  },
+  {
+    "id": "10147",
+    "identifier": "magearna-original",
+    "species_id": "801",
+    "height": "10",
+    "weight": "805",
+    "base_experience": "300",
+    "order": "982",
+    "is_default": "0"
+  },
+  {
+    "id": "10148",
+    "identifier": "pikachu-partner-cap",
+    "species_id": "25",
+    "height": "4",
+    "weight": "60",
+    "base_experience": "112",
+    "order": "48",
+    "is_default": "0"
+  },
+  {
+    "id": "10149",
+    "identifier": "marowak-totem",
+    "species_id": "105",
+    "height": "17",
+    "weight": "980",
+    "base_experience": "149",
+    "order": "166",
+    "is_default": "0"
+  },
+  {
+    "id": "10150",
+    "identifier": "ribombee-totem",
+    "species_id": "743",
+    "height": "4",
+    "weight": "20",
+    "base_experience": "162",
+    "order": "895",
+    "is_default": "0"
+  },
+  {
+    "id": "10151",
+    "identifier": "rockruff-own-tempo",
+    "species_id": "744",
+    "height": "5",
+    "weight": "92",
+    "base_experience": "56",
+    "order": "897",
+    "is_default": "0"
+  },
+  {
+    "id": "10153",
+    "identifier": "araquanid-totem",
+    "species_id": "752",
+    "height": "31",
+    "weight": "2175",
+    "base_experience": "159",
+    "order": "909",
+    "is_default": "0"
+  },
+  {
+    "id": "10154",
+    "identifier": "togedemaru-totem",
+    "species_id": "777",
+    "height": "6",
+    "weight": "130",
+    "base_experience": "152",
+    "order": "950",
+    "is_default": "0"
+  },
+  {
+    "id": "10160",
+    "identifier": "pikachu-world-cap",
+    "species_id": "25",
+    "height": "4",
+    "weight": "60",
+    "base_experience": "112",
+    "order": "50",
+    "is_default": "0"
+  },
+  {
+    "id": "10182",
+    "identifier": "cramorant-gulping",
+    "species_id": "845",
+    "height": "8",
+    "weight": "180",
+    "base_experience": "166",
+    "order": "1027",
+    "is_default": "0"
+  },
+  {
+    "id": "10183",
+    "identifier": "cramorant-gorging",
+    "species_id": "845",
+    "height": "8",
+    "weight": "180",
+    "base_experience": "166",
+    "order": "1028",
+    "is_default": "0"
+  },
+  {
+    "id": "10192",
+    "identifier": "zarude-dada",
+    "species_id": "893",
+    "height": "18",
+    "weight": "700",
+    "base_experience": "300",
+    "order": "1085",
+    "is_default": "0"
+  },
+  {
+    "id": "10228",
+    "identifier": "toxtricity-low-key-gmax",
+    "species_id": "849",
+    "height": "240",
+    "weight": "10000",
+    "base_experience": "176",
+    "order": "",
+    "is_default": "0"
+  },
+  {
+    "id": "10264",
+    "identifier": "koraidon-limited-build",
+    "species_id": "1007",
+    "height": "35",
+    "weight": "3030",
+    "base_experience": "335",
+    "order": "",
+    "is_default": "0"
+  },
+  {
+    "id": "10265",
+    "identifier": "koraidon-sprinting-build",
+    "species_id": "1007",
+    "height": "35",
+    "weight": "3030",
+    "base_experience": "335",
+    "order": "",
+    "is_default": "0"
+  },
+  {
+    "id": "10266",
+    "identifier": "koraidon-swimming-build",
+    "species_id": "1007",
+    "height": "35",
+    "weight": "3030",
+    "base_experience": "335",
+    "order": "",
+    "is_default": "0"
+  },
+  {
+    "id": "10267",
+    "identifier": "koraidon-gliding-build",
+    "species_id": "1007",
+    "height": "35",
+    "weight": "3030",
+    "base_experience": "335",
+    "order": "",
+    "is_default": "0"
+  },
+  {
+    "id": "10268",
+    "identifier": "miraidon-low-power-mode",
+    "species_id": "1008",
+    "height": "28",
+    "weight": "2400",
+    "base_experience": "335",
+    "order": "",
+    "is_default": "0"
+  },
+  {
+    "id": "10269",
+    "identifier": "miraidon-drive-mode",
+    "species_id": "1008",
+    "height": "28",
+    "weight": "2400",
+    "base_experience": "335",
+    "order": "",
+    "is_default": "0"
+  },
+  {
+    "id": "10270",
+    "identifier": "miraidon-aquatic-mode",
+    "species_id": "1008",
+    "height": "28",
+    "weight": "2400",
+    "base_experience": "335",
+    "order": "",
+    "is_default": "0"
+  },
+  {
+    "id": "10271",
+    "identifier": "miraidon-glide-mode",
+    "species_id": "1008",
+    "height": "28",
+    "weight": "2400",
+    "base_experience": "335",
+    "order": "",
+    "is_default": "0"
+  },
+  {
+    "id": "10318",
+    "identifier": "magearna-original-mega",
+    "species_id": "801",
+    "height": "13",
+    "weight": "2481",
+    "base_experience": "",
+    "order": "",
+    "is_default": "0"
+  }
+]

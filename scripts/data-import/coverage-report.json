@@ -1,0 +1,630 @@
+{
+  "catalogRecords": 1357,
+  "nationalSpecies": 1025,
+  "sourceNationalSpecies": 1025,
+  "sourcePokemonRecords": 1351,
+  "exactFormMappings": 1353,
+  "speciesOnlyForms": [
+    {
+      "id": 20077,
+      "speciesId": 791,
+      "name": "Radiant Sun Solgaleo",
+      "reason": "Exact form has no unambiguous canonical mapping; species biology only"
+    },
+    {
+      "id": 20079,
+      "speciesId": 792,
+      "name": "Full Moon Lunala",
+      "reason": "Exact form has no unambiguous canonical mapping; species biology only"
+    },
+    {
+      "id": 20201,
+      "speciesId": 718,
+      "name": "Zygarde Core",
+      "reason": "Exact form has no unambiguous canonical mapping; species biology only"
+    },
+    {
+      "id": 20202,
+      "speciesId": 718,
+      "name": "Zygarde Cell",
+      "reason": "Exact form has no unambiguous canonical mapping; species biology only"
+    }
+  ],
+  "coverage": {
+    "heightMeters": {
+      "filled": 1353,
+      "total": 1357,
+      "percent": 99.71
+    },
+    "weightKg": {
+      "filled": 1353,
+      "total": 1357,
+      "percent": 99.71
+    },
+    "category": {
+      "filled": 1357,
+      "total": 1357,
+      "percent": 100.0
+    },
+    "eggGroups": {
+      "filled": 1357,
+      "total": 1357,
+      "percent": 100.0
+    },
+    "genderRateEighths": {
+      "filled": 1357,
+      "total": 1357,
+      "percent": 100.0
+    },
+    "growthRate": {
+      "filled": 1357,
+      "total": 1357,
+      "percent": 100.0
+    },
+    "captureRate": {
+      "filled": 1357,
+      "total": 1357,
+      "percent": 100.0
+    },
+    "baseExperience": {
+      "filled": 1304,
+      "total": 1357,
+      "percent": 96.09
+    },
+    "hatchCounter": {
+      "filled": 1357,
+      "total": 1357,
+      "percent": 100.0
+    },
+    "baseHappiness": {
+      "filled": 1357,
+      "total": 1357,
+      "percent": 100.0
+    },
+    "abilities": {
+      "filled": 1344,
+      "total": 1357,
+      "percent": 99.04
+    }
+  },
+  "appUsedAbilitySlugs": 313,
+  "appUsedAbilitiesWithEffect": 313,
+  "missingAppUsedAbilityEffects": [],
+  "abilityEntries": 376,
+  "abilityDescriptions": 317,
+  "missingTranslationTexts": [],
+  "missingAbilityEffects": [
+    {
+      "id": 10002,
+      "name": "Wave Rider",
+      "slug": "wave-rider",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10003,
+      "name": "Skater",
+      "slug": "skater",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10004,
+      "name": "Thrust",
+      "slug": "thrust",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10005,
+      "name": "Perception",
+      "slug": "perception",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10006,
+      "name": "Parry",
+      "slug": "parry",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10007,
+      "name": "Instinct",
+      "slug": "instinct",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10008,
+      "name": "Dodge",
+      "slug": "dodge",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10009,
+      "name": "Jagged Edge",
+      "slug": "jagged-edge",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10010,
+      "name": "Frostbite",
+      "slug": "frostbite",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10011,
+      "name": "Tenacity",
+      "slug": "tenacity",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10012,
+      "name": "Pride",
+      "slug": "pride",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10013,
+      "name": "Deep Sleep",
+      "slug": "deep-sleep",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10014,
+      "name": "Power Nap",
+      "slug": "power-nap",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10015,
+      "name": "Spirit",
+      "slug": "spirit",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10016,
+      "name": "Warm Blanket",
+      "slug": "warm-blanket",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10017,
+      "name": "Gulp",
+      "slug": "gulp",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10018,
+      "name": "Herbivore",
+      "slug": "herbivore",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10019,
+      "name": "Sandpit",
+      "slug": "sandpit",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10020,
+      "name": "Hot Blooded",
+      "slug": "hot-blooded",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10021,
+      "name": "Medic",
+      "slug": "medic",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10022,
+      "name": "Life Force",
+      "slug": "life-force",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10023,
+      "name": "Lunchbox",
+      "slug": "lunchbox",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10024,
+      "name": "Nurse",
+      "slug": "nurse",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10025,
+      "name": "Melee",
+      "slug": "melee",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10026,
+      "name": "Sponge",
+      "slug": "sponge",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10027,
+      "name": "Bodyguard",
+      "slug": "bodyguard",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10028,
+      "name": "Hero",
+      "slug": "hero",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10029,
+      "name": "Last Bastion",
+      "slug": "last-bastion",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10030,
+      "name": "Stealth",
+      "slug": "stealth",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10031,
+      "name": "Vanguard",
+      "slug": "vanguard",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10032,
+      "name": "Nomad",
+      "slug": "nomad",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10033,
+      "name": "Sequence",
+      "slug": "sequence",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10034,
+      "name": "Grass Cloak",
+      "slug": "grass-cloak",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10035,
+      "name": "Celebrate",
+      "slug": "celebrate",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10036,
+      "name": "Lullaby",
+      "slug": "lullaby",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10037,
+      "name": "Calming",
+      "slug": "calming",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10038,
+      "name": "Daze",
+      "slug": "daze",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10039,
+      "name": "Frighten",
+      "slug": "frighten",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10040,
+      "name": "Interference",
+      "slug": "interference",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10041,
+      "name": "Mood Maker",
+      "slug": "mood-maker",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10042,
+      "name": "Confidence",
+      "slug": "confidence",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10043,
+      "name": "Fortune",
+      "slug": "fortune",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10044,
+      "name": "Bonanza",
+      "slug": "bonanza",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10045,
+      "name": "Explode",
+      "slug": "explode",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10046,
+      "name": "Omnipotent",
+      "slug": "omnipotent",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10047,
+      "name": "Share",
+      "slug": "share",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10048,
+      "name": "Black Hole",
+      "slug": "black-hole",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10049,
+      "name": "Shadow Dash",
+      "slug": "shadow-dash",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10050,
+      "name": "Sprint",
+      "slug": "sprint",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10051,
+      "name": "Disgust",
+      "slug": "disgust",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10052,
+      "name": "High-rise",
+      "slug": "high-rise",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10053,
+      "name": "Climber",
+      "slug": "climber",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10054,
+      "name": "Flame Boost",
+      "slug": "flame-boost",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10055,
+      "name": "Aqua Boost",
+      "slug": "aqua-boost",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10056,
+      "name": "Run Up",
+      "slug": "run-up",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10057,
+      "name": "Conqueror",
+      "slug": "conqueror",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10058,
+      "name": "Shackle",
+      "slug": "shackle",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10059,
+      "name": "Decoy",
+      "slug": "decoy",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    },
+    {
+      "id": 10060,
+      "name": "Shield",
+      "slug": "shield",
+      "effectSource": null,
+      "championsSpecific": false,
+      "description": null,
+      "descriptionTranslation": null
+    }
+  ],
+  "flavorTextImported": false
+}

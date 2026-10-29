@@ -30,5 +30,5 @@ jobs:
       - name: Instalar plataforma Android
         run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
       - name: Compilar e verificar
-        run: ./gradlew --no-daemon :app:assemblePreview :app:lintDebug :app:assembleDebugAndroidTest
+        run: ./gradlew --no-daemon :app:assemblePreview :app:lintDebug :app:testDebugUnitTest :app:assembleDebugAndroidTest
       # CI signing is ephemeral. Only validated, separately signed APKs are published manually.

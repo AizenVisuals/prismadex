@@ -21,12 +21,16 @@ data class Pokemon(
 data class Move(
     val id: Int, val name: String, val type: String, val category: String,
     val power: Int?, val accuracy: Int?, val pp: Int?,
+    val description: String = "", val summary: String = "",
+    val priority: Int = 0, val target: String = "normal",
+    val flags: Set<String> = emptySet(), val referenceGame: Int = 25,
 )
 
 data class HeldItem(
     val id: Int, val name: String, val description: String,
     val compatibleSpecies: List<Int>? = null,
     val compatiblePokemonIds:List<Int>?=null,
+    val icon: String? = null,
 )
 
 val StatKeys = listOf("hp", "atk", "def", "spa", "spd", "spe")
@@ -57,6 +61,9 @@ data class UserState(
     val activeTeam:SavedTeam get()=teams.first{it.id==activeTeamId}
     val team:List<Int> get()=activeTeam.members
     val builds:Map<Int,Build> get()=activeTeam.builds
+    fun removeTeamMember(teamId:String,pokemonId:Int):UserState=copy(teams=teams.map{
+        if(it.id==teamId)it.copy(members=it.members-pokemonId,builds=it.builds-pokemonId) else it
+    })
     fun updateTeam(change:(SavedTeam)->SavedTeam)=copy(teams=teams.map{if(it.id==activeTeamId)change(it) else it})
 }
 

@@ -23,3 +23,5 @@ Na revisão 0.3.0, Rillaboom foi incluído, Indeedee macho/fêmea e Meowstic Meg
 Existem 166 itens e 515 definições de golpes específicos de Champions. Formas cosméticas ou de batalha podem compartilhar aprendizados quando isso é explícito na fonte. Não deduplicar espécies apenas porque compartilham arte.
 
 Ainda faltam validação de todas as combinações competitivas, cobertura histórica completa e atualização por novos regulamentos. O catálogo nacional é consulta adicional, não uma promessa de que toda espécie possa ser usada em Champions.
+
+Na 0.5.0, cada um dos 166 itens recebe seu próprio sprite offline, mapeado pelo nome canônico e mantendo o ID salvo. Os 515 golpes de Champions passam a expor descrição, resumo, prioridade, alvo e propriedades. Os 17 textos específicos de Champions têm prioridade sobre a descrição geral do mesmo golpe. Fontes e versões estão nos [avisos técnicos](../android/THIRD_PARTY_NOTICES.md). Descrições originais permanecem em inglês, com indicação visível; a tradução da interface não é apresentada como tradução oficial do jogo.

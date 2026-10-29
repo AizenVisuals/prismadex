@@ -1,0 +1,94 @@
+Uma Poké Ball para capturar Pokémon fisgados por uma vara durante a pesca.|||Una Poké Ball para capturar Pokémon enganchados con una caña al pescar.
+Uma Poké Ball para capturar Pokémon de nível inferior ao seu.|||Una Poké Ball para capturar Pokémon de nivel inferior al tuyo.
+Uma Poké Ball para capturar Pokémon que evoluem com Moon Stone.|||Una Poké Ball para capturar Pokémon que evolucionan con Moon Stone.
+Uma Poké Ball para capturar Pokémon muito pesados.|||Una Poké Ball para capturar Pokémon muy pesados.
+Uma Poké Ball que melhora conforme mais turnos passam na batalha.|||Una Poké Ball que mejora cuantos más turnos pasan en combate.
+Uma Poké Ball que torna os Pokémon capturados mais amigáveis.|||Una Poké Ball que hace más amistosos a los Pokémon capturados.
+Uma Poké Ball que facilita capturar Pokémon que fogem rapidamente.|||Una Poké Ball que facilita capturar Pokémon que huyen rápidamente.
+Uma Poké Ball que facilita capturar Pokémon selvagens à noite ou em cavernas.|||Una Poké Ball que facilita capturar Pokémon salvajes de noche o en cuevas.
+Uma Poké Ball que facilita capturar Pokémon selvagens enquanto dormem.|||Una Poké Ball que facilita capturar Pokémon salvajes mientras duermen.
+Uma Poké Ball com maior taxa de captura no início de um encontro selvagem.|||Una Poké Ball con mayor probabilidad de captura al inicio de un encuentro salvaje.
+Uma Poké Ball especialmente eficaz para Pokémon que vivem debaixo d'água.|||Una Poké Ball especialmente eficaz para Pokémon que viven bajo el agua.
+Uma Poké Ball especialmente eficaz para Pokémon dos tipos Água e Inseto.|||Una Poké Ball especialmente eficaz para Pokémon de tipos Agua y Bicho.
+Uma Poké Ball especialmente eficaz para Pokémon selvagens mais fracos.|||Una Poké Ball especialmente eficaz para Pokémon salvajes más débiles.
+Uma Poké Ball eficaz para espécies de Pokémon que já foram capturadas antes.|||Una Poké Ball eficaz para especies de Pokémon que ya se capturaron antes.
+Uma grande pepita de ouro puro que emite um brilho lustroso.|||Una gran pepita de oro puro que emite un brillo reluciente.
+Uma Poké Ball confortável que faz o Pokémon selvagem capturado tornar-se amigável rapidamente.|||Una Poké Ball cómoda que hace que el Pokémon salvaje capturado se vuelva amistoso rápidamente.
+Uma Poké Ball de alto desempenho com taxa de captura maior que uma Poké Ball.|||Una Poké Ball de alto rendimiento con mayor probabilidad de captura que una Poké Ball.
+Uma Poké Ball rara criada para comemorar um evento.|||Una Poké Ball rara creada para conmemorar un evento.
+Uma Poké Ball rara criada para comemorar uma ocasião.|||Una Poké Ball rara creada para conmemorar una ocasión.
+Uma Poké Ball curativa que recupera o HP e cura a condição de status do Pokémon capturado.|||Una Poké Ball curativa que recupera los HP y cura el problema de estado del Pokémon capturado.
+Uma Poké Ball especial projetada para capturar Ultra Beasts.|||Una Poké Ball especial diseñada para capturar Ultra Beasts.
+Uma Poké Ball especial para o Bug-Catching Contest.|||Una Poké Ball especial para el Bug-Catching Contest.
+Uma Poké Ball especial para o Pal Park.|||Una Poké Ball especial para Pal Park.
+Uma Poké Ball especial usada apenas na Safari Zone e no Great Marsh.|||Una Poké Ball especial usada solo en Safari Zone y Great Marsh.
+Após atacar, o portador recupera em HP 1/8 do dano causado a outros Pokémon.|||Tras atacar, el portador recupera como HP 1/8 del daño causado a otros Pokémon.
+Uma Poké Ball de desempenho superior com taxa de captura maior que uma Great Ball.|||Una Poké Ball de rendimiento superior con mayor probabilidad de captura que una Great Ball.
+Não pode ser consumido pelo portador. Não tem efeito quando consumido por Bug Bite ou Pluck.|||El portador no puede consumirlo. No tiene efecto al consumirse mediante Bug Bite o Pluck.
+Muda Arceus para o tipo Normal quando usado em Legends: Arceus.|||Cambia a Arceus al tipo Normal al usarse en Legends: Arceus.
+Cura o portador dos efeitos de Attract, Disable, Encore, Heal Block, Taunt e Torment. Uso único.|||Cura al portador de los efectos de Attract, Disable, Encore, Heal Block, Taunt y Torment. Un solo uso.
+Aumenta o dano dos golpes usados em turnos consecutivos. Máximo de 2× após 5 turnos.|||Aumenta el daño de los movimientos usados en turnos consecutivos. Máximo de 2× tras 5 turnos.
+Dusk Mane/Dawn Wings Necrozma: ativa Ultra Burst e depois um Z-Move com Photon Geyser.|||Dusk Mane/Dawn Wings Necrozma: activa Ultra Burst y después un Z-Move con Photon Geyser.
+A cada turno, o portador tem 20% de chance de agir primeiro dentro de sua faixa de prioridade.|||Cada turno, el portador tiene un 20% de probabilidad de actuar primero dentro de su intervalo de prioridad.
+A cada turno, o portador perde 1/8 do HP máximo. Um atacante que fizer contato pode receber o item.|||Cada turno, el portador pierde 1/8 de sus HP máximos. Un atacante que haga contacto puede recibir el objeto.
+Evolui Happiny para Chansey quando segurado ao subir de nível durante o dia.|||Evoluciona a Happiny en Chansey al llevarlo y subir de nivel durante el día.
+Evolui Milcery para Alcremie quando segurado ao girar.|||Evoluciona a Milcery en Alcremie al llevarlo y girar.
+Evolui Ursaring para Ursaluna quando usado durante a lua cheia.|||Evoluciona a Ursaring en Ursaluna al usarse durante la luna llena.
+Evolui determinadas espécies de Pokémon quando usado.|||Evoluciona a ciertas especies de Pokémon al usarlo.
+Reduz à metade o dano recebido de um ataque do tipo Normal. Uso único.|||Reduce a la mitad el daño recibido de un ataque de tipo Normal. Un solo uso.
+Nenhum efeito pode impedir o portador de escolher sair de campo.|||Ningún efecto puede impedir que el portador elija retirarse del combate.
+Cura a paralisia do portador. Uso único.|||Cura la parálisis del portador. Un solo uso.
+O portador recupera 1.3× de HP por drenagem, Aqua Ring, Ingrain, Leech Seed ou Strength Sap.|||El portador recupera 1.3× de HP mediante drenaje, Aqua Ring, Ingrain, Leech Seed o Strength Sap.
+Concede ao portador o efeito de Focus Energy quando está com 1/4 do HP máximo ou menos. Uso único.|||Otorga al portador el efecto de Focus Energy cuando tiene 1/4 de sus HP máximos o menos. Un solo uso.
+Cura a queimadura do portador. Uso único.|||Cura la quemadura del portador. Un solo uso.
+Cura a confusão do portador. Uso único.|||Cura la confusión del portador. Un solo uso.
+Cura o congelamento do portador. Uso único.|||Cura la congelación del portador. Un solo uso.
+Cura o envenenamento do portador. Uso único.|||Cura el envenenamiento del portador. Un solo uso.
+O portador fica no chão e sua Velocidade cai à metade. Se for do tipo Voador, recebe dano neutro de Terra.|||El portador queda en el suelo y su Velocidad se reduce a la mitad. Si es de tipo Volador, recibe daño neutro de Tierra.
+O portador age primeiro dentro de sua faixa de prioridade quando está com 1/4 do HP máximo ou menos. Uso único.|||El portador actúa primero dentro de su intervalo de prioridad cuando tiene 1/4 de sus HP máximos o menos. Un solo uso.
+O portador age por último dentro de sua faixa de prioridade.|||El portador actúa último dentro de su intervalo de prioridad.
+Acorda o portador se estiver dormindo. Uso único.|||Despierta al portador si está dormido. Un solo uso.
+A Velocidade do portador cai à metade. A habilidade Klutz não ignora esse efeito.|||La Velocidad del portador se reduce a la mitad. La habilidad Klutz no ignora este efecto.
+Os ataques do portador sem chance de causar hesitação passam a ter 10% de chance de causar hesitação.|||Los ataques del portador sin probabilidad de hacer retroceder obtienen un 10% de probabilidad de hacerlo.
+A taxa de acerto crítico do portador aumenta em 1 estágio.|||La probabilidad de golpe crítico del portador aumenta en 1 nivel.
+O próximo golpe do portador tem 1.2× de precisão quando está com 1/4 do HP máximo ou menos. Uso único.|||El siguiente movimiento del portador tiene 1.2× de precisión cuando tiene 1/4 de sus HP máximos o menos. Un solo uso.
+Os golpes de aprisionamento parcial do portador sempre duram 7 turnos.|||Los movimientos de atrapamiento parcial del portador siempre duran 7 turnos.
+Os golpes de aprisionamento parcial do portador causam 1/6 do HP máximo por turno em vez de 1/8.|||Los movimientos de atrapamiento parcial del portador causan 1/6 de los HP máximos por turno en lugar de 1/8.
+Os ataques físicos do portador têm 1.1× de poder.|||Los ataques físicos del portador tienen 1.1× de potencia.
+Os ataques de soco do portador têm 1.1× de poder e não fazem contato.|||Los ataques de puño del portador tienen 1.1× de potencia y no hacen contacto.
+Os ataques especiais do portador têm 1.1× de poder.|||Los ataques especiales del portador tienen 1.1× de potencia.
+Os golpes de dois turnos do portador terminam em um turno, exceto Sky Drop. Uso único.|||Los movimientos de dos turnos del portador se completan en un turno, excepto Sky Drop. Un solo uso.
+O peso do portador cai à metade.|||El peso del portador se reduce a la mitad.
+Se Trick Room estiver ativo, a Velocidade do portador cai em 1 estágio. Uso único.|||Si Trick Room está activo, la Velocidad del portador baja en 1 nivel. Un solo uso.
+Se for segurado por Chansey, aumenta sua taxa de acerto crítico em 2 estágios.|||Si lo lleva Chansey, aumenta su probabilidad de golpe crítico en 2 niveles.
+Se for segurado por Farfetch’d ou Sirfetch’d, aumenta sua taxa de acerto crítico em 2 estágios.|||Si lo lleva Farfetch’d o Sirfetch’d, aumenta su probabilidad de golpe crítico en 2 niveles.
+Se for segurado por Pikachu, dobra seu Ataque e Atq. Esp.|||Si lo lleva Pikachu, duplica su Ataque y At. Esp.
+Se o portador ficar apaixonado, o outro Pokémon também fica apaixonado.|||Si el portador se enamora, el otro Pokémon también se enamora.
+Se o portador receber um golpe físico, o atacante perde 1/8 de seu HP máximo. Uso único.|||Si el portador recibe un movimiento físico, el atacante pierde 1/8 de sus HP máximos. Un solo uso.
+Se o portador receber um golpe especial, o atacante perde 1/8 de seu HP máximo. Uso único.|||Si el portador recibe un movimiento especial, el atacante pierde 1/8 de sus HP máximos. Un solo uso.
+Se o portador sobreviver a um golpe, o atacante é forçado a trocar para um aliado aleatório. Uso único.|||Si el portador sobrevive a un golpe, el atacante debe cambiar a un aliado aleatorio. Un solo uso.
+Se o portador sobreviver a um golpe, troca imediatamente para um aliado escolhido. Uso único.|||Si el portador sobrevive a un golpe, cambia inmediatamente a un aliado elegido. Un solo uso.
+Se o portador errar devido à precisão, sua Velocidade aumenta em 2 estágios. Uso único.|||Si el portador falla por precisión, su Velocidad aumenta en 2 niveles. Un solo uso.
+Se os estágios de atributos do portador forem reduzidos, troca para um aliado escolhido. Uso único.|||Si bajan los niveles de características del portador, cambia a un aliado elegido. Un solo uso.
+Em Legends: Arceus, Judgment de Arceus muda de tipo para ser super efetivo.|||En Legends: Arceus, Judgment de Arceus cambia de tipo para ser supereficaz.
+Lunala ou Dawn Wings Necrozma com Moongeist Beam pode usar um Z-Move especial.|||Lunala o Dawn Wings Necrozma con Moongeist Beam puede usar un Z-Move especial.
+Sem uso competitivo, exceto quando usado com Fling.|||Sin uso competitivo, salvo al usarse con Fling.
+Ogerpon-Cornerstone: ataques com 1.2× de poder; Terastalizar concede Embody Aspect.|||Ogerpon-Cornerstone: ataques con 1.2× de potencia; teracristalizar otorga Embody Aspect.
+Ogerpon-Hearthflame: ataques com 1.2× de poder; Terastalizar concede Embody Aspect.|||Ogerpon-Hearthflame: ataques con 1.2× de potencia; teracristalizar otorga Embody Aspect.
+Ogerpon-Wellspring: ataques com 1.2× de poder; Terastalizar concede Embody Aspect.|||Ogerpon-Wellspring: ataques con 1.2× de potencia; teracristalizar otorga Embody Aspect.
+Marcador para capturas em uma Poké Ball que não existe no jogo atual.|||Marcador para capturas con una Poké Ball que no existe en el juego actual.
+Uma Poké Ball para capturar Pokémon do gênero oposto ao do seu Pokémon.|||Una Poké Ball para capturar Pokémon del género opuesto al de tu Pokémon.
+Aumenta um atributo aleatório em 2 quando está com 1/4 do HP máximo ou menos, exceto precisão e evasão. Uso único.|||Aumenta una característica aleatoria en 2 cuando tiene 1/4 de sus HP máximos o menos, excepto precisión y evasión. Un solo uso.
+Recupera 1/4 do HP máximo após o portador receber um golpe super efetivo. Uso único.|||Recupera 1/4 de los HP máximos tras recibir el portador un movimiento supereficaz. Un solo uso.
+Recupera 10 PP do primeiro golpe do portador a chegar a 0 PP. Uso único.|||Recupera 10 PP del primer movimiento del portador que llegue a 0 PP. Un solo uso.
+Restaura todos os estágios de atributos reduzidos para 0 quando um deles está abaixo de 0. Uso único.|||Restaura todos los niveles reducidos de características a 0 cuando uno está por debajo de 0. Un solo uso.
+Solgaleo ou Dusk Mane Necrozma com Sunsteel Strike pode usar um Z-Move especial.|||Solgaleo o Dusk Mane Necrozma con Sunsteel Strike puede usar un Z-Move especial.
+A precisão dos ataques contra o portador é multiplicada por 0.9×.|||La precisión de los ataques contra el portador se multiplica por 0.9×.
+A precisão dos ataques do portador é multiplicada por 1.1×.|||La precisión de los ataques del portador se multiplica por 1.1×.
+A precisão dos ataques do portador é multiplicada por 1.2× se ele agir depois do alvo.|||La precisión de los ataques del portador se multiplica por 1.2× si actúa después de su objetivo.
+A melhor Poké Ball, com desempenho máximo. Captura qualquer Pokémon selvagem.|||La mejor Poké Ball, con rendimiento máximo. Captura cualquier Pokémon salvaje.
+O portador ignora efeitos baseados em chuva e sol.|||El portador ignora efectos basados en lluvia y sol.
+As imunidades concedidas ao portador apenas por sua tipagem são anuladas.|||Se anulan las inmunidades otorgadas al portador únicamente por sus tipos.
+Apesar de bonita, esta pena é apenas uma pena comum e não tem efeito.|||Aunque es bonita, esta pluma solo es una pluma común y no tiene efecto.
+Usado em Hyper Training. Todos os atributos de um Pokémon são calculados com IV de 31.|||Se usa en Hyper Training. Todas las características de un Pokémon se calculan con IV de 31.
+Usado em Hyper Training. Um atributo de um Pokémon é calculado com IV de 31.|||Se usa en Hyper Training. Una característica de un Pokémon se calcula con IV de 31.

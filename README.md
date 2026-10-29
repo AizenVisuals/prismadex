@@ -8,7 +8,7 @@ O PrismaDex é o segundo app da **[Aizen Visuals](https://github.com/AizenVisual
 
 Catálogo, artes, golpes, favoritos, equipes e calculadora funcionam offline desde a instalação. A aba Meta usa internet para consultar relatórios e mantém a última consulta em cache.
 
-**[Baixar PrismaDex 0.4.1 — prévia Android](https://github.com/AizenVisuals/prismadex/releases/tag/v0.4.1-preview)** · [Novidades](CHANGELOG.md) · [Privacidade](PRIVACY.md)
+**[Baixar PrismaDex 0.4.1 — prévia pública Android](https://github.com/AizenVisuals/prismadex/releases/tag/v0.4.1-preview)** · [Novidades](CHANGELOG.md) · [Privacidade](PRIVACY.md)
 
 ## No seu celular
 
@@ -19,15 +19,18 @@ Catálogo, artes, golpes, favoritos, equipes e calculadora funcionam offline des
 
 Capturas reais em Redmi Note 10S com Android 13: tema escuro na versão 0.4.1 e tema claro na 0.4.0.
 
-## O que você encontra
+A revisão 0.5.0 descrita abaixo está em desenvolvimento local; ainda não foi publicada.
+
+## No código atual
 
 - **Pokédex:** busca por nome/número, grade ou lista, filtros por tipo, geração e jogo, favoritos e destaque rotativo, incluindo lendários.
 - **Champions e Nacional:** 1.025 espécies nacionais em 1.306 registros com formas. A seleção Champions revisada reúne 231 espécies em 354 registros; veja os [limites das fontes](docs/DADOS.md).
-- **Fichas completas:** arte local, tipagens com símbolos, atributos, habilidades e golpes do jogo selecionado.
-- **TeamBuilder:** múltiplas equipes com jogo e formato próprios. Em Champions, configure habilidade, natureza, SP, item e até quatro golpes.
+- **Fichas completas:** arte local, tipagens com símbolos, atributos, habilidades e golpes do jogo selecionado. Os golpes têm efeito, prioridade, alvo e propriedades; descrições acompanham o idioma, com acesso ao original.
+- **TeamBuilder:** ícones individuais dos itens segurados e múltiplas equipes com jogo e formato próprios. Em Champions, configure habilidade, natureza, SP, item e até quatro golpes.
 - **Rascunhos locais:** alterações no set ficam separadas do set salvo; sair do editor oferece salvar, descartar ou continuar.
 - **Calculadora offline:** Singles e Doubles, sets de equipes diferentes e alvos de teste independentes, condições de batalha, intervalo de dano e chance de KO.
 - **Meta online:** relatórios mensais separados por formato, com fonte e período explícitos. Dados do simulador não são apresentados como ranking oficial do jogo.
+- **Idioma e texto:** interface offline em português brasileiro, inglês e espanhol, seleção manual ou seguindo o Android; tamanho de texto de 85% a 150%, com prévia imediata e combinado com a fonte do sistema. Nomes dos golpes e itens permanecem originais; descrições em português e espanhol são incluídas offline.
 - **Aparência:** Aurora, Carmim, Oceano, Jade, Âmbar e Pérola; cada paleta tem claro, escuro e opção Sistema. Vidro com refração no Android 13+, transições e resposta ao toque.
 
 ## Instalar e atualizar

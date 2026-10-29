@@ -20,3 +20,19 @@ fun resolvePokemonIdentity(catalog:List<Pokemon>,name:String):Pokemon?{
         ?:catalog.firstOrNull{p->p.aliases.any{pokemonNameKey(it)==key}}
         ?:catalog.firstOrNull{pokemonNameKey(it.name)==key}
 }
+
+/** Same exact-match precedence as resolvePokemonIdentity, built once for bulk source lookups. */
+class PokemonIdentityIndex(catalog: List<Pokemon>) {
+    private val byName = buildMap<String, Pokemon> {
+        // putIfAbsent retains catalog ordering, including ambiguous aliases.
+        catalog.forEach { putIfAbsent(pokemonNameKey(it.name), it) }
+    }.toMutableMap().apply {
+        val aliases = mutableMapOf<String, Pokemon>()
+        catalog.forEach { p -> p.aliases.forEach { aliases.putIfAbsent(pokemonNameKey(it), p) } }
+        putAll(aliases)
+        val canonical = mutableMapOf<String, Pokemon>()
+        catalog.forEach { p -> p.canonicalName?.let { canonical.putIfAbsent(pokemonNameKey(it), p) } }
+        putAll(canonical)
+    }
+    fun resolve(name: String): Pokemon? = byName[pokemonNameKey(name)]
+}

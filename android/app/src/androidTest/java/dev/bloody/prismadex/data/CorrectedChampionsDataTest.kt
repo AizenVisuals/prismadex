@@ -16,7 +16,7 @@ class CorrectedChampionsDataTest{
     private val context get()=InstrumentationRegistry.getInstrumentation().targetContext
     @Test fun everyOfficialEntryAndSupplementalFormHasItsOwnVerifiedData()=runBlocking{
         val repo=PokemonRepository(context);val catalog=repo.loadCatalog()
-        assertEquals(1306,catalog.size);assertEquals(catalog.size,catalog.map{it.name.lowercase()}.distinct().size)
+        assertEquals(1306+AdditionalFormsRepository(context).catalogEntries().size,catalog.size);assertEquals(catalog.size,catalog.map{it.name.lowercase()}.distinct().size)
         assertTrue(catalog.none{it.id in RetiredPokemonIds});assertTrue(catalog.all{it.stats.size==6&&it.stats.sum()>0})
         assertEquals(262,catalog.count{it.championsSource=="official-regulation"})
         assertEquals(354,catalog.count{it.champions})

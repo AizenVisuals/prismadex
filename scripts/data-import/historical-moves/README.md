@@ -1,0 +1,14 @@
+# Historical scalar move data
+
+Run `python scripts/data-import/import_historical_moves.py --fetch` to refresh the exact pinned inputs; omit `--fetch` for offline regeneration. PokeAPI commit `2bf639e5572812a67d2b94903fdcb9d095f5aeb2` (BSD-3-Clause) supplies moves, changelog, types and version groups. Pinned Showdown commit `1242c1e2d9763ba5b85d33f13aecb89bae19ae3d` (MIT) supplements literal generation-specific scalars. Source files, URLs and SHA-256 digests are recorded in `sources.json`. Existing bundled license texts cover these sources.
+
+The mapping from internal games 1–24 to named PokeAPI groups is explicit and validated. Source chronology uses version_groups.order, never numeric ID ordering (Colosseum/XD demonstrate why). Each scalar first takes the earliest future changelog's nonempty old value, otherwise the pinned current source value. Blank changelog cells never set an override. Literal Showdown gen8→target generation overrides fill incomplete source history, e.g. PokeAPI omits Recover's Gen9 PP reduction while Showdown gen8 explicitly records 10 PP. Pre-Gen4 physical/special categories follow historical type-based categories. No code callbacks are imported or executed.
+
+Asset output contains only differences from existing raw move scalars, separately indexed per game. Champions (game25) is excluded and untouched. This does not alter learnsets or grant any move to a Pokémon; caller must retain existing game-filtered move IDs.
+
+Limits: scalar history and chronological/default generation data do not establish every special title's exceptional rule. Historical effect prose, targets, flags, secondary chances and battle callbacks remain unvalidated. Legends: Arceus-specific moves/behaviors beyond the scalar records are not certified. Do not label this as full historical battle-engine parity. Tests cover Recover PP, Tackle power, type changes, pre-Gen4 category split and Champions preservation; parent must execute them.
+
+Integration: create `HistoricalMoveData(context)` once per PokemonRepository, call `load()` on its existing IO move-loading path, and apply `applyHistoricalMove(move, game)` after constructing each move. The scalar helper never changes the chosen referenceGame, move ID or name.
+
+
+Identity correction: internal move IDs diverge from PokeAPI following the Z-move block. Joining by numeric ID is invalid (internal750 Apple Acid versus source787; internal787 G-Max Replenish). Import now joins only unique exact normalized names and records unmatched source identities, with no numeric fallback. Unmatched records leave existing scalar data untouched. The manifest records 883 exact matches and 54 unmatched source records, mainly physical/special Z-move variants or source-only entries. An importer assertion and instrumented regression protect Apple Acid and other Gen8 identities. Current Sword/Shield overrides contain no accidental known-positive-power→null changes.

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "scope": "announced-unreleased",
+  "source": "https://asia-press.portal-pokemon.com/press-release/announcing-two-all-new-entries-in-the-pokemon-series-pokemon-winds-and-pokemon-waves_20260227/",
+  "verifiedAt": "2026-10-29",
+  "pokemon": [
+    {
+      "key": "browt",
+      "name": "Browt",
+      "type": "grass",
+      "category": "Bean Chick Pokémon",
+      "height": 0.3,
+      "weight": 3.5,
+      "ability": "Overgrow",
+      "nationalId": null,
+      "baseStats": null,
+      "evolutions": null,
+      "championsAvailability": null,
+      "source": "https://asia-press.portal-pokemon.com/press-release/announcing-two-all-new-entries-in-the-pokemon-series-pokemon-winds-and-pokemon-waves_20260227/",
+      "announcedAt": "2026-02-27",
+      "verifiedAt": "2026-10-29",
+      "game": "Pokémon Winds / Pokémon Waves",
+      "releaseYear": 2027
+    },
+    {
+      "key": "pombon",
+      "name": "Pombon",
+      "type": "fire",
+      "category": "Puppy Pokémon",
+      "height": 0.4,
+      "weight": 6.7,
+      "ability": "Blaze",
+      "nationalId": null,
+      "baseStats": null,
+      "evolutions": null,
+      "championsAvailability": null,
+      "source": "https://asia-press.portal-pokemon.com/press-release/announcing-two-all-new-entries-in-the-pokemon-series-pokemon-winds-and-pokemon-waves_20260227/",
+      "announcedAt": "2026-02-27",
+      "verifiedAt": "2026-10-29",
+      "game": "Pokémon Winds / Pokémon Waves",
+      "releaseYear": 2027
+    },
+    {
+      "key": "gecqua",
+      "name": "Gecqua",
+      "type": "water",
+      "category": "Water Gecko Pokémon",
+      "height": 0.3,
+      "weight": 4.3,
+      "ability": "Torrent",
+      "nationalId": null,
+      "baseStats": null,
+      "evolutions": null,
+      "championsAvailability": null,
+      "source": "https://asia-press.portal-pokemon.com/press-release/announcing-two-all-new-entries-in-the-pokemon-series-pokemon-winds-and-pokemon-waves_20260227/",
+      "announcedAt": "2026-02-27",
+      "verifiedAt": "2026-10-29",
+      "game": "Pokémon Winds / Pokémon Waves",
+      "releaseYear": 2027
+    }
+  ]
+}

@@ -2,6 +2,8 @@
 package dev.bloody.prismadex.ui
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.animation.*
+import androidx.compose.animation.core.*
 import androidx.compose.foundation.lazy.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -40,9 +42,13 @@ private val conditionsSaver=listSaver<BattleConditions,Any>(
 )
 
 @Composable internal fun DamageScreen(catalog:List<Pokemon>,state:UserState,repo:PokemonRepository,engine:DamageEngine,onSelectTeam:(String)->Unit,onEdit:(Pokemon,String?)->Unit,onDummy:(String?)->Unit,onDeleteDummy:(String)->Unit,requestedDefender:String?=null,onDefenderConsumed:()->Unit={},onChoosePokemon:()->Unit={}){
+    var inspectedMove by remember{mutableStateOf<Move?>(null)}
+    inspectedMove?.let{MoveInfoSheet(it){inspectedMove=null}}
+    var deletingDummy by rememberSaveable{mutableStateOf<String?>(null)}
+    state.dummies.find{it.id==deletingDummy}?.let{d->AlertDialog(onDismissRequest={deletingDummy=null},title={LText("Excluir alvo ${d.label}?")},text={LText("Este alvo e sua configuração serão removidos do aparelho.")},confirmButton={TextButton(onClick={onDeleteDummy(d.id);deletingDummy=null}){LText("Excluir",color=MaterialTheme.colorScheme.error)}},dismissButton={TextButton(onClick={deletingDummy=null}){LText("Cancelar")}})}
     val scope=rememberCoroutineScope()
-    val attackers=battleTeamChoices(state,catalog)
-    val defenders=battleDefenderChoices(state,catalog)
+    val attackers=remember(state.teams,catalog){battleTeamChoices(state,catalog)}
+    val defenders=remember(state.teams,state.dummies,catalog){battleDefenderChoices(state,catalog)}
     var attackerKey by rememberSaveable{mutableStateOf(attackers.firstOrNull{it.teamId==state.activeTeamId}?.key?:attackers.firstOrNull()?.key?:"")}
     var defenderKey by rememberSaveable{mutableStateOf(defenders.firstOrNull{it.key!=attackerKey}?.key?:defenders.firstOrNull()?.key?:"")}
     LaunchedEffect(requestedDefender){requestedDefender?.let{defenderKey=it;onDefenderConsumed()}}
@@ -98,56 +104,61 @@ private val conditionsSaver=listSaver<BattleConditions,Any>(
             busy=false
         }
     }
-    LazyColumn(Modifier.fillMaxSize(),contentPadding=PaddingValues(start=22.dp,end=22.dp,top=88.dp,bottom=120.dp),verticalArrangement=Arrangement.spacedBy(18.dp)){
-        item(key="intro"){Text("Compare seus sets",fontSize=22.sp,fontWeight=FontWeight.SemiBold)}
+    LazyColumn(Modifier.prismaViewport(),contentPadding=PaddingValues(start=22.dp,end=22.dp,top=16.dp,bottom=24.dp),verticalArrangement=Arrangement.spacedBy(18.dp)){
+        item(key="intro"){LText("Compare seus sets",fontSize=22.sp,fontWeight=FontWeight.SemiBold)}
         item(key="format"){Column(verticalArrangement=Arrangement.spacedBy(9.dp)){
-            Row(horizontalArrangement=Arrangement.spacedBy(8.dp)){
-                FilterChip(format=="singles",{format="singles"},label={Text("Singles · individual")},modifier=Modifier.weight(1f))
-                FilterChip(format=="doubles",{format="doubles"},label={Text("Doubles · duplas")},modifier=Modifier.weight(1f))
+            FlowRow(horizontalArrangement=Arrangement.spacedBy(8.dp)){
+                FilterChip(format=="singles",{format="singles"},label={LText("Singles · individual")})
+                FilterChip(format=="doubles",{format="doubles"},label={LText("Doubles · duplas")})
             }
-            Text(if(format=="doubles")"Cálculo Doubles · redução de golpes em área e efeitos de aliados." else "Cálculo Singles · confronto individual, sem efeitos de aliados.",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
+            LText(if(format=="doubles")"Cálculo Doubles · redução de golpes em área e efeitos de aliados." else "Cálculo Singles · confronto individual, sem efeitos de aliados.",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
         }}
         if(attackers.isEmpty())item{Column(verticalArrangement=Arrangement.spacedBy(14.dp)){
-            Text("Monte um set Champions para começar. O atacante e o defensor podem vir de equipes diferentes.",fontSize=15.sp,lineHeight=22.sp)
+            LText("Monte um set Champions para começar. O atacante e o defensor podem vir de equipes diferentes.",fontSize=15.sp,lineHeight=22.sp)
             ActionButton("Montar equipe Champions",Icons.Rounded.Add,true,onChoosePokemon)
-            OutlinedButton(onClick={onDummy(null)},modifier=Modifier.fillMaxWidth()){Text("Criar alvo de teste")}
+            OutlinedButton(onClick={onDummy(null)},modifier=Modifier.fillMaxWidth()){LText("Criar alvo de teste")}
         }}
         else{
             item(key="attacker"){Column(verticalArrangement=Arrangement.spacedBy(12.dp)){
                 ChoiceField("Atacante · equipe e Pokémon",attackerChoice?.label?:"Escolha um atacante",attackers.map{it.key to it.label}){attackerKey=it}
-                attacker?.let{p->CombatantSummary(p,attackerBuild,attackerChoice?.label?:"Set salvo");TextButton(onClick={onEdit(p,attackerChoice?.teamId)}){Text("Editar set do atacante")}}
+                attacker?.let{p->CombatantSummary(p,attackerBuild,attackerChoice?.label?:"Set salvo");TextButton(onClick={onEdit(p,attackerChoice?.teamId)}){LText("Editar set do atacante")}}
             }}
             item(key="defender"){Column(verticalArrangement=Arrangement.spacedBy(12.dp)){
                 ChoiceField("Defensor · equipe ou alvo",defenderChoice?.label?:"Escolha um alvo",defenders.map{it.key to it.label}){defenderKey=it}
-                defender?.let{p->CombatantSummary(p,defenderBuild,if(dummy!=null)"Alvo independente · não ocupa vaga" else defenderChoice?.label?:"Set salvo");TextButton(onClick={if(dummy!=null)onDummy(dummy.id) else onEdit(p,defenderChoice?.teamId)}){Text("Editar configuração do defensor")}}
-                OutlinedButton(onClick={onDummy(null)},modifier=Modifier.fillMaxWidth()){Icon(Icons.Rounded.Add,null);Text("Criar alvo de teste",Modifier.padding(8.dp))}
+                defender?.let{p->CombatantSummary(p,defenderBuild,if(dummy!=null)"Alvo independente · não ocupa vaga" else defenderChoice?.label?:"Set salvo");TextButton(onClick={if(dummy!=null)onDummy(dummy.id) else onEdit(p,defenderChoice?.teamId)}){LText("Editar configuração do defensor")}}
+                OutlinedButton(onClick={onDummy(null)},modifier=Modifier.fillMaxWidth()){LIcon(Icons.Rounded.Add,null);LText("Criar alvo de teste",Modifier.padding(8.dp))}
             }}
             item(key="moves"){Column(verticalArrangement=Arrangement.spacedBy(10.dp)){
-                Text("GOLPE DO SET",fontSize=13.sp,letterSpacing=1.5.sp,color=MaterialTheme.colorScheme.primary)
-                if(moves.isEmpty())Text("Salve pelo menos um golpe no set do atacante.",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
-                FlowRow(horizontalArrangement=Arrangement.spacedBy(8.dp),verticalArrangement=Arrangement.spacedBy(8.dp)){moves.forEach{m->FilterChip(moveId==m.id,{moveId=m.id},label={Text(m.name,fontSize=13.sp)},leadingIcon={TypeSymbol(m.type)})}}
-                FilterChip(conditions.critical,{updateConditions(conditions.copy(critical=!conditions.critical))},label={Text("Acerto crítico")})
-                OutlinedButton(onClick={advanced=!advanced},modifier=Modifier.fillMaxWidth()){Text(if(advanced)"Recolher condições da batalha" else "Condições da batalha e modificadores")}
+                LText("GOLPE DO SET",fontSize=13.sp,letterSpacing=1.5.sp,color=MaterialTheme.colorScheme.primary)
+                if(moves.isEmpty())LText("Salve pelo menos um golpe no set do atacante.",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
+                FlowRow(horizontalArrangement=Arrangement.spacedBy(8.dp),verticalArrangement=Arrangement.spacedBy(8.dp)){moves.forEach{m->FilterChip(moveId==m.id,{moveId=m.id},label={LText(m.name,fontSize=13.sp)},leadingIcon={TypeSymbol(m.type)})}}
+                moves.find{it.id==moveId}?.let{move->TextButton(onClick={inspectedMove=move}){LIcon(Icons.Rounded.Info,null);LText("Ver efeito e propriedades",Modifier.padding(start=8.dp))}}
+                FilterChip(conditions.critical,{updateConditions(conditions.copy(critical=!conditions.critical))},label={LText("Acerto crítico")})
+                OutlinedButton(onClick={advanced=!advanced},modifier=Modifier.fillMaxWidth()){LText(if(advanced)"Recolher condições da batalha" else "Condições da batalha e modificadores")}
             }}
-            if(advanced)item(key="conditions"){ConditionsEditor(conditions){updateConditions(it)}}
+            item(key="conditions"){AnimatedVisibility(advanced,enter=expandVertically(tween(220))+fadeIn(),exit=shrinkVertically(tween(160))+fadeOut()){ConditionsEditor(conditions){updateConditions(it)}}}
             item(key="calculate"){Column(verticalArrangement=Arrangement.spacedBy(12.dp)){
                 ActionButton(if(busy)"Calculando no aparelho…" else "Calcular dano",Icons.Rounded.AutoAwesome,!busy&&moves.isNotEmpty()&&defender!=null){calculate()}
                 if(busy)LinearProgressIndicator(Modifier.fillMaxWidth())
-                error?.let{Text(it,color=MaterialTheme.colorScheme.error,fontSize=13.sp,lineHeight=18.sp)}
-                Text("Motor Showdown · modo Champions. Nível 50, SP, naturezas, habilidades, itens e variação de dano. Acerto do golpe e decisões do adversário não são uma previsão.",fontSize=13.sp,lineHeight=17.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
+                error?.let{LText(it,color=MaterialTheme.colorScheme.error,fontSize=13.sp,lineHeight=18.sp)}
+                LText("Motor Showdown · modo Champions. Nível 50, SP, naturezas, habilidades, itens e variação de dano. Acerto do golpe e decisões do adversário não são uma previsão.",fontSize=13.sp,lineHeight=17.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
             }}
-            result?.let{r->item(key="result"){DamageResult(r)}}
+            result?.let{r->item(key="result"){DamageResult(r,Modifier.animateItem())}}
         }
         if(state.dummies.isNotEmpty()){
-            item(key="dummy-heading"){Text("ALVOS SALVOS · ${state.dummies.size}/50",fontSize=13.sp,letterSpacing=1.5.sp,color=MaterialTheme.colorScheme.primary)}
-            items(state.dummies,key={"dummy/${it.id}"}){d->Surface(shape=RoundedCornerShape(22.dp),color=MaterialTheme.colorScheme.surface){Row(Modifier.fillMaxWidth().padding(14.dp),verticalAlignment=Alignment.CenterVertically){PokemonArt(d.pokemonId,Modifier.size(56.dp),d.label);Column(Modifier.weight(1f).padding(start=12.dp)){Text(d.label,fontSize=14.sp,fontWeight=FontWeight.SemiBold);Text("${d.build.nature} · ${d.build.sps.sum()}/66 SP",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)};IconButton(onClick={onDummy(d.id)}){Icon(Icons.Rounded.Edit,"Editar alvo ${d.label}")};IconButton(onClick={onDeleteDummy(d.id)}){Icon(Icons.Rounded.Close,"Excluir alvo ${d.label}")}}}}
+            item(key="dummy-heading"){LText("ALVOS SALVOS · ${state.dummies.size}/50",fontSize=13.sp,letterSpacing=1.5.sp,color=MaterialTheme.colorScheme.primary)}
+            items(state.dummies,key={"dummy/${it.id}"}){d->Surface(shape=RoundedCornerShape(22.dp),color=MaterialTheme.colorScheme.surface){Column(Modifier.fillMaxWidth().padding(16.dp),verticalArrangement=Arrangement.spacedBy(8.dp)){
+                Row(verticalAlignment=Alignment.CenterVertically){PokemonArt(d.pokemonId,Modifier.size(56.dp),d.label);Column(Modifier.weight(1f).padding(start=12.dp)){Text(d.label,fontSize=14.sp,fontWeight=FontWeight.SemiBold);LText("${d.build.nature} · ${d.build.sps.sum()}/66 SP",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)}}
+                Row(Modifier.align(Alignment.End),horizontalArrangement=Arrangement.spacedBy(8.dp)){IconButton(onClick={onDummy(d.id)}){LIcon(Icons.Rounded.Edit,"Editar alvo ${d.label}")};IconButton(onClick={deletingDummy=d.id}){LIcon(Icons.Rounded.Close,"Excluir alvo ${d.label}")}}
+            }}}
+
         }
-        item{Text("A base e o motor estão versionados; a elegibilidade do regulamento atual ainda precisa ser conferida. Cenários especiais não expostos nos controles usam os padrões do motor.",fontSize=13.sp,lineHeight=17.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)}
+        item{LText("A base e o motor estão versionados; a elegibilidade do regulamento atual ainda precisa ser conferida. Cenários especiais não expostos nos controles usam os padrões do motor.",fontSize=13.sp,lineHeight=17.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)}
     }
 }
 
 @Composable private fun CombatantSummary(p:Pokemon,build:Build,subtitle:String){
-    Row(verticalAlignment=Alignment.CenterVertically,horizontalArrangement=Arrangement.spacedBy(12.dp)){PokemonArt(p.id,Modifier.size(76.dp),p.name);Column{Text("${build.nature} · ${build.sps.sum()}/66 SP",fontSize=14.sp,fontWeight=FontWeight.SemiBold);Text(build.ability?.replace('-',' ')?:"Habilidade padrão da espécie",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant);Text(subtitle,fontSize=13.sp,color=MaterialTheme.colorScheme.primary,modifier=Modifier.padding(top=6.dp))}}
+    Row(verticalAlignment=Alignment.CenterVertically,horizontalArrangement=Arrangement.spacedBy(12.dp)){Box(Modifier.size(76.dp)){PokemonArt(p.id,Modifier.fillMaxSize(),p.name);if(build.itemId!=null)ItemArt(build.itemId,null,Modifier.align(Alignment.BottomEnd).size(28.dp))};Column(Modifier.weight(1f)){LText("${build.nature} · ${build.sps.sum()}/66 SP",fontSize=14.sp,fontWeight=FontWeight.SemiBold);LText(build.ability?.replace('-',' ')?:"Habilidade padrão da espécie",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant);LText(subtitle,fontSize=13.sp,color=MaterialTheme.colorScheme.primary,modifier=Modifier.padding(top=6.dp))}}
 }
 
 @Composable private fun ConditionsEditor(c:BattleConditions,onChange:(BattleConditions)->Unit){
@@ -156,13 +167,17 @@ private val conditionsSaver=listSaver<BattleConditions,Any>(
         ChoiceField("Terreno",mapOf("" to "Sem terreno","Electric" to "Elétrico","Grassy" to "Grama","Misty" to "Névoa","Psychic" to "Psíquico").getValue(c.terrain),listOf("" to "Sem terreno","Electric" to "Elétrico","Grassy" to "Grama","Misty" to "Névoa","Psychic" to "Psíquico")){onChange(c.copy(terrain=it))}
         for(side in 0..1){
             val hp=if(side==0)c.attackerHP else c.defenderHP;val status=if(side==0)c.attackerStatus else c.defenderStatus
-            Text(if(side==0)"Atacante" else "Defensor",fontWeight=FontWeight.SemiBold)
-            OutlinedTextField(hp.toString(),{raw->if(raw.isBlank()||raw.all{it.isDigit()}){val value=(raw.toIntOrNull()?:1).coerceIn(1,100);onChange(if(side==0)c.copy(attackerHP=value) else c.copy(defenderHP=value))}},label={Text("HP atual (%)")},singleLine=true,keyboardOptions=KeyboardOptions(keyboardType=KeyboardType.Number),modifier=Modifier.fillMaxWidth())
+            LText(if(side==0)"Atacante" else "Defensor",fontWeight=FontWeight.SemiBold)
+            OutlinedTextField(hp.toString(),{raw->if(raw.isBlank()||raw.all{it.isDigit()}){val value=(raw.toIntOrNull()?:1).coerceIn(1,100);onChange(if(side==0)c.copy(attackerHP=value) else c.copy(defenderHP=value))}},label={LText("HP atual (%)")},singleLine=true,keyboardOptions=KeyboardOptions(keyboardType=KeyboardType.Number),modifier=Modifier.fillMaxWidth())
             val statuses=listOf("" to "Sem condição","brn" to "Queimadura","par" to "Paralisia","psn" to "Veneno","tox" to "Veneno tóxico","slp" to "Sono","frz" to "Congelamento")
             ChoiceField("Condição",statuses.first{it.first==status}.second,statuses){onChange(if(side==0)c.copy(attackerStatus=it) else c.copy(defenderStatus=it))}
             val boosts=if(side==0)c.attackerBoosts else c.defenderBoosts
-            Text("Estágios em batalha (−6 a +6)",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
-            for(row in 0..1)Row(horizontalArrangement=Arrangement.spacedBy(9.dp)){for(col in 0..2){val i=row*3+col;if(i==0)Spacer(Modifier.weight(1f)) else ChoiceFieldSmall(statLabels[i],boosts[i],Modifier.weight(1f)){value->val next=boosts.toMutableList().apply{set(i,value)};onChange(if(side==0)c.copy(attackerBoosts=next) else c.copy(defenderBoosts=next))}}}
+            LText("Estágios em batalha (−6 a +6)",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
+            val columns=if(androidx.compose.ui.platform.LocalDensity.current.fontScale>1.25f)2 else 3
+            for(indices in (1..5).toList().chunked(columns))Row(horizontalArrangement=Arrangement.spacedBy(8.dp)){
+                indices.forEach{i->ChoiceFieldSmall(statLabels[i],boosts[i],Modifier.weight(1f)){value->val next=boosts.toMutableList().apply{set(i,value)};onChange(if(side==0)c.copy(attackerBoosts=next) else c.copy(defenderBoosts=next))}}
+                repeat(columns-indices.size){Spacer(Modifier.weight(1f))}
+            }
             val on=if(side==0)c.attackerAbilityOn else c.defenderAbilityOn
             ToggleLine("Habilidade condicional ativada",on){onChange(if(side==0)c.copy(attackerAbilityOn=it) else c.copy(defenderAbilityOn=it))}
         }
@@ -176,27 +191,28 @@ private val conditionsSaver=listSaver<BattleConditions,Any>(
     }
 }
 @Composable private fun ChoiceFieldSmall(label:String,value:Int,modifier:Modifier,onChange:(Int)->Unit){Column(modifier){ChoiceField(label,if(value>0)"+$value" else value.toString(),(-6..6).map{it.toString() to if(it>0)"+$it" else it.toString()}){onChange(it.toInt())}}}
-@Composable private fun ToggleLine(label:String,checked:Boolean,onChange:(Boolean)->Unit){Row(Modifier.fillMaxWidth(),verticalAlignment=Alignment.CenterVertically){Text(label,Modifier.weight(1f),fontSize=13.sp);Switch(checked,onChange)}}
+@Composable private fun ToggleLine(label:String,checked:Boolean,onChange:(Boolean)->Unit){Row(Modifier.fillMaxWidth(),verticalAlignment=Alignment.CenterVertically){LText(label,Modifier.weight(1f),fontSize=13.sp);Switch(checked,onChange)}}
 
-@Composable private fun DamageResult(r:JSONObject){
-    Surface(shape=RoundedCornerShape(26.dp),color=MaterialTheme.colorScheme.primary.copy(alpha=.12f)){
+@Composable private fun DamageResult(r:JSONObject,modifier:Modifier=Modifier){
+    val ui=LocalUiStrings.current
+    Surface(modifier=modifier,shape=RoundedCornerShape(26.dp),color=MaterialTheme.colorScheme.primary.copy(alpha=.12f)){
         Column(Modifier.padding(22.dp),verticalArrangement=Arrangement.spacedBy(13.dp)){
-            Text("${r.optString("attackerName")} → ${r.optString("defenderName")} · ${r.optString("gameType")}",fontSize=13.sp,fontWeight=FontWeight.SemiBold)
-            Text("DANO ESTIMADO",fontSize=13.sp,letterSpacing=1.5.sp,color=MaterialTheme.colorScheme.primary)
-            Text("${r.getInt("min")}–${r.getInt("max")} HP",fontSize=30.sp,fontWeight=FontWeight.Bold)
-            Text("${r.getDouble("percentMin")}%–${r.getDouble("percentMax")}% do HP máximo",fontSize=15.sp)
+            LText("${r.optString("attackerName")} → ${r.optString("defenderName")} · ${r.optString("gameType")}",fontSize=13.sp,fontWeight=FontWeight.SemiBold)
+            LText("DANO ESTIMADO",fontSize=13.sp,letterSpacing=1.5.sp,color=MaterialTheme.colorScheme.primary)
+            LText("${r.getInt("min")}–${r.getInt("max")} HP",fontSize=30.sp,fontWeight=FontWeight.Bold)
+            LText("${r.getDouble("percentMin")}%–${r.getDouble("percentMax")}% do HP máximo",fontSize=15.sp)
             LinearProgressIndicator(progress={(r.getDouble("percentMax")/100).coerceIn(0.0,1.0).toFloat()},modifier=Modifier.fillMaxWidth().height(8.dp))
-            val ko=r.optString("ko");Text(if(ko.startsWith("guaranteed "))ko.removePrefix("guaranteed ")+" garantido" else ko,fontSize=14.sp,fontWeight=FontWeight.SemiBold)
-            val hp=r.getInt("currentHP");Text("HP restante: ${(hp-r.getInt("max")).coerceAtLeast(0)}–${(hp-r.getInt("min")).coerceAtLeast(0)} / ${r.getInt("hp")}",fontSize=13.sp)
+            val ko=r.optString("ko");LText(if(ko.startsWith("guaranteed "))ko.removePrefix("guaranteed ")+" garantido" else ko,fontSize=14.sp,fontWeight=FontWeight.SemiBold)
+            val hp=r.getInt("currentHP");LText("HP restante: ${(hp-r.getInt("max")).coerceAtLeast(0)}–${(hp-r.getInt("min")).coerceAtLeast(0)} / ${r.getInt("hp")}",fontSize=13.sp)
             for((key,title) in listOf("attackerStats" to "Atributos do atacante","defenderStats" to "Atributos do defensor")){
-                Text(title,fontSize=13.sp,fontWeight=FontWeight.SemiBold)
+                LText(title,fontSize=13.sp,fontWeight=FontWeight.SemiBold)
                 val stats=r.getJSONObject(key)
-                FlowRow(horizontalArrangement=Arrangement.spacedBy(13.dp),verticalArrangement=Arrangement.spacedBy(6.dp)){StatKeys.forEachIndexed{i,k->Text("${statLabels[i]} ${stats.getInt(k)}",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)}}
+                FlowRow(horizontalArrangement=Arrangement.spacedBy(13.dp),verticalArrangement=Arrangement.spacedBy(6.dp)){StatKeys.forEachIndexed{i,k->LText("${ui.text(statLabels[i])} ${stats.getInt(k)}",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)}}
             }
-            Text("Habilidades: ${r.optString("attackerAbility")} × ${r.optString("defenderAbility")}",fontSize=13.sp)
+            LText("Habilidades: ${r.optString("attackerAbility")} × ${r.optString("defenderAbility")}",fontSize=13.sp)
             val rolls=r.optJSONArray("rolls")
-            if(rolls!=null&&rolls.length()>0)Text("Variações de dano: "+(0 until rolls.length()).joinToString(" · "){rolls.getInt(it).toString()},fontSize=13.sp,lineHeight=17.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
-            Text(r.optString("description"),fontSize=13.sp,lineHeight=17.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
+            if(rolls!=null&&rolls.length()>0)LText("Variações de dano: "+(0 until rolls.length()).joinToString(" · "){rolls.getInt(it).toString()},fontSize=13.sp,lineHeight=17.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
+            LText(r.optString("description"),fontSize=13.sp,lineHeight=17.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
         }
     }
 }
@@ -209,16 +225,16 @@ private val conditionsSaver=listSaver<BattleConditions,Any>(
     var moves by remember(p?.id){mutableStateOf<List<Move>>(emptyList())}
     var items by remember(p?.id){mutableStateOf<List<HeldItem>>(emptyList())}
     LaunchedEffect(p){if(p!=null){moves=repo.movesFor(p);items=repo.heldItemsFor(p)}}
-    LazyColumn(Modifier.fillMaxSize(),contentPadding=PaddingValues(top=8.dp,bottom=48.dp),verticalArrangement=Arrangement.spacedBy(18.dp)){
+    LazyColumn(Modifier.prismaViewport(top=0.dp,bottom=0.dp).imePadding(),contentPadding=PaddingValues(top=8.dp,bottom=48.dp),verticalArrangement=Arrangement.spacedBy(18.dp)){
         item{Column(Modifier.padding(horizontal=24.dp),verticalArrangement=Arrangement.spacedBy(13.dp)){
-            IconButton(onClick=onBack){Icon(Icons.AutoMirrored.Rounded.ArrowBack,"Voltar")}
-            Text(if(existing==null)"Novo alvo\nde teste." else "Editar alvo\nde teste.",fontSize=30.sp,lineHeight=34.sp,fontWeight=FontWeight.Bold)
-            Text("Configure um defensor sem ocupar vaga na equipe. Ele fica salvo no aparelho e pode ser reutilizado nas simulações.",fontSize=13.sp,lineHeight=19.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
-            OutlinedTextField(label,{label=it.take(50)},label={Text("Nome do alvo")},placeholder={Text("Ex.: Venusaur defensivo")},singleLine=true,modifier=Modifier.fillMaxWidth(),shape=RoundedCornerShape(18.dp))
-            if(p==null){OutlinedTextField(query,{query=it},placeholder={Text("Buscar Pokémon Champions")},singleLine=true,modifier=Modifier.fillMaxWidth(),shape=RoundedCornerShape(18.dp))}
-            else{Row(verticalAlignment=Alignment.CenterVertically){PokemonArt(p.id,Modifier.size(80.dp),p.name);Text(p.name,Modifier.weight(1f),fontSize=18.sp,fontWeight=FontWeight.SemiBold);TextButton(onClick={pokemonId=null}){Text("Trocar")}}}
+            IconButton(onClick=onBack){LIcon(Icons.AutoMirrored.Rounded.ArrowBack,"Voltar")}
+            LText(if(existing==null)"Novo alvo\nde teste." else "Editar alvo\nde teste.",fontSize=30.sp,lineHeight=34.sp,fontWeight=FontWeight.Bold)
+            LText("Configure um defensor sem ocupar vaga na equipe. Ele fica salvo no aparelho e pode ser reutilizado nas simulações.",fontSize=13.sp,lineHeight=19.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
+            OutlinedTextField(label,{label=it.take(50)},label={LText("Nome do alvo")},placeholder={LText("Ex.: Venusaur defensivo")},singleLine=true,modifier=Modifier.fillMaxWidth(),shape=RoundedCornerShape(18.dp))
+            if(p==null){OutlinedTextField(query,{query=it},placeholder={LText("Buscar Pokémon Champions")},singleLine=true,modifier=Modifier.fillMaxWidth(),shape=RoundedCornerShape(18.dp))}
+            else{Row(verticalAlignment=Alignment.CenterVertically){PokemonArt(p.id,Modifier.size(80.dp),p.name);LText(p.name,Modifier.weight(1f),fontSize=18.sp,fontWeight=FontWeight.SemiBold);TextButton(onClick={pokemonId=null}){LText("Trocar")}}}
         }}
-        if(p==null){items(catalog.filter{it.champions&&it.matchesQuery(query)}.sortedBy{it.baseId},key={it.id}){pokemon->Surface(onClick={pokemonId=pokemon.id;if(label.isBlank())label="${pokemon.name} · alvo"},shape=RoundedCornerShape(20.dp),color=MaterialTheme.colorScheme.surface,modifier=Modifier.padding(horizontal=24.dp)){Row(Modifier.fillMaxWidth().padding(12.dp),verticalAlignment=Alignment.CenterVertically){PokemonArt(pokemon.id,Modifier.size(56.dp),pokemon.name);Text(pokemon.name,Modifier.padding(start=14.dp),fontSize=15.sp)}}}}
+        if(p==null){items(catalog.filter{it.champions&&it.matchesQuery(query)}.sortedBy{it.baseId},key={it.id}){pokemon->Surface(onClick={pokemonId=pokemon.id;if(label.isBlank())label="${pokemon.name} · alvo"},shape=RoundedCornerShape(20.dp),color=MaterialTheme.colorScheme.surface,modifier=Modifier.padding(horizontal=24.dp)){Row(Modifier.fillMaxWidth().padding(12.dp),verticalAlignment=Alignment.CenterVertically){PokemonArt(pokemon.id,Modifier.size(56.dp),pokemon.name);LText(pokemon.name,Modifier.padding(start=14.dp),fontSize=15.sp)}}}}
         else item(key="dummy-build/${p.id}"){BuildEditor(p,existing?.takeIf{it.pokemonId==p.id}?.build?:Build(),true,moves,items,{},onSave={build->onSave(TrainingDummy(existing?.id?:UUID.randomUUID().toString(),label.trim().ifBlank{"${p.name} · alvo"},p.id,build))})}
     }
 }

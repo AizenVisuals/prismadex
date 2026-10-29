@@ -1,0 +1,378 @@
+{
+  "commit": "2bf639e5572812a67d2b94903fdcb9d095f5aeb2",
+  "license": "BSD-3-Clause; assets/licenses/pokeapi-BSD-3-Clause.txt",
+  "sources": [
+    {
+      "name": "move_changelog.csv",
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/2bf639e5572812a67d2b94903fdcb9d095f5aeb2/data/v2/csv/move_changelog.csv",
+      "sha256": "86c1511f6a0e29dcc5a885c5b8f125ffd502afbec9f69c7f2b85a3e0e8b001f8"
+    },
+    {
+      "name": "version_groups.csv",
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/2bf639e5572812a67d2b94903fdcb9d095f5aeb2/data/v2/csv/version_groups.csv",
+      "sha256": "28da8d89d8eb4966941f81a9e62b3990510ed4d76dd774158246551a8e7707a7"
+    },
+    {
+      "name": "moves.csv",
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/2bf639e5572812a67d2b94903fdcb9d095f5aeb2/data/v2/csv/moves.csv",
+      "sha256": "8aafd37bf78f19471495c05b201545180f50f0a08a2a2a844d69f9837dd39ac9"
+    },
+    {
+      "name": "types.csv",
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/2bf639e5572812a67d2b94903fdcb9d095f5aeb2/data/v2/csv/types.csv",
+      "sha256": "37f039c8d722f47d51ba1c5c5ecf9b7007235b1a9a1af2827645c777b70307c8"
+    },
+    {
+      "name": "showdown-gen1-moves.ts",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown/1242c1e2d9763ba5b85d33f13aecb89bae19ae3d/data/mods/gen1/moves.ts",
+      "sha256": "c95e355731cc2790cff2489fb5cc7c0e59c8e8af596705fc675fdf54cb6b5a07",
+      "license": "MIT"
+    },
+    {
+      "name": "showdown-gen2-moves.ts",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown/1242c1e2d9763ba5b85d33f13aecb89bae19ae3d/data/mods/gen2/moves.ts",
+      "sha256": "4ad44a12bc0414032ba7f5bdd9d61206701ec126c16622c11e302484dcf00fba",
+      "license": "MIT"
+    },
+    {
+      "name": "showdown-gen3-moves.ts",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown/1242c1e2d9763ba5b85d33f13aecb89bae19ae3d/data/mods/gen3/moves.ts",
+      "sha256": "14a46067caf648850c85b2415ef9aa769d35b1d541aca711ef4627b331b182a8",
+      "license": "MIT"
+    },
+    {
+      "name": "showdown-gen4-moves.ts",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown/1242c1e2d9763ba5b85d33f13aecb89bae19ae3d/data/mods/gen4/moves.ts",
+      "sha256": "cf559c9dba99baecdb884340ae8ec5f3018d6b6798d931ce3975d4f719d6a738",
+      "license": "MIT"
+    },
+    {
+      "name": "showdown-gen5-moves.ts",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown/1242c1e2d9763ba5b85d33f13aecb89bae19ae3d/data/mods/gen5/moves.ts",
+      "sha256": "b7f2146ad3b81a5f17a05fdb87bc3fb9b19e891ac2a44ec8f7b4ca94252e8010",
+      "license": "MIT"
+    },
+    {
+      "name": "showdown-gen6-moves.ts",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown/1242c1e2d9763ba5b85d33f13aecb89bae19ae3d/data/mods/gen6/moves.ts",
+      "sha256": "2253b9dd1ed8cde982cb5e4c5057a75f6fdebba2053af27c7fe61769979b8adb",
+      "license": "MIT"
+    },
+    {
+      "name": "showdown-gen7-moves.ts",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown/1242c1e2d9763ba5b85d33f13aecb89bae19ae3d/data/mods/gen7/moves.ts",
+      "sha256": "d043fc23b4a812ba8734d3520c8f4d7ee629b42b24d005382a447b050db9f8bc",
+      "license": "MIT"
+    },
+    {
+      "name": "showdown-gen8-moves.ts",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown/1242c1e2d9763ba5b85d33f13aecb89bae19ae3d/data/mods/gen8/moves.ts",
+      "sha256": "d75a2e25ce019c8619a71bd271ebb3521d8ed54b33540a0961f67320f5231f2e",
+      "license": "MIT"
+    }
+  ],
+  "games": {
+    "1": 403,
+    "2": 403,
+    "3": 393,
+    "4": 393,
+    "5": 387,
+    "6": 387,
+    "7": 387,
+    "8": 202,
+    "9": 201,
+    "10": 201,
+    "11": 166,
+    "12": 387,
+    "13": 387,
+    "14": 166,
+    "15": 90,
+    "16": 90,
+    "17": 100,
+    "18": 100,
+    "19": 104,
+    "20": 110,
+    "21": 110,
+    "22": 110,
+    "23": 122,
+    "24": 122
+  },
+  "exactNameMappedMoves": 883,
+  "unmatchedSourceMoves": [
+    {
+      "sourceMoveId": 622,
+      "identifier": "breakneck-blitz--physical",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 623,
+      "identifier": "breakneck-blitz--special",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 624,
+      "identifier": "all-out-pummeling--physical",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 625,
+      "identifier": "all-out-pummeling--special",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 626,
+      "identifier": "supersonic-skystrike--physical",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 627,
+      "identifier": "supersonic-skystrike--special",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 628,
+      "identifier": "acid-downpour--physical",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 629,
+      "identifier": "acid-downpour--special",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 630,
+      "identifier": "tectonic-rage--physical",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 631,
+      "identifier": "tectonic-rage--special",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 632,
+      "identifier": "continental-crush--physical",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 633,
+      "identifier": "continental-crush--special",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 634,
+      "identifier": "savage-spin-out--physical",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 635,
+      "identifier": "savage-spin-out--special",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 636,
+      "identifier": "never-ending-nightmare--physical",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 637,
+      "identifier": "never-ending-nightmare--special",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 638,
+      "identifier": "corkscrew-crash--physical",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 639,
+      "identifier": "corkscrew-crash--special",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 640,
+      "identifier": "inferno-overdrive--physical",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 641,
+      "identifier": "inferno-overdrive--special",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 642,
+      "identifier": "hydro-vortex--physical",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 643,
+      "identifier": "hydro-vortex--special",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 644,
+      "identifier": "bloom-doom--physical",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 645,
+      "identifier": "bloom-doom--special",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 646,
+      "identifier": "gigavolt-havoc--physical",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 647,
+      "identifier": "gigavolt-havoc--special",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 648,
+      "identifier": "shattered-psyche--physical",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 649,
+      "identifier": "shattered-psyche--special",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 650,
+      "identifier": "subzero-slammer--physical",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 651,
+      "identifier": "subzero-slammer--special",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 652,
+      "identifier": "devastating-drake--physical",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 653,
+      "identifier": "devastating-drake--special",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 654,
+      "identifier": "black-hole-eclipse--physical",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 655,
+      "identifier": "black-hole-eclipse--special",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 656,
+      "identifier": "twinkle-tackle--physical",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 657,
+      "identifier": "twinkle-tackle--special",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 10001,
+      "identifier": "shadow-rush",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 10002,
+      "identifier": "shadow-blast",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 10003,
+      "identifier": "shadow-blitz",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 10004,
+      "identifier": "shadow-bolt",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 10005,
+      "identifier": "shadow-break",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 10006,
+      "identifier": "shadow-chill",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 10007,
+      "identifier": "shadow-end",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 10008,
+      "identifier": "shadow-fire",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 10009,
+      "identifier": "shadow-rave",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 10010,
+      "identifier": "shadow-storm",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 10011,
+      "identifier": "shadow-wave",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 10012,
+      "identifier": "shadow-down",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 10013,
+      "identifier": "shadow-half",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 10014,
+      "identifier": "shadow-hold",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 10015,
+      "identifier": "shadow-mist",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 10016,
+      "identifier": "shadow-panic",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 10017,
+      "identifier": "shadow-shed",
+      "reason": "no exact name match"
+    },
+    {
+      "sourceMoveId": 10018,
+      "identifier": "shadow-sky",
+      "reason": "no exact name match"
+    }
+  ],
+  "limitations": [
+    "Chronological changelog; exceptional title-specific divergences not guaranteed exhaustive",
+    "Historical effects, targets and flags remain unvalidated; do not label complete historical battle data",
+    "Learnset filtering is separate; this importer does not grant moves to a species or game"
+  ]
+}

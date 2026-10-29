@@ -46,7 +46,7 @@ class TeamLibraryTest{
         assertTrue(rows.getValue(150).availableIn(1));assertFalse(rows.getValue(1000).availableIn(1))
         assertTrue(rows.getValue(10033).availableIn(25))
         assertTrue(repo.movesFor(rows.getValue(10033),25).isNotEmpty())
-        assertEquals(1306,rows.size);assertEquals(354,rows.values.count{it.champions})
+        assertEquals(1306+AdditionalFormsRepository(context).catalogEntries().size,rows.size);assertEquals(354,rows.values.count{it.champions})
         val featured=rows.values.filter{it.id==it.baseId}
         assertEquals(1025,featured.size);assertTrue(featured.any{it.id==150});assertTrue(featured.any{it.id==249});assertTrue(featured.any{it.id==384});assertTrue(featured.any{it.id==493})
     }

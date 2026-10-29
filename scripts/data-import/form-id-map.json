@@ -1,0 +1,8120 @@
+{
+  "1": {
+    "pokeapiId": 1,
+    "canonical": "bulbasaur",
+    "pokeapiFormId": null,
+    "speciesId": 1
+  },
+  "2": {
+    "pokeapiId": 2,
+    "canonical": "ivysaur",
+    "pokeapiFormId": null,
+    "speciesId": 2
+  },
+  "3": {
+    "pokeapiId": 3,
+    "canonical": "venusaur",
+    "pokeapiFormId": null,
+    "speciesId": 3
+  },
+  "4": {
+    "pokeapiId": 4,
+    "canonical": "charmander",
+    "pokeapiFormId": null,
+    "speciesId": 4
+  },
+  "5": {
+    "pokeapiId": 5,
+    "canonical": "charmeleon",
+    "pokeapiFormId": null,
+    "speciesId": 5
+  },
+  "6": {
+    "pokeapiId": 6,
+    "canonical": "charizard",
+    "pokeapiFormId": null,
+    "speciesId": 6
+  },
+  "7": {
+    "pokeapiId": 7,
+    "canonical": "squirtle",
+    "pokeapiFormId": null,
+    "speciesId": 7
+  },
+  "8": {
+    "pokeapiId": 8,
+    "canonical": "wartortle",
+    "pokeapiFormId": null,
+    "speciesId": 8
+  },
+  "9": {
+    "pokeapiId": 9,
+    "canonical": "blastoise",
+    "pokeapiFormId": null,
+    "speciesId": 9
+  },
+  "10": {
+    "pokeapiId": 10,
+    "canonical": "caterpie",
+    "pokeapiFormId": null,
+    "speciesId": 10
+  },
+  "11": {
+    "pokeapiId": 11,
+    "canonical": "metapod",
+    "pokeapiFormId": null,
+    "speciesId": 11
+  },
+  "12": {
+    "pokeapiId": 12,
+    "canonical": "butterfree",
+    "pokeapiFormId": null,
+    "speciesId": 12
+  },
+  "13": {
+    "pokeapiId": 13,
+    "canonical": "weedle",
+    "pokeapiFormId": null,
+    "speciesId": 13
+  },
+  "14": {
+    "pokeapiId": 14,
+    "canonical": "kakuna",
+    "pokeapiFormId": null,
+    "speciesId": 14
+  },
+  "15": {
+    "pokeapiId": 15,
+    "canonical": "beedrill",
+    "pokeapiFormId": null,
+    "speciesId": 15
+  },
+  "16": {
+    "pokeapiId": 16,
+    "canonical": "pidgey",
+    "pokeapiFormId": null,
+    "speciesId": 16
+  },
+  "17": {
+    "pokeapiId": 17,
+    "canonical": "pidgeotto",
+    "pokeapiFormId": null,
+    "speciesId": 17
+  },
+  "18": {
+    "pokeapiId": 18,
+    "canonical": "pidgeot",
+    "pokeapiFormId": null,
+    "speciesId": 18
+  },
+  "19": {
+    "pokeapiId": 19,
+    "canonical": "rattata",
+    "pokeapiFormId": null,
+    "speciesId": 19
+  },
+  "20": {
+    "pokeapiId": 20,
+    "canonical": "raticate",
+    "pokeapiFormId": null,
+    "speciesId": 20
+  },
+  "21": {
+    "pokeapiId": 21,
+    "canonical": "spearow",
+    "pokeapiFormId": null,
+    "speciesId": 21
+  },
+  "22": {
+    "pokeapiId": 22,
+    "canonical": "fearow",
+    "pokeapiFormId": null,
+    "speciesId": 22
+  },
+  "23": {
+    "pokeapiId": 23,
+    "canonical": "ekans",
+    "pokeapiFormId": null,
+    "speciesId": 23
+  },
+  "24": {
+    "pokeapiId": 24,
+    "canonical": "arbok",
+    "pokeapiFormId": null,
+    "speciesId": 24
+  },
+  "25": {
+    "pokeapiId": 25,
+    "canonical": "pikachu",
+    "pokeapiFormId": null,
+    "speciesId": 25
+  },
+  "26": {
+    "pokeapiId": 26,
+    "canonical": "raichu",
+    "pokeapiFormId": null,
+    "speciesId": 26
+  },
+  "27": {
+    "pokeapiId": 27,
+    "canonical": "sandshrew",
+    "pokeapiFormId": null,
+    "speciesId": 27
+  },
+  "28": {
+    "pokeapiId": 28,
+    "canonical": "sandslash",
+    "pokeapiFormId": null,
+    "speciesId": 28
+  },
+  "29": {
+    "pokeapiId": 29,
+    "canonical": "nidoran-f",
+    "pokeapiFormId": null,
+    "speciesId": 29
+  },
+  "30": {
+    "pokeapiId": 30,
+    "canonical": "nidorina",
+    "pokeapiFormId": null,
+    "speciesId": 30
+  },
+  "31": {
+    "pokeapiId": 31,
+    "canonical": "nidoqueen",
+    "pokeapiFormId": null,
+    "speciesId": 31
+  },
+  "32": {
+    "pokeapiId": 32,
+    "canonical": "nidoran-m",
+    "pokeapiFormId": null,
+    "speciesId": 32
+  },
+  "33": {
+    "pokeapiId": 33,
+    "canonical": "nidorino",
+    "pokeapiFormId": null,
+    "speciesId": 33
+  },
+  "34": {
+    "pokeapiId": 34,
+    "canonical": "nidoking",
+    "pokeapiFormId": null,
+    "speciesId": 34
+  },
+  "35": {
+    "pokeapiId": 35,
+    "canonical": "clefairy",
+    "pokeapiFormId": null,
+    "speciesId": 35
+  },
+  "36": {
+    "pokeapiId": 36,
+    "canonical": "clefable",
+    "pokeapiFormId": null,
+    "speciesId": 36
+  },
+  "37": {
+    "pokeapiId": 37,
+    "canonical": "vulpix",
+    "pokeapiFormId": null,
+    "speciesId": 37
+  },
+  "38": {
+    "pokeapiId": 38,
+    "canonical": "ninetales",
+    "pokeapiFormId": null,
+    "speciesId": 38
+  },
+  "39": {
+    "pokeapiId": 39,
+    "canonical": "jigglypuff",
+    "pokeapiFormId": null,
+    "speciesId": 39
+  },
+  "40": {
+    "pokeapiId": 40,
+    "canonical": "wigglytuff",
+    "pokeapiFormId": null,
+    "speciesId": 40
+  },
+  "41": {
+    "pokeapiId": 41,
+    "canonical": "zubat",
+    "pokeapiFormId": null,
+    "speciesId": 41
+  },
+  "42": {
+    "pokeapiId": 42,
+    "canonical": "golbat",
+    "pokeapiFormId": null,
+    "speciesId": 42
+  },
+  "43": {
+    "pokeapiId": 43,
+    "canonical": "oddish",
+    "pokeapiFormId": null,
+    "speciesId": 43
+  },
+  "44": {
+    "pokeapiId": 44,
+    "canonical": "gloom",
+    "pokeapiFormId": null,
+    "speciesId": 44
+  },
+  "45": {
+    "pokeapiId": 45,
+    "canonical": "vileplume",
+    "pokeapiFormId": null,
+    "speciesId": 45
+  },
+  "46": {
+    "pokeapiId": 46,
+    "canonical": "paras",
+    "pokeapiFormId": null,
+    "speciesId": 46
+  },
+  "47": {
+    "pokeapiId": 47,
+    "canonical": "parasect",
+    "pokeapiFormId": null,
+    "speciesId": 47
+  },
+  "48": {
+    "pokeapiId": 48,
+    "canonical": "venonat",
+    "pokeapiFormId": null,
+    "speciesId": 48
+  },
+  "49": {
+    "pokeapiId": 49,
+    "canonical": "venomoth",
+    "pokeapiFormId": null,
+    "speciesId": 49
+  },
+  "50": {
+    "pokeapiId": 50,
+    "canonical": "diglett",
+    "pokeapiFormId": null,
+    "speciesId": 50
+  },
+  "51": {
+    "pokeapiId": 51,
+    "canonical": "dugtrio",
+    "pokeapiFormId": null,
+    "speciesId": 51
+  },
+  "52": {
+    "pokeapiId": 52,
+    "canonical": "meowth",
+    "pokeapiFormId": null,
+    "speciesId": 52
+  },
+  "53": {
+    "pokeapiId": 53,
+    "canonical": "persian",
+    "pokeapiFormId": null,
+    "speciesId": 53
+  },
+  "54": {
+    "pokeapiId": 54,
+    "canonical": "psyduck",
+    "pokeapiFormId": null,
+    "speciesId": 54
+  },
+  "55": {
+    "pokeapiId": 55,
+    "canonical": "golduck",
+    "pokeapiFormId": null,
+    "speciesId": 55
+  },
+  "56": {
+    "pokeapiId": 56,
+    "canonical": "mankey",
+    "pokeapiFormId": null,
+    "speciesId": 56
+  },
+  "57": {
+    "pokeapiId": 57,
+    "canonical": "primeape",
+    "pokeapiFormId": null,
+    "speciesId": 57
+  },
+  "58": {
+    "pokeapiId": 58,
+    "canonical": "growlithe",
+    "pokeapiFormId": null,
+    "speciesId": 58
+  },
+  "59": {
+    "pokeapiId": 59,
+    "canonical": "arcanine",
+    "pokeapiFormId": null,
+    "speciesId": 59
+  },
+  "60": {
+    "pokeapiId": 60,
+    "canonical": "poliwag",
+    "pokeapiFormId": null,
+    "speciesId": 60
+  },
+  "61": {
+    "pokeapiId": 61,
+    "canonical": "poliwhirl",
+    "pokeapiFormId": null,
+    "speciesId": 61
+  },
+  "62": {
+    "pokeapiId": 62,
+    "canonical": "poliwrath",
+    "pokeapiFormId": null,
+    "speciesId": 62
+  },
+  "63": {
+    "pokeapiId": 63,
+    "canonical": "abra",
+    "pokeapiFormId": null,
+    "speciesId": 63
+  },
+  "64": {
+    "pokeapiId": 64,
+    "canonical": "kadabra",
+    "pokeapiFormId": null,
+    "speciesId": 64
+  },
+  "65": {
+    "pokeapiId": 65,
+    "canonical": "alakazam",
+    "pokeapiFormId": null,
+    "speciesId": 65
+  },
+  "66": {
+    "pokeapiId": 66,
+    "canonical": "machop",
+    "pokeapiFormId": null,
+    "speciesId": 66
+  },
+  "67": {
+    "pokeapiId": 67,
+    "canonical": "machoke",
+    "pokeapiFormId": null,
+    "speciesId": 67
+  },
+  "68": {
+    "pokeapiId": 68,
+    "canonical": "machamp",
+    "pokeapiFormId": null,
+    "speciesId": 68
+  },
+  "69": {
+    "pokeapiId": 69,
+    "canonical": "bellsprout",
+    "pokeapiFormId": null,
+    "speciesId": 69
+  },
+  "70": {
+    "pokeapiId": 70,
+    "canonical": "weepinbell",
+    "pokeapiFormId": null,
+    "speciesId": 70
+  },
+  "71": {
+    "pokeapiId": 71,
+    "canonical": "victreebel",
+    "pokeapiFormId": null,
+    "speciesId": 71
+  },
+  "72": {
+    "pokeapiId": 72,
+    "canonical": "tentacool",
+    "pokeapiFormId": null,
+    "speciesId": 72
+  },
+  "73": {
+    "pokeapiId": 73,
+    "canonical": "tentacruel",
+    "pokeapiFormId": null,
+    "speciesId": 73
+  },
+  "74": {
+    "pokeapiId": 74,
+    "canonical": "geodude",
+    "pokeapiFormId": null,
+    "speciesId": 74
+  },
+  "75": {
+    "pokeapiId": 75,
+    "canonical": "graveler",
+    "pokeapiFormId": null,
+    "speciesId": 75
+  },
+  "76": {
+    "pokeapiId": 76,
+    "canonical": "golem",
+    "pokeapiFormId": null,
+    "speciesId": 76
+  },
+  "77": {
+    "pokeapiId": 77,
+    "canonical": "ponyta",
+    "pokeapiFormId": null,
+    "speciesId": 77
+  },
+  "78": {
+    "pokeapiId": 78,
+    "canonical": "rapidash",
+    "pokeapiFormId": null,
+    "speciesId": 78
+  },
+  "79": {
+    "pokeapiId": 79,
+    "canonical": "slowpoke",
+    "pokeapiFormId": null,
+    "speciesId": 79
+  },
+  "80": {
+    "pokeapiId": 80,
+    "canonical": "slowbro",
+    "pokeapiFormId": null,
+    "speciesId": 80
+  },
+  "81": {
+    "pokeapiId": 81,
+    "canonical": "magnemite",
+    "pokeapiFormId": null,
+    "speciesId": 81
+  },
+  "82": {
+    "pokeapiId": 82,
+    "canonical": "magneton",
+    "pokeapiFormId": null,
+    "speciesId": 82
+  },
+  "83": {
+    "pokeapiId": 83,
+    "canonical": "farfetchd",
+    "pokeapiFormId": null,
+    "speciesId": 83
+  },
+  "84": {
+    "pokeapiId": 84,
+    "canonical": "doduo",
+    "pokeapiFormId": null,
+    "speciesId": 84
+  },
+  "85": {
+    "pokeapiId": 85,
+    "canonical": "dodrio",
+    "pokeapiFormId": null,
+    "speciesId": 85
+  },
+  "86": {
+    "pokeapiId": 86,
+    "canonical": "seel",
+    "pokeapiFormId": null,
+    "speciesId": 86
+  },
+  "87": {
+    "pokeapiId": 87,
+    "canonical": "dewgong",
+    "pokeapiFormId": null,
+    "speciesId": 87
+  },
+  "88": {
+    "pokeapiId": 88,
+    "canonical": "grimer",
+    "pokeapiFormId": null,
+    "speciesId": 88
+  },
+  "89": {
+    "pokeapiId": 89,
+    "canonical": "muk",
+    "pokeapiFormId": null,
+    "speciesId": 89
+  },
+  "90": {
+    "pokeapiId": 90,
+    "canonical": "shellder",
+    "pokeapiFormId": null,
+    "speciesId": 90
+  },
+  "91": {
+    "pokeapiId": 91,
+    "canonical": "cloyster",
+    "pokeapiFormId": null,
+    "speciesId": 91
+  },
+  "92": {
+    "pokeapiId": 92,
+    "canonical": "gastly",
+    "pokeapiFormId": null,
+    "speciesId": 92
+  },
+  "93": {
+    "pokeapiId": 93,
+    "canonical": "haunter",
+    "pokeapiFormId": null,
+    "speciesId": 93
+  },
+  "94": {
+    "pokeapiId": 94,
+    "canonical": "gengar",
+    "pokeapiFormId": null,
+    "speciesId": 94
+  },
+  "95": {
+    "pokeapiId": 95,
+    "canonical": "onix",
+    "pokeapiFormId": null,
+    "speciesId": 95
+  },
+  "96": {
+    "pokeapiId": 96,
+    "canonical": "drowzee",
+    "pokeapiFormId": null,
+    "speciesId": 96
+  },
+  "97": {
+    "pokeapiId": 97,
+    "canonical": "hypno",
+    "pokeapiFormId": null,
+    "speciesId": 97
+  },
+  "98": {
+    "pokeapiId": 98,
+    "canonical": "krabby",
+    "pokeapiFormId": null,
+    "speciesId": 98
+  },
+  "99": {
+    "pokeapiId": 99,
+    "canonical": "kingler",
+    "pokeapiFormId": null,
+    "speciesId": 99
+  },
+  "100": {
+    "pokeapiId": 100,
+    "canonical": "voltorb",
+    "pokeapiFormId": null,
+    "speciesId": 100
+  },
+  "101": {
+    "pokeapiId": 101,
+    "canonical": "electrode",
+    "pokeapiFormId": null,
+    "speciesId": 101
+  },
+  "102": {
+    "pokeapiId": 102,
+    "canonical": "exeggcute",
+    "pokeapiFormId": null,
+    "speciesId": 102
+  },
+  "103": {
+    "pokeapiId": 103,
+    "canonical": "exeggutor",
+    "pokeapiFormId": null,
+    "speciesId": 103
+  },
+  "104": {
+    "pokeapiId": 104,
+    "canonical": "cubone",
+    "pokeapiFormId": null,
+    "speciesId": 104
+  },
+  "105": {
+    "pokeapiId": 105,
+    "canonical": "marowak",
+    "pokeapiFormId": null,
+    "speciesId": 105
+  },
+  "106": {
+    "pokeapiId": 106,
+    "canonical": "hitmonlee",
+    "pokeapiFormId": null,
+    "speciesId": 106
+  },
+  "107": {
+    "pokeapiId": 107,
+    "canonical": "hitmonchan",
+    "pokeapiFormId": null,
+    "speciesId": 107
+  },
+  "108": {
+    "pokeapiId": 108,
+    "canonical": "lickitung",
+    "pokeapiFormId": null,
+    "speciesId": 108
+  },
+  "109": {
+    "pokeapiId": 109,
+    "canonical": "koffing",
+    "pokeapiFormId": null,
+    "speciesId": 109
+  },
+  "110": {
+    "pokeapiId": 110,
+    "canonical": "weezing",
+    "pokeapiFormId": null,
+    "speciesId": 110
+  },
+  "111": {
+    "pokeapiId": 111,
+    "canonical": "rhyhorn",
+    "pokeapiFormId": null,
+    "speciesId": 111
+  },
+  "112": {
+    "pokeapiId": 112,
+    "canonical": "rhydon",
+    "pokeapiFormId": null,
+    "speciesId": 112
+  },
+  "113": {
+    "pokeapiId": 113,
+    "canonical": "chansey",
+    "pokeapiFormId": null,
+    "speciesId": 113
+  },
+  "114": {
+    "pokeapiId": 114,
+    "canonical": "tangela",
+    "pokeapiFormId": null,
+    "speciesId": 114
+  },
+  "115": {
+    "pokeapiId": 115,
+    "canonical": "kangaskhan",
+    "pokeapiFormId": null,
+    "speciesId": 115
+  },
+  "116": {
+    "pokeapiId": 116,
+    "canonical": "horsea",
+    "pokeapiFormId": null,
+    "speciesId": 116
+  },
+  "117": {
+    "pokeapiId": 117,
+    "canonical": "seadra",
+    "pokeapiFormId": null,
+    "speciesId": 117
+  },
+  "118": {
+    "pokeapiId": 118,
+    "canonical": "goldeen",
+    "pokeapiFormId": null,
+    "speciesId": 118
+  },
+  "119": {
+    "pokeapiId": 119,
+    "canonical": "seaking",
+    "pokeapiFormId": null,
+    "speciesId": 119
+  },
+  "120": {
+    "pokeapiId": 120,
+    "canonical": "staryu",
+    "pokeapiFormId": null,
+    "speciesId": 120
+  },
+  "121": {
+    "pokeapiId": 121,
+    "canonical": "starmie",
+    "pokeapiFormId": null,
+    "speciesId": 121
+  },
+  "122": {
+    "pokeapiId": 122,
+    "canonical": "mr-mime",
+    "pokeapiFormId": null,
+    "speciesId": 122
+  },
+  "123": {
+    "pokeapiId": 123,
+    "canonical": "scyther",
+    "pokeapiFormId": null,
+    "speciesId": 123
+  },
+  "124": {
+    "pokeapiId": 124,
+    "canonical": "jynx",
+    "pokeapiFormId": null,
+    "speciesId": 124
+  },
+  "125": {
+    "pokeapiId": 125,
+    "canonical": "electabuzz",
+    "pokeapiFormId": null,
+    "speciesId": 125
+  },
+  "126": {
+    "pokeapiId": 126,
+    "canonical": "magmar",
+    "pokeapiFormId": null,
+    "speciesId": 126
+  },
+  "127": {
+    "pokeapiId": 127,
+    "canonical": "pinsir",
+    "pokeapiFormId": null,
+    "speciesId": 127
+  },
+  "128": {
+    "pokeapiId": 128,
+    "canonical": "tauros",
+    "pokeapiFormId": null,
+    "speciesId": 128
+  },
+  "129": {
+    "pokeapiId": 129,
+    "canonical": "magikarp",
+    "pokeapiFormId": null,
+    "speciesId": 129
+  },
+  "130": {
+    "pokeapiId": 130,
+    "canonical": "gyarados",
+    "pokeapiFormId": null,
+    "speciesId": 130
+  },
+  "131": {
+    "pokeapiId": 131,
+    "canonical": "lapras",
+    "pokeapiFormId": null,
+    "speciesId": 131
+  },
+  "132": {
+    "pokeapiId": 132,
+    "canonical": "ditto",
+    "pokeapiFormId": null,
+    "speciesId": 132
+  },
+  "133": {
+    "pokeapiId": 133,
+    "canonical": "eevee",
+    "pokeapiFormId": null,
+    "speciesId": 133
+  },
+  "134": {
+    "pokeapiId": 134,
+    "canonical": "vaporeon",
+    "pokeapiFormId": null,
+    "speciesId": 134
+  },
+  "135": {
+    "pokeapiId": 135,
+    "canonical": "jolteon",
+    "pokeapiFormId": null,
+    "speciesId": 135
+  },
+  "136": {
+    "pokeapiId": 136,
+    "canonical": "flareon",
+    "pokeapiFormId": null,
+    "speciesId": 136
+  },
+  "137": {
+    "pokeapiId": 137,
+    "canonical": "porygon",
+    "pokeapiFormId": null,
+    "speciesId": 137
+  },
+  "138": {
+    "pokeapiId": 138,
+    "canonical": "omanyte",
+    "pokeapiFormId": null,
+    "speciesId": 138
+  },
+  "139": {
+    "pokeapiId": 139,
+    "canonical": "omastar",
+    "pokeapiFormId": null,
+    "speciesId": 139
+  },
+  "140": {
+    "pokeapiId": 140,
+    "canonical": "kabuto",
+    "pokeapiFormId": null,
+    "speciesId": 140
+  },
+  "141": {
+    "pokeapiId": 141,
+    "canonical": "kabutops",
+    "pokeapiFormId": null,
+    "speciesId": 141
+  },
+  "142": {
+    "pokeapiId": 142,
+    "canonical": "aerodactyl",
+    "pokeapiFormId": null,
+    "speciesId": 142
+  },
+  "143": {
+    "pokeapiId": 143,
+    "canonical": "snorlax",
+    "pokeapiFormId": null,
+    "speciesId": 143
+  },
+  "144": {
+    "pokeapiId": 144,
+    "canonical": "articuno",
+    "pokeapiFormId": null,
+    "speciesId": 144
+  },
+  "145": {
+    "pokeapiId": 145,
+    "canonical": "zapdos",
+    "pokeapiFormId": null,
+    "speciesId": 145
+  },
+  "146": {
+    "pokeapiId": 146,
+    "canonical": "moltres",
+    "pokeapiFormId": null,
+    "speciesId": 146
+  },
+  "147": {
+    "pokeapiId": 147,
+    "canonical": "dratini",
+    "pokeapiFormId": null,
+    "speciesId": 147
+  },
+  "148": {
+    "pokeapiId": 148,
+    "canonical": "dragonair",
+    "pokeapiFormId": null,
+    "speciesId": 148
+  },
+  "149": {
+    "pokeapiId": 149,
+    "canonical": "dragonite",
+    "pokeapiFormId": null,
+    "speciesId": 149
+  },
+  "150": {
+    "pokeapiId": 150,
+    "canonical": "mewtwo",
+    "pokeapiFormId": null,
+    "speciesId": 150
+  },
+  "151": {
+    "pokeapiId": 151,
+    "canonical": "mew",
+    "pokeapiFormId": null,
+    "speciesId": 151
+  },
+  "152": {
+    "pokeapiId": 152,
+    "canonical": "chikorita",
+    "pokeapiFormId": null,
+    "speciesId": 152
+  },
+  "153": {
+    "pokeapiId": 153,
+    "canonical": "bayleef",
+    "pokeapiFormId": null,
+    "speciesId": 153
+  },
+  "154": {
+    "pokeapiId": 154,
+    "canonical": "meganium",
+    "pokeapiFormId": null,
+    "speciesId": 154
+  },
+  "155": {
+    "pokeapiId": 155,
+    "canonical": "cyndaquil",
+    "pokeapiFormId": null,
+    "speciesId": 155
+  },
+  "156": {
+    "pokeapiId": 156,
+    "canonical": "quilava",
+    "pokeapiFormId": null,
+    "speciesId": 156
+  },
+  "157": {
+    "pokeapiId": 157,
+    "canonical": "typhlosion",
+    "pokeapiFormId": null,
+    "speciesId": 157
+  },
+  "158": {
+    "pokeapiId": 158,
+    "canonical": "totodile",
+    "pokeapiFormId": null,
+    "speciesId": 158
+  },
+  "159": {
+    "pokeapiId": 159,
+    "canonical": "croconaw",
+    "pokeapiFormId": null,
+    "speciesId": 159
+  },
+  "160": {
+    "pokeapiId": 160,
+    "canonical": "feraligatr",
+    "pokeapiFormId": null,
+    "speciesId": 160
+  },
+  "161": {
+    "pokeapiId": 161,
+    "canonical": "sentret",
+    "pokeapiFormId": null,
+    "speciesId": 161
+  },
+  "162": {
+    "pokeapiId": 162,
+    "canonical": "furret",
+    "pokeapiFormId": null,
+    "speciesId": 162
+  },
+  "163": {
+    "pokeapiId": 163,
+    "canonical": "hoothoot",
+    "pokeapiFormId": null,
+    "speciesId": 163
+  },
+  "164": {
+    "pokeapiId": 164,
+    "canonical": "noctowl",
+    "pokeapiFormId": null,
+    "speciesId": 164
+  },
+  "165": {
+    "pokeapiId": 165,
+    "canonical": "ledyba",
+    "pokeapiFormId": null,
+    "speciesId": 165
+  },
+  "166": {
+    "pokeapiId": 166,
+    "canonical": "ledian",
+    "pokeapiFormId": null,
+    "speciesId": 166
+  },
+  "167": {
+    "pokeapiId": 167,
+    "canonical": "spinarak",
+    "pokeapiFormId": null,
+    "speciesId": 167
+  },
+  "168": {
+    "pokeapiId": 168,
+    "canonical": "ariados",
+    "pokeapiFormId": null,
+    "speciesId": 168
+  },
+  "169": {
+    "pokeapiId": 169,
+    "canonical": "crobat",
+    "pokeapiFormId": null,
+    "speciesId": 169
+  },
+  "170": {
+    "pokeapiId": 170,
+    "canonical": "chinchou",
+    "pokeapiFormId": null,
+    "speciesId": 170
+  },
+  "171": {
+    "pokeapiId": 171,
+    "canonical": "lanturn",
+    "pokeapiFormId": null,
+    "speciesId": 171
+  },
+  "172": {
+    "pokeapiId": 172,
+    "canonical": "pichu",
+    "pokeapiFormId": null,
+    "speciesId": 172
+  },
+  "173": {
+    "pokeapiId": 173,
+    "canonical": "cleffa",
+    "pokeapiFormId": null,
+    "speciesId": 173
+  },
+  "174": {
+    "pokeapiId": 174,
+    "canonical": "igglybuff",
+    "pokeapiFormId": null,
+    "speciesId": 174
+  },
+  "175": {
+    "pokeapiId": 175,
+    "canonical": "togepi",
+    "pokeapiFormId": null,
+    "speciesId": 175
+  },
+  "176": {
+    "pokeapiId": 176,
+    "canonical": "togetic",
+    "pokeapiFormId": null,
+    "speciesId": 176
+  },
+  "177": {
+    "pokeapiId": 177,
+    "canonical": "natu",
+    "pokeapiFormId": null,
+    "speciesId": 177
+  },
+  "178": {
+    "pokeapiId": 178,
+    "canonical": "xatu",
+    "pokeapiFormId": null,
+    "speciesId": 178
+  },
+  "179": {
+    "pokeapiId": 179,
+    "canonical": "mareep",
+    "pokeapiFormId": null,
+    "speciesId": 179
+  },
+  "180": {
+    "pokeapiId": 180,
+    "canonical": "flaaffy",
+    "pokeapiFormId": null,
+    "speciesId": 180
+  },
+  "181": {
+    "pokeapiId": 181,
+    "canonical": "ampharos",
+    "pokeapiFormId": null,
+    "speciesId": 181
+  },
+  "182": {
+    "pokeapiId": 182,
+    "canonical": "bellossom",
+    "pokeapiFormId": null,
+    "speciesId": 182
+  },
+  "183": {
+    "pokeapiId": 183,
+    "canonical": "marill",
+    "pokeapiFormId": null,
+    "speciesId": 183
+  },
+  "184": {
+    "pokeapiId": 184,
+    "canonical": "azumarill",
+    "pokeapiFormId": null,
+    "speciesId": 184
+  },
+  "185": {
+    "pokeapiId": 185,
+    "canonical": "sudowoodo",
+    "pokeapiFormId": null,
+    "speciesId": 185
+  },
+  "186": {
+    "pokeapiId": 186,
+    "canonical": "politoed",
+    "pokeapiFormId": null,
+    "speciesId": 186
+  },
+  "187": {
+    "pokeapiId": 187,
+    "canonical": "hoppip",
+    "pokeapiFormId": null,
+    "speciesId": 187
+  },
+  "188": {
+    "pokeapiId": 188,
+    "canonical": "skiploom",
+    "pokeapiFormId": null,
+    "speciesId": 188
+  },
+  "189": {
+    "pokeapiId": 189,
+    "canonical": "jumpluff",
+    "pokeapiFormId": null,
+    "speciesId": 189
+  },
+  "190": {
+    "pokeapiId": 190,
+    "canonical": "aipom",
+    "pokeapiFormId": null,
+    "speciesId": 190
+  },
+  "191": {
+    "pokeapiId": 191,
+    "canonical": "sunkern",
+    "pokeapiFormId": null,
+    "speciesId": 191
+  },
+  "192": {
+    "pokeapiId": 192,
+    "canonical": "sunflora",
+    "pokeapiFormId": null,
+    "speciesId": 192
+  },
+  "193": {
+    "pokeapiId": 193,
+    "canonical": "yanma",
+    "pokeapiFormId": null,
+    "speciesId": 193
+  },
+  "194": {
+    "pokeapiId": 194,
+    "canonical": "wooper",
+    "pokeapiFormId": null,
+    "speciesId": 194
+  },
+  "195": {
+    "pokeapiId": 195,
+    "canonical": "quagsire",
+    "pokeapiFormId": null,
+    "speciesId": 195
+  },
+  "196": {
+    "pokeapiId": 196,
+    "canonical": "espeon",
+    "pokeapiFormId": null,
+    "speciesId": 196
+  },
+  "197": {
+    "pokeapiId": 197,
+    "canonical": "umbreon",
+    "pokeapiFormId": null,
+    "speciesId": 197
+  },
+  "198": {
+    "pokeapiId": 198,
+    "canonical": "murkrow",
+    "pokeapiFormId": null,
+    "speciesId": 198
+  },
+  "199": {
+    "pokeapiId": 199,
+    "canonical": "slowking",
+    "pokeapiFormId": null,
+    "speciesId": 199
+  },
+  "200": {
+    "pokeapiId": 200,
+    "canonical": "misdreavus",
+    "pokeapiFormId": null,
+    "speciesId": 200
+  },
+  "201": {
+    "pokeapiId": 201,
+    "canonical": "unown",
+    "pokeapiFormId": null,
+    "speciesId": 201
+  },
+  "202": {
+    "pokeapiId": 202,
+    "canonical": "wobbuffet",
+    "pokeapiFormId": null,
+    "speciesId": 202
+  },
+  "203": {
+    "pokeapiId": 203,
+    "canonical": "girafarig",
+    "pokeapiFormId": null,
+    "speciesId": 203
+  },
+  "204": {
+    "pokeapiId": 204,
+    "canonical": "pineco",
+    "pokeapiFormId": null,
+    "speciesId": 204
+  },
+  "205": {
+    "pokeapiId": 205,
+    "canonical": "forretress",
+    "pokeapiFormId": null,
+    "speciesId": 205
+  },
+  "206": {
+    "pokeapiId": 206,
+    "canonical": "dunsparce",
+    "pokeapiFormId": null,
+    "speciesId": 206
+  },
+  "207": {
+    "pokeapiId": 207,
+    "canonical": "gligar",
+    "pokeapiFormId": null,
+    "speciesId": 207
+  },
+  "208": {
+    "pokeapiId": 208,
+    "canonical": "steelix",
+    "pokeapiFormId": null,
+    "speciesId": 208
+  },
+  "209": {
+    "pokeapiId": 209,
+    "canonical": "snubbull",
+    "pokeapiFormId": null,
+    "speciesId": 209
+  },
+  "210": {
+    "pokeapiId": 210,
+    "canonical": "granbull",
+    "pokeapiFormId": null,
+    "speciesId": 210
+  },
+  "211": {
+    "pokeapiId": 211,
+    "canonical": "qwilfish",
+    "pokeapiFormId": null,
+    "speciesId": 211
+  },
+  "212": {
+    "pokeapiId": 212,
+    "canonical": "scizor",
+    "pokeapiFormId": null,
+    "speciesId": 212
+  },
+  "213": {
+    "pokeapiId": 213,
+    "canonical": "shuckle",
+    "pokeapiFormId": null,
+    "speciesId": 213
+  },
+  "214": {
+    "pokeapiId": 214,
+    "canonical": "heracross",
+    "pokeapiFormId": null,
+    "speciesId": 214
+  },
+  "215": {
+    "pokeapiId": 215,
+    "canonical": "sneasel",
+    "pokeapiFormId": null,
+    "speciesId": 215
+  },
+  "216": {
+    "pokeapiId": 216,
+    "canonical": "teddiursa",
+    "pokeapiFormId": null,
+    "speciesId": 216
+  },
+  "217": {
+    "pokeapiId": 217,
+    "canonical": "ursaring",
+    "pokeapiFormId": null,
+    "speciesId": 217
+  },
+  "218": {
+    "pokeapiId": 218,
+    "canonical": "slugma",
+    "pokeapiFormId": null,
+    "speciesId": 218
+  },
+  "219": {
+    "pokeapiId": 219,
+    "canonical": "magcargo",
+    "pokeapiFormId": null,
+    "speciesId": 219
+  },
+  "220": {
+    "pokeapiId": 220,
+    "canonical": "swinub",
+    "pokeapiFormId": null,
+    "speciesId": 220
+  },
+  "221": {
+    "pokeapiId": 221,
+    "canonical": "piloswine",
+    "pokeapiFormId": null,
+    "speciesId": 221
+  },
+  "222": {
+    "pokeapiId": 222,
+    "canonical": "corsola",
+    "pokeapiFormId": null,
+    "speciesId": 222
+  },
+  "223": {
+    "pokeapiId": 223,
+    "canonical": "remoraid",
+    "pokeapiFormId": null,
+    "speciesId": 223
+  },
+  "224": {
+    "pokeapiId": 224,
+    "canonical": "octillery",
+    "pokeapiFormId": null,
+    "speciesId": 224
+  },
+  "225": {
+    "pokeapiId": 225,
+    "canonical": "delibird",
+    "pokeapiFormId": null,
+    "speciesId": 225
+  },
+  "226": {
+    "pokeapiId": 226,
+    "canonical": "mantine",
+    "pokeapiFormId": null,
+    "speciesId": 226
+  },
+  "227": {
+    "pokeapiId": 227,
+    "canonical": "skarmory",
+    "pokeapiFormId": null,
+    "speciesId": 227
+  },
+  "228": {
+    "pokeapiId": 228,
+    "canonical": "houndour",
+    "pokeapiFormId": null,
+    "speciesId": 228
+  },
+  "229": {
+    "pokeapiId": 229,
+    "canonical": "houndoom",
+    "pokeapiFormId": null,
+    "speciesId": 229
+  },
+  "230": {
+    "pokeapiId": 230,
+    "canonical": "kingdra",
+    "pokeapiFormId": null,
+    "speciesId": 230
+  },
+  "231": {
+    "pokeapiId": 231,
+    "canonical": "phanpy",
+    "pokeapiFormId": null,
+    "speciesId": 231
+  },
+  "232": {
+    "pokeapiId": 232,
+    "canonical": "donphan",
+    "pokeapiFormId": null,
+    "speciesId": 232
+  },
+  "233": {
+    "pokeapiId": 233,
+    "canonical": "porygon2",
+    "pokeapiFormId": null,
+    "speciesId": 233
+  },
+  "234": {
+    "pokeapiId": 234,
+    "canonical": "stantler",
+    "pokeapiFormId": null,
+    "speciesId": 234
+  },
+  "235": {
+    "pokeapiId": 235,
+    "canonical": "smeargle",
+    "pokeapiFormId": null,
+    "speciesId": 235
+  },
+  "236": {
+    "pokeapiId": 236,
+    "canonical": "tyrogue",
+    "pokeapiFormId": null,
+    "speciesId": 236
+  },
+  "237": {
+    "pokeapiId": 237,
+    "canonical": "hitmontop",
+    "pokeapiFormId": null,
+    "speciesId": 237
+  },
+  "238": {
+    "pokeapiId": 238,
+    "canonical": "smoochum",
+    "pokeapiFormId": null,
+    "speciesId": 238
+  },
+  "239": {
+    "pokeapiId": 239,
+    "canonical": "elekid",
+    "pokeapiFormId": null,
+    "speciesId": 239
+  },
+  "240": {
+    "pokeapiId": 240,
+    "canonical": "magby",
+    "pokeapiFormId": null,
+    "speciesId": 240
+  },
+  "241": {
+    "pokeapiId": 241,
+    "canonical": "miltank",
+    "pokeapiFormId": null,
+    "speciesId": 241
+  },
+  "242": {
+    "pokeapiId": 242,
+    "canonical": "blissey",
+    "pokeapiFormId": null,
+    "speciesId": 242
+  },
+  "243": {
+    "pokeapiId": 243,
+    "canonical": "raikou",
+    "pokeapiFormId": null,
+    "speciesId": 243
+  },
+  "244": {
+    "pokeapiId": 244,
+    "canonical": "entei",
+    "pokeapiFormId": null,
+    "speciesId": 244
+  },
+  "245": {
+    "pokeapiId": 245,
+    "canonical": "suicune",
+    "pokeapiFormId": null,
+    "speciesId": 245
+  },
+  "246": {
+    "pokeapiId": 246,
+    "canonical": "larvitar",
+    "pokeapiFormId": null,
+    "speciesId": 246
+  },
+  "247": {
+    "pokeapiId": 247,
+    "canonical": "pupitar",
+    "pokeapiFormId": null,
+    "speciesId": 247
+  },
+  "248": {
+    "pokeapiId": 248,
+    "canonical": "tyranitar",
+    "pokeapiFormId": null,
+    "speciesId": 248
+  },
+  "249": {
+    "pokeapiId": 249,
+    "canonical": "lugia",
+    "pokeapiFormId": null,
+    "speciesId": 249
+  },
+  "250": {
+    "pokeapiId": 250,
+    "canonical": "ho-oh",
+    "pokeapiFormId": null,
+    "speciesId": 250
+  },
+  "251": {
+    "pokeapiId": 251,
+    "canonical": "celebi",
+    "pokeapiFormId": null,
+    "speciesId": 251
+  },
+  "252": {
+    "pokeapiId": 252,
+    "canonical": "treecko",
+    "pokeapiFormId": null,
+    "speciesId": 252
+  },
+  "253": {
+    "pokeapiId": 253,
+    "canonical": "grovyle",
+    "pokeapiFormId": null,
+    "speciesId": 253
+  },
+  "254": {
+    "pokeapiId": 254,
+    "canonical": "sceptile",
+    "pokeapiFormId": null,
+    "speciesId": 254
+  },
+  "255": {
+    "pokeapiId": 255,
+    "canonical": "torchic",
+    "pokeapiFormId": null,
+    "speciesId": 255
+  },
+  "256": {
+    "pokeapiId": 256,
+    "canonical": "combusken",
+    "pokeapiFormId": null,
+    "speciesId": 256
+  },
+  "257": {
+    "pokeapiId": 257,
+    "canonical": "blaziken",
+    "pokeapiFormId": null,
+    "speciesId": 257
+  },
+  "258": {
+    "pokeapiId": 258,
+    "canonical": "mudkip",
+    "pokeapiFormId": null,
+    "speciesId": 258
+  },
+  "259": {
+    "pokeapiId": 259,
+    "canonical": "marshtomp",
+    "pokeapiFormId": null,
+    "speciesId": 259
+  },
+  "260": {
+    "pokeapiId": 260,
+    "canonical": "swampert",
+    "pokeapiFormId": null,
+    "speciesId": 260
+  },
+  "261": {
+    "pokeapiId": 261,
+    "canonical": "poochyena",
+    "pokeapiFormId": null,
+    "speciesId": 261
+  },
+  "262": {
+    "pokeapiId": 262,
+    "canonical": "mightyena",
+    "pokeapiFormId": null,
+    "speciesId": 262
+  },
+  "263": {
+    "pokeapiId": 263,
+    "canonical": "zigzagoon",
+    "pokeapiFormId": null,
+    "speciesId": 263
+  },
+  "264": {
+    "pokeapiId": 264,
+    "canonical": "linoone",
+    "pokeapiFormId": null,
+    "speciesId": 264
+  },
+  "265": {
+    "pokeapiId": 265,
+    "canonical": "wurmple",
+    "pokeapiFormId": null,
+    "speciesId": 265
+  },
+  "266": {
+    "pokeapiId": 266,
+    "canonical": "silcoon",
+    "pokeapiFormId": null,
+    "speciesId": 266
+  },
+  "267": {
+    "pokeapiId": 267,
+    "canonical": "beautifly",
+    "pokeapiFormId": null,
+    "speciesId": 267
+  },
+  "268": {
+    "pokeapiId": 268,
+    "canonical": "cascoon",
+    "pokeapiFormId": null,
+    "speciesId": 268
+  },
+  "269": {
+    "pokeapiId": 269,
+    "canonical": "dustox",
+    "pokeapiFormId": null,
+    "speciesId": 269
+  },
+  "270": {
+    "pokeapiId": 270,
+    "canonical": "lotad",
+    "pokeapiFormId": null,
+    "speciesId": 270
+  },
+  "271": {
+    "pokeapiId": 271,
+    "canonical": "lombre",
+    "pokeapiFormId": null,
+    "speciesId": 271
+  },
+  "272": {
+    "pokeapiId": 272,
+    "canonical": "ludicolo",
+    "pokeapiFormId": null,
+    "speciesId": 272
+  },
+  "273": {
+    "pokeapiId": 273,
+    "canonical": "seedot",
+    "pokeapiFormId": null,
+    "speciesId": 273
+  },
+  "274": {
+    "pokeapiId": 274,
+    "canonical": "nuzleaf",
+    "pokeapiFormId": null,
+    "speciesId": 274
+  },
+  "275": {
+    "pokeapiId": 275,
+    "canonical": "shiftry",
+    "pokeapiFormId": null,
+    "speciesId": 275
+  },
+  "276": {
+    "pokeapiId": 276,
+    "canonical": "taillow",
+    "pokeapiFormId": null,
+    "speciesId": 276
+  },
+  "277": {
+    "pokeapiId": 277,
+    "canonical": "swellow",
+    "pokeapiFormId": null,
+    "speciesId": 277
+  },
+  "278": {
+    "pokeapiId": 278,
+    "canonical": "wingull",
+    "pokeapiFormId": null,
+    "speciesId": 278
+  },
+  "279": {
+    "pokeapiId": 279,
+    "canonical": "pelipper",
+    "pokeapiFormId": null,
+    "speciesId": 279
+  },
+  "280": {
+    "pokeapiId": 280,
+    "canonical": "ralts",
+    "pokeapiFormId": null,
+    "speciesId": 280
+  },
+  "281": {
+    "pokeapiId": 281,
+    "canonical": "kirlia",
+    "pokeapiFormId": null,
+    "speciesId": 281
+  },
+  "282": {
+    "pokeapiId": 282,
+    "canonical": "gardevoir",
+    "pokeapiFormId": null,
+    "speciesId": 282
+  },
+  "283": {
+    "pokeapiId": 283,
+    "canonical": "surskit",
+    "pokeapiFormId": null,
+    "speciesId": 283
+  },
+  "284": {
+    "pokeapiId": 284,
+    "canonical": "masquerain",
+    "pokeapiFormId": null,
+    "speciesId": 284
+  },
+  "285": {
+    "pokeapiId": 285,
+    "canonical": "shroomish",
+    "pokeapiFormId": null,
+    "speciesId": 285
+  },
+  "286": {
+    "pokeapiId": 286,
+    "canonical": "breloom",
+    "pokeapiFormId": null,
+    "speciesId": 286
+  },
+  "287": {
+    "pokeapiId": 287,
+    "canonical": "slakoth",
+    "pokeapiFormId": null,
+    "speciesId": 287
+  },
+  "288": {
+    "pokeapiId": 288,
+    "canonical": "vigoroth",
+    "pokeapiFormId": null,
+    "speciesId": 288
+  },
+  "289": {
+    "pokeapiId": 289,
+    "canonical": "slaking",
+    "pokeapiFormId": null,
+    "speciesId": 289
+  },
+  "290": {
+    "pokeapiId": 290,
+    "canonical": "nincada",
+    "pokeapiFormId": null,
+    "speciesId": 290
+  },
+  "291": {
+    "pokeapiId": 291,
+    "canonical": "ninjask",
+    "pokeapiFormId": null,
+    "speciesId": 291
+  },
+  "292": {
+    "pokeapiId": 292,
+    "canonical": "shedinja",
+    "pokeapiFormId": null,
+    "speciesId": 292
+  },
+  "293": {
+    "pokeapiId": 293,
+    "canonical": "whismur",
+    "pokeapiFormId": null,
+    "speciesId": 293
+  },
+  "294": {
+    "pokeapiId": 294,
+    "canonical": "loudred",
+    "pokeapiFormId": null,
+    "speciesId": 294
+  },
+  "295": {
+    "pokeapiId": 295,
+    "canonical": "exploud",
+    "pokeapiFormId": null,
+    "speciesId": 295
+  },
+  "296": {
+    "pokeapiId": 296,
+    "canonical": "makuhita",
+    "pokeapiFormId": null,
+    "speciesId": 296
+  },
+  "297": {
+    "pokeapiId": 297,
+    "canonical": "hariyama",
+    "pokeapiFormId": null,
+    "speciesId": 297
+  },
+  "298": {
+    "pokeapiId": 298,
+    "canonical": "azurill",
+    "pokeapiFormId": null,
+    "speciesId": 298
+  },
+  "299": {
+    "pokeapiId": 299,
+    "canonical": "nosepass",
+    "pokeapiFormId": null,
+    "speciesId": 299
+  },
+  "300": {
+    "pokeapiId": 300,
+    "canonical": "skitty",
+    "pokeapiFormId": null,
+    "speciesId": 300
+  },
+  "301": {
+    "pokeapiId": 301,
+    "canonical": "delcatty",
+    "pokeapiFormId": null,
+    "speciesId": 301
+  },
+  "302": {
+    "pokeapiId": 302,
+    "canonical": "sableye",
+    "pokeapiFormId": null,
+    "speciesId": 302
+  },
+  "303": {
+    "pokeapiId": 303,
+    "canonical": "mawile",
+    "pokeapiFormId": null,
+    "speciesId": 303
+  },
+  "304": {
+    "pokeapiId": 304,
+    "canonical": "aron",
+    "pokeapiFormId": null,
+    "speciesId": 304
+  },
+  "305": {
+    "pokeapiId": 305,
+    "canonical": "lairon",
+    "pokeapiFormId": null,
+    "speciesId": 305
+  },
+  "306": {
+    "pokeapiId": 306,
+    "canonical": "aggron",
+    "pokeapiFormId": null,
+    "speciesId": 306
+  },
+  "307": {
+    "pokeapiId": 307,
+    "canonical": "meditite",
+    "pokeapiFormId": null,
+    "speciesId": 307
+  },
+  "308": {
+    "pokeapiId": 308,
+    "canonical": "medicham",
+    "pokeapiFormId": null,
+    "speciesId": 308
+  },
+  "309": {
+    "pokeapiId": 309,
+    "canonical": "electrike",
+    "pokeapiFormId": null,
+    "speciesId": 309
+  },
+  "310": {
+    "pokeapiId": 310,
+    "canonical": "manectric",
+    "pokeapiFormId": null,
+    "speciesId": 310
+  },
+  "311": {
+    "pokeapiId": 311,
+    "canonical": "plusle",
+    "pokeapiFormId": null,
+    "speciesId": 311
+  },
+  "312": {
+    "pokeapiId": 312,
+    "canonical": "minun",
+    "pokeapiFormId": null,
+    "speciesId": 312
+  },
+  "313": {
+    "pokeapiId": 313,
+    "canonical": "volbeat",
+    "pokeapiFormId": null,
+    "speciesId": 313
+  },
+  "314": {
+    "pokeapiId": 314,
+    "canonical": "illumise",
+    "pokeapiFormId": null,
+    "speciesId": 314
+  },
+  "315": {
+    "pokeapiId": 315,
+    "canonical": "roselia",
+    "pokeapiFormId": null,
+    "speciesId": 315
+  },
+  "316": {
+    "pokeapiId": 316,
+    "canonical": "gulpin",
+    "pokeapiFormId": null,
+    "speciesId": 316
+  },
+  "317": {
+    "pokeapiId": 317,
+    "canonical": "swalot",
+    "pokeapiFormId": null,
+    "speciesId": 317
+  },
+  "318": {
+    "pokeapiId": 318,
+    "canonical": "carvanha",
+    "pokeapiFormId": null,
+    "speciesId": 318
+  },
+  "319": {
+    "pokeapiId": 319,
+    "canonical": "sharpedo",
+    "pokeapiFormId": null,
+    "speciesId": 319
+  },
+  "320": {
+    "pokeapiId": 320,
+    "canonical": "wailmer",
+    "pokeapiFormId": null,
+    "speciesId": 320
+  },
+  "321": {
+    "pokeapiId": 321,
+    "canonical": "wailord",
+    "pokeapiFormId": null,
+    "speciesId": 321
+  },
+  "322": {
+    "pokeapiId": 322,
+    "canonical": "numel",
+    "pokeapiFormId": null,
+    "speciesId": 322
+  },
+  "323": {
+    "pokeapiId": 323,
+    "canonical": "camerupt",
+    "pokeapiFormId": null,
+    "speciesId": 323
+  },
+  "324": {
+    "pokeapiId": 324,
+    "canonical": "torkoal",
+    "pokeapiFormId": null,
+    "speciesId": 324
+  },
+  "325": {
+    "pokeapiId": 325,
+    "canonical": "spoink",
+    "pokeapiFormId": null,
+    "speciesId": 325
+  },
+  "326": {
+    "pokeapiId": 326,
+    "canonical": "grumpig",
+    "pokeapiFormId": null,
+    "speciesId": 326
+  },
+  "327": {
+    "pokeapiId": 327,
+    "canonical": "spinda",
+    "pokeapiFormId": null,
+    "speciesId": 327
+  },
+  "328": {
+    "pokeapiId": 328,
+    "canonical": "trapinch",
+    "pokeapiFormId": null,
+    "speciesId": 328
+  },
+  "329": {
+    "pokeapiId": 329,
+    "canonical": "vibrava",
+    "pokeapiFormId": null,
+    "speciesId": 329
+  },
+  "330": {
+    "pokeapiId": 330,
+    "canonical": "flygon",
+    "pokeapiFormId": null,
+    "speciesId": 330
+  },
+  "331": {
+    "pokeapiId": 331,
+    "canonical": "cacnea",
+    "pokeapiFormId": null,
+    "speciesId": 331
+  },
+  "332": {
+    "pokeapiId": 332,
+    "canonical": "cacturne",
+    "pokeapiFormId": null,
+    "speciesId": 332
+  },
+  "333": {
+    "pokeapiId": 333,
+    "canonical": "swablu",
+    "pokeapiFormId": null,
+    "speciesId": 333
+  },
+  "334": {
+    "pokeapiId": 334,
+    "canonical": "altaria",
+    "pokeapiFormId": null,
+    "speciesId": 334
+  },
+  "335": {
+    "pokeapiId": 335,
+    "canonical": "zangoose",
+    "pokeapiFormId": null,
+    "speciesId": 335
+  },
+  "336": {
+    "pokeapiId": 336,
+    "canonical": "seviper",
+    "pokeapiFormId": null,
+    "speciesId": 336
+  },
+  "337": {
+    "pokeapiId": 337,
+    "canonical": "lunatone",
+    "pokeapiFormId": null,
+    "speciesId": 337
+  },
+  "338": {
+    "pokeapiId": 338,
+    "canonical": "solrock",
+    "pokeapiFormId": null,
+    "speciesId": 338
+  },
+  "339": {
+    "pokeapiId": 339,
+    "canonical": "barboach",
+    "pokeapiFormId": null,
+    "speciesId": 339
+  },
+  "340": {
+    "pokeapiId": 340,
+    "canonical": "whiscash",
+    "pokeapiFormId": null,
+    "speciesId": 340
+  },
+  "341": {
+    "pokeapiId": 341,
+    "canonical": "corphish",
+    "pokeapiFormId": null,
+    "speciesId": 341
+  },
+  "342": {
+    "pokeapiId": 342,
+    "canonical": "crawdaunt",
+    "pokeapiFormId": null,
+    "speciesId": 342
+  },
+  "343": {
+    "pokeapiId": 343,
+    "canonical": "baltoy",
+    "pokeapiFormId": null,
+    "speciesId": 343
+  },
+  "344": {
+    "pokeapiId": 344,
+    "canonical": "claydol",
+    "pokeapiFormId": null,
+    "speciesId": 344
+  },
+  "345": {
+    "pokeapiId": 345,
+    "canonical": "lileep",
+    "pokeapiFormId": null,
+    "speciesId": 345
+  },
+  "346": {
+    "pokeapiId": 346,
+    "canonical": "cradily",
+    "pokeapiFormId": null,
+    "speciesId": 346
+  },
+  "347": {
+    "pokeapiId": 347,
+    "canonical": "anorith",
+    "pokeapiFormId": null,
+    "speciesId": 347
+  },
+  "348": {
+    "pokeapiId": 348,
+    "canonical": "armaldo",
+    "pokeapiFormId": null,
+    "speciesId": 348
+  },
+  "349": {
+    "pokeapiId": 349,
+    "canonical": "feebas",
+    "pokeapiFormId": null,
+    "speciesId": 349
+  },
+  "350": {
+    "pokeapiId": 350,
+    "canonical": "milotic",
+    "pokeapiFormId": null,
+    "speciesId": 350
+  },
+  "351": {
+    "pokeapiId": 351,
+    "canonical": "castform",
+    "pokeapiFormId": null,
+    "speciesId": 351
+  },
+  "352": {
+    "pokeapiId": 352,
+    "canonical": "kecleon",
+    "pokeapiFormId": null,
+    "speciesId": 352
+  },
+  "353": {
+    "pokeapiId": 353,
+    "canonical": "shuppet",
+    "pokeapiFormId": null,
+    "speciesId": 353
+  },
+  "354": {
+    "pokeapiId": 354,
+    "canonical": "banette",
+    "pokeapiFormId": null,
+    "speciesId": 354
+  },
+  "355": {
+    "pokeapiId": 355,
+    "canonical": "duskull",
+    "pokeapiFormId": null,
+    "speciesId": 355
+  },
+  "356": {
+    "pokeapiId": 356,
+    "canonical": "dusclops",
+    "pokeapiFormId": null,
+    "speciesId": 356
+  },
+  "357": {
+    "pokeapiId": 357,
+    "canonical": "tropius",
+    "pokeapiFormId": null,
+    "speciesId": 357
+  },
+  "358": {
+    "pokeapiId": 358,
+    "canonical": "chimecho",
+    "pokeapiFormId": null,
+    "speciesId": 358
+  },
+  "359": {
+    "pokeapiId": 359,
+    "canonical": "absol",
+    "pokeapiFormId": null,
+    "speciesId": 359
+  },
+  "360": {
+    "pokeapiId": 360,
+    "canonical": "wynaut",
+    "pokeapiFormId": null,
+    "speciesId": 360
+  },
+  "361": {
+    "pokeapiId": 361,
+    "canonical": "snorunt",
+    "pokeapiFormId": null,
+    "speciesId": 361
+  },
+  "362": {
+    "pokeapiId": 362,
+    "canonical": "glalie",
+    "pokeapiFormId": null,
+    "speciesId": 362
+  },
+  "363": {
+    "pokeapiId": 363,
+    "canonical": "spheal",
+    "pokeapiFormId": null,
+    "speciesId": 363
+  },
+  "364": {
+    "pokeapiId": 364,
+    "canonical": "sealeo",
+    "pokeapiFormId": null,
+    "speciesId": 364
+  },
+  "365": {
+    "pokeapiId": 365,
+    "canonical": "walrein",
+    "pokeapiFormId": null,
+    "speciesId": 365
+  },
+  "366": {
+    "pokeapiId": 366,
+    "canonical": "clamperl",
+    "pokeapiFormId": null,
+    "speciesId": 366
+  },
+  "367": {
+    "pokeapiId": 367,
+    "canonical": "huntail",
+    "pokeapiFormId": null,
+    "speciesId": 367
+  },
+  "368": {
+    "pokeapiId": 368,
+    "canonical": "gorebyss",
+    "pokeapiFormId": null,
+    "speciesId": 368
+  },
+  "369": {
+    "pokeapiId": 369,
+    "canonical": "relicanth",
+    "pokeapiFormId": null,
+    "speciesId": 369
+  },
+  "370": {
+    "pokeapiId": 370,
+    "canonical": "luvdisc",
+    "pokeapiFormId": null,
+    "speciesId": 370
+  },
+  "371": {
+    "pokeapiId": 371,
+    "canonical": "bagon",
+    "pokeapiFormId": null,
+    "speciesId": 371
+  },
+  "372": {
+    "pokeapiId": 372,
+    "canonical": "shelgon",
+    "pokeapiFormId": null,
+    "speciesId": 372
+  },
+  "373": {
+    "pokeapiId": 373,
+    "canonical": "salamence",
+    "pokeapiFormId": null,
+    "speciesId": 373
+  },
+  "374": {
+    "pokeapiId": 374,
+    "canonical": "beldum",
+    "pokeapiFormId": null,
+    "speciesId": 374
+  },
+  "375": {
+    "pokeapiId": 375,
+    "canonical": "metang",
+    "pokeapiFormId": null,
+    "speciesId": 375
+  },
+  "376": {
+    "pokeapiId": 376,
+    "canonical": "metagross",
+    "pokeapiFormId": null,
+    "speciesId": 376
+  },
+  "377": {
+    "pokeapiId": 377,
+    "canonical": "regirock",
+    "pokeapiFormId": null,
+    "speciesId": 377
+  },
+  "378": {
+    "pokeapiId": 378,
+    "canonical": "regice",
+    "pokeapiFormId": null,
+    "speciesId": 378
+  },
+  "379": {
+    "pokeapiId": 379,
+    "canonical": "registeel",
+    "pokeapiFormId": null,
+    "speciesId": 379
+  },
+  "380": {
+    "pokeapiId": 380,
+    "canonical": "latias",
+    "pokeapiFormId": null,
+    "speciesId": 380
+  },
+  "381": {
+    "pokeapiId": 381,
+    "canonical": "latios",
+    "pokeapiFormId": null,
+    "speciesId": 381
+  },
+  "382": {
+    "pokeapiId": 382,
+    "canonical": "kyogre",
+    "pokeapiFormId": null,
+    "speciesId": 382
+  },
+  "383": {
+    "pokeapiId": 383,
+    "canonical": "groudon",
+    "pokeapiFormId": null,
+    "speciesId": 383
+  },
+  "384": {
+    "pokeapiId": 384,
+    "canonical": "rayquaza",
+    "pokeapiFormId": null,
+    "speciesId": 384
+  },
+  "385": {
+    "pokeapiId": 385,
+    "canonical": "jirachi",
+    "pokeapiFormId": null,
+    "speciesId": 385
+  },
+  "386": {
+    "pokeapiId": 386,
+    "canonical": "deoxys-normal",
+    "pokeapiFormId": null,
+    "speciesId": 386
+  },
+  "387": {
+    "pokeapiId": 387,
+    "canonical": "turtwig",
+    "pokeapiFormId": null,
+    "speciesId": 387
+  },
+  "388": {
+    "pokeapiId": 388,
+    "canonical": "grotle",
+    "pokeapiFormId": null,
+    "speciesId": 388
+  },
+  "389": {
+    "pokeapiId": 389,
+    "canonical": "torterra",
+    "pokeapiFormId": null,
+    "speciesId": 389
+  },
+  "390": {
+    "pokeapiId": 390,
+    "canonical": "chimchar",
+    "pokeapiFormId": null,
+    "speciesId": 390
+  },
+  "391": {
+    "pokeapiId": 391,
+    "canonical": "monferno",
+    "pokeapiFormId": null,
+    "speciesId": 391
+  },
+  "392": {
+    "pokeapiId": 392,
+    "canonical": "infernape",
+    "pokeapiFormId": null,
+    "speciesId": 392
+  },
+  "393": {
+    "pokeapiId": 393,
+    "canonical": "piplup",
+    "pokeapiFormId": null,
+    "speciesId": 393
+  },
+  "394": {
+    "pokeapiId": 394,
+    "canonical": "prinplup",
+    "pokeapiFormId": null,
+    "speciesId": 394
+  },
+  "395": {
+    "pokeapiId": 395,
+    "canonical": "empoleon",
+    "pokeapiFormId": null,
+    "speciesId": 395
+  },
+  "396": {
+    "pokeapiId": 396,
+    "canonical": "starly",
+    "pokeapiFormId": null,
+    "speciesId": 396
+  },
+  "397": {
+    "pokeapiId": 397,
+    "canonical": "staravia",
+    "pokeapiFormId": null,
+    "speciesId": 397
+  },
+  "398": {
+    "pokeapiId": 398,
+    "canonical": "staraptor",
+    "pokeapiFormId": null,
+    "speciesId": 398
+  },
+  "399": {
+    "pokeapiId": 399,
+    "canonical": "bidoof",
+    "pokeapiFormId": null,
+    "speciesId": 399
+  },
+  "400": {
+    "pokeapiId": 400,
+    "canonical": "bibarel",
+    "pokeapiFormId": null,
+    "speciesId": 400
+  },
+  "401": {
+    "pokeapiId": 401,
+    "canonical": "kricketot",
+    "pokeapiFormId": null,
+    "speciesId": 401
+  },
+  "402": {
+    "pokeapiId": 402,
+    "canonical": "kricketune",
+    "pokeapiFormId": null,
+    "speciesId": 402
+  },
+  "403": {
+    "pokeapiId": 403,
+    "canonical": "shinx",
+    "pokeapiFormId": null,
+    "speciesId": 403
+  },
+  "404": {
+    "pokeapiId": 404,
+    "canonical": "luxio",
+    "pokeapiFormId": null,
+    "speciesId": 404
+  },
+  "405": {
+    "pokeapiId": 405,
+    "canonical": "luxray",
+    "pokeapiFormId": null,
+    "speciesId": 405
+  },
+  "406": {
+    "pokeapiId": 406,
+    "canonical": "budew",
+    "pokeapiFormId": null,
+    "speciesId": 406
+  },
+  "407": {
+    "pokeapiId": 407,
+    "canonical": "roserade",
+    "pokeapiFormId": null,
+    "speciesId": 407
+  },
+  "408": {
+    "pokeapiId": 408,
+    "canonical": "cranidos",
+    "pokeapiFormId": null,
+    "speciesId": 408
+  },
+  "409": {
+    "pokeapiId": 409,
+    "canonical": "rampardos",
+    "pokeapiFormId": null,
+    "speciesId": 409
+  },
+  "410": {
+    "pokeapiId": 410,
+    "canonical": "shieldon",
+    "pokeapiFormId": null,
+    "speciesId": 410
+  },
+  "411": {
+    "pokeapiId": 411,
+    "canonical": "bastiodon",
+    "pokeapiFormId": null,
+    "speciesId": 411
+  },
+  "412": {
+    "pokeapiId": 412,
+    "canonical": "burmy",
+    "pokeapiFormId": null,
+    "speciesId": 412
+  },
+  "413": {
+    "pokeapiId": 413,
+    "canonical": "wormadam-plant",
+    "pokeapiFormId": null,
+    "speciesId": 413
+  },
+  "414": {
+    "pokeapiId": 414,
+    "canonical": "mothim",
+    "pokeapiFormId": null,
+    "speciesId": 414
+  },
+  "415": {
+    "pokeapiId": 415,
+    "canonical": "combee",
+    "pokeapiFormId": null,
+    "speciesId": 415
+  },
+  "416": {
+    "pokeapiId": 416,
+    "canonical": "vespiquen",
+    "pokeapiFormId": null,
+    "speciesId": 416
+  },
+  "417": {
+    "pokeapiId": 417,
+    "canonical": "pachirisu",
+    "pokeapiFormId": null,
+    "speciesId": 417
+  },
+  "418": {
+    "pokeapiId": 418,
+    "canonical": "buizel",
+    "pokeapiFormId": null,
+    "speciesId": 418
+  },
+  "419": {
+    "pokeapiId": 419,
+    "canonical": "floatzel",
+    "pokeapiFormId": null,
+    "speciesId": 419
+  },
+  "420": {
+    "pokeapiId": 420,
+    "canonical": "cherubi",
+    "pokeapiFormId": null,
+    "speciesId": 420
+  },
+  "421": {
+    "pokeapiId": 421,
+    "canonical": "cherrim",
+    "pokeapiFormId": null,
+    "speciesId": 421
+  },
+  "422": {
+    "pokeapiId": 422,
+    "canonical": "shellos",
+    "pokeapiFormId": null,
+    "speciesId": 422
+  },
+  "423": {
+    "pokeapiId": 423,
+    "canonical": "gastrodon",
+    "pokeapiFormId": null,
+    "speciesId": 423
+  },
+  "424": {
+    "pokeapiId": 424,
+    "canonical": "ambipom",
+    "pokeapiFormId": null,
+    "speciesId": 424
+  },
+  "425": {
+    "pokeapiId": 425,
+    "canonical": "drifloon",
+    "pokeapiFormId": null,
+    "speciesId": 425
+  },
+  "426": {
+    "pokeapiId": 426,
+    "canonical": "drifblim",
+    "pokeapiFormId": null,
+    "speciesId": 426
+  },
+  "427": {
+    "pokeapiId": 427,
+    "canonical": "buneary",
+    "pokeapiFormId": null,
+    "speciesId": 427
+  },
+  "428": {
+    "pokeapiId": 428,
+    "canonical": "lopunny",
+    "pokeapiFormId": null,
+    "speciesId": 428
+  },
+  "429": {
+    "pokeapiId": 429,
+    "canonical": "mismagius",
+    "pokeapiFormId": null,
+    "speciesId": 429
+  },
+  "430": {
+    "pokeapiId": 430,
+    "canonical": "honchkrow",
+    "pokeapiFormId": null,
+    "speciesId": 430
+  },
+  "431": {
+    "pokeapiId": 431,
+    "canonical": "glameow",
+    "pokeapiFormId": null,
+    "speciesId": 431
+  },
+  "432": {
+    "pokeapiId": 432,
+    "canonical": "purugly",
+    "pokeapiFormId": null,
+    "speciesId": 432
+  },
+  "433": {
+    "pokeapiId": 433,
+    "canonical": "chingling",
+    "pokeapiFormId": null,
+    "speciesId": 433
+  },
+  "434": {
+    "pokeapiId": 434,
+    "canonical": "stunky",
+    "pokeapiFormId": null,
+    "speciesId": 434
+  },
+  "435": {
+    "pokeapiId": 435,
+    "canonical": "skuntank",
+    "pokeapiFormId": null,
+    "speciesId": 435
+  },
+  "436": {
+    "pokeapiId": 436,
+    "canonical": "bronzor",
+    "pokeapiFormId": null,
+    "speciesId": 436
+  },
+  "437": {
+    "pokeapiId": 437,
+    "canonical": "bronzong",
+    "pokeapiFormId": null,
+    "speciesId": 437
+  },
+  "438": {
+    "pokeapiId": 438,
+    "canonical": "bonsly",
+    "pokeapiFormId": null,
+    "speciesId": 438
+  },
+  "439": {
+    "pokeapiId": 439,
+    "canonical": "mime-jr",
+    "pokeapiFormId": null,
+    "speciesId": 439
+  },
+  "440": {
+    "pokeapiId": 440,
+    "canonical": "happiny",
+    "pokeapiFormId": null,
+    "speciesId": 440
+  },
+  "441": {
+    "pokeapiId": 441,
+    "canonical": "chatot",
+    "pokeapiFormId": null,
+    "speciesId": 441
+  },
+  "442": {
+    "pokeapiId": 442,
+    "canonical": "spiritomb",
+    "pokeapiFormId": null,
+    "speciesId": 442
+  },
+  "443": {
+    "pokeapiId": 443,
+    "canonical": "gible",
+    "pokeapiFormId": null,
+    "speciesId": 443
+  },
+  "444": {
+    "pokeapiId": 444,
+    "canonical": "gabite",
+    "pokeapiFormId": null,
+    "speciesId": 444
+  },
+  "445": {
+    "pokeapiId": 445,
+    "canonical": "garchomp",
+    "pokeapiFormId": null,
+    "speciesId": 445
+  },
+  "446": {
+    "pokeapiId": 446,
+    "canonical": "munchlax",
+    "pokeapiFormId": null,
+    "speciesId": 446
+  },
+  "447": {
+    "pokeapiId": 447,
+    "canonical": "riolu",
+    "pokeapiFormId": null,
+    "speciesId": 447
+  },
+  "448": {
+    "pokeapiId": 448,
+    "canonical": "lucario",
+    "pokeapiFormId": null,
+    "speciesId": 448
+  },
+  "449": {
+    "pokeapiId": 449,
+    "canonical": "hippopotas",
+    "pokeapiFormId": null,
+    "speciesId": 449
+  },
+  "450": {
+    "pokeapiId": 450,
+    "canonical": "hippowdon",
+    "pokeapiFormId": null,
+    "speciesId": 450
+  },
+  "451": {
+    "pokeapiId": 451,
+    "canonical": "skorupi",
+    "pokeapiFormId": null,
+    "speciesId": 451
+  },
+  "452": {
+    "pokeapiId": 452,
+    "canonical": "drapion",
+    "pokeapiFormId": null,
+    "speciesId": 452
+  },
+  "453": {
+    "pokeapiId": 453,
+    "canonical": "croagunk",
+    "pokeapiFormId": null,
+    "speciesId": 453
+  },
+  "454": {
+    "pokeapiId": 454,
+    "canonical": "toxicroak",
+    "pokeapiFormId": null,
+    "speciesId": 454
+  },
+  "455": {
+    "pokeapiId": 455,
+    "canonical": "carnivine",
+    "pokeapiFormId": null,
+    "speciesId": 455
+  },
+  "456": {
+    "pokeapiId": 456,
+    "canonical": "finneon",
+    "pokeapiFormId": null,
+    "speciesId": 456
+  },
+  "457": {
+    "pokeapiId": 457,
+    "canonical": "lumineon",
+    "pokeapiFormId": null,
+    "speciesId": 457
+  },
+  "458": {
+    "pokeapiId": 458,
+    "canonical": "mantyke",
+    "pokeapiFormId": null,
+    "speciesId": 458
+  },
+  "459": {
+    "pokeapiId": 459,
+    "canonical": "snover",
+    "pokeapiFormId": null,
+    "speciesId": 459
+  },
+  "460": {
+    "pokeapiId": 460,
+    "canonical": "abomasnow",
+    "pokeapiFormId": null,
+    "speciesId": 460
+  },
+  "461": {
+    "pokeapiId": 461,
+    "canonical": "weavile",
+    "pokeapiFormId": null,
+    "speciesId": 461
+  },
+  "462": {
+    "pokeapiId": 462,
+    "canonical": "magnezone",
+    "pokeapiFormId": null,
+    "speciesId": 462
+  },
+  "463": {
+    "pokeapiId": 463,
+    "canonical": "lickilicky",
+    "pokeapiFormId": null,
+    "speciesId": 463
+  },
+  "464": {
+    "pokeapiId": 464,
+    "canonical": "rhyperior",
+    "pokeapiFormId": null,
+    "speciesId": 464
+  },
+  "465": {
+    "pokeapiId": 465,
+    "canonical": "tangrowth",
+    "pokeapiFormId": null,
+    "speciesId": 465
+  },
+  "466": {
+    "pokeapiId": 466,
+    "canonical": "electivire",
+    "pokeapiFormId": null,
+    "speciesId": 466
+  },
+  "467": {
+    "pokeapiId": 467,
+    "canonical": "magmortar",
+    "pokeapiFormId": null,
+    "speciesId": 467
+  },
+  "468": {
+    "pokeapiId": 468,
+    "canonical": "togekiss",
+    "pokeapiFormId": null,
+    "speciesId": 468
+  },
+  "469": {
+    "pokeapiId": 469,
+    "canonical": "yanmega",
+    "pokeapiFormId": null,
+    "speciesId": 469
+  },
+  "470": {
+    "pokeapiId": 470,
+    "canonical": "leafeon",
+    "pokeapiFormId": null,
+    "speciesId": 470
+  },
+  "471": {
+    "pokeapiId": 471,
+    "canonical": "glaceon",
+    "pokeapiFormId": null,
+    "speciesId": 471
+  },
+  "472": {
+    "pokeapiId": 472,
+    "canonical": "gliscor",
+    "pokeapiFormId": null,
+    "speciesId": 472
+  },
+  "473": {
+    "pokeapiId": 473,
+    "canonical": "mamoswine",
+    "pokeapiFormId": null,
+    "speciesId": 473
+  },
+  "474": {
+    "pokeapiId": 474,
+    "canonical": "porygon-z",
+    "pokeapiFormId": null,
+    "speciesId": 474
+  },
+  "475": {
+    "pokeapiId": 475,
+    "canonical": "gallade",
+    "pokeapiFormId": null,
+    "speciesId": 475
+  },
+  "476": {
+    "pokeapiId": 476,
+    "canonical": "probopass",
+    "pokeapiFormId": null,
+    "speciesId": 476
+  },
+  "477": {
+    "pokeapiId": 477,
+    "canonical": "dusknoir",
+    "pokeapiFormId": null,
+    "speciesId": 477
+  },
+  "478": {
+    "pokeapiId": 478,
+    "canonical": "froslass",
+    "pokeapiFormId": null,
+    "speciesId": 478
+  },
+  "479": {
+    "pokeapiId": 479,
+    "canonical": "rotom",
+    "pokeapiFormId": null,
+    "speciesId": 479
+  },
+  "480": {
+    "pokeapiId": 480,
+    "canonical": "uxie",
+    "pokeapiFormId": null,
+    "speciesId": 480
+  },
+  "481": {
+    "pokeapiId": 481,
+    "canonical": "mesprit",
+    "pokeapiFormId": null,
+    "speciesId": 481
+  },
+  "482": {
+    "pokeapiId": 482,
+    "canonical": "azelf",
+    "pokeapiFormId": null,
+    "speciesId": 482
+  },
+  "483": {
+    "pokeapiId": 483,
+    "canonical": "dialga",
+    "pokeapiFormId": null,
+    "speciesId": 483
+  },
+  "484": {
+    "pokeapiId": 484,
+    "canonical": "palkia",
+    "pokeapiFormId": null,
+    "speciesId": 484
+  },
+  "485": {
+    "pokeapiId": 485,
+    "canonical": "heatran",
+    "pokeapiFormId": null,
+    "speciesId": 485
+  },
+  "486": {
+    "pokeapiId": 486,
+    "canonical": "regigigas",
+    "pokeapiFormId": null,
+    "speciesId": 486
+  },
+  "487": {
+    "pokeapiId": 487,
+    "canonical": "giratina-altered",
+    "pokeapiFormId": null,
+    "speciesId": 487
+  },
+  "488": {
+    "pokeapiId": 488,
+    "canonical": "cresselia",
+    "pokeapiFormId": null,
+    "speciesId": 488
+  },
+  "489": {
+    "pokeapiId": 489,
+    "canonical": "phione",
+    "pokeapiFormId": null,
+    "speciesId": 489
+  },
+  "490": {
+    "pokeapiId": 490,
+    "canonical": "manaphy",
+    "pokeapiFormId": null,
+    "speciesId": 490
+  },
+  "491": {
+    "pokeapiId": 491,
+    "canonical": "darkrai",
+    "pokeapiFormId": null,
+    "speciesId": 491
+  },
+  "492": {
+    "pokeapiId": 492,
+    "canonical": "shaymin-land",
+    "pokeapiFormId": null,
+    "speciesId": 492
+  },
+  "493": {
+    "pokeapiId": 493,
+    "canonical": "arceus",
+    "pokeapiFormId": null,
+    "speciesId": 493
+  },
+  "494": {
+    "pokeapiId": 494,
+    "canonical": "victini",
+    "pokeapiFormId": null,
+    "speciesId": 494
+  },
+  "495": {
+    "pokeapiId": 495,
+    "canonical": "snivy",
+    "pokeapiFormId": null,
+    "speciesId": 495
+  },
+  "496": {
+    "pokeapiId": 496,
+    "canonical": "servine",
+    "pokeapiFormId": null,
+    "speciesId": 496
+  },
+  "497": {
+    "pokeapiId": 497,
+    "canonical": "serperior",
+    "pokeapiFormId": null,
+    "speciesId": 497
+  },
+  "498": {
+    "pokeapiId": 498,
+    "canonical": "tepig",
+    "pokeapiFormId": null,
+    "speciesId": 498
+  },
+  "499": {
+    "pokeapiId": 499,
+    "canonical": "pignite",
+    "pokeapiFormId": null,
+    "speciesId": 499
+  },
+  "500": {
+    "pokeapiId": 500,
+    "canonical": "emboar",
+    "pokeapiFormId": null,
+    "speciesId": 500
+  },
+  "501": {
+    "pokeapiId": 501,
+    "canonical": "oshawott",
+    "pokeapiFormId": null,
+    "speciesId": 501
+  },
+  "502": {
+    "pokeapiId": 502,
+    "canonical": "dewott",
+    "pokeapiFormId": null,
+    "speciesId": 502
+  },
+  "503": {
+    "pokeapiId": 503,
+    "canonical": "samurott",
+    "pokeapiFormId": null,
+    "speciesId": 503
+  },
+  "504": {
+    "pokeapiId": 504,
+    "canonical": "patrat",
+    "pokeapiFormId": null,
+    "speciesId": 504
+  },
+  "505": {
+    "pokeapiId": 505,
+    "canonical": "watchog",
+    "pokeapiFormId": null,
+    "speciesId": 505
+  },
+  "506": {
+    "pokeapiId": 506,
+    "canonical": "lillipup",
+    "pokeapiFormId": null,
+    "speciesId": 506
+  },
+  "507": {
+    "pokeapiId": 507,
+    "canonical": "herdier",
+    "pokeapiFormId": null,
+    "speciesId": 507
+  },
+  "508": {
+    "pokeapiId": 508,
+    "canonical": "stoutland",
+    "pokeapiFormId": null,
+    "speciesId": 508
+  },
+  "509": {
+    "pokeapiId": 509,
+    "canonical": "purrloin",
+    "pokeapiFormId": null,
+    "speciesId": 509
+  },
+  "510": {
+    "pokeapiId": 510,
+    "canonical": "liepard",
+    "pokeapiFormId": null,
+    "speciesId": 510
+  },
+  "511": {
+    "pokeapiId": 511,
+    "canonical": "pansage",
+    "pokeapiFormId": null,
+    "speciesId": 511
+  },
+  "512": {
+    "pokeapiId": 512,
+    "canonical": "simisage",
+    "pokeapiFormId": null,
+    "speciesId": 512
+  },
+  "513": {
+    "pokeapiId": 513,
+    "canonical": "pansear",
+    "pokeapiFormId": null,
+    "speciesId": 513
+  },
+  "514": {
+    "pokeapiId": 514,
+    "canonical": "simisear",
+    "pokeapiFormId": null,
+    "speciesId": 514
+  },
+  "515": {
+    "pokeapiId": 515,
+    "canonical": "panpour",
+    "pokeapiFormId": null,
+    "speciesId": 515
+  },
+  "516": {
+    "pokeapiId": 516,
+    "canonical": "simipour",
+    "pokeapiFormId": null,
+    "speciesId": 516
+  },
+  "517": {
+    "pokeapiId": 517,
+    "canonical": "munna",
+    "pokeapiFormId": null,
+    "speciesId": 517
+  },
+  "518": {
+    "pokeapiId": 518,
+    "canonical": "musharna",
+    "pokeapiFormId": null,
+    "speciesId": 518
+  },
+  "519": {
+    "pokeapiId": 519,
+    "canonical": "pidove",
+    "pokeapiFormId": null,
+    "speciesId": 519
+  },
+  "520": {
+    "pokeapiId": 520,
+    "canonical": "tranquill",
+    "pokeapiFormId": null,
+    "speciesId": 520
+  },
+  "521": {
+    "pokeapiId": 521,
+    "canonical": "unfezant",
+    "pokeapiFormId": null,
+    "speciesId": 521
+  },
+  "522": {
+    "pokeapiId": 522,
+    "canonical": "blitzle",
+    "pokeapiFormId": null,
+    "speciesId": 522
+  },
+  "523": {
+    "pokeapiId": 523,
+    "canonical": "zebstrika",
+    "pokeapiFormId": null,
+    "speciesId": 523
+  },
+  "524": {
+    "pokeapiId": 524,
+    "canonical": "roggenrola",
+    "pokeapiFormId": null,
+    "speciesId": 524
+  },
+  "525": {
+    "pokeapiId": 525,
+    "canonical": "boldore",
+    "pokeapiFormId": null,
+    "speciesId": 525
+  },
+  "526": {
+    "pokeapiId": 526,
+    "canonical": "gigalith",
+    "pokeapiFormId": null,
+    "speciesId": 526
+  },
+  "527": {
+    "pokeapiId": 527,
+    "canonical": "woobat",
+    "pokeapiFormId": null,
+    "speciesId": 527
+  },
+  "528": {
+    "pokeapiId": 528,
+    "canonical": "swoobat",
+    "pokeapiFormId": null,
+    "speciesId": 528
+  },
+  "529": {
+    "pokeapiId": 529,
+    "canonical": "drilbur",
+    "pokeapiFormId": null,
+    "speciesId": 529
+  },
+  "530": {
+    "pokeapiId": 530,
+    "canonical": "excadrill",
+    "pokeapiFormId": null,
+    "speciesId": 530
+  },
+  "531": {
+    "pokeapiId": 531,
+    "canonical": "audino",
+    "pokeapiFormId": null,
+    "speciesId": 531
+  },
+  "532": {
+    "pokeapiId": 532,
+    "canonical": "timburr",
+    "pokeapiFormId": null,
+    "speciesId": 532
+  },
+  "533": {
+    "pokeapiId": 533,
+    "canonical": "gurdurr",
+    "pokeapiFormId": null,
+    "speciesId": 533
+  },
+  "534": {
+    "pokeapiId": 534,
+    "canonical": "conkeldurr",
+    "pokeapiFormId": null,
+    "speciesId": 534
+  },
+  "535": {
+    "pokeapiId": 535,
+    "canonical": "tympole",
+    "pokeapiFormId": null,
+    "speciesId": 535
+  },
+  "536": {
+    "pokeapiId": 536,
+    "canonical": "palpitoad",
+    "pokeapiFormId": null,
+    "speciesId": 536
+  },
+  "537": {
+    "pokeapiId": 537,
+    "canonical": "seismitoad",
+    "pokeapiFormId": null,
+    "speciesId": 537
+  },
+  "538": {
+    "pokeapiId": 538,
+    "canonical": "throh",
+    "pokeapiFormId": null,
+    "speciesId": 538
+  },
+  "539": {
+    "pokeapiId": 539,
+    "canonical": "sawk",
+    "pokeapiFormId": null,
+    "speciesId": 539
+  },
+  "540": {
+    "pokeapiId": 540,
+    "canonical": "sewaddle",
+    "pokeapiFormId": null,
+    "speciesId": 540
+  },
+  "541": {
+    "pokeapiId": 541,
+    "canonical": "swadloon",
+    "pokeapiFormId": null,
+    "speciesId": 541
+  },
+  "542": {
+    "pokeapiId": 542,
+    "canonical": "leavanny",
+    "pokeapiFormId": null,
+    "speciesId": 542
+  },
+  "543": {
+    "pokeapiId": 543,
+    "canonical": "venipede",
+    "pokeapiFormId": null,
+    "speciesId": 543
+  },
+  "544": {
+    "pokeapiId": 544,
+    "canonical": "whirlipede",
+    "pokeapiFormId": null,
+    "speciesId": 544
+  },
+  "545": {
+    "pokeapiId": 545,
+    "canonical": "scolipede",
+    "pokeapiFormId": null,
+    "speciesId": 545
+  },
+  "546": {
+    "pokeapiId": 546,
+    "canonical": "cottonee",
+    "pokeapiFormId": null,
+    "speciesId": 546
+  },
+  "547": {
+    "pokeapiId": 547,
+    "canonical": "whimsicott",
+    "pokeapiFormId": null,
+    "speciesId": 547
+  },
+  "548": {
+    "pokeapiId": 548,
+    "canonical": "petilil",
+    "pokeapiFormId": null,
+    "speciesId": 548
+  },
+  "549": {
+    "pokeapiId": 549,
+    "canonical": "lilligant",
+    "pokeapiFormId": null,
+    "speciesId": 549
+  },
+  "550": {
+    "pokeapiId": 550,
+    "canonical": "basculin-red-striped",
+    "pokeapiFormId": null,
+    "speciesId": 550
+  },
+  "551": {
+    "pokeapiId": 551,
+    "canonical": "sandile",
+    "pokeapiFormId": null,
+    "speciesId": 551
+  },
+  "552": {
+    "pokeapiId": 552,
+    "canonical": "krokorok",
+    "pokeapiFormId": null,
+    "speciesId": 552
+  },
+  "553": {
+    "pokeapiId": 553,
+    "canonical": "krookodile",
+    "pokeapiFormId": null,
+    "speciesId": 553
+  },
+  "554": {
+    "pokeapiId": 554,
+    "canonical": "darumaka",
+    "pokeapiFormId": null,
+    "speciesId": 554
+  },
+  "555": {
+    "pokeapiId": 555,
+    "canonical": "darmanitan-standard",
+    "pokeapiFormId": null,
+    "speciesId": 555
+  },
+  "556": {
+    "pokeapiId": 556,
+    "canonical": "maractus",
+    "pokeapiFormId": null,
+    "speciesId": 556
+  },
+  "557": {
+    "pokeapiId": 557,
+    "canonical": "dwebble",
+    "pokeapiFormId": null,
+    "speciesId": 557
+  },
+  "558": {
+    "pokeapiId": 558,
+    "canonical": "crustle",
+    "pokeapiFormId": null,
+    "speciesId": 558
+  },
+  "559": {
+    "pokeapiId": 559,
+    "canonical": "scraggy",
+    "pokeapiFormId": null,
+    "speciesId": 559
+  },
+  "560": {
+    "pokeapiId": 560,
+    "canonical": "scrafty",
+    "pokeapiFormId": null,
+    "speciesId": 560
+  },
+  "561": {
+    "pokeapiId": 561,
+    "canonical": "sigilyph",
+    "pokeapiFormId": null,
+    "speciesId": 561
+  },
+  "562": {
+    "pokeapiId": 562,
+    "canonical": "yamask",
+    "pokeapiFormId": null,
+    "speciesId": 562
+  },
+  "563": {
+    "pokeapiId": 563,
+    "canonical": "cofagrigus",
+    "pokeapiFormId": null,
+    "speciesId": 563
+  },
+  "564": {
+    "pokeapiId": 564,
+    "canonical": "tirtouga",
+    "pokeapiFormId": null,
+    "speciesId": 564
+  },
+  "565": {
+    "pokeapiId": 565,
+    "canonical": "carracosta",
+    "pokeapiFormId": null,
+    "speciesId": 565
+  },
+  "566": {
+    "pokeapiId": 566,
+    "canonical": "archen",
+    "pokeapiFormId": null,
+    "speciesId": 566
+  },
+  "567": {
+    "pokeapiId": 567,
+    "canonical": "archeops",
+    "pokeapiFormId": null,
+    "speciesId": 567
+  },
+  "568": {
+    "pokeapiId": 568,
+    "canonical": "trubbish",
+    "pokeapiFormId": null,
+    "speciesId": 568
+  },
+  "569": {
+    "pokeapiId": 569,
+    "canonical": "garbodor",
+    "pokeapiFormId": null,
+    "speciesId": 569
+  },
+  "570": {
+    "pokeapiId": 570,
+    "canonical": "zorua",
+    "pokeapiFormId": null,
+    "speciesId": 570
+  },
+  "571": {
+    "pokeapiId": 571,
+    "canonical": "zoroark",
+    "pokeapiFormId": null,
+    "speciesId": 571
+  },
+  "572": {
+    "pokeapiId": 572,
+    "canonical": "minccino",
+    "pokeapiFormId": null,
+    "speciesId": 572
+  },
+  "573": {
+    "pokeapiId": 573,
+    "canonical": "cinccino",
+    "pokeapiFormId": null,
+    "speciesId": 573
+  },
+  "574": {
+    "pokeapiId": 574,
+    "canonical": "gothita",
+    "pokeapiFormId": null,
+    "speciesId": 574
+  },
+  "575": {
+    "pokeapiId": 575,
+    "canonical": "gothorita",
+    "pokeapiFormId": null,
+    "speciesId": 575
+  },
+  "576": {
+    "pokeapiId": 576,
+    "canonical": "gothitelle",
+    "pokeapiFormId": null,
+    "speciesId": 576
+  },
+  "577": {
+    "pokeapiId": 577,
+    "canonical": "solosis",
+    "pokeapiFormId": null,
+    "speciesId": 577
+  },
+  "578": {
+    "pokeapiId": 578,
+    "canonical": "duosion",
+    "pokeapiFormId": null,
+    "speciesId": 578
+  },
+  "579": {
+    "pokeapiId": 579,
+    "canonical": "reuniclus",
+    "pokeapiFormId": null,
+    "speciesId": 579
+  },
+  "580": {
+    "pokeapiId": 580,
+    "canonical": "ducklett",
+    "pokeapiFormId": null,
+    "speciesId": 580
+  },
+  "581": {
+    "pokeapiId": 581,
+    "canonical": "swanna",
+    "pokeapiFormId": null,
+    "speciesId": 581
+  },
+  "582": {
+    "pokeapiId": 582,
+    "canonical": "vanillite",
+    "pokeapiFormId": null,
+    "speciesId": 582
+  },
+  "583": {
+    "pokeapiId": 583,
+    "canonical": "vanillish",
+    "pokeapiFormId": null,
+    "speciesId": 583
+  },
+  "584": {
+    "pokeapiId": 584,
+    "canonical": "vanilluxe",
+    "pokeapiFormId": null,
+    "speciesId": 584
+  },
+  "585": {
+    "pokeapiId": 585,
+    "canonical": "deerling",
+    "pokeapiFormId": null,
+    "speciesId": 585
+  },
+  "586": {
+    "pokeapiId": 586,
+    "canonical": "sawsbuck",
+    "pokeapiFormId": null,
+    "speciesId": 586
+  },
+  "587": {
+    "pokeapiId": 587,
+    "canonical": "emolga",
+    "pokeapiFormId": null,
+    "speciesId": 587
+  },
+  "588": {
+    "pokeapiId": 588,
+    "canonical": "karrablast",
+    "pokeapiFormId": null,
+    "speciesId": 588
+  },
+  "589": {
+    "pokeapiId": 589,
+    "canonical": "escavalier",
+    "pokeapiFormId": null,
+    "speciesId": 589
+  },
+  "590": {
+    "pokeapiId": 590,
+    "canonical": "foongus",
+    "pokeapiFormId": null,
+    "speciesId": 590
+  },
+  "591": {
+    "pokeapiId": 591,
+    "canonical": "amoonguss",
+    "pokeapiFormId": null,
+    "speciesId": 591
+  },
+  "592": {
+    "pokeapiId": 592,
+    "canonical": "frillish-male",
+    "pokeapiFormId": null,
+    "speciesId": 592
+  },
+  "593": {
+    "pokeapiId": 593,
+    "canonical": "jellicent-male",
+    "pokeapiFormId": null,
+    "speciesId": 593
+  },
+  "594": {
+    "pokeapiId": 594,
+    "canonical": "alomomola",
+    "pokeapiFormId": null,
+    "speciesId": 594
+  },
+  "595": {
+    "pokeapiId": 595,
+    "canonical": "joltik",
+    "pokeapiFormId": null,
+    "speciesId": 595
+  },
+  "596": {
+    "pokeapiId": 596,
+    "canonical": "galvantula",
+    "pokeapiFormId": null,
+    "speciesId": 596
+  },
+  "597": {
+    "pokeapiId": 597,
+    "canonical": "ferroseed",
+    "pokeapiFormId": null,
+    "speciesId": 597
+  },
+  "598": {
+    "pokeapiId": 598,
+    "canonical": "ferrothorn",
+    "pokeapiFormId": null,
+    "speciesId": 598
+  },
+  "599": {
+    "pokeapiId": 599,
+    "canonical": "klink",
+    "pokeapiFormId": null,
+    "speciesId": 599
+  },
+  "600": {
+    "pokeapiId": 600,
+    "canonical": "klang",
+    "pokeapiFormId": null,
+    "speciesId": 600
+  },
+  "601": {
+    "pokeapiId": 601,
+    "canonical": "klinklang",
+    "pokeapiFormId": null,
+    "speciesId": 601
+  },
+  "602": {
+    "pokeapiId": 602,
+    "canonical": "tynamo",
+    "pokeapiFormId": null,
+    "speciesId": 602
+  },
+  "603": {
+    "pokeapiId": 603,
+    "canonical": "eelektrik",
+    "pokeapiFormId": null,
+    "speciesId": 603
+  },
+  "604": {
+    "pokeapiId": 604,
+    "canonical": "eelektross",
+    "pokeapiFormId": null,
+    "speciesId": 604
+  },
+  "605": {
+    "pokeapiId": 605,
+    "canonical": "elgyem",
+    "pokeapiFormId": null,
+    "speciesId": 605
+  },
+  "606": {
+    "pokeapiId": 606,
+    "canonical": "beheeyem",
+    "pokeapiFormId": null,
+    "speciesId": 606
+  },
+  "607": {
+    "pokeapiId": 607,
+    "canonical": "litwick",
+    "pokeapiFormId": null,
+    "speciesId": 607
+  },
+  "608": {
+    "pokeapiId": 608,
+    "canonical": "lampent",
+    "pokeapiFormId": null,
+    "speciesId": 608
+  },
+  "609": {
+    "pokeapiId": 609,
+    "canonical": "chandelure",
+    "pokeapiFormId": null,
+    "speciesId": 609
+  },
+  "610": {
+    "pokeapiId": 610,
+    "canonical": "axew",
+    "pokeapiFormId": null,
+    "speciesId": 610
+  },
+  "611": {
+    "pokeapiId": 611,
+    "canonical": "fraxure",
+    "pokeapiFormId": null,
+    "speciesId": 611
+  },
+  "612": {
+    "pokeapiId": 612,
+    "canonical": "haxorus",
+    "pokeapiFormId": null,
+    "speciesId": 612
+  },
+  "613": {
+    "pokeapiId": 613,
+    "canonical": "cubchoo",
+    "pokeapiFormId": null,
+    "speciesId": 613
+  },
+  "614": {
+    "pokeapiId": 614,
+    "canonical": "beartic",
+    "pokeapiFormId": null,
+    "speciesId": 614
+  },
+  "615": {
+    "pokeapiId": 615,
+    "canonical": "cryogonal",
+    "pokeapiFormId": null,
+    "speciesId": 615
+  },
+  "616": {
+    "pokeapiId": 616,
+    "canonical": "shelmet",
+    "pokeapiFormId": null,
+    "speciesId": 616
+  },
+  "617": {
+    "pokeapiId": 617,
+    "canonical": "accelgor",
+    "pokeapiFormId": null,
+    "speciesId": 617
+  },
+  "618": {
+    "pokeapiId": 618,
+    "canonical": "stunfisk",
+    "pokeapiFormId": null,
+    "speciesId": 618
+  },
+  "619": {
+    "pokeapiId": 619,
+    "canonical": "mienfoo",
+    "pokeapiFormId": null,
+    "speciesId": 619
+  },
+  "620": {
+    "pokeapiId": 620,
+    "canonical": "mienshao",
+    "pokeapiFormId": null,
+    "speciesId": 620
+  },
+  "621": {
+    "pokeapiId": 621,
+    "canonical": "druddigon",
+    "pokeapiFormId": null,
+    "speciesId": 621
+  },
+  "622": {
+    "pokeapiId": 622,
+    "canonical": "golett",
+    "pokeapiFormId": null,
+    "speciesId": 622
+  },
+  "623": {
+    "pokeapiId": 623,
+    "canonical": "golurk",
+    "pokeapiFormId": null,
+    "speciesId": 623
+  },
+  "624": {
+    "pokeapiId": 624,
+    "canonical": "pawniard",
+    "pokeapiFormId": null,
+    "speciesId": 624
+  },
+  "625": {
+    "pokeapiId": 625,
+    "canonical": "bisharp",
+    "pokeapiFormId": null,
+    "speciesId": 625
+  },
+  "626": {
+    "pokeapiId": 626,
+    "canonical": "bouffalant",
+    "pokeapiFormId": null,
+    "speciesId": 626
+  },
+  "627": {
+    "pokeapiId": 627,
+    "canonical": "rufflet",
+    "pokeapiFormId": null,
+    "speciesId": 627
+  },
+  "628": {
+    "pokeapiId": 628,
+    "canonical": "braviary",
+    "pokeapiFormId": null,
+    "speciesId": 628
+  },
+  "629": {
+    "pokeapiId": 629,
+    "canonical": "vullaby",
+    "pokeapiFormId": null,
+    "speciesId": 629
+  },
+  "630": {
+    "pokeapiId": 630,
+    "canonical": "mandibuzz",
+    "pokeapiFormId": null,
+    "speciesId": 630
+  },
+  "631": {
+    "pokeapiId": 631,
+    "canonical": "heatmor",
+    "pokeapiFormId": null,
+    "speciesId": 631
+  },
+  "632": {
+    "pokeapiId": 632,
+    "canonical": "durant",
+    "pokeapiFormId": null,
+    "speciesId": 632
+  },
+  "633": {
+    "pokeapiId": 633,
+    "canonical": "deino",
+    "pokeapiFormId": null,
+    "speciesId": 633
+  },
+  "634": {
+    "pokeapiId": 634,
+    "canonical": "zweilous",
+    "pokeapiFormId": null,
+    "speciesId": 634
+  },
+  "635": {
+    "pokeapiId": 635,
+    "canonical": "hydreigon",
+    "pokeapiFormId": null,
+    "speciesId": 635
+  },
+  "636": {
+    "pokeapiId": 636,
+    "canonical": "larvesta",
+    "pokeapiFormId": null,
+    "speciesId": 636
+  },
+  "637": {
+    "pokeapiId": 637,
+    "canonical": "volcarona",
+    "pokeapiFormId": null,
+    "speciesId": 637
+  },
+  "638": {
+    "pokeapiId": 638,
+    "canonical": "cobalion",
+    "pokeapiFormId": null,
+    "speciesId": 638
+  },
+  "639": {
+    "pokeapiId": 639,
+    "canonical": "terrakion",
+    "pokeapiFormId": null,
+    "speciesId": 639
+  },
+  "640": {
+    "pokeapiId": 640,
+    "canonical": "virizion",
+    "pokeapiFormId": null,
+    "speciesId": 640
+  },
+  "641": {
+    "pokeapiId": 641,
+    "canonical": "tornadus-incarnate",
+    "pokeapiFormId": null,
+    "speciesId": 641
+  },
+  "642": {
+    "pokeapiId": 642,
+    "canonical": "thundurus-incarnate",
+    "pokeapiFormId": null,
+    "speciesId": 642
+  },
+  "643": {
+    "pokeapiId": 643,
+    "canonical": "reshiram",
+    "pokeapiFormId": null,
+    "speciesId": 643
+  },
+  "644": {
+    "pokeapiId": 644,
+    "canonical": "zekrom",
+    "pokeapiFormId": null,
+    "speciesId": 644
+  },
+  "645": {
+    "pokeapiId": 645,
+    "canonical": "landorus-incarnate",
+    "pokeapiFormId": null,
+    "speciesId": 645
+  },
+  "646": {
+    "pokeapiId": 646,
+    "canonical": "kyurem",
+    "pokeapiFormId": null,
+    "speciesId": 646
+  },
+  "647": {
+    "pokeapiId": 647,
+    "canonical": "keldeo-ordinary",
+    "pokeapiFormId": null,
+    "speciesId": 647
+  },
+  "648": {
+    "pokeapiId": 648,
+    "canonical": "meloetta-aria",
+    "pokeapiFormId": null,
+    "speciesId": 648
+  },
+  "649": {
+    "pokeapiId": 649,
+    "canonical": "genesect",
+    "pokeapiFormId": null,
+    "speciesId": 649
+  },
+  "650": {
+    "pokeapiId": 650,
+    "canonical": "chespin",
+    "pokeapiFormId": null,
+    "speciesId": 650
+  },
+  "651": {
+    "pokeapiId": 651,
+    "canonical": "quilladin",
+    "pokeapiFormId": null,
+    "speciesId": 651
+  },
+  "652": {
+    "pokeapiId": 652,
+    "canonical": "chesnaught",
+    "pokeapiFormId": null,
+    "speciesId": 652
+  },
+  "653": {
+    "pokeapiId": 653,
+    "canonical": "fennekin",
+    "pokeapiFormId": null,
+    "speciesId": 653
+  },
+  "654": {
+    "pokeapiId": 654,
+    "canonical": "braixen",
+    "pokeapiFormId": null,
+    "speciesId": 654
+  },
+  "655": {
+    "pokeapiId": 655,
+    "canonical": "delphox",
+    "pokeapiFormId": null,
+    "speciesId": 655
+  },
+  "656": {
+    "pokeapiId": 656,
+    "canonical": "froakie",
+    "pokeapiFormId": null,
+    "speciesId": 656
+  },
+  "657": {
+    "pokeapiId": 657,
+    "canonical": "frogadier",
+    "pokeapiFormId": null,
+    "speciesId": 657
+  },
+  "658": {
+    "pokeapiId": 658,
+    "canonical": "greninja",
+    "pokeapiFormId": null,
+    "speciesId": 658
+  },
+  "659": {
+    "pokeapiId": 659,
+    "canonical": "bunnelby",
+    "pokeapiFormId": null,
+    "speciesId": 659
+  },
+  "660": {
+    "pokeapiId": 660,
+    "canonical": "diggersby",
+    "pokeapiFormId": null,
+    "speciesId": 660
+  },
+  "661": {
+    "pokeapiId": 661,
+    "canonical": "fletchling",
+    "pokeapiFormId": null,
+    "speciesId": 661
+  },
+  "662": {
+    "pokeapiId": 662,
+    "canonical": "fletchinder",
+    "pokeapiFormId": null,
+    "speciesId": 662
+  },
+  "663": {
+    "pokeapiId": 663,
+    "canonical": "talonflame",
+    "pokeapiFormId": null,
+    "speciesId": 663
+  },
+  "664": {
+    "pokeapiId": 664,
+    "canonical": "scatterbug",
+    "pokeapiFormId": null,
+    "speciesId": 664
+  },
+  "665": {
+    "pokeapiId": 665,
+    "canonical": "spewpa",
+    "pokeapiFormId": null,
+    "speciesId": 665
+  },
+  "666": {
+    "pokeapiId": 666,
+    "canonical": "vivillon",
+    "pokeapiFormId": null,
+    "speciesId": 666
+  },
+  "667": {
+    "pokeapiId": 667,
+    "canonical": "litleo",
+    "pokeapiFormId": null,
+    "speciesId": 667
+  },
+  "668": {
+    "pokeapiId": 668,
+    "canonical": "pyroar-male",
+    "pokeapiFormId": null,
+    "speciesId": 668
+  },
+  "669": {
+    "pokeapiId": 669,
+    "canonical": "flabebe",
+    "pokeapiFormId": null,
+    "speciesId": 669
+  },
+  "670": {
+    "pokeapiId": 670,
+    "canonical": "floette",
+    "pokeapiFormId": null,
+    "speciesId": 670
+  },
+  "671": {
+    "pokeapiId": 671,
+    "canonical": "florges",
+    "pokeapiFormId": null,
+    "speciesId": 671
+  },
+  "672": {
+    "pokeapiId": 672,
+    "canonical": "skiddo",
+    "pokeapiFormId": null,
+    "speciesId": 672
+  },
+  "673": {
+    "pokeapiId": 673,
+    "canonical": "gogoat",
+    "pokeapiFormId": null,
+    "speciesId": 673
+  },
+  "674": {
+    "pokeapiId": 674,
+    "canonical": "pancham",
+    "pokeapiFormId": null,
+    "speciesId": 674
+  },
+  "675": {
+    "pokeapiId": 675,
+    "canonical": "pangoro",
+    "pokeapiFormId": null,
+    "speciesId": 675
+  },
+  "676": {
+    "pokeapiId": 676,
+    "canonical": "furfrou",
+    "pokeapiFormId": null,
+    "speciesId": 676
+  },
+  "677": {
+    "pokeapiId": 677,
+    "canonical": "espurr",
+    "pokeapiFormId": null,
+    "speciesId": 677
+  },
+  "678": {
+    "pokeapiId": 678,
+    "canonical": "meowstic-male",
+    "pokeapiFormId": null,
+    "speciesId": 678
+  },
+  "679": {
+    "pokeapiId": 679,
+    "canonical": "honedge",
+    "pokeapiFormId": null,
+    "speciesId": 679
+  },
+  "680": {
+    "pokeapiId": 680,
+    "canonical": "doublade",
+    "pokeapiFormId": null,
+    "speciesId": 680
+  },
+  "681": {
+    "pokeapiId": 681,
+    "canonical": "aegislash-shield",
+    "pokeapiFormId": null,
+    "speciesId": 681
+  },
+  "682": {
+    "pokeapiId": 682,
+    "canonical": "spritzee",
+    "pokeapiFormId": null,
+    "speciesId": 682
+  },
+  "683": {
+    "pokeapiId": 683,
+    "canonical": "aromatisse",
+    "pokeapiFormId": null,
+    "speciesId": 683
+  },
+  "684": {
+    "pokeapiId": 684,
+    "canonical": "swirlix",
+    "pokeapiFormId": null,
+    "speciesId": 684
+  },
+  "685": {
+    "pokeapiId": 685,
+    "canonical": "slurpuff",
+    "pokeapiFormId": null,
+    "speciesId": 685
+  },
+  "686": {
+    "pokeapiId": 686,
+    "canonical": "inkay",
+    "pokeapiFormId": null,
+    "speciesId": 686
+  },
+  "687": {
+    "pokeapiId": 687,
+    "canonical": "malamar",
+    "pokeapiFormId": null,
+    "speciesId": 687
+  },
+  "688": {
+    "pokeapiId": 688,
+    "canonical": "binacle",
+    "pokeapiFormId": null,
+    "speciesId": 688
+  },
+  "689": {
+    "pokeapiId": 689,
+    "canonical": "barbaracle",
+    "pokeapiFormId": null,
+    "speciesId": 689
+  },
+  "690": {
+    "pokeapiId": 690,
+    "canonical": "skrelp",
+    "pokeapiFormId": null,
+    "speciesId": 690
+  },
+  "691": {
+    "pokeapiId": 691,
+    "canonical": "dragalge",
+    "pokeapiFormId": null,
+    "speciesId": 691
+  },
+  "692": {
+    "pokeapiId": 692,
+    "canonical": "clauncher",
+    "pokeapiFormId": null,
+    "speciesId": 692
+  },
+  "693": {
+    "pokeapiId": 693,
+    "canonical": "clawitzer",
+    "pokeapiFormId": null,
+    "speciesId": 693
+  },
+  "694": {
+    "pokeapiId": 694,
+    "canonical": "helioptile",
+    "pokeapiFormId": null,
+    "speciesId": 694
+  },
+  "695": {
+    "pokeapiId": 695,
+    "canonical": "heliolisk",
+    "pokeapiFormId": null,
+    "speciesId": 695
+  },
+  "696": {
+    "pokeapiId": 696,
+    "canonical": "tyrunt",
+    "pokeapiFormId": null,
+    "speciesId": 696
+  },
+  "697": {
+    "pokeapiId": 697,
+    "canonical": "tyrantrum",
+    "pokeapiFormId": null,
+    "speciesId": 697
+  },
+  "698": {
+    "pokeapiId": 698,
+    "canonical": "amaura",
+    "pokeapiFormId": null,
+    "speciesId": 698
+  },
+  "699": {
+    "pokeapiId": 699,
+    "canonical": "aurorus",
+    "pokeapiFormId": null,
+    "speciesId": 699
+  },
+  "700": {
+    "pokeapiId": 700,
+    "canonical": "sylveon",
+    "pokeapiFormId": null,
+    "speciesId": 700
+  },
+  "701": {
+    "pokeapiId": 701,
+    "canonical": "hawlucha",
+    "pokeapiFormId": null,
+    "speciesId": 701
+  },
+  "702": {
+    "pokeapiId": 702,
+    "canonical": "dedenne",
+    "pokeapiFormId": null,
+    "speciesId": 702
+  },
+  "703": {
+    "pokeapiId": 703,
+    "canonical": "carbink",
+    "pokeapiFormId": null,
+    "speciesId": 703
+  },
+  "704": {
+    "pokeapiId": 704,
+    "canonical": "goomy",
+    "pokeapiFormId": null,
+    "speciesId": 704
+  },
+  "705": {
+    "pokeapiId": 705,
+    "canonical": "sliggoo",
+    "pokeapiFormId": null,
+    "speciesId": 705
+  },
+  "706": {
+    "pokeapiId": 706,
+    "canonical": "goodra",
+    "pokeapiFormId": null,
+    "speciesId": 706
+  },
+  "707": {
+    "pokeapiId": 707,
+    "canonical": "klefki",
+    "pokeapiFormId": null,
+    "speciesId": 707
+  },
+  "708": {
+    "pokeapiId": 708,
+    "canonical": "phantump",
+    "pokeapiFormId": null,
+    "speciesId": 708
+  },
+  "709": {
+    "pokeapiId": 709,
+    "canonical": "trevenant",
+    "pokeapiFormId": null,
+    "speciesId": 709
+  },
+  "710": {
+    "pokeapiId": 710,
+    "canonical": "pumpkaboo-average",
+    "pokeapiFormId": null,
+    "speciesId": 710
+  },
+  "711": {
+    "pokeapiId": 711,
+    "canonical": "gourgeist-average",
+    "pokeapiFormId": null,
+    "speciesId": 711
+  },
+  "712": {
+    "pokeapiId": 712,
+    "canonical": "bergmite",
+    "pokeapiFormId": null,
+    "speciesId": 712
+  },
+  "713": {
+    "pokeapiId": 713,
+    "canonical": "avalugg",
+    "pokeapiFormId": null,
+    "speciesId": 713
+  },
+  "714": {
+    "pokeapiId": 714,
+    "canonical": "noibat",
+    "pokeapiFormId": null,
+    "speciesId": 714
+  },
+  "715": {
+    "pokeapiId": 715,
+    "canonical": "noivern",
+    "pokeapiFormId": null,
+    "speciesId": 715
+  },
+  "716": {
+    "pokeapiId": 716,
+    "canonical": "xerneas",
+    "pokeapiFormId": null,
+    "speciesId": 716
+  },
+  "717": {
+    "pokeapiId": 717,
+    "canonical": "yveltal",
+    "pokeapiFormId": null,
+    "speciesId": 717
+  },
+  "718": {
+    "pokeapiId": 718,
+    "canonical": "zygarde-50",
+    "pokeapiFormId": null,
+    "speciesId": 718
+  },
+  "719": {
+    "pokeapiId": 719,
+    "canonical": "diancie",
+    "pokeapiFormId": null,
+    "speciesId": 719
+  },
+  "720": {
+    "pokeapiId": 720,
+    "canonical": "hoopa",
+    "pokeapiFormId": null,
+    "speciesId": 720
+  },
+  "721": {
+    "pokeapiId": 721,
+    "canonical": "volcanion",
+    "pokeapiFormId": null,
+    "speciesId": 721
+  },
+  "722": {
+    "pokeapiId": 722,
+    "canonical": "rowlet",
+    "pokeapiFormId": null,
+    "speciesId": 722
+  },
+  "723": {
+    "pokeapiId": 723,
+    "canonical": "dartrix",
+    "pokeapiFormId": null,
+    "speciesId": 723
+  },
+  "724": {
+    "pokeapiId": 724,
+    "canonical": "decidueye",
+    "pokeapiFormId": null,
+    "speciesId": 724
+  },
+  "725": {
+    "pokeapiId": 725,
+    "canonical": "litten",
+    "pokeapiFormId": null,
+    "speciesId": 725
+  },
+  "726": {
+    "pokeapiId": 726,
+    "canonical": "torracat",
+    "pokeapiFormId": null,
+    "speciesId": 726
+  },
+  "727": {
+    "pokeapiId": 727,
+    "canonical": "incineroar",
+    "pokeapiFormId": null,
+    "speciesId": 727
+  },
+  "728": {
+    "pokeapiId": 728,
+    "canonical": "popplio",
+    "pokeapiFormId": null,
+    "speciesId": 728
+  },
+  "729": {
+    "pokeapiId": 729,
+    "canonical": "brionne",
+    "pokeapiFormId": null,
+    "speciesId": 729
+  },
+  "730": {
+    "pokeapiId": 730,
+    "canonical": "primarina",
+    "pokeapiFormId": null,
+    "speciesId": 730
+  },
+  "731": {
+    "pokeapiId": 731,
+    "canonical": "pikipek",
+    "pokeapiFormId": null,
+    "speciesId": 731
+  },
+  "732": {
+    "pokeapiId": 732,
+    "canonical": "trumbeak",
+    "pokeapiFormId": null,
+    "speciesId": 732
+  },
+  "733": {
+    "pokeapiId": 733,
+    "canonical": "toucannon",
+    "pokeapiFormId": null,
+    "speciesId": 733
+  },
+  "734": {
+    "pokeapiId": 734,
+    "canonical": "yungoos",
+    "pokeapiFormId": null,
+    "speciesId": 734
+  },
+  "735": {
+    "pokeapiId": 735,
+    "canonical": "gumshoos",
+    "pokeapiFormId": null,
+    "speciesId": 735
+  },
+  "736": {
+    "pokeapiId": 736,
+    "canonical": "grubbin",
+    "pokeapiFormId": null,
+    "speciesId": 736
+  },
+  "737": {
+    "pokeapiId": 737,
+    "canonical": "charjabug",
+    "pokeapiFormId": null,
+    "speciesId": 737
+  },
+  "738": {
+    "pokeapiId": 738,
+    "canonical": "vikavolt",
+    "pokeapiFormId": null,
+    "speciesId": 738
+  },
+  "739": {
+    "pokeapiId": 739,
+    "canonical": "crabrawler",
+    "pokeapiFormId": null,
+    "speciesId": 739
+  },
+  "740": {
+    "pokeapiId": 740,
+    "canonical": "crabominable",
+    "pokeapiFormId": null,
+    "speciesId": 740
+  },
+  "741": {
+    "pokeapiId": 741,
+    "canonical": "oricorio-baile",
+    "pokeapiFormId": null,
+    "speciesId": 741
+  },
+  "742": {
+    "pokeapiId": 742,
+    "canonical": "cutiefly",
+    "pokeapiFormId": null,
+    "speciesId": 742
+  },
+  "743": {
+    "pokeapiId": 743,
+    "canonical": "ribombee",
+    "pokeapiFormId": null,
+    "speciesId": 743
+  },
+  "744": {
+    "pokeapiId": 744,
+    "canonical": "rockruff",
+    "pokeapiFormId": null,
+    "speciesId": 744
+  },
+  "745": {
+    "pokeapiId": 745,
+    "canonical": "lycanroc-midday",
+    "pokeapiFormId": null,
+    "speciesId": 745
+  },
+  "746": {
+    "pokeapiId": 746,
+    "canonical": "wishiwashi-solo",
+    "pokeapiFormId": null,
+    "speciesId": 746
+  },
+  "747": {
+    "pokeapiId": 747,
+    "canonical": "mareanie",
+    "pokeapiFormId": null,
+    "speciesId": 747
+  },
+  "748": {
+    "pokeapiId": 748,
+    "canonical": "toxapex",
+    "pokeapiFormId": null,
+    "speciesId": 748
+  },
+  "749": {
+    "pokeapiId": 749,
+    "canonical": "mudbray",
+    "pokeapiFormId": null,
+    "speciesId": 749
+  },
+  "750": {
+    "pokeapiId": 750,
+    "canonical": "mudsdale",
+    "pokeapiFormId": null,
+    "speciesId": 750
+  },
+  "751": {
+    "pokeapiId": 751,
+    "canonical": "dewpider",
+    "pokeapiFormId": null,
+    "speciesId": 751
+  },
+  "752": {
+    "pokeapiId": 752,
+    "canonical": "araquanid",
+    "pokeapiFormId": null,
+    "speciesId": 752
+  },
+  "753": {
+    "pokeapiId": 753,
+    "canonical": "fomantis",
+    "pokeapiFormId": null,
+    "speciesId": 753
+  },
+  "754": {
+    "pokeapiId": 754,
+    "canonical": "lurantis",
+    "pokeapiFormId": null,
+    "speciesId": 754
+  },
+  "755": {
+    "pokeapiId": 755,
+    "canonical": "morelull",
+    "pokeapiFormId": null,
+    "speciesId": 755
+  },
+  "756": {
+    "pokeapiId": 756,
+    "canonical": "shiinotic",
+    "pokeapiFormId": null,
+    "speciesId": 756
+  },
+  "757": {
+    "pokeapiId": 757,
+    "canonical": "salandit",
+    "pokeapiFormId": null,
+    "speciesId": 757
+  },
+  "758": {
+    "pokeapiId": 758,
+    "canonical": "salazzle",
+    "pokeapiFormId": null,
+    "speciesId": 758
+  },
+  "759": {
+    "pokeapiId": 759,
+    "canonical": "stufful",
+    "pokeapiFormId": null,
+    "speciesId": 759
+  },
+  "760": {
+    "pokeapiId": 760,
+    "canonical": "bewear",
+    "pokeapiFormId": null,
+    "speciesId": 760
+  },
+  "761": {
+    "pokeapiId": 761,
+    "canonical": "bounsweet",
+    "pokeapiFormId": null,
+    "speciesId": 761
+  },
+  "762": {
+    "pokeapiId": 762,
+    "canonical": "steenee",
+    "pokeapiFormId": null,
+    "speciesId": 762
+  },
+  "763": {
+    "pokeapiId": 763,
+    "canonical": "tsareena",
+    "pokeapiFormId": null,
+    "speciesId": 763
+  },
+  "764": {
+    "pokeapiId": 764,
+    "canonical": "comfey",
+    "pokeapiFormId": null,
+    "speciesId": 764
+  },
+  "765": {
+    "pokeapiId": 765,
+    "canonical": "oranguru",
+    "pokeapiFormId": null,
+    "speciesId": 765
+  },
+  "766": {
+    "pokeapiId": 766,
+    "canonical": "passimian",
+    "pokeapiFormId": null,
+    "speciesId": 766
+  },
+  "767": {
+    "pokeapiId": 767,
+    "canonical": "wimpod",
+    "pokeapiFormId": null,
+    "speciesId": 767
+  },
+  "768": {
+    "pokeapiId": 768,
+    "canonical": "golisopod",
+    "pokeapiFormId": null,
+    "speciesId": 768
+  },
+  "769": {
+    "pokeapiId": 769,
+    "canonical": "sandygast",
+    "pokeapiFormId": null,
+    "speciesId": 769
+  },
+  "770": {
+    "pokeapiId": 770,
+    "canonical": "palossand",
+    "pokeapiFormId": null,
+    "speciesId": 770
+  },
+  "771": {
+    "pokeapiId": 771,
+    "canonical": "pyukumuku",
+    "pokeapiFormId": null,
+    "speciesId": 771
+  },
+  "772": {
+    "pokeapiId": 772,
+    "canonical": "type-null",
+    "pokeapiFormId": null,
+    "speciesId": 772
+  },
+  "773": {
+    "pokeapiId": 773,
+    "canonical": "silvally",
+    "pokeapiFormId": null,
+    "speciesId": 773
+  },
+  "774": {
+    "pokeapiId": 774,
+    "canonical": "minior-red-meteor",
+    "pokeapiFormId": null,
+    "speciesId": 774
+  },
+  "775": {
+    "pokeapiId": 775,
+    "canonical": "komala",
+    "pokeapiFormId": null,
+    "speciesId": 775
+  },
+  "776": {
+    "pokeapiId": 776,
+    "canonical": "turtonator",
+    "pokeapiFormId": null,
+    "speciesId": 776
+  },
+  "777": {
+    "pokeapiId": 777,
+    "canonical": "togedemaru",
+    "pokeapiFormId": null,
+    "speciesId": 777
+  },
+  "778": {
+    "pokeapiId": 778,
+    "canonical": "mimikyu-disguised",
+    "pokeapiFormId": null,
+    "speciesId": 778
+  },
+  "779": {
+    "pokeapiId": 779,
+    "canonical": "bruxish",
+    "pokeapiFormId": null,
+    "speciesId": 779
+  },
+  "780": {
+    "pokeapiId": 780,
+    "canonical": "drampa",
+    "pokeapiFormId": null,
+    "speciesId": 780
+  },
+  "781": {
+    "pokeapiId": 781,
+    "canonical": "dhelmise",
+    "pokeapiFormId": null,
+    "speciesId": 781
+  },
+  "782": {
+    "pokeapiId": 782,
+    "canonical": "jangmo-o",
+    "pokeapiFormId": null,
+    "speciesId": 782
+  },
+  "783": {
+    "pokeapiId": 783,
+    "canonical": "hakamo-o",
+    "pokeapiFormId": null,
+    "speciesId": 783
+  },
+  "784": {
+    "pokeapiId": 784,
+    "canonical": "kommo-o",
+    "pokeapiFormId": null,
+    "speciesId": 784
+  },
+  "785": {
+    "pokeapiId": 785,
+    "canonical": "tapu-koko",
+    "pokeapiFormId": null,
+    "speciesId": 785
+  },
+  "786": {
+    "pokeapiId": 786,
+    "canonical": "tapu-lele",
+    "pokeapiFormId": null,
+    "speciesId": 786
+  },
+  "787": {
+    "pokeapiId": 787,
+    "canonical": "tapu-bulu",
+    "pokeapiFormId": null,
+    "speciesId": 787
+  },
+  "788": {
+    "pokeapiId": 788,
+    "canonical": "tapu-fini",
+    "pokeapiFormId": null,
+    "speciesId": 788
+  },
+  "789": {
+    "pokeapiId": 789,
+    "canonical": "cosmog",
+    "pokeapiFormId": null,
+    "speciesId": 789
+  },
+  "790": {
+    "pokeapiId": 790,
+    "canonical": "cosmoem",
+    "pokeapiFormId": null,
+    "speciesId": 790
+  },
+  "791": {
+    "pokeapiId": 791,
+    "canonical": "solgaleo",
+    "pokeapiFormId": null,
+    "speciesId": 791
+  },
+  "792": {
+    "pokeapiId": 792,
+    "canonical": "lunala",
+    "pokeapiFormId": null,
+    "speciesId": 792
+  },
+  "793": {
+    "pokeapiId": 793,
+    "canonical": "nihilego",
+    "pokeapiFormId": null,
+    "speciesId": 793
+  },
+  "794": {
+    "pokeapiId": 794,
+    "canonical": "buzzwole",
+    "pokeapiFormId": null,
+    "speciesId": 794
+  },
+  "795": {
+    "pokeapiId": 795,
+    "canonical": "pheromosa",
+    "pokeapiFormId": null,
+    "speciesId": 795
+  },
+  "796": {
+    "pokeapiId": 796,
+    "canonical": "xurkitree",
+    "pokeapiFormId": null,
+    "speciesId": 796
+  },
+  "797": {
+    "pokeapiId": 797,
+    "canonical": "celesteela",
+    "pokeapiFormId": null,
+    "speciesId": 797
+  },
+  "798": {
+    "pokeapiId": 798,
+    "canonical": "kartana",
+    "pokeapiFormId": null,
+    "speciesId": 798
+  },
+  "799": {
+    "pokeapiId": 799,
+    "canonical": "guzzlord",
+    "pokeapiFormId": null,
+    "speciesId": 799
+  },
+  "800": {
+    "pokeapiId": 800,
+    "canonical": "necrozma",
+    "pokeapiFormId": null,
+    "speciesId": 800
+  },
+  "801": {
+    "pokeapiId": 801,
+    "canonical": "magearna",
+    "pokeapiFormId": null,
+    "speciesId": 801
+  },
+  "802": {
+    "pokeapiId": 802,
+    "canonical": "marshadow",
+    "pokeapiFormId": null,
+    "speciesId": 802
+  },
+  "803": {
+    "pokeapiId": 803,
+    "canonical": "poipole",
+    "pokeapiFormId": null,
+    "speciesId": 803
+  },
+  "804": {
+    "pokeapiId": 804,
+    "canonical": "naganadel",
+    "pokeapiFormId": null,
+    "speciesId": 804
+  },
+  "805": {
+    "pokeapiId": 805,
+    "canonical": "stakataka",
+    "pokeapiFormId": null,
+    "speciesId": 805
+  },
+  "806": {
+    "pokeapiId": 806,
+    "canonical": "blacephalon",
+    "pokeapiFormId": null,
+    "speciesId": 806
+  },
+  "807": {
+    "pokeapiId": 807,
+    "canonical": "zeraora",
+    "pokeapiFormId": null,
+    "speciesId": 807
+  },
+  "808": {
+    "pokeapiId": 808,
+    "canonical": "meltan",
+    "pokeapiFormId": null,
+    "speciesId": 808
+  },
+  "809": {
+    "pokeapiId": 809,
+    "canonical": "melmetal",
+    "pokeapiFormId": null,
+    "speciesId": 809
+  },
+  "810": {
+    "pokeapiId": 810,
+    "canonical": "grookey",
+    "pokeapiFormId": null,
+    "speciesId": 810
+  },
+  "811": {
+    "pokeapiId": 811,
+    "canonical": "thwackey",
+    "pokeapiFormId": null,
+    "speciesId": 811
+  },
+  "812": {
+    "pokeapiId": 812,
+    "canonical": "rillaboom",
+    "pokeapiFormId": null,
+    "speciesId": 812
+  },
+  "813": {
+    "pokeapiId": 813,
+    "canonical": "scorbunny",
+    "pokeapiFormId": null,
+    "speciesId": 813
+  },
+  "814": {
+    "pokeapiId": 814,
+    "canonical": "raboot",
+    "pokeapiFormId": null,
+    "speciesId": 814
+  },
+  "815": {
+    "pokeapiId": 815,
+    "canonical": "cinderace",
+    "pokeapiFormId": null,
+    "speciesId": 815
+  },
+  "816": {
+    "pokeapiId": 816,
+    "canonical": "sobble",
+    "pokeapiFormId": null,
+    "speciesId": 816
+  },
+  "817": {
+    "pokeapiId": 817,
+    "canonical": "drizzile",
+    "pokeapiFormId": null,
+    "speciesId": 817
+  },
+  "818": {
+    "pokeapiId": 818,
+    "canonical": "inteleon",
+    "pokeapiFormId": null,
+    "speciesId": 818
+  },
+  "819": {
+    "pokeapiId": 819,
+    "canonical": "skwovet",
+    "pokeapiFormId": null,
+    "speciesId": 819
+  },
+  "820": {
+    "pokeapiId": 820,
+    "canonical": "greedent",
+    "pokeapiFormId": null,
+    "speciesId": 820
+  },
+  "821": {
+    "pokeapiId": 821,
+    "canonical": "rookidee",
+    "pokeapiFormId": null,
+    "speciesId": 821
+  },
+  "822": {
+    "pokeapiId": 822,
+    "canonical": "corvisquire",
+    "pokeapiFormId": null,
+    "speciesId": 822
+  },
+  "823": {
+    "pokeapiId": 823,
+    "canonical": "corviknight",
+    "pokeapiFormId": null,
+    "speciesId": 823
+  },
+  "824": {
+    "pokeapiId": 824,
+    "canonical": "blipbug",
+    "pokeapiFormId": null,
+    "speciesId": 824
+  },
+  "825": {
+    "pokeapiId": 825,
+    "canonical": "dottler",
+    "pokeapiFormId": null,
+    "speciesId": 825
+  },
+  "826": {
+    "pokeapiId": 826,
+    "canonical": "orbeetle",
+    "pokeapiFormId": null,
+    "speciesId": 826
+  },
+  "827": {
+    "pokeapiId": 827,
+    "canonical": "nickit",
+    "pokeapiFormId": null,
+    "speciesId": 827
+  },
+  "828": {
+    "pokeapiId": 828,
+    "canonical": "thievul",
+    "pokeapiFormId": null,
+    "speciesId": 828
+  },
+  "829": {
+    "pokeapiId": 829,
+    "canonical": "gossifleur",
+    "pokeapiFormId": null,
+    "speciesId": 829
+  },
+  "830": {
+    "pokeapiId": 830,
+    "canonical": "eldegoss",
+    "pokeapiFormId": null,
+    "speciesId": 830
+  },
+  "831": {
+    "pokeapiId": 831,
+    "canonical": "wooloo",
+    "pokeapiFormId": null,
+    "speciesId": 831
+  },
+  "832": {
+    "pokeapiId": 832,
+    "canonical": "dubwool",
+    "pokeapiFormId": null,
+    "speciesId": 832
+  },
+  "833": {
+    "pokeapiId": 833,
+    "canonical": "chewtle",
+    "pokeapiFormId": null,
+    "speciesId": 833
+  },
+  "834": {
+    "pokeapiId": 834,
+    "canonical": "drednaw",
+    "pokeapiFormId": null,
+    "speciesId": 834
+  },
+  "835": {
+    "pokeapiId": 835,
+    "canonical": "yamper",
+    "pokeapiFormId": null,
+    "speciesId": 835
+  },
+  "836": {
+    "pokeapiId": 836,
+    "canonical": "boltund",
+    "pokeapiFormId": null,
+    "speciesId": 836
+  },
+  "837": {
+    "pokeapiId": 837,
+    "canonical": "rolycoly",
+    "pokeapiFormId": null,
+    "speciesId": 837
+  },
+  "838": {
+    "pokeapiId": 838,
+    "canonical": "carkol",
+    "pokeapiFormId": null,
+    "speciesId": 838
+  },
+  "839": {
+    "pokeapiId": 839,
+    "canonical": "coalossal",
+    "pokeapiFormId": null,
+    "speciesId": 839
+  },
+  "840": {
+    "pokeapiId": 840,
+    "canonical": "applin",
+    "pokeapiFormId": null,
+    "speciesId": 840
+  },
+  "841": {
+    "pokeapiId": 841,
+    "canonical": "flapple",
+    "pokeapiFormId": null,
+    "speciesId": 841
+  },
+  "842": {
+    "pokeapiId": 842,
+    "canonical": "appletun",
+    "pokeapiFormId": null,
+    "speciesId": 842
+  },
+  "843": {
+    "pokeapiId": 843,
+    "canonical": "silicobra",
+    "pokeapiFormId": null,
+    "speciesId": 843
+  },
+  "844": {
+    "pokeapiId": 844,
+    "canonical": "sandaconda",
+    "pokeapiFormId": null,
+    "speciesId": 844
+  },
+  "845": {
+    "pokeapiId": 845,
+    "canonical": "cramorant",
+    "pokeapiFormId": null,
+    "speciesId": 845
+  },
+  "846": {
+    "pokeapiId": 846,
+    "canonical": "arrokuda",
+    "pokeapiFormId": null,
+    "speciesId": 846
+  },
+  "847": {
+    "pokeapiId": 847,
+    "canonical": "barraskewda",
+    "pokeapiFormId": null,
+    "speciesId": 847
+  },
+  "848": {
+    "pokeapiId": 848,
+    "canonical": "toxel",
+    "pokeapiFormId": null,
+    "speciesId": 848
+  },
+  "849": {
+    "pokeapiId": 849,
+    "canonical": "toxtricity-amped",
+    "pokeapiFormId": null,
+    "speciesId": 849
+  },
+  "850": {
+    "pokeapiId": 850,
+    "canonical": "sizzlipede",
+    "pokeapiFormId": null,
+    "speciesId": 850
+  },
+  "851": {
+    "pokeapiId": 851,
+    "canonical": "centiskorch",
+    "pokeapiFormId": null,
+    "speciesId": 851
+  },
+  "852": {
+    "pokeapiId": 852,
+    "canonical": "clobbopus",
+    "pokeapiFormId": null,
+    "speciesId": 852
+  },
+  "853": {
+    "pokeapiId": 853,
+    "canonical": "grapploct",
+    "pokeapiFormId": null,
+    "speciesId": 853
+  },
+  "854": {
+    "pokeapiId": 854,
+    "canonical": "sinistea",
+    "pokeapiFormId": null,
+    "speciesId": 854
+  },
+  "855": {
+    "pokeapiId": 855,
+    "canonical": "polteageist",
+    "pokeapiFormId": null,
+    "speciesId": 855
+  },
+  "856": {
+    "pokeapiId": 856,
+    "canonical": "hatenna",
+    "pokeapiFormId": null,
+    "speciesId": 856
+  },
+  "857": {
+    "pokeapiId": 857,
+    "canonical": "hattrem",
+    "pokeapiFormId": null,
+    "speciesId": 857
+  },
+  "858": {
+    "pokeapiId": 858,
+    "canonical": "hatterene",
+    "pokeapiFormId": null,
+    "speciesId": 858
+  },
+  "859": {
+    "pokeapiId": 859,
+    "canonical": "impidimp",
+    "pokeapiFormId": null,
+    "speciesId": 859
+  },
+  "860": {
+    "pokeapiId": 860,
+    "canonical": "morgrem",
+    "pokeapiFormId": null,
+    "speciesId": 860
+  },
+  "861": {
+    "pokeapiId": 861,
+    "canonical": "grimmsnarl",
+    "pokeapiFormId": null,
+    "speciesId": 861
+  },
+  "862": {
+    "pokeapiId": 862,
+    "canonical": "obstagoon",
+    "pokeapiFormId": null,
+    "speciesId": 862
+  },
+  "863": {
+    "pokeapiId": 863,
+    "canonical": "perrserker",
+    "pokeapiFormId": null,
+    "speciesId": 863
+  },
+  "864": {
+    "pokeapiId": 864,
+    "canonical": "cursola",
+    "pokeapiFormId": null,
+    "speciesId": 864
+  },
+  "865": {
+    "pokeapiId": 865,
+    "canonical": "sirfetchd",
+    "pokeapiFormId": null,
+    "speciesId": 865
+  },
+  "866": {
+    "pokeapiId": 866,
+    "canonical": "mr-rime",
+    "pokeapiFormId": null,
+    "speciesId": 866
+  },
+  "867": {
+    "pokeapiId": 867,
+    "canonical": "runerigus",
+    "pokeapiFormId": null,
+    "speciesId": 867
+  },
+  "868": {
+    "pokeapiId": 868,
+    "canonical": "milcery",
+    "pokeapiFormId": null,
+    "speciesId": 868
+  },
+  "869": {
+    "pokeapiId": 869,
+    "canonical": "alcremie",
+    "pokeapiFormId": null,
+    "speciesId": 869
+  },
+  "870": {
+    "pokeapiId": 870,
+    "canonical": "falinks",
+    "pokeapiFormId": null,
+    "speciesId": 870
+  },
+  "871": {
+    "pokeapiId": 871,
+    "canonical": "pincurchin",
+    "pokeapiFormId": null,
+    "speciesId": 871
+  },
+  "872": {
+    "pokeapiId": 872,
+    "canonical": "snom",
+    "pokeapiFormId": null,
+    "speciesId": 872
+  },
+  "873": {
+    "pokeapiId": 873,
+    "canonical": "frosmoth",
+    "pokeapiFormId": null,
+    "speciesId": 873
+  },
+  "874": {
+    "pokeapiId": 874,
+    "canonical": "stonjourner",
+    "pokeapiFormId": null,
+    "speciesId": 874
+  },
+  "875": {
+    "pokeapiId": 875,
+    "canonical": "eiscue-ice",
+    "pokeapiFormId": null,
+    "speciesId": 875
+  },
+  "876": {
+    "pokeapiId": 876,
+    "canonical": "indeedee-male",
+    "pokeapiFormId": null,
+    "speciesId": 876
+  },
+  "877": {
+    "pokeapiId": 877,
+    "canonical": "morpeko-full-belly",
+    "pokeapiFormId": null,
+    "speciesId": 877
+  },
+  "878": {
+    "pokeapiId": 878,
+    "canonical": "cufant",
+    "pokeapiFormId": null,
+    "speciesId": 878
+  },
+  "879": {
+    "pokeapiId": 879,
+    "canonical": "copperajah",
+    "pokeapiFormId": null,
+    "speciesId": 879
+  },
+  "880": {
+    "pokeapiId": 880,
+    "canonical": "dracozolt",
+    "pokeapiFormId": null,
+    "speciesId": 880
+  },
+  "881": {
+    "pokeapiId": 881,
+    "canonical": "arctozolt",
+    "pokeapiFormId": null,
+    "speciesId": 881
+  },
+  "882": {
+    "pokeapiId": 882,
+    "canonical": "dracovish",
+    "pokeapiFormId": null,
+    "speciesId": 882
+  },
+  "883": {
+    "pokeapiId": 883,
+    "canonical": "arctovish",
+    "pokeapiFormId": null,
+    "speciesId": 883
+  },
+  "884": {
+    "pokeapiId": 884,
+    "canonical": "duraludon",
+    "pokeapiFormId": null,
+    "speciesId": 884
+  },
+  "885": {
+    "pokeapiId": 885,
+    "canonical": "dreepy",
+    "pokeapiFormId": null,
+    "speciesId": 885
+  },
+  "886": {
+    "pokeapiId": 886,
+    "canonical": "drakloak",
+    "pokeapiFormId": null,
+    "speciesId": 886
+  },
+  "887": {
+    "pokeapiId": 887,
+    "canonical": "dragapult",
+    "pokeapiFormId": null,
+    "speciesId": 887
+  },
+  "888": {
+    "pokeapiId": 888,
+    "canonical": "zacian",
+    "pokeapiFormId": null,
+    "speciesId": 888
+  },
+  "889": {
+    "pokeapiId": 889,
+    "canonical": "zamazenta",
+    "pokeapiFormId": null,
+    "speciesId": 889
+  },
+  "890": {
+    "pokeapiId": 890,
+    "canonical": "eternatus",
+    "pokeapiFormId": null,
+    "speciesId": 890
+  },
+  "891": {
+    "pokeapiId": 891,
+    "canonical": "kubfu",
+    "pokeapiFormId": null,
+    "speciesId": 891
+  },
+  "892": {
+    "pokeapiId": 892,
+    "canonical": "urshifu-single-strike",
+    "pokeapiFormId": null,
+    "speciesId": 892
+  },
+  "893": {
+    "pokeapiId": 893,
+    "canonical": "zarude",
+    "pokeapiFormId": null,
+    "speciesId": 893
+  },
+  "894": {
+    "pokeapiId": 894,
+    "canonical": "regieleki",
+    "pokeapiFormId": null,
+    "speciesId": 894
+  },
+  "895": {
+    "pokeapiId": 895,
+    "canonical": "regidrago",
+    "pokeapiFormId": null,
+    "speciesId": 895
+  },
+  "896": {
+    "pokeapiId": 896,
+    "canonical": "glastrier",
+    "pokeapiFormId": null,
+    "speciesId": 896
+  },
+  "897": {
+    "pokeapiId": 897,
+    "canonical": "spectrier",
+    "pokeapiFormId": null,
+    "speciesId": 897
+  },
+  "898": {
+    "pokeapiId": 898,
+    "canonical": "calyrex",
+    "pokeapiFormId": null,
+    "speciesId": 898
+  },
+  "899": {
+    "pokeapiId": 899,
+    "canonical": "wyrdeer",
+    "pokeapiFormId": null,
+    "speciesId": 899
+  },
+  "900": {
+    "pokeapiId": 900,
+    "canonical": "kleavor",
+    "pokeapiFormId": null,
+    "speciesId": 900
+  },
+  "901": {
+    "pokeapiId": 901,
+    "canonical": "ursaluna",
+    "pokeapiFormId": null,
+    "speciesId": 901
+  },
+  "902": {
+    "pokeapiId": 902,
+    "canonical": "basculegion-male",
+    "pokeapiFormId": null,
+    "speciesId": 902
+  },
+  "903": {
+    "pokeapiId": 903,
+    "canonical": "sneasler",
+    "pokeapiFormId": null,
+    "speciesId": 903
+  },
+  "904": {
+    "pokeapiId": 904,
+    "canonical": "overqwil",
+    "pokeapiFormId": null,
+    "speciesId": 904
+  },
+  "905": {
+    "pokeapiId": 905,
+    "canonical": "enamorus-incarnate",
+    "pokeapiFormId": null,
+    "speciesId": 905
+  },
+  "906": {
+    "pokeapiId": 906,
+    "canonical": "sprigatito",
+    "pokeapiFormId": null,
+    "speciesId": 906
+  },
+  "907": {
+    "pokeapiId": 907,
+    "canonical": "floragato",
+    "pokeapiFormId": null,
+    "speciesId": 907
+  },
+  "908": {
+    "pokeapiId": 908,
+    "canonical": "meowscarada",
+    "pokeapiFormId": null,
+    "speciesId": 908
+  },
+  "909": {
+    "pokeapiId": 909,
+    "canonical": "fuecoco",
+    "pokeapiFormId": null,
+    "speciesId": 909
+  },
+  "910": {
+    "pokeapiId": 910,
+    "canonical": "crocalor",
+    "pokeapiFormId": null,
+    "speciesId": 910
+  },
+  "911": {
+    "pokeapiId": 911,
+    "canonical": "skeledirge",
+    "pokeapiFormId": null,
+    "speciesId": 911
+  },
+  "912": {
+    "pokeapiId": 912,
+    "canonical": "quaxly",
+    "pokeapiFormId": null,
+    "speciesId": 912
+  },
+  "913": {
+    "pokeapiId": 913,
+    "canonical": "quaxwell",
+    "pokeapiFormId": null,
+    "speciesId": 913
+  },
+  "914": {
+    "pokeapiId": 914,
+    "canonical": "quaquaval",
+    "pokeapiFormId": null,
+    "speciesId": 914
+  },
+  "915": {
+    "pokeapiId": 915,
+    "canonical": "lechonk",
+    "pokeapiFormId": null,
+    "speciesId": 915
+  },
+  "916": {
+    "pokeapiId": 916,
+    "canonical": "oinkologne-male",
+    "pokeapiFormId": null,
+    "speciesId": 916
+  },
+  "917": {
+    "pokeapiId": 917,
+    "canonical": "tarountula",
+    "pokeapiFormId": null,
+    "speciesId": 917
+  },
+  "918": {
+    "pokeapiId": 918,
+    "canonical": "spidops",
+    "pokeapiFormId": null,
+    "speciesId": 918
+  },
+  "919": {
+    "pokeapiId": 919,
+    "canonical": "nymble",
+    "pokeapiFormId": null,
+    "speciesId": 919
+  },
+  "920": {
+    "pokeapiId": 920,
+    "canonical": "lokix",
+    "pokeapiFormId": null,
+    "speciesId": 920
+  },
+  "921": {
+    "pokeapiId": 921,
+    "canonical": "pawmi",
+    "pokeapiFormId": null,
+    "speciesId": 921
+  },
+  "922": {
+    "pokeapiId": 922,
+    "canonical": "pawmo",
+    "pokeapiFormId": null,
+    "speciesId": 922
+  },
+  "923": {
+    "pokeapiId": 923,
+    "canonical": "pawmot",
+    "pokeapiFormId": null,
+    "speciesId": 923
+  },
+  "924": {
+    "pokeapiId": 924,
+    "canonical": "tandemaus",
+    "pokeapiFormId": null,
+    "speciesId": 924
+  },
+  "925": {
+    "pokeapiId": 925,
+    "canonical": "maushold-family-of-four",
+    "pokeapiFormId": null,
+    "speciesId": 925
+  },
+  "926": {
+    "pokeapiId": 926,
+    "canonical": "fidough",
+    "pokeapiFormId": null,
+    "speciesId": 926
+  },
+  "927": {
+    "pokeapiId": 927,
+    "canonical": "dachsbun",
+    "pokeapiFormId": null,
+    "speciesId": 927
+  },
+  "928": {
+    "pokeapiId": 928,
+    "canonical": "smoliv",
+    "pokeapiFormId": null,
+    "speciesId": 928
+  },
+  "929": {
+    "pokeapiId": 929,
+    "canonical": "dolliv",
+    "pokeapiFormId": null,
+    "speciesId": 929
+  },
+  "930": {
+    "pokeapiId": 930,
+    "canonical": "arboliva",
+    "pokeapiFormId": null,
+    "speciesId": 930
+  },
+  "931": {
+    "pokeapiId": 931,
+    "canonical": "squawkabilly-green-plumage",
+    "pokeapiFormId": null,
+    "speciesId": 931
+  },
+  "932": {
+    "pokeapiId": 932,
+    "canonical": "nacli",
+    "pokeapiFormId": null,
+    "speciesId": 932
+  },
+  "933": {
+    "pokeapiId": 933,
+    "canonical": "naclstack",
+    "pokeapiFormId": null,
+    "speciesId": 933
+  },
+  "934": {
+    "pokeapiId": 934,
+    "canonical": "garganacl",
+    "pokeapiFormId": null,
+    "speciesId": 934
+  },
+  "935": {
+    "pokeapiId": 935,
+    "canonical": "charcadet",
+    "pokeapiFormId": null,
+    "speciesId": 935
+  },
+  "936": {
+    "pokeapiId": 936,
+    "canonical": "armarouge",
+    "pokeapiFormId": null,
+    "speciesId": 936
+  },
+  "937": {
+    "pokeapiId": 937,
+    "canonical": "ceruledge",
+    "pokeapiFormId": null,
+    "speciesId": 937
+  },
+  "938": {
+    "pokeapiId": 938,
+    "canonical": "tadbulb",
+    "pokeapiFormId": null,
+    "speciesId": 938
+  },
+  "939": {
+    "pokeapiId": 939,
+    "canonical": "bellibolt",
+    "pokeapiFormId": null,
+    "speciesId": 939
+  },
+  "940": {
+    "pokeapiId": 940,
+    "canonical": "wattrel",
+    "pokeapiFormId": null,
+    "speciesId": 940
+  },
+  "941": {
+    "pokeapiId": 941,
+    "canonical": "kilowattrel",
+    "pokeapiFormId": null,
+    "speciesId": 941
+  },
+  "942": {
+    "pokeapiId": 942,
+    "canonical": "maschiff",
+    "pokeapiFormId": null,
+    "speciesId": 942
+  },
+  "943": {
+    "pokeapiId": 943,
+    "canonical": "mabosstiff",
+    "pokeapiFormId": null,
+    "speciesId": 943
+  },
+  "944": {
+    "pokeapiId": 944,
+    "canonical": "shroodle",
+    "pokeapiFormId": null,
+    "speciesId": 944
+  },
+  "945": {
+    "pokeapiId": 945,
+    "canonical": "grafaiai",
+    "pokeapiFormId": null,
+    "speciesId": 945
+  },
+  "946": {
+    "pokeapiId": 946,
+    "canonical": "bramblin",
+    "pokeapiFormId": null,
+    "speciesId": 946
+  },
+  "947": {
+    "pokeapiId": 947,
+    "canonical": "brambleghast",
+    "pokeapiFormId": null,
+    "speciesId": 947
+  },
+  "948": {
+    "pokeapiId": 948,
+    "canonical": "toedscool",
+    "pokeapiFormId": null,
+    "speciesId": 948
+  },
+  "949": {
+    "pokeapiId": 949,
+    "canonical": "toedscruel",
+    "pokeapiFormId": null,
+    "speciesId": 949
+  },
+  "950": {
+    "pokeapiId": 950,
+    "canonical": "klawf",
+    "pokeapiFormId": null,
+    "speciesId": 950
+  },
+  "951": {
+    "pokeapiId": 951,
+    "canonical": "capsakid",
+    "pokeapiFormId": null,
+    "speciesId": 951
+  },
+  "952": {
+    "pokeapiId": 952,
+    "canonical": "scovillain",
+    "pokeapiFormId": null,
+    "speciesId": 952
+  },
+  "953": {
+    "pokeapiId": 953,
+    "canonical": "rellor",
+    "pokeapiFormId": null,
+    "speciesId": 953
+  },
+  "954": {
+    "pokeapiId": 954,
+    "canonical": "rabsca",
+    "pokeapiFormId": null,
+    "speciesId": 954
+  },
+  "955": {
+    "pokeapiId": 955,
+    "canonical": "flittle",
+    "pokeapiFormId": null,
+    "speciesId": 955
+  },
+  "956": {
+    "pokeapiId": 956,
+    "canonical": "espathra",
+    "pokeapiFormId": null,
+    "speciesId": 956
+  },
+  "957": {
+    "pokeapiId": 957,
+    "canonical": "tinkatink",
+    "pokeapiFormId": null,
+    "speciesId": 957
+  },
+  "958": {
+    "pokeapiId": 958,
+    "canonical": "tinkatuff",
+    "pokeapiFormId": null,
+    "speciesId": 958
+  },
+  "959": {
+    "pokeapiId": 959,
+    "canonical": "tinkaton",
+    "pokeapiFormId": null,
+    "speciesId": 959
+  },
+  "960": {
+    "pokeapiId": 960,
+    "canonical": "wiglett",
+    "pokeapiFormId": null,
+    "speciesId": 960
+  },
+  "961": {
+    "pokeapiId": 961,
+    "canonical": "wugtrio",
+    "pokeapiFormId": null,
+    "speciesId": 961
+  },
+  "962": {
+    "pokeapiId": 962,
+    "canonical": "bombirdier",
+    "pokeapiFormId": null,
+    "speciesId": 962
+  },
+  "963": {
+    "pokeapiId": 963,
+    "canonical": "finizen",
+    "pokeapiFormId": null,
+    "speciesId": 963
+  },
+  "964": {
+    "pokeapiId": 964,
+    "canonical": "palafin-zero",
+    "pokeapiFormId": null,
+    "speciesId": 964
+  },
+  "965": {
+    "pokeapiId": 965,
+    "canonical": "varoom",
+    "pokeapiFormId": null,
+    "speciesId": 965
+  },
+  "966": {
+    "pokeapiId": 966,
+    "canonical": "revavroom",
+    "pokeapiFormId": null,
+    "speciesId": 966
+  },
+  "967": {
+    "pokeapiId": 967,
+    "canonical": "cyclizar",
+    "pokeapiFormId": null,
+    "speciesId": 967
+  },
+  "968": {
+    "pokeapiId": 968,
+    "canonical": "orthworm",
+    "pokeapiFormId": null,
+    "speciesId": 968
+  },
+  "969": {
+    "pokeapiId": 969,
+    "canonical": "glimmet",
+    "pokeapiFormId": null,
+    "speciesId": 969
+  },
+  "970": {
+    "pokeapiId": 970,
+    "canonical": "glimmora",
+    "pokeapiFormId": null,
+    "speciesId": 970
+  },
+  "971": {
+    "pokeapiId": 971,
+    "canonical": "greavard",
+    "pokeapiFormId": null,
+    "speciesId": 971
+  },
+  "972": {
+    "pokeapiId": 972,
+    "canonical": "houndstone",
+    "pokeapiFormId": null,
+    "speciesId": 972
+  },
+  "973": {
+    "pokeapiId": 973,
+    "canonical": "flamigo",
+    "pokeapiFormId": null,
+    "speciesId": 973
+  },
+  "974": {
+    "pokeapiId": 974,
+    "canonical": "cetoddle",
+    "pokeapiFormId": null,
+    "speciesId": 974
+  },
+  "975": {
+    "pokeapiId": 975,
+    "canonical": "cetitan",
+    "pokeapiFormId": null,
+    "speciesId": 975
+  },
+  "976": {
+    "pokeapiId": 976,
+    "canonical": "veluza",
+    "pokeapiFormId": null,
+    "speciesId": 976
+  },
+  "977": {
+    "pokeapiId": 977,
+    "canonical": "dondozo",
+    "pokeapiFormId": null,
+    "speciesId": 977
+  },
+  "978": {
+    "pokeapiId": 978,
+    "canonical": "tatsugiri-curly",
+    "pokeapiFormId": null,
+    "speciesId": 978
+  },
+  "979": {
+    "pokeapiId": 979,
+    "canonical": "annihilape",
+    "pokeapiFormId": null,
+    "speciesId": 979
+  },
+  "980": {
+    "pokeapiId": 980,
+    "canonical": "clodsire",
+    "pokeapiFormId": null,
+    "speciesId": 980
+  },
+  "981": {
+    "pokeapiId": 981,
+    "canonical": "farigiraf",
+    "pokeapiFormId": null,
+    "speciesId": 981
+  },
+  "982": {
+    "pokeapiId": 982,
+    "canonical": "dudunsparce-two-segment",
+    "pokeapiFormId": null,
+    "speciesId": 982
+  },
+  "983": {
+    "pokeapiId": 983,
+    "canonical": "kingambit",
+    "pokeapiFormId": null,
+    "speciesId": 983
+  },
+  "984": {
+    "pokeapiId": 984,
+    "canonical": "great-tusk",
+    "pokeapiFormId": null,
+    "speciesId": 984
+  },
+  "985": {
+    "pokeapiId": 985,
+    "canonical": "scream-tail",
+    "pokeapiFormId": null,
+    "speciesId": 985
+  },
+  "986": {
+    "pokeapiId": 986,
+    "canonical": "brute-bonnet",
+    "pokeapiFormId": null,
+    "speciesId": 986
+  },
+  "987": {
+    "pokeapiId": 987,
+    "canonical": "flutter-mane",
+    "pokeapiFormId": null,
+    "speciesId": 987
+  },
+  "988": {
+    "pokeapiId": 988,
+    "canonical": "slither-wing",
+    "pokeapiFormId": null,
+    "speciesId": 988
+  },
+  "989": {
+    "pokeapiId": 989,
+    "canonical": "sandy-shocks",
+    "pokeapiFormId": null,
+    "speciesId": 989
+  },
+  "990": {
+    "pokeapiId": 990,
+    "canonical": "iron-treads",
+    "pokeapiFormId": null,
+    "speciesId": 990
+  },
+  "991": {
+    "pokeapiId": 991,
+    "canonical": "iron-bundle",
+    "pokeapiFormId": null,
+    "speciesId": 991
+  },
+  "992": {
+    "pokeapiId": 992,
+    "canonical": "iron-hands",
+    "pokeapiFormId": null,
+    "speciesId": 992
+  },
+  "993": {
+    "pokeapiId": 993,
+    "canonical": "iron-jugulis",
+    "pokeapiFormId": null,
+    "speciesId": 993
+  },
+  "994": {
+    "pokeapiId": 994,
+    "canonical": "iron-moth",
+    "pokeapiFormId": null,
+    "speciesId": 994
+  },
+  "995": {
+    "pokeapiId": 995,
+    "canonical": "iron-thorns",
+    "pokeapiFormId": null,
+    "speciesId": 995
+  },
+  "996": {
+    "pokeapiId": 996,
+    "canonical": "frigibax",
+    "pokeapiFormId": null,
+    "speciesId": 996
+  },
+  "997": {
+    "pokeapiId": 997,
+    "canonical": "arctibax",
+    "pokeapiFormId": null,
+    "speciesId": 997
+  },
+  "998": {
+    "pokeapiId": 998,
+    "canonical": "baxcalibur",
+    "pokeapiFormId": null,
+    "speciesId": 998
+  },
+  "999": {
+    "pokeapiId": 999,
+    "canonical": "gimmighoul",
+    "pokeapiFormId": null,
+    "speciesId": 999
+  },
+  "1000": {
+    "pokeapiId": 1000,
+    "canonical": "gholdengo",
+    "pokeapiFormId": null,
+    "speciesId": 1000
+  },
+  "1001": {
+    "pokeapiId": 1001,
+    "canonical": "wo-chien",
+    "pokeapiFormId": null,
+    "speciesId": 1001
+  },
+  "1002": {
+    "pokeapiId": 1002,
+    "canonical": "chien-pao",
+    "pokeapiFormId": null,
+    "speciesId": 1002
+  },
+  "1003": {
+    "pokeapiId": 1003,
+    "canonical": "ting-lu",
+    "pokeapiFormId": null,
+    "speciesId": 1003
+  },
+  "1004": {
+    "pokeapiId": 1004,
+    "canonical": "chi-yu",
+    "pokeapiFormId": null,
+    "speciesId": 1004
+  },
+  "1005": {
+    "pokeapiId": 1005,
+    "canonical": "roaring-moon",
+    "pokeapiFormId": null,
+    "speciesId": 1005
+  },
+  "1006": {
+    "pokeapiId": 1006,
+    "canonical": "iron-valiant",
+    "pokeapiFormId": null,
+    "speciesId": 1006
+  },
+  "1007": {
+    "pokeapiId": 1007,
+    "canonical": "koraidon",
+    "pokeapiFormId": null,
+    "speciesId": 1007
+  },
+  "1008": {
+    "pokeapiId": 1008,
+    "canonical": "miraidon",
+    "pokeapiFormId": null,
+    "speciesId": 1008
+  },
+  "1009": {
+    "pokeapiId": 1009,
+    "canonical": "walking-wake",
+    "pokeapiFormId": null,
+    "speciesId": 1009
+  },
+  "1010": {
+    "pokeapiId": 1010,
+    "canonical": "iron-leaves",
+    "pokeapiFormId": null,
+    "speciesId": 1010
+  },
+  "1011": {
+    "pokeapiId": 1011,
+    "canonical": "dipplin",
+    "pokeapiFormId": null,
+    "speciesId": 1011
+  },
+  "1012": {
+    "pokeapiId": 1012,
+    "canonical": "poltchageist",
+    "pokeapiFormId": null,
+    "speciesId": 1012
+  },
+  "1013": {
+    "pokeapiId": 1013,
+    "canonical": "sinistcha",
+    "pokeapiFormId": null,
+    "speciesId": 1013
+  },
+  "1014": {
+    "pokeapiId": 1014,
+    "canonical": "okidogi",
+    "pokeapiFormId": null,
+    "speciesId": 1014
+  },
+  "1015": {
+    "pokeapiId": 1015,
+    "canonical": "munkidori",
+    "pokeapiFormId": null,
+    "speciesId": 1015
+  },
+  "1016": {
+    "pokeapiId": 1016,
+    "canonical": "fezandipiti",
+    "pokeapiFormId": null,
+    "speciesId": 1016
+  },
+  "1017": {
+    "pokeapiId": 1017,
+    "canonical": "ogerpon",
+    "pokeapiFormId": null,
+    "speciesId": 1017
+  },
+  "1018": {
+    "pokeapiId": 1018,
+    "canonical": "archaludon",
+    "pokeapiFormId": null,
+    "speciesId": 1018
+  },
+  "1019": {
+    "pokeapiId": 1019,
+    "canonical": "hydrapple",
+    "pokeapiFormId": null,
+    "speciesId": 1019
+  },
+  "1020": {
+    "pokeapiId": 1020,
+    "canonical": "gouging-fire",
+    "pokeapiFormId": null,
+    "speciesId": 1020
+  },
+  "1021": {
+    "pokeapiId": 1021,
+    "canonical": "raging-bolt",
+    "pokeapiFormId": null,
+    "speciesId": 1021
+  },
+  "1022": {
+    "pokeapiId": 1022,
+    "canonical": "iron-boulder",
+    "pokeapiFormId": null,
+    "speciesId": 1022
+  },
+  "1023": {
+    "pokeapiId": 1023,
+    "canonical": "iron-crown",
+    "pokeapiFormId": null,
+    "speciesId": 1023
+  },
+  "1024": {
+    "pokeapiId": 1024,
+    "canonical": "terapagos",
+    "pokeapiFormId": null,
+    "speciesId": 1024
+  },
+  "1025": {
+    "pokeapiId": 1025,
+    "canonical": "pecharunt",
+    "pokeapiFormId": null,
+    "speciesId": 1025
+  },
+  "10001": {
+    "pokeapiId": 10001,
+    "canonical": "deoxys-attack",
+    "pokeapiFormId": null,
+    "speciesId": 386
+  },
+  "10002": {
+    "pokeapiId": 10002,
+    "canonical": "deoxys-defense",
+    "pokeapiFormId": null,
+    "speciesId": 386
+  },
+  "10003": {
+    "pokeapiId": 10003,
+    "canonical": "deoxys-speed",
+    "pokeapiFormId": null,
+    "speciesId": 386
+  },
+  "10004": {
+    "pokeapiId": 10004,
+    "canonical": "wormadam-sandy",
+    "pokeapiFormId": null,
+    "speciesId": 413
+  },
+  "10005": {
+    "pokeapiId": 10005,
+    "canonical": "wormadam-trash",
+    "pokeapiFormId": null,
+    "speciesId": 413
+  },
+  "10006": {
+    "pokeapiId": 10006,
+    "canonical": "shaymin-sky",
+    "pokeapiFormId": null,
+    "speciesId": 492
+  },
+  "10007": {
+    "pokeapiId": 10007,
+    "canonical": "giratina-origin",
+    "pokeapiFormId": null,
+    "speciesId": 487
+  },
+  "10008": {
+    "pokeapiId": 10008,
+    "canonical": "rotom-heat",
+    "pokeapiFormId": null,
+    "speciesId": 479
+  },
+  "10009": {
+    "pokeapiId": 10009,
+    "canonical": "rotom-wash",
+    "pokeapiFormId": null,
+    "speciesId": 479
+  },
+  "10010": {
+    "pokeapiId": 10010,
+    "canonical": "rotom-frost",
+    "pokeapiFormId": null,
+    "speciesId": 479
+  },
+  "10011": {
+    "pokeapiId": 10011,
+    "canonical": "rotom-fan",
+    "pokeapiFormId": null,
+    "speciesId": 479
+  },
+  "10012": {
+    "pokeapiId": 10012,
+    "canonical": "rotom-mow",
+    "pokeapiFormId": null,
+    "speciesId": 479
+  },
+  "10013": {
+    "pokeapiId": 10013,
+    "canonical": "castform-sunny",
+    "pokeapiFormId": null,
+    "speciesId": 351
+  },
+  "10014": {
+    "pokeapiId": 10014,
+    "canonical": "castform-rainy",
+    "pokeapiFormId": null,
+    "speciesId": 351
+  },
+  "10015": {
+    "pokeapiId": 10015,
+    "canonical": "castform-snowy",
+    "pokeapiFormId": null,
+    "speciesId": 351
+  },
+  "10016": {
+    "pokeapiId": 10016,
+    "canonical": "basculin-blue-striped",
+    "pokeapiFormId": null,
+    "speciesId": 550
+  },
+  "10017": {
+    "pokeapiId": 10017,
+    "canonical": "darmanitan-zen",
+    "pokeapiFormId": null,
+    "speciesId": 555
+  },
+  "10018": {
+    "pokeapiId": 10018,
+    "canonical": "meloetta-pirouette",
+    "pokeapiFormId": null,
+    "speciesId": 648
+  },
+  "10019": {
+    "pokeapiId": 10019,
+    "canonical": "tornadus-therian",
+    "pokeapiFormId": null,
+    "speciesId": 641
+  },
+  "10020": {
+    "pokeapiId": 10020,
+    "canonical": "thundurus-therian",
+    "pokeapiFormId": null,
+    "speciesId": 642
+  },
+  "10021": {
+    "pokeapiId": 10021,
+    "canonical": "landorus-therian",
+    "pokeapiFormId": null,
+    "speciesId": 645
+  },
+  "10022": {
+    "pokeapiId": 10022,
+    "canonical": "kyurem-black",
+    "pokeapiFormId": null,
+    "speciesId": 646
+  },
+  "10023": {
+    "pokeapiId": 10023,
+    "canonical": "kyurem-white",
+    "pokeapiFormId": null,
+    "speciesId": 646
+  },
+  "10024": {
+    "pokeapiId": 10024,
+    "canonical": "keldeo-resolute",
+    "pokeapiFormId": null,
+    "speciesId": 647
+  },
+  "10025": {
+    "pokeapiId": 10025,
+    "canonical": "meowstic-female",
+    "pokeapiFormId": null,
+    "speciesId": 678
+  },
+  "10026": {
+    "pokeapiId": 10026,
+    "canonical": "aegislash-blade",
+    "pokeapiFormId": null,
+    "speciesId": 681
+  },
+  "10027": {
+    "pokeapiId": 10027,
+    "canonical": "pumpkaboo-small",
+    "pokeapiFormId": null,
+    "speciesId": 710
+  },
+  "10028": {
+    "pokeapiId": 10028,
+    "canonical": "pumpkaboo-large",
+    "pokeapiFormId": null,
+    "speciesId": 710
+  },
+  "10029": {
+    "pokeapiId": 10029,
+    "canonical": "pumpkaboo-super",
+    "pokeapiFormId": null,
+    "speciesId": 710
+  },
+  "10030": {
+    "pokeapiId": 10030,
+    "canonical": "gourgeist-small",
+    "pokeapiFormId": null,
+    "speciesId": 711
+  },
+  "10031": {
+    "pokeapiId": 10031,
+    "canonical": "gourgeist-large",
+    "pokeapiFormId": null,
+    "speciesId": 711
+  },
+  "10032": {
+    "pokeapiId": 10032,
+    "canonical": "gourgeist-super",
+    "pokeapiFormId": null,
+    "speciesId": 711
+  },
+  "10033": {
+    "pokeapiId": 10033,
+    "canonical": "venusaur-mega",
+    "pokeapiFormId": null,
+    "speciesId": 3
+  },
+  "10034": {
+    "pokeapiId": 10034,
+    "canonical": "charizard-mega-x",
+    "pokeapiFormId": null,
+    "speciesId": 6
+  },
+  "10035": {
+    "pokeapiId": 10035,
+    "canonical": "charizard-mega-y",
+    "pokeapiFormId": null,
+    "speciesId": 6
+  },
+  "10036": {
+    "pokeapiId": 10036,
+    "canonical": "blastoise-mega",
+    "pokeapiFormId": null,
+    "speciesId": 9
+  },
+  "10037": {
+    "pokeapiId": 10037,
+    "canonical": "alakazam-mega",
+    "pokeapiFormId": null,
+    "speciesId": 65
+  },
+  "10038": {
+    "pokeapiId": 10038,
+    "canonical": "gengar-mega",
+    "pokeapiFormId": null,
+    "speciesId": 94
+  },
+  "10039": {
+    "pokeapiId": 10039,
+    "canonical": "kangaskhan-mega",
+    "pokeapiFormId": null,
+    "speciesId": 115
+  },
+  "10040": {
+    "pokeapiId": 10040,
+    "canonical": "pinsir-mega",
+    "pokeapiFormId": null,
+    "speciesId": 127
+  },
+  "10041": {
+    "pokeapiId": 10041,
+    "canonical": "gyarados-mega",
+    "pokeapiFormId": null,
+    "speciesId": 130
+  },
+  "10042": {
+    "pokeapiId": 10042,
+    "canonical": "aerodactyl-mega",
+    "pokeapiFormId": null,
+    "speciesId": 142
+  },
+  "10043": {
+    "pokeapiId": 10043,
+    "canonical": "mewtwo-mega-x",
+    "pokeapiFormId": null,
+    "speciesId": 150
+  },
+  "10044": {
+    "pokeapiId": 10044,
+    "canonical": "mewtwo-mega-y",
+    "pokeapiFormId": null,
+    "speciesId": 150
+  },
+  "10045": {
+    "pokeapiId": 10045,
+    "canonical": "ampharos-mega",
+    "pokeapiFormId": null,
+    "speciesId": 181
+  },
+  "10046": {
+    "pokeapiId": 10046,
+    "canonical": "scizor-mega",
+    "pokeapiFormId": null,
+    "speciesId": 212
+  },
+  "10047": {
+    "pokeapiId": 10047,
+    "canonical": "heracross-mega",
+    "pokeapiFormId": null,
+    "speciesId": 214
+  },
+  "10048": {
+    "pokeapiId": 10048,
+    "canonical": "houndoom-mega",
+    "pokeapiFormId": null,
+    "speciesId": 229
+  },
+  "10049": {
+    "pokeapiId": 10049,
+    "canonical": "tyranitar-mega",
+    "pokeapiFormId": null,
+    "speciesId": 248
+  },
+  "10050": {
+    "pokeapiId": 10050,
+    "canonical": "blaziken-mega",
+    "pokeapiFormId": null,
+    "speciesId": 257
+  },
+  "10051": {
+    "pokeapiId": 10051,
+    "canonical": "gardevoir-mega",
+    "pokeapiFormId": null,
+    "speciesId": 282
+  },
+  "10052": {
+    "pokeapiId": 10052,
+    "canonical": "mawile-mega",
+    "pokeapiFormId": null,
+    "speciesId": 303
+  },
+  "10053": {
+    "pokeapiId": 10053,
+    "canonical": "aggron-mega",
+    "pokeapiFormId": null,
+    "speciesId": 306
+  },
+  "10054": {
+    "pokeapiId": 10054,
+    "canonical": "medicham-mega",
+    "pokeapiFormId": null,
+    "speciesId": 308
+  },
+  "10055": {
+    "pokeapiId": 10055,
+    "canonical": "manectric-mega",
+    "pokeapiFormId": null,
+    "speciesId": 310
+  },
+  "10056": {
+    "pokeapiId": 10056,
+    "canonical": "banette-mega",
+    "pokeapiFormId": null,
+    "speciesId": 354
+  },
+  "10057": {
+    "pokeapiId": 10057,
+    "canonical": "absol-mega",
+    "pokeapiFormId": null,
+    "speciesId": 359
+  },
+  "10058": {
+    "pokeapiId": 10058,
+    "canonical": "garchomp-mega",
+    "pokeapiFormId": null,
+    "speciesId": 445
+  },
+  "10059": {
+    "pokeapiId": 10059,
+    "canonical": "lucario-mega",
+    "pokeapiFormId": null,
+    "speciesId": 448
+  },
+  "10060": {
+    "pokeapiId": 10060,
+    "canonical": "abomasnow-mega",
+    "pokeapiFormId": null,
+    "speciesId": 460
+  },
+  "10061": {
+    "pokeapiId": 10061,
+    "canonical": "floette-eternal",
+    "pokeapiFormId": null,
+    "speciesId": 670
+  },
+  "10062": {
+    "pokeapiId": 10062,
+    "canonical": "latias-mega",
+    "pokeapiFormId": null,
+    "speciesId": 380
+  },
+  "10063": {
+    "pokeapiId": 10063,
+    "canonical": "latios-mega",
+    "pokeapiFormId": null,
+    "speciesId": 381
+  },
+  "10064": {
+    "pokeapiId": 10064,
+    "canonical": "swampert-mega",
+    "pokeapiFormId": null,
+    "speciesId": 260
+  },
+  "10065": {
+    "pokeapiId": 10065,
+    "canonical": "sceptile-mega",
+    "pokeapiFormId": null,
+    "speciesId": 254
+  },
+  "10066": {
+    "pokeapiId": 10066,
+    "canonical": "sableye-mega",
+    "pokeapiFormId": null,
+    "speciesId": 302
+  },
+  "10067": {
+    "pokeapiId": 10067,
+    "canonical": "altaria-mega",
+    "pokeapiFormId": null,
+    "speciesId": 334
+  },
+  "10068": {
+    "pokeapiId": 10068,
+    "canonical": "gallade-mega",
+    "pokeapiFormId": null,
+    "speciesId": 475
+  },
+  "10069": {
+    "pokeapiId": 10069,
+    "canonical": "audino-mega",
+    "pokeapiFormId": null,
+    "speciesId": 531
+  },
+  "10070": {
+    "pokeapiId": 10070,
+    "canonical": "sharpedo-mega",
+    "pokeapiFormId": null,
+    "speciesId": 319
+  },
+  "10071": {
+    "pokeapiId": 10071,
+    "canonical": "slowbro-mega",
+    "pokeapiFormId": null,
+    "speciesId": 80
+  },
+  "10072": {
+    "pokeapiId": 10072,
+    "canonical": "steelix-mega",
+    "pokeapiFormId": null,
+    "speciesId": 208
+  },
+  "10073": {
+    "pokeapiId": 10073,
+    "canonical": "pidgeot-mega",
+    "pokeapiFormId": null,
+    "speciesId": 18
+  },
+  "10074": {
+    "pokeapiId": 10074,
+    "canonical": "glalie-mega",
+    "pokeapiFormId": null,
+    "speciesId": 362
+  },
+  "10075": {
+    "pokeapiId": 10075,
+    "canonical": "diancie-mega",
+    "pokeapiFormId": null,
+    "speciesId": 719
+  },
+  "10076": {
+    "pokeapiId": 10076,
+    "canonical": "metagross-mega",
+    "pokeapiFormId": null,
+    "speciesId": 376
+  },
+  "10077": {
+    "pokeapiId": 10077,
+    "canonical": "kyogre-primal",
+    "pokeapiFormId": null,
+    "speciesId": 382
+  },
+  "10078": {
+    "pokeapiId": 10078,
+    "canonical": "groudon-primal",
+    "pokeapiFormId": null,
+    "speciesId": 383
+  },
+  "10079": {
+    "pokeapiId": 10079,
+    "canonical": "rayquaza-mega",
+    "pokeapiFormId": null,
+    "speciesId": 384
+  },
+  "10080": {
+    "pokeapiId": 10080,
+    "canonical": "pikachu-rock-star",
+    "pokeapiFormId": null,
+    "speciesId": 25
+  },
+  "10081": {
+    "pokeapiId": 10081,
+    "canonical": "pikachu-belle",
+    "pokeapiFormId": null,
+    "speciesId": 25
+  },
+  "10082": {
+    "pokeapiId": 10082,
+    "canonical": "pikachu-pop-star",
+    "pokeapiFormId": null,
+    "speciesId": 25
+  },
+  "10083": {
+    "pokeapiId": 10083,
+    "canonical": "pikachu-phd",
+    "pokeapiFormId": null,
+    "speciesId": 25
+  },
+  "10084": {
+    "pokeapiId": 10084,
+    "canonical": "pikachu-libre",
+    "pokeapiFormId": null,
+    "speciesId": 25
+  },
+  "10085": {
+    "pokeapiId": 10085,
+    "canonical": "pikachu-cosplay",
+    "pokeapiFormId": null,
+    "speciesId": 25
+  },
+  "10086": {
+    "pokeapiId": 10086,
+    "canonical": "hoopa-unbound",
+    "pokeapiFormId": null,
+    "speciesId": 720
+  },
+  "10087": {
+    "pokeapiId": 10087,
+    "canonical": "camerupt-mega",
+    "pokeapiFormId": null,
+    "speciesId": 323
+  },
+  "10088": {
+    "pokeapiId": 10088,
+    "canonical": "lopunny-mega",
+    "pokeapiFormId": null,
+    "speciesId": 428
+  },
+  "10089": {
+    "pokeapiId": 10089,
+    "canonical": "salamence-mega",
+    "pokeapiFormId": null,
+    "speciesId": 373
+  },
+  "10090": {
+    "pokeapiId": 10090,
+    "canonical": "beedrill-mega",
+    "pokeapiFormId": null,
+    "speciesId": 15
+  },
+  "10326": {
+    "pokeapiId": 10326,
+    "canonical": "meowstic-female-mega",
+    "pokeapiFormId": null,
+    "speciesId": 678
+  },
+  "20021": {
+    "pokeapiId": 10123,
+    "canonical": "oricorio-pom-pom",
+    "pokeapiFormId": null,
+    "speciesId": 741
+  },
+  "20022": {
+    "pokeapiId": 10124,
+    "canonical": "oricorio-pau",
+    "pokeapiFormId": null,
+    "speciesId": 741
+  },
+  "20023": {
+    "pokeapiId": 10125,
+    "canonical": "oricorio-sensu",
+    "pokeapiFormId": null,
+    "speciesId": 741
+  },
+  "20028": {
+    "pokeapiId": 10126,
+    "canonical": "lycanroc-midnight",
+    "pokeapiFormId": null,
+    "speciesId": 745
+  },
+  "20029": {
+    "pokeapiId": 10152,
+    "canonical": "lycanroc-dusk",
+    "pokeapiFormId": null,
+    "speciesId": 745
+  },
+  "20030": {
+    "pokeapiId": 10127,
+    "canonical": "wishiwashi-school",
+    "pokeapiFormId": null,
+    "speciesId": 746
+  },
+  "20059": {
+    "pokeapiId": 10136,
+    "canonical": "minior-red",
+    "pokeapiFormId": null,
+    "speciesId": 774
+  },
+  "20080": {
+    "pokeapiId": 10155,
+    "canonical": "necrozma-dusk",
+    "pokeapiFormId": null,
+    "speciesId": 800
+  },
+  "20081": {
+    "pokeapiId": 10156,
+    "canonical": "necrozma-dawn",
+    "pokeapiFormId": null,
+    "speciesId": 800
+  },
+  "20082": {
+    "pokeapiId": 10157,
+    "canonical": "necrozma-ultra",
+    "pokeapiFormId": null,
+    "speciesId": 800
+  },
+  "20083": {
+    "pokeapiId": 10158,
+    "canonical": "pikachu-starter",
+    "pokeapiFormId": null,
+    "speciesId": 25
+  },
+  "20084": {
+    "pokeapiId": 10159,
+    "canonical": "eevee-starter",
+    "pokeapiFormId": null,
+    "speciesId": 133
+  },
+  "20151": {
+    "pokeapiId": 10114,
+    "canonical": "exeggutor-alola",
+    "pokeapiFormId": null,
+    "speciesId": 103
+  },
+  "20152": {
+    "pokeapiId": 10103,
+    "canonical": "vulpix-alola",
+    "pokeapiFormId": null,
+    "speciesId": 37
+  },
+  "20153": {
+    "pokeapiId": 10104,
+    "canonical": "ninetales-alola",
+    "pokeapiFormId": null,
+    "speciesId": 38
+  },
+  "20154": {
+    "pokeapiId": 10101,
+    "canonical": "sandshrew-alola",
+    "pokeapiFormId": null,
+    "speciesId": 27
+  },
+  "20155": {
+    "pokeapiId": 10102,
+    "canonical": "sandslash-alola",
+    "pokeapiFormId": null,
+    "speciesId": 28
+  },
+  "20156": {
+    "pokeapiId": 10107,
+    "canonical": "meowth-alola",
+    "pokeapiFormId": null,
+    "speciesId": 52
+  },
+  "20157": {
+    "pokeapiId": 10108,
+    "canonical": "persian-alola",
+    "pokeapiFormId": null,
+    "speciesId": 53
+  },
+  "20158": {
+    "pokeapiId": 10115,
+    "canonical": "marowak-alola",
+    "pokeapiFormId": null,
+    "speciesId": 105
+  },
+  "20159": {
+    "pokeapiId": 10100,
+    "canonical": "raichu-alola",
+    "pokeapiFormId": null,
+    "speciesId": 26
+  },
+  "20160": {
+    "pokeapiId": 10091,
+    "canonical": "rattata-alola",
+    "pokeapiFormId": null,
+    "speciesId": 19
+  },
+  "20161": {
+    "pokeapiId": 10092,
+    "canonical": "raticate-alola",
+    "pokeapiFormId": null,
+    "speciesId": 20
+  },
+  "20162": {
+    "pokeapiId": 10112,
+    "canonical": "grimer-alola",
+    "pokeapiFormId": null,
+    "speciesId": 88
+  },
+  "20163": {
+    "pokeapiId": 10113,
+    "canonical": "muk-alola",
+    "pokeapiFormId": null,
+    "speciesId": 89
+  },
+  "20164": {
+    "pokeapiId": 10105,
+    "canonical": "diglett-alola",
+    "pokeapiFormId": null,
+    "speciesId": 50
+  },
+  "20165": {
+    "pokeapiId": 10106,
+    "canonical": "dugtrio-alola",
+    "pokeapiFormId": null,
+    "speciesId": 51
+  },
+  "20166": {
+    "pokeapiId": 10109,
+    "canonical": "geodude-alola",
+    "pokeapiFormId": null,
+    "speciesId": 74
+  },
+  "20167": {
+    "pokeapiId": 10110,
+    "canonical": "graveler-alola",
+    "pokeapiFormId": null,
+    "speciesId": 75
+  },
+  "20168": {
+    "pokeapiId": 10111,
+    "canonical": "golem-alola",
+    "pokeapiFormId": null,
+    "speciesId": 76
+  },
+  "20203": {
+    "pokeapiId": 10181,
+    "canonical": "zygarde-10",
+    "pokeapiFormId": null,
+    "speciesId": 718
+  },
+  "20205": {
+    "pokeapiId": 10120,
+    "canonical": "zygarde-complete",
+    "pokeapiFormId": null,
+    "speciesId": 718
+  },
+  "20206": {
+    "pokeapiId": 10117,
+    "canonical": "greninja-ash",
+    "pokeapiFormId": null,
+    "speciesId": 658
+  },
+  "200301": {
+    "pokeapiId": 10174,
+    "canonical": "zigzagoon-galar",
+    "pokeapiFormId": null,
+    "speciesId": 263
+  },
+  "200302": {
+    "pokeapiId": 10175,
+    "canonical": "linoone-galar",
+    "pokeapiFormId": null,
+    "speciesId": 264
+  },
+  "200303": {
+    "pokeapiId": 10167,
+    "canonical": "weezing-galar",
+    "pokeapiFormId": null,
+    "speciesId": 110
+  },
+  "200304": {
+    "pokeapiId": 10162,
+    "canonical": "ponyta-galar",
+    "pokeapiFormId": null,
+    "speciesId": 77
+  },
+  "200305": {
+    "pokeapiId": 10163,
+    "canonical": "rapidash-galar",
+    "pokeapiFormId": null,
+    "speciesId": 78
+  },
+  "200306": {
+    "pokeapiId": 10161,
+    "canonical": "meowth-galar",
+    "pokeapiFormId": null,
+    "speciesId": 52
+  },
+  "200307": {
+    "pokeapiId": 10166,
+    "canonical": "farfetchd-galar",
+    "pokeapiFormId": null,
+    "speciesId": 83
+  },
+  "200308": {
+    "pokeapiId": 10168,
+    "canonical": "mr-mime-galar",
+    "pokeapiFormId": null,
+    "speciesId": 122
+  },
+  "200309": {
+    "pokeapiId": 10173,
+    "canonical": "corsola-galar",
+    "pokeapiFormId": null,
+    "speciesId": 222
+  },
+  "200310": {
+    "pokeapiId": 10180,
+    "canonical": "stunfisk-galar",
+    "pokeapiFormId": null,
+    "speciesId": 618
+  },
+  "200311": {
+    "pokeapiId": 10176,
+    "canonical": "darumaka-galar",
+    "pokeapiFormId": null,
+    "speciesId": 554
+  },
+  "200312": {
+    "pokeapiId": 10177,
+    "canonical": "darmanitan-galar-standard",
+    "pokeapiFormId": null,
+    "speciesId": 555
+  },
+  "200313": {
+    "pokeapiId": 10179,
+    "canonical": "yamask-galar",
+    "pokeapiFormId": null,
+    "speciesId": 562
+  },
+  "200314": {
+    "pokeapiId": 10178,
+    "canonical": "darmanitan-galar-zen",
+    "pokeapiFormId": null,
+    "speciesId": 555
+  },
+  "200315": {
+    "pokeapiId": 10164,
+    "canonical": "slowpoke-galar",
+    "pokeapiFormId": null,
+    "speciesId": 79
+  },
+  "200316": {
+    "pokeapiId": 10165,
+    "canonical": "slowbro-galar",
+    "pokeapiFormId": null,
+    "speciesId": 80
+  },
+  "200317": {
+    "pokeapiId": 10169,
+    "canonical": "articuno-galar",
+    "pokeapiFormId": null,
+    "speciesId": 144
+  },
+  "200318": {
+    "pokeapiId": 10170,
+    "canonical": "zapdos-galar",
+    "pokeapiFormId": null,
+    "speciesId": 145
+  },
+  "200319": {
+    "pokeapiId": 10171,
+    "canonical": "moltres-galar",
+    "pokeapiFormId": null,
+    "speciesId": 146
+  },
+  "200320": {
+    "pokeapiId": 10172,
+    "canonical": "slowking-galar",
+    "pokeapiFormId": null,
+    "speciesId": 199
+  },
+  "200401": {
+    "pokeapiId": 10214,
+    "canonical": "drednaw-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 834
+  },
+  "200402": {
+    "pokeapiId": 10212,
+    "canonical": "corviknight-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 823
+  },
+  "200403": {
+    "pokeapiId": 10223,
+    "canonical": "alcremie-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 869
+  },
+  "200404": {
+    "pokeapiId": 10221,
+    "canonical": "hatterene-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 858
+  },
+  "200405": {
+    "pokeapiId": 10215,
+    "canonical": "coalossal-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 839
+  },
+  "200406": {
+    "pokeapiId": 10220,
+    "canonical": "centiskorch-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 851
+  },
+  "200407": {
+    "pokeapiId": 10222,
+    "canonical": "grimmsnarl-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 861
+  },
+  "200408": {
+    "pokeapiId": 10216,
+    "canonical": "flapple-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 841
+  },
+  "200409": {
+    "pokeapiId": 10224,
+    "canonical": "copperajah-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 879
+  },
+  "200410": {
+    "pokeapiId": 10225,
+    "canonical": "duraludon-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 884
+  },
+  "200411": {
+    "pokeapiId": 10196,
+    "canonical": "charizard-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 6
+  },
+  "200412": {
+    "pokeapiId": 10198,
+    "canonical": "butterfree-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 12
+  },
+  "200413": {
+    "pokeapiId": 10199,
+    "canonical": "pikachu-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 25
+  },
+  "200414": {
+    "pokeapiId": 10205,
+    "canonical": "eevee-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 133
+  },
+  "200415": {
+    "pokeapiId": 10200,
+    "canonical": "meowth-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 52
+  },
+  "200416": {
+    "pokeapiId": 10201,
+    "canonical": "machamp-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 68
+  },
+  "200417": {
+    "pokeapiId": 10203,
+    "canonical": "kingler-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 99
+  },
+  "200418": {
+    "pokeapiId": 10204,
+    "canonical": "lapras-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 131
+  },
+  "200419": {
+    "pokeapiId": 10207,
+    "canonical": "garbodor-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 569
+  },
+  "200420": {
+    "pokeapiId": 10202,
+    "canonical": "gengar-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 94
+  },
+  "200421": {
+    "pokeapiId": 10206,
+    "canonical": "snorlax-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 143
+  },
+  "200422": {
+    "pokeapiId": 10208,
+    "canonical": "melmetal-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 809
+  },
+  "200423": {
+    "pokeapiId": 10213,
+    "canonical": "orbeetle-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 826
+  },
+  "200424": {
+    "pokeapiId": 10217,
+    "canonical": "appletun-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 842
+  },
+  "200425": {
+    "pokeapiId": 10218,
+    "canonical": "sandaconda-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 844
+  },
+  "200426": {
+    "pokeapiId": 10219,
+    "canonical": "toxtricity-amped-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 849
+  },
+  "200427": {
+    "pokeapiId": 10195,
+    "canonical": "venusaur-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 3
+  },
+  "200428": {
+    "pokeapiId": 10197,
+    "canonical": "blastoise-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 9
+  },
+  "200429": {
+    "pokeapiId": 10209,
+    "canonical": "rillaboom-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 812
+  },
+  "200430": {
+    "pokeapiId": 10210,
+    "canonical": "cinderace-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 815
+  },
+  "200431": {
+    "pokeapiId": 10211,
+    "canonical": "inteleon-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 818
+  },
+  "200432": {
+    "pokeapiId": 10226,
+    "canonical": "urshifu-single-strike-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 892
+  },
+  "200433": {
+    "pokeapiId": 10227,
+    "canonical": "urshifu-rapid-strike-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 892
+  },
+  "200501": {
+    "pokeapiId": 10229,
+    "canonical": "growlithe-hisui",
+    "pokeapiFormId": null,
+    "speciesId": 58
+  },
+  "200502": {
+    "pokeapiId": 10230,
+    "canonical": "arcanine-hisui",
+    "pokeapiFormId": null,
+    "speciesId": 59
+  },
+  "200503": {
+    "pokeapiId": 10231,
+    "canonical": "voltorb-hisui",
+    "pokeapiFormId": null,
+    "speciesId": 100
+  },
+  "200504": {
+    "pokeapiId": 10232,
+    "canonical": "electrode-hisui",
+    "pokeapiFormId": null,
+    "speciesId": 101
+  },
+  "200505": {
+    "pokeapiId": 10233,
+    "canonical": "typhlosion-hisui",
+    "pokeapiFormId": null,
+    "speciesId": 157
+  },
+  "200506": {
+    "pokeapiId": 10234,
+    "canonical": "qwilfish-hisui",
+    "pokeapiFormId": null,
+    "speciesId": 211
+  },
+  "200507": {
+    "pokeapiId": 10235,
+    "canonical": "sneasel-hisui",
+    "pokeapiFormId": null,
+    "speciesId": 215
+  },
+  "200508": {
+    "pokeapiId": 10236,
+    "canonical": "samurott-hisui",
+    "pokeapiFormId": null,
+    "speciesId": 503
+  },
+  "200509": {
+    "pokeapiId": 10237,
+    "canonical": "lilligant-hisui",
+    "pokeapiFormId": null,
+    "speciesId": 549
+  },
+  "200510": {
+    "pokeapiId": 10238,
+    "canonical": "zorua-hisui",
+    "pokeapiFormId": null,
+    "speciesId": 570
+  },
+  "200511": {
+    "pokeapiId": 10239,
+    "canonical": "zoroark-hisui",
+    "pokeapiFormId": null,
+    "speciesId": 571
+  },
+  "200512": {
+    "pokeapiId": 10240,
+    "canonical": "braviary-hisui",
+    "pokeapiFormId": null,
+    "speciesId": 628
+  },
+  "200513": {
+    "pokeapiId": 10241,
+    "canonical": "sliggoo-hisui",
+    "pokeapiFormId": null,
+    "speciesId": 705
+  },
+  "200514": {
+    "pokeapiId": 10242,
+    "canonical": "goodra-hisui",
+    "pokeapiFormId": null,
+    "speciesId": 706
+  },
+  "200515": {
+    "pokeapiId": 10243,
+    "canonical": "avalugg-hisui",
+    "pokeapiFormId": null,
+    "speciesId": 713
+  },
+  "200516": {
+    "pokeapiId": 10244,
+    "canonical": "decidueye-hisui",
+    "pokeapiFormId": null,
+    "speciesId": 724
+  },
+  "200601": {
+    "pokeapiId": 10250,
+    "canonical": "tauros-paldea-combat-breed",
+    "pokeapiFormId": null,
+    "speciesId": 128
+  },
+  "200602": {
+    "pokeapiId": 10251,
+    "canonical": "tauros-paldea-blaze-breed",
+    "pokeapiFormId": null,
+    "speciesId": 128
+  },
+  "200603": {
+    "pokeapiId": 10252,
+    "canonical": "tauros-paldea-aqua-breed",
+    "pokeapiFormId": null,
+    "speciesId": 128
+  },
+  "200604": {
+    "pokeapiId": 10253,
+    "canonical": "wooper-paldea",
+    "pokeapiFormId": null,
+    "speciesId": 194
+  },
+  "200701": {
+    "pokeapiId": 10278,
+    "canonical": "clefable-mega",
+    "pokeapiFormId": null,
+    "speciesId": 36
+  },
+  "200702": {
+    "pokeapiId": 10279,
+    "canonical": "victreebel-mega",
+    "pokeapiFormId": null,
+    "speciesId": 71
+  },
+  "200703": {
+    "pokeapiId": 10280,
+    "canonical": "starmie-mega",
+    "pokeapiFormId": null,
+    "speciesId": 121
+  },
+  "200704": {
+    "pokeapiId": 10281,
+    "canonical": "dragonite-mega",
+    "pokeapiFormId": null,
+    "speciesId": 149
+  },
+  "200705": {
+    "pokeapiId": 10282,
+    "canonical": "meganium-mega",
+    "pokeapiFormId": null,
+    "speciesId": 154
+  },
+  "200706": {
+    "pokeapiId": 10283,
+    "canonical": "feraligatr-mega",
+    "pokeapiFormId": null,
+    "speciesId": 160
+  },
+  "200707": {
+    "pokeapiId": 10284,
+    "canonical": "skarmory-mega",
+    "pokeapiFormId": null,
+    "speciesId": 227
+  },
+  "200708": {
+    "pokeapiId": 10285,
+    "canonical": "froslass-mega",
+    "pokeapiFormId": null,
+    "speciesId": 478
+  },
+  "200709": {
+    "pokeapiId": 10286,
+    "canonical": "emboar-mega",
+    "pokeapiFormId": null,
+    "speciesId": 500
+  },
+  "200710": {
+    "pokeapiId": 10287,
+    "canonical": "excadrill-mega",
+    "pokeapiFormId": null,
+    "speciesId": 530
+  },
+  "200711": {
+    "pokeapiId": 10288,
+    "canonical": "scolipede-mega",
+    "pokeapiFormId": null,
+    "speciesId": 545
+  },
+  "200712": {
+    "pokeapiId": 10289,
+    "canonical": "scrafty-mega",
+    "pokeapiFormId": null,
+    "speciesId": 560
+  },
+  "200713": {
+    "pokeapiId": 10290,
+    "canonical": "eelektross-mega",
+    "pokeapiFormId": null,
+    "speciesId": 604
+  },
+  "200714": {
+    "pokeapiId": 10291,
+    "canonical": "chandelure-mega",
+    "pokeapiFormId": null,
+    "speciesId": 609
+  },
+  "200715": {
+    "pokeapiId": 10292,
+    "canonical": "chesnaught-mega",
+    "pokeapiFormId": null,
+    "speciesId": 652
+  },
+  "200716": {
+    "pokeapiId": 10293,
+    "canonical": "delphox-mega",
+    "pokeapiFormId": null,
+    "speciesId": 655
+  },
+  "200717": {
+    "pokeapiId": 10294,
+    "canonical": "greninja-mega",
+    "pokeapiFormId": null,
+    "speciesId": 658
+  },
+  "200718": {
+    "pokeapiId": 10295,
+    "canonical": "pyroar-mega",
+    "pokeapiFormId": null,
+    "speciesId": 668
+  },
+  "200719": {
+    "pokeapiId": 10297,
+    "canonical": "malamar-mega",
+    "pokeapiFormId": null,
+    "speciesId": 687
+  },
+  "200720": {
+    "pokeapiId": 10298,
+    "canonical": "barbaracle-mega",
+    "pokeapiFormId": null,
+    "speciesId": 689
+  },
+  "200721": {
+    "pokeapiId": 10299,
+    "canonical": "dragalge-mega",
+    "pokeapiFormId": null,
+    "speciesId": 691
+  },
+  "200722": {
+    "pokeapiId": 10296,
+    "canonical": "floette-mega",
+    "pokeapiFormId": null,
+    "speciesId": 670
+  },
+  "200723": {
+    "pokeapiId": 10300,
+    "canonical": "hawlucha-mega",
+    "pokeapiFormId": null,
+    "speciesId": 701
+  },
+  "200724": {
+    "pokeapiId": 10301,
+    "canonical": "zygarde-mega",
+    "pokeapiFormId": null,
+    "speciesId": 718
+  },
+  "200725": {
+    "pokeapiId": 10302,
+    "canonical": "drampa-mega",
+    "pokeapiFormId": null,
+    "speciesId": 780
+  },
+  "200726": {
+    "pokeapiId": 10303,
+    "canonical": "falinks-mega",
+    "pokeapiFormId": null,
+    "speciesId": 870
+  },
+  "200727": {
+    "pokeapiId": 10306,
+    "canonical": "chimecho-mega",
+    "pokeapiFormId": null,
+    "speciesId": 358
+  },
+  "200728": {
+    "pokeapiId": 10308,
+    "canonical": "staraptor-mega",
+    "pokeapiFormId": null,
+    "speciesId": 398
+  },
+  "200729": {
+    "pokeapiId": 10311,
+    "canonical": "heatran-mega",
+    "pokeapiFormId": null,
+    "speciesId": 485
+  },
+  "200730": {
+    "pokeapiId": 10312,
+    "canonical": "darkrai-mega",
+    "pokeapiFormId": null,
+    "speciesId": 491
+  },
+  "200731": {
+    "pokeapiId": 10313,
+    "canonical": "golurk-mega",
+    "pokeapiFormId": null,
+    "speciesId": 623
+  },
+  "200732": {
+    "pokeapiId": 10314,
+    "canonical": "meowstic-male-mega",
+    "pokeapiFormId": null,
+    "speciesId": 678
+  },
+  "200733": {
+    "pokeapiId": 10315,
+    "canonical": "crabominable-mega",
+    "pokeapiFormId": null,
+    "speciesId": 740
+  },
+  "200734": {
+    "pokeapiId": 10316,
+    "canonical": "golisopod-mega",
+    "pokeapiFormId": null,
+    "speciesId": 768
+  },
+  "200735": {
+    "pokeapiId": 10317,
+    "canonical": "magearna-mega",
+    "pokeapiFormId": null,
+    "speciesId": 801
+  },
+  "200736": {
+    "pokeapiId": 10319,
+    "canonical": "zeraora-mega",
+    "pokeapiFormId": null,
+    "speciesId": 807
+  },
+  "200737": {
+    "pokeapiId": 10320,
+    "canonical": "scovillain-mega",
+    "pokeapiFormId": null,
+    "speciesId": 952
+  },
+  "200738": {
+    "pokeapiId": 10321,
+    "canonical": "glimmora-mega",
+    "pokeapiFormId": null,
+    "speciesId": 970
+  },
+  "200739": {
+    "pokeapiId": 10325,
+    "canonical": "baxcalibur-mega",
+    "pokeapiFormId": null,
+    "speciesId": 998
+  },
+  "200740": {
+    "pokeapiId": 10304,
+    "canonical": "raichu-mega-x",
+    "pokeapiFormId": null,
+    "speciesId": 26
+  },
+  "200741": {
+    "pokeapiId": 10305,
+    "canonical": "raichu-mega-y",
+    "pokeapiFormId": null,
+    "speciesId": 26
+  },
+  "200742": {
+    "pokeapiId": 10307,
+    "canonical": "absol-mega-z",
+    "pokeapiFormId": null,
+    "speciesId": 359
+  },
+  "200743": {
+    "pokeapiId": 10309,
+    "canonical": "garchomp-mega-z",
+    "pokeapiFormId": null,
+    "speciesId": 445
+  },
+  "200744": {
+    "pokeapiId": 10310,
+    "canonical": "lucario-mega-z",
+    "pokeapiFormId": null,
+    "speciesId": 448
+  },
+  "200745": {
+    "pokeapiId": 10322,
+    "canonical": "tatsugiri-curly-mega",
+    "pokeapiFormId": null,
+    "speciesId": 978
+  },
+  "200746": {
+    "pokeapiId": 10323,
+    "canonical": "tatsugiri-droopy-mega",
+    "pokeapiFormId": null,
+    "speciesId": 978
+  },
+  "200747": {
+    "pokeapiId": 10324,
+    "canonical": "tatsugiri-stretchy-mega",
+    "pokeapiFormId": null,
+    "speciesId": 978
+  },
+  "20010801": {
+    "pokeapiId": 10187,
+    "canonical": "morpeko-hangry",
+    "pokeapiFormId": null,
+    "speciesId": 877
+  },
+  "20010802": {
+    "pokeapiId": 10184,
+    "canonical": "toxtricity-low-key",
+    "pokeapiFormId": null,
+    "speciesId": 849
+  },
+  "20010803": {
+    "pokeapiId": 10186,
+    "canonical": "indeedee-female",
+    "pokeapiFormId": null,
+    "speciesId": 876
+  },
+  "20010804": {
+    "pokeapiId": 10185,
+    "canonical": "eiscue-noice",
+    "pokeapiFormId": null,
+    "speciesId": 875
+  },
+  "20010805": {
+    "pokeapiId": 10188,
+    "canonical": "zacian-crowned",
+    "pokeapiFormId": null,
+    "speciesId": 888
+  },
+  "20010806": {
+    "pokeapiId": 10189,
+    "canonical": "zamazenta-crowned",
+    "pokeapiFormId": null,
+    "speciesId": 889
+  },
+  "20010807": {
+    "pokeapiId": 10190,
+    "canonical": "eternatus-eternamax",
+    "pokeapiFormId": null,
+    "speciesId": 890
+  },
+  "20010808": {
+    "pokeapiId": 10191,
+    "canonical": "urshifu-rapid-strike",
+    "pokeapiFormId": null,
+    "speciesId": 892
+  },
+  "20010809": {
+    "pokeapiId": 10193,
+    "canonical": "calyrex-ice",
+    "pokeapiFormId": null,
+    "speciesId": 898
+  },
+  "20010810": {
+    "pokeapiId": 10194,
+    "canonical": "calyrex-shadow",
+    "pokeapiFormId": null,
+    "speciesId": 898
+  },
+  "20010901": {
+    "pokeapiId": 10245,
+    "canonical": "dialga-origin",
+    "pokeapiFormId": null,
+    "speciesId": 483
+  },
+  "20010902": {
+    "pokeapiId": 10246,
+    "canonical": "palkia-origin",
+    "pokeapiFormId": null,
+    "speciesId": 484
+  },
+  "20010903": {
+    "pokeapiId": 10247,
+    "canonical": "basculin-white-striped",
+    "pokeapiFormId": null,
+    "speciesId": 550
+  },
+  "20010904": {
+    "pokeapiId": 10248,
+    "canonical": "basculegion-female",
+    "pokeapiFormId": null,
+    "speciesId": 902
+  },
+  "20010905": {
+    "pokeapiId": 10249,
+    "canonical": "enamorus-therian",
+    "pokeapiFormId": null,
+    "speciesId": 905
+  },
+  "20011001": {
+    "pokeapiId": 10254,
+    "canonical": "oinkologne-female",
+    "pokeapiFormId": null,
+    "speciesId": 916
+  },
+  "20011002": {
+    "pokeapiId": 10256,
+    "canonical": "palafin-hero",
+    "pokeapiFormId": null,
+    "speciesId": 964
+  },
+  "20011003": {
+    "pokeapiId": 10260,
+    "canonical": "squawkabilly-blue-plumage",
+    "pokeapiFormId": null,
+    "speciesId": 931
+  },
+  "20011004": {
+    "pokeapiId": 10263,
+    "canonical": "gimmighoul-roaming",
+    "pokeapiFormId": null,
+    "speciesId": 999
+  },
+  "20011005": {
+    "pokeapiId": 10261,
+    "canonical": "squawkabilly-yellow-plumage",
+    "pokeapiFormId": null,
+    "speciesId": 931
+  },
+  "20011006": {
+    "pokeapiId": 10262,
+    "canonical": "squawkabilly-white-plumage",
+    "pokeapiFormId": null,
+    "speciesId": 931
+  },
+  "20011007": {
+    "pokeapiId": 10257,
+    "canonical": "maushold-family-of-three",
+    "pokeapiFormId": null,
+    "speciesId": 925
+  },
+  "20011008": {
+    "pokeapiId": 10258,
+    "canonical": "tatsugiri-droopy",
+    "pokeapiFormId": null,
+    "speciesId": 978
+  },
+  "20011009": {
+    "pokeapiId": 10259,
+    "canonical": "tatsugiri-stretchy",
+    "pokeapiFormId": null,
+    "speciesId": 978
+  },
+  "20011010": {
+    "pokeapiId": 10255,
+    "canonical": "dudunsparce-three-segment",
+    "pokeapiFormId": null,
+    "speciesId": 982
+  },
+  "20011011": {
+    "pokeapiId": 1012,
+    "canonical": "poltchageist",
+    "pokeapiFormId": 10447,
+    "speciesId": 1012
+  },
+  "20011012": {
+    "pokeapiId": 1013,
+    "canonical": "sinistcha",
+    "pokeapiFormId": 10448,
+    "speciesId": 1013
+  },
+  "20011013": {
+    "pokeapiId": 10273,
+    "canonical": "ogerpon-wellspring-mask",
+    "pokeapiFormId": null,
+    "speciesId": 1017
+  },
+  "20011014": {
+    "pokeapiId": 10274,
+    "canonical": "ogerpon-hearthflame-mask",
+    "pokeapiFormId": null,
+    "speciesId": 1017
+  },
+  "20011015": {
+    "pokeapiId": 10275,
+    "canonical": "ogerpon-cornerstone-mask",
+    "pokeapiFormId": null,
+    "speciesId": 1017
+  },
+  "20011016": {
+    "pokeapiId": 10272,
+    "canonical": "ursaluna-bloodmoon",
+    "pokeapiFormId": null,
+    "speciesId": 901
+  },
+  "20011017": {
+    "pokeapiId": 10276,
+    "canonical": "terapagos-terastal",
+    "pokeapiFormId": null,
+    "speciesId": 1024
+  },
+  "20011018": {
+    "pokeapiId": 10277,
+    "canonical": "terapagos-stellar",
+    "pokeapiFormId": null,
+    "speciesId": 1024
+  },
+  "310093": {
+    "pokeapiId": 10093,
+    "canonical": "raticate-totem-alola",
+    "pokeapiFormId": null,
+    "speciesId": 20
+  },
+  "310094": {
+    "pokeapiId": 10094,
+    "canonical": "pikachu-original-cap",
+    "pokeapiFormId": null,
+    "speciesId": 25
+  },
+  "310095": {
+    "pokeapiId": 10095,
+    "canonical": "pikachu-hoenn-cap",
+    "pokeapiFormId": null,
+    "speciesId": 25
+  },
+  "310096": {
+    "pokeapiId": 10096,
+    "canonical": "pikachu-sinnoh-cap",
+    "pokeapiFormId": null,
+    "speciesId": 25
+  },
+  "310097": {
+    "pokeapiId": 10097,
+    "canonical": "pikachu-unova-cap",
+    "pokeapiFormId": null,
+    "speciesId": 25
+  },
+  "310098": {
+    "pokeapiId": 10098,
+    "canonical": "pikachu-kalos-cap",
+    "pokeapiFormId": null,
+    "speciesId": 25
+  },
+  "310099": {
+    "pokeapiId": 10099,
+    "canonical": "pikachu-alola-cap",
+    "pokeapiFormId": null,
+    "speciesId": 25
+  },
+  "310116": {
+    "pokeapiId": 10116,
+    "canonical": "greninja-battle-bond",
+    "pokeapiFormId": null,
+    "speciesId": 658
+  },
+  "310118": {
+    "pokeapiId": 10118,
+    "canonical": "zygarde-10-power-construct",
+    "pokeapiFormId": null,
+    "speciesId": 718
+  },
+  "310119": {
+    "pokeapiId": 10119,
+    "canonical": "zygarde-50-power-construct",
+    "pokeapiFormId": null,
+    "speciesId": 718
+  },
+  "310121": {
+    "pokeapiId": 10121,
+    "canonical": "gumshoos-totem",
+    "pokeapiFormId": null,
+    "speciesId": 735
+  },
+  "310122": {
+    "pokeapiId": 10122,
+    "canonical": "vikavolt-totem",
+    "pokeapiFormId": null,
+    "speciesId": 738
+  },
+  "310128": {
+    "pokeapiId": 10128,
+    "canonical": "lurantis-totem",
+    "pokeapiFormId": null,
+    "speciesId": 754
+  },
+  "310129": {
+    "pokeapiId": 10129,
+    "canonical": "salazzle-totem",
+    "pokeapiFormId": null,
+    "speciesId": 758
+  },
+  "310130": {
+    "pokeapiId": 10130,
+    "canonical": "minior-orange-meteor",
+    "pokeapiFormId": null,
+    "speciesId": 774
+  },
+  "310131": {
+    "pokeapiId": 10131,
+    "canonical": "minior-yellow-meteor",
+    "pokeapiFormId": null,
+    "speciesId": 774
+  },
+  "310132": {
+    "pokeapiId": 10132,
+    "canonical": "minior-green-meteor",
+    "pokeapiFormId": null,
+    "speciesId": 774
+  },
+  "310133": {
+    "pokeapiId": 10133,
+    "canonical": "minior-blue-meteor",
+    "pokeapiFormId": null,
+    "speciesId": 774
+  },
+  "310134": {
+    "pokeapiId": 10134,
+    "canonical": "minior-indigo-meteor",
+    "pokeapiFormId": null,
+    "speciesId": 774
+  },
+  "310135": {
+    "pokeapiId": 10135,
+    "canonical": "minior-violet-meteor",
+    "pokeapiFormId": null,
+    "speciesId": 774
+  },
+  "310137": {
+    "pokeapiId": 10137,
+    "canonical": "minior-orange",
+    "pokeapiFormId": null,
+    "speciesId": 774
+  },
+  "310138": {
+    "pokeapiId": 10138,
+    "canonical": "minior-yellow",
+    "pokeapiFormId": null,
+    "speciesId": 774
+  },
+  "310139": {
+    "pokeapiId": 10139,
+    "canonical": "minior-green",
+    "pokeapiFormId": null,
+    "speciesId": 774
+  },
+  "310140": {
+    "pokeapiId": 10140,
+    "canonical": "minior-blue",
+    "pokeapiFormId": null,
+    "speciesId": 774
+  },
+  "310141": {
+    "pokeapiId": 10141,
+    "canonical": "minior-indigo",
+    "pokeapiFormId": null,
+    "speciesId": 774
+  },
+  "310142": {
+    "pokeapiId": 10142,
+    "canonical": "minior-violet",
+    "pokeapiFormId": null,
+    "speciesId": 774
+  },
+  "310143": {
+    "pokeapiId": 10143,
+    "canonical": "mimikyu-busted",
+    "pokeapiFormId": null,
+    "speciesId": 778
+  },
+  "310144": {
+    "pokeapiId": 10144,
+    "canonical": "mimikyu-totem-disguised",
+    "pokeapiFormId": null,
+    "speciesId": 778
+  },
+  "310145": {
+    "pokeapiId": 10145,
+    "canonical": "mimikyu-totem-busted",
+    "pokeapiFormId": null,
+    "speciesId": 778
+  },
+  "310146": {
+    "pokeapiId": 10146,
+    "canonical": "kommo-o-totem",
+    "pokeapiFormId": null,
+    "speciesId": 784
+  },
+  "310147": {
+    "pokeapiId": 10147,
+    "canonical": "magearna-original",
+    "pokeapiFormId": null,
+    "speciesId": 801
+  },
+  "310148": {
+    "pokeapiId": 10148,
+    "canonical": "pikachu-partner-cap",
+    "pokeapiFormId": null,
+    "speciesId": 25
+  },
+  "310149": {
+    "pokeapiId": 10149,
+    "canonical": "marowak-totem",
+    "pokeapiFormId": null,
+    "speciesId": 105
+  },
+  "310150": {
+    "pokeapiId": 10150,
+    "canonical": "ribombee-totem",
+    "pokeapiFormId": null,
+    "speciesId": 743
+  },
+  "310151": {
+    "pokeapiId": 10151,
+    "canonical": "rockruff-own-tempo",
+    "pokeapiFormId": null,
+    "speciesId": 744
+  },
+  "310153": {
+    "pokeapiId": 10153,
+    "canonical": "araquanid-totem",
+    "pokeapiFormId": null,
+    "speciesId": 752
+  },
+  "310154": {
+    "pokeapiId": 10154,
+    "canonical": "togedemaru-totem",
+    "pokeapiFormId": null,
+    "speciesId": 777
+  },
+  "310160": {
+    "pokeapiId": 10160,
+    "canonical": "pikachu-world-cap",
+    "pokeapiFormId": null,
+    "speciesId": 25
+  },
+  "310182": {
+    "pokeapiId": 10182,
+    "canonical": "cramorant-gulping",
+    "pokeapiFormId": null,
+    "speciesId": 845
+  },
+  "310183": {
+    "pokeapiId": 10183,
+    "canonical": "cramorant-gorging",
+    "pokeapiFormId": null,
+    "speciesId": 845
+  },
+  "310192": {
+    "pokeapiId": 10192,
+    "canonical": "zarude-dada",
+    "pokeapiFormId": null,
+    "speciesId": 893
+  },
+  "310228": {
+    "pokeapiId": 10228,
+    "canonical": "toxtricity-low-key-gmax",
+    "pokeapiFormId": null,
+    "speciesId": 849
+  },
+  "310264": {
+    "pokeapiId": 10264,
+    "canonical": "koraidon-limited-build",
+    "pokeapiFormId": null,
+    "speciesId": 1007
+  },
+  "310265": {
+    "pokeapiId": 10265,
+    "canonical": "koraidon-sprinting-build",
+    "pokeapiFormId": null,
+    "speciesId": 1007
+  },
+  "310266": {
+    "pokeapiId": 10266,
+    "canonical": "koraidon-swimming-build",
+    "pokeapiFormId": null,
+    "speciesId": 1007
+  },
+  "310267": {
+    "pokeapiId": 10267,
+    "canonical": "koraidon-gliding-build",
+    "pokeapiFormId": null,
+    "speciesId": 1007
+  },
+  "310268": {
+    "pokeapiId": 10268,
+    "canonical": "miraidon-low-power-mode",
+    "pokeapiFormId": null,
+    "speciesId": 1008
+  },
+  "310269": {
+    "pokeapiId": 10269,
+    "canonical": "miraidon-drive-mode",
+    "pokeapiFormId": null,
+    "speciesId": 1008
+  },
+  "310270": {
+    "pokeapiId": 10270,
+    "canonical": "miraidon-aquatic-mode",
+    "pokeapiFormId": null,
+    "speciesId": 1008
+  },
+  "310271": {
+    "pokeapiId": 10271,
+    "canonical": "miraidon-glide-mode",
+    "pokeapiFormId": null,
+    "speciesId": 1008
+  },
+  "310318": {
+    "pokeapiId": 10318,
+    "canonical": "magearna-original-mega",
+    "pokeapiFormId": null,
+    "speciesId": 801
+  }
+}
