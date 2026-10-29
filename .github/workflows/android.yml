@@ -1,0 +1,31 @@
+name: Android
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: android-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    name: Build e lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: android
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+      - name: Instalar plataforma Android
+        run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Compilar e verificar
+        run: ./gradlew --no-daemon :app:assemblePreview :app:lintDebug :app:assembleDebugAndroidTest
+      # CI signing is ephemeral. Only validated, separately signed APKs are published manually.

@@ -1,0 +1,9 @@
+# Dados nativos e contas locais
+
+`PokemonRepository(Context)` lê os assets JSON locais em Dispatchers.IO. O catálogo e a tabela de espécies têm cache lazy por instância; as listas retornadas devem ser tratadas como somente leitura. `movesFor(p,25)` usa exclusivamente game25 e, aprendizados explícitos por forma, incluindo heranças documentadas. `heldItemsFor` exige flag Champions e item segurado, filtrando compatibleSpecies e compatiblePokemonIds. Isso descreve a base local; não certifica regulamentos atuais.
+
+`Store(Context, storageName = "prisma")` guarda credenciais em SQLite privado, com salt aleatório16bytes e PBKDF2-HMAC-SHA256600mil iterações. Não há nuvem, envio de email, verificação ou recuperação remota. As contas e o visitante têm estados separados. O email atual vem da conta de sessão local. Fechar ou reabrir o app conserva a sessão.
+
+`load`, `save`, `logout` e `currentEmail` são síncronos; o chamador deve usá-los fora da thread principal. `register` e `login` já trocam para Dispatchers.IO. `save` valida catálogo, até6 membros sem repetição, itens compatíveis e até4 golpes legais sem repetição antes de persistir. O lock por instância serializa sessão e salvamento; use uma instância de Store compartilhada pelo app. Não use várias instâncias concorrentes no aplicativo. O limite10tentativas/minuto é local à instância e não substitui proteção de serviço remoto.
+
+Teste instrumentado: `./gradlew connectedDebugAndroidTest`. Requer dispositivo/emulador e dependências androidx.test.ext:junit e androidx.test:runner configuradas pelo projeto. NativeDataTest cria nome de armazenamento UUID e remove somente seus próprios arquivos ao final. Ele verifica1306registros/imagens, learnsets, itens e isolamento de conta/visitante. A execução deve ser registrada pelo responsável pelo build; a criação do arquivo de testes não significa que já passaram.

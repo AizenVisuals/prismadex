@@ -1,0 +1,31 @@
+# Only the distributable Android project and public documentation are tracked.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/LICENSE
+!/CHANGELOG.md
+!/PRIVACY.md
+!/android/
+!/docs/
+!/vendor/
+!/.github/
+
+# Device, local SDK and signing material never belong in Git.
+**/build/
+**/.gradle/
+**/.kotlin/
+**/.idea/
+**/local.properties
+**/*.jks
+**/*.keystore
+**/key.properties
+**/.env
+**/.env.*
+**/*.apk
+**/*.aab
+**/*.sqlite3
+**/*.db
+**/node_modules/
+**/__pycache__/
+**/*.pyc

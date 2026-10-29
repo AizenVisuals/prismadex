@@ -1,0 +1,1 @@
+<resources><style name="Theme.Prismadex" parent="android:style/Theme.Material.NoActionBar"><item name="android:fontFamily">sans</item><item name="android:windowLightStatusBar">false</item><item name="android:windowActionModeOverlay">true</item><item name="android:windowBackground">#10121b</item><item name="android:colorAccent">#bfb0ff</item></style></resources>
