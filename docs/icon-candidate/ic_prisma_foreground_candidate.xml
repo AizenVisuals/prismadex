@@ -1,0 +1,13 @@
+<!-- CANDIDATE ONLY - NOT SHIPPED. Approval required before replacing res/drawable/ic_prisma_foreground.xml.
+     Original motif (rotated ball-mark), enlarged + thicker stroke + glass highlight, Aurora tokens only:
+     graphite #141322, lilac gradient #E3D9FF -> #AE96ED, white highlight at low alpha. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
+  <path android:pathData="M14,54a40,40 0,1 0,80 0a40,40 0,1 0,-80 0" android:fillColor="#1FAE96ED"/>
+  <group android:rotation="-25" android:pivotX="54" android:pivotY="54">
+    <path android:pathData="M20,54 A34,34 0,1 0,88 54 A34,34 0,1 0,20 54 M20,54 H43 M65,54 H88 M43,54 A11,11 0,1 0,65 54 A11,11 0,1 0,43 54" android:fillColor="#00000000" android:strokeWidth="5" android:strokeLineCap="round" android:strokeLineJoin="round">
+      <aapt:attr name="android:strokeColor"><gradient android:startX="20" android:startY="20" android:endX="88" android:endY="88" android:startColor="#E3D9FF" android:endColor="#AE96ED" android:type="linear"/></aapt:attr>
+    </path>
+    <path android:pathData="M43,54 A11,11 0,1 0,65 54 A11,11 0,1 0,43 54" android:fillColor="#141322"/>
+    <path android:pathData="M30,30 A34,34 0,0 1,54 20" android:fillColor="#00000000" android:strokeColor="#80FFFFFF" android:strokeWidth="2" android:strokeLineCap="round"/>
+  </group>
+</vector>

@@ -20,7 +20,7 @@ class NativeDataTest {
         assertEquals(catalog.size, catalog.map { it.id }.toSet().size)
         assertTrue(additional.all{!it.champions&&it.games.isEmpty()})
         // Every catalog record must have a decodable bundled art entry, not just a filename.
-        assertEquals(1353, context.assets.list("art")!!.size)
+        assertEquals(1353, context.assets.list("art")!!.count { it.endsWith(".webp") })
         val unavailableArt=setOf(310264,310266,310268,310270)
         assertEquals(unavailableArt,additional.filter{p->context.assets.list("art")!!.none{it=="${p.id}.webp"}}.map{it.id}.toSet())
         catalog.filter{it.id !in unavailableArt}.forEach { p ->
