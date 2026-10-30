@@ -1,6 +1,6 @@
 # Privacidade — PrismaDex
 
-Última revisão: 29 de outubro de 2026. Aplica-se à prévia Android 0.4.0 da Aizen Visuals.
+Última revisão: 29 de outubro de 2026. Aplica-se à prévia Android 0.6.0-preview da Aizen Visuals.
 
 ## O que fica no aparelho
 
@@ -16,7 +16,7 @@ Catálogo, imagens, golpes, equipes e cálculo de dano não dependem de conexão
 
 ## Anúncios e métricas
 
-A implementação 0.4.0 não integra publicidade nem SDK de analytics. O download pelo GitHub e os sites externos têm suas próprias políticas.
+A implementação 0.6.0-preview não integra publicidade nem SDK de analytics. O download pelo GitHub e os sites externos têm suas próprias políticas.
 
 ## Excluir dados
 
