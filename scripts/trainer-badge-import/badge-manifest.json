@@ -1,0 +1,1001 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-30",
+  "scope": "Gym badges only; version-specific order, no badges invented for Alola/Legends/Champions",
+  "newFiles": 40,
+  "totalNewBytes": 391258,
+  "sets": {
+    "kalos": {
+      "games": [
+        15
+      ],
+      "sourceIds": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "names": [
+        "Bug",
+        "Cliff",
+        "Rumble",
+        "Plant",
+        "Voltage",
+        "Fairy",
+        "Psychic",
+        "Iceberg"
+      ]
+    },
+    "galar-sword": {
+      "games": [
+        20
+      ],
+      "variant": "sword",
+      "sourceIds": [
+        51,
+        52,
+        53,
+        54,
+        56,
+        57,
+        59,
+        60
+      ],
+      "names": [
+        "Grass",
+        "Water",
+        "Fire",
+        "Fighting",
+        "Fairy",
+        "Rock",
+        "Dark",
+        "Dragon"
+      ]
+    },
+    "galar-shield": {
+      "games": [
+        20
+      ],
+      "variant": "shield",
+      "sourceIds": [
+        51,
+        52,
+        53,
+        55,
+        56,
+        58,
+        59,
+        60
+      ],
+      "names": [
+        "Grass",
+        "Water",
+        "Fire",
+        "Ghost",
+        "Fairy",
+        "Ice",
+        "Dark",
+        "Dragon"
+      ]
+    },
+    "sinnoh-dp": {
+      "games": [
+        8,
+        21
+      ],
+      "existingFiles": [
+        "sinnoh-1",
+        "sinnoh-2",
+        "sinnoh-4",
+        "sinnoh-5",
+        "sinnoh-3",
+        "sinnoh-6",
+        "sinnoh-7",
+        "sinnoh-8"
+      ],
+      "names": [
+        "Coal",
+        "Forest",
+        "Cobble",
+        "Fen",
+        "Relic",
+        "Mine",
+        "Icicle",
+        "Beacon"
+      ]
+    },
+    "unova2": {
+      "games": [
+        14
+      ],
+      "existingFiles": [
+        "unova-2",
+        35,
+        "unova-3",
+        "unova-4",
+        "unova-5",
+        "unova-6",
+        "unova-8",
+        42
+      ],
+      "names": [
+        "Basic",
+        "Toxic",
+        "Insect",
+        "Bolt",
+        "Quake",
+        "Jet",
+        "Legend",
+        "Wave"
+      ]
+    }
+  },
+  "records": [
+    {
+      "set": "kalos",
+      "index": 1,
+      "name": "Bug",
+      "gameIds": [
+        15
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/kalos-1.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 43,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/43.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "911bdf677528be29258ba9fc7e499b6f0d40cac48628df83b220318990a5974c",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "139a80e1828ba0b3dabece06a4bda1c8c16bb20d12a3cdfedf99a1319b68e28e",
+      "bytes": 12890
+    },
+    {
+      "set": "kalos",
+      "index": 2,
+      "name": "Cliff",
+      "gameIds": [
+        15
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/kalos-2.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 44,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/44.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "40be5e616e21325b04daad1aa3c3d20bfff84cff0e486b262bdae22724803eaf",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "4826b68eaf4a84c72666a5252679d7b5522784df2a9439603045af2a063c0bf0",
+      "bytes": 5043
+    },
+    {
+      "set": "kalos",
+      "index": 3,
+      "name": "Rumble",
+      "gameIds": [
+        15
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/kalos-3.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 45,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/45.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "0c7a17024e33e5f6bb19946de3edaca7df627ba8d288953b6ee6df619c047b7a",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "3728aadb2d66027e225c294f5ee8083da1865db428614fa4511a6812832415d9",
+      "bytes": 4287
+    },
+    {
+      "set": "kalos",
+      "index": 4,
+      "name": "Plant",
+      "gameIds": [
+        15
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/kalos-4.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 46,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/46.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "c6f1632aaa76b2a06d3b7ceac4eb40cb105a996bdad90cb85567be5a9fe94e93",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "05442eb13552f7901174e9bd82fad35cedad45202d27ded46c86b92bbc4042f2",
+      "bytes": 14210
+    },
+    {
+      "set": "kalos",
+      "index": 5,
+      "name": "Voltage",
+      "gameIds": [
+        15
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/kalos-5.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 47,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/47.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "f54d1ae2c236434e35d0dd162bb559320c4e77891704235185a6581dcd7eff8f",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "19a37993314f1c5653431f9285b5d33e135a1dc030b24bea1bd609470666f9e8",
+      "bytes": 14529
+    },
+    {
+      "set": "kalos",
+      "index": 6,
+      "name": "Fairy",
+      "gameIds": [
+        15
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/kalos-6.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 48,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/48.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "7f6c9b7e19981222864c518b4ae9b3389e1bc86a5c6687ae3240a3b10d82f76d",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "209fe512ca85f6b6aae418a2378334cf0c83d5eee8a35000ff70e7481059b089",
+      "bytes": 6397
+    },
+    {
+      "set": "kalos",
+      "index": 7,
+      "name": "Psychic",
+      "gameIds": [
+        15
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/kalos-7.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 49,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/49.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "eec9f447a78ebe1ec076a3838fcf12411aa096242620ffb5bfdde7b4efa3dd84",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "09bf8056bbfb98f2fcac0243901f176320e29b82bbb2180c225d3c392a2f3ac1",
+      "bytes": 12508
+    },
+    {
+      "set": "kalos",
+      "index": 8,
+      "name": "Iceberg",
+      "gameIds": [
+        15
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/kalos-8.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 50,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/50.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "6981c8ab940798bb046d7319bd3d7043fbd45d382d87de908476ea2d3ab60da1",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "22f65ecd5045a800d6790bcefb4995c098a813d5a139a1689aee518a8d539c6a",
+      "bytes": 14561
+    },
+    {
+      "set": "galar-sword",
+      "index": 1,
+      "name": "Grass",
+      "gameIds": [
+        20
+      ],
+      "variant": "sword",
+      "asset": "android/app/src/main/assets/badges/galar-sword-1.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 51,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/51.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "ce9622bccdcaf697d191db47ca48356a61aa92101f038ad803f487dff42b8d1b",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "6ba94a37392c2764d20cbc8b4499e986ac25b0b4d8f0909aa116d5c489b2d6a7",
+      "bytes": 9234
+    },
+    {
+      "set": "galar-sword",
+      "index": 2,
+      "name": "Water",
+      "gameIds": [
+        20
+      ],
+      "variant": "sword",
+      "asset": "android/app/src/main/assets/badges/galar-sword-2.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 52,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/52.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "be8e416a40cf690a28012653ca15ac0e8c6a2d3667ab73c68530d41eb554d125",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "3a0167b391c72b582885afd78492ddacdddd32c5936d6f28bfadc1042aeb10ff",
+      "bytes": 7404
+    },
+    {
+      "set": "galar-sword",
+      "index": 3,
+      "name": "Fire",
+      "gameIds": [
+        20
+      ],
+      "variant": "sword",
+      "asset": "android/app/src/main/assets/badges/galar-sword-3.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 53,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/53.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "a4ad9767577c1d249c1f833b4b267e277bd88ba069416927b090a2a08d3d4524",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "3ffc97a3ef6391c8d6f8de1ca55c0b47f556ee2d375c178b0a247f71c7e565f9",
+      "bytes": 9639
+    },
+    {
+      "set": "galar-sword",
+      "index": 4,
+      "name": "Fighting",
+      "gameIds": [
+        20
+      ],
+      "variant": "sword",
+      "asset": "android/app/src/main/assets/badges/galar-sword-4.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 54,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/54.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "bf7dbcad6cedb6c7b5e8a5a10badbdd901eeda3bd5167039d465f612391e2089",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "2472d55eb513a43d19c4d518bbc64a9a9a997c0d49c07db6149702e4044439e3",
+      "bytes": 10015
+    },
+    {
+      "set": "galar-sword",
+      "index": 5,
+      "name": "Fairy",
+      "gameIds": [
+        20
+      ],
+      "variant": "sword",
+      "asset": "android/app/src/main/assets/badges/galar-sword-5.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 56,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/56.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "7fae6b5899143bfd0c6157db3e6bbe868af17aa2738c52cfabca5ecb97f1fb13",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "6b6a303a17b526d90a1dd64ce7aee86813428db789d1e2696b23c67459de1fee",
+      "bytes": 5990
+    },
+    {
+      "set": "galar-sword",
+      "index": 6,
+      "name": "Rock",
+      "gameIds": [
+        20
+      ],
+      "variant": "sword",
+      "asset": "android/app/src/main/assets/badges/galar-sword-6.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 57,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/57.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "0053465903392e3196350356c7f7040c95ab6e1131a4a6ef061c8b9b24b1f4a4",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "baadad2d7d315c59316ba9923f7e42c2f3065c85453aee7ca0e8aca822982241",
+      "bytes": 7735
+    },
+    {
+      "set": "galar-sword",
+      "index": 7,
+      "name": "Dark",
+      "gameIds": [
+        20
+      ],
+      "variant": "sword",
+      "asset": "android/app/src/main/assets/badges/galar-sword-7.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 59,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/59.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "059c69836543fa66159ab9d2be0825fb13e1dd4d517b82ea3774a4647f222cfb",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "d2e9bf3c249f144981a82abeb35fb2622948be24e4ee4104bc4a7420442101bf",
+      "bytes": 8554
+    },
+    {
+      "set": "galar-sword",
+      "index": 8,
+      "name": "Dragon",
+      "gameIds": [
+        20
+      ],
+      "variant": "sword",
+      "asset": "android/app/src/main/assets/badges/galar-sword-8.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 60,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/60.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "3cbd9bae6b2a205866c9178b471b00f8ba66a9e5d63012adc731590a9892de03",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "4c981344df613915469ed8a7348e6e74b2ea9b6f036e79a901084ad489f2bc4a",
+      "bytes": 9090
+    },
+    {
+      "set": "galar-shield",
+      "index": 1,
+      "name": "Grass",
+      "gameIds": [
+        20
+      ],
+      "variant": "shield",
+      "asset": "android/app/src/main/assets/badges/galar-shield-1.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 51,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/51.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "ce9622bccdcaf697d191db47ca48356a61aa92101f038ad803f487dff42b8d1b",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "4523532d7f48b39c6c4dc3ce153bc7d785e1e8e9d41ce4c6a54573a0597775e9",
+      "bytes": 9234
+    },
+    {
+      "set": "galar-shield",
+      "index": 2,
+      "name": "Water",
+      "gameIds": [
+        20
+      ],
+      "variant": "shield",
+      "asset": "android/app/src/main/assets/badges/galar-shield-2.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 52,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/52.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "be8e416a40cf690a28012653ca15ac0e8c6a2d3667ab73c68530d41eb554d125",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "94040a6c21754c43a9378b38b23d455fabdb64e8bdfacc5f5a66bc645876b3fe",
+      "bytes": 7404
+    },
+    {
+      "set": "galar-shield",
+      "index": 3,
+      "name": "Fire",
+      "gameIds": [
+        20
+      ],
+      "variant": "shield",
+      "asset": "android/app/src/main/assets/badges/galar-shield-3.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 53,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/53.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "a4ad9767577c1d249c1f833b4b267e277bd88ba069416927b090a2a08d3d4524",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "37b4ee2a2598ab4fb715fa14fe614fc69f75d0ef3f3542ce4f29693e98693577",
+      "bytes": 9639
+    },
+    {
+      "set": "galar-shield",
+      "index": 4,
+      "name": "Ghost",
+      "gameIds": [
+        20
+      ],
+      "variant": "shield",
+      "asset": "android/app/src/main/assets/badges/galar-shield-4.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 55,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/55.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "2577d98c5fac53dae322c8adc0a917c2ba1a44f6f82439a53ac1bb62aa853e07",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "ee2f63d7d97769afe9a139c184aa26906384d92eefeb36123bc8dcfb23a80154",
+      "bytes": 10426
+    },
+    {
+      "set": "galar-shield",
+      "index": 5,
+      "name": "Fairy",
+      "gameIds": [
+        20
+      ],
+      "variant": "shield",
+      "asset": "android/app/src/main/assets/badges/galar-shield-5.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 56,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/56.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "7fae6b5899143bfd0c6157db3e6bbe868af17aa2738c52cfabca5ecb97f1fb13",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "1d2718522a8ad82baca3644511a7cb90a5885c4df53c09bc4c5876a417ce79d3",
+      "bytes": 5990
+    },
+    {
+      "set": "galar-shield",
+      "index": 6,
+      "name": "Ice",
+      "gameIds": [
+        20
+      ],
+      "variant": "shield",
+      "asset": "android/app/src/main/assets/badges/galar-shield-6.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 58,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/58.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "faa93888378893458cc2297c38945692b18c654d1f24fd841c1a10fe0e892894",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "f10a9486c85dd96ee93e98f5c5afa211a180ad257b9ea6ce9e9e184c4f9c74b3",
+      "bytes": 7451
+    },
+    {
+      "set": "galar-shield",
+      "index": 7,
+      "name": "Dark",
+      "gameIds": [
+        20
+      ],
+      "variant": "shield",
+      "asset": "android/app/src/main/assets/badges/galar-shield-7.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 59,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/59.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "059c69836543fa66159ab9d2be0825fb13e1dd4d517b82ea3774a4647f222cfb",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "972aa85db728c25be28344d19fbc0729d5376eac46ac5b1e58b9aa69ce3553c6",
+      "bytes": 8554
+    },
+    {
+      "set": "galar-shield",
+      "index": 8,
+      "name": "Dragon",
+      "gameIds": [
+        20
+      ],
+      "variant": "shield",
+      "asset": "android/app/src/main/assets/badges/galar-shield-8.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 60,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/60.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "3cbd9bae6b2a205866c9178b471b00f8ba66a9e5d63012adc731590a9892de03",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "afefc3c5c3a7cbd7dad6582a432e14aef0bd3db1617f9d33925b9ae9e35f7a17",
+      "bytes": 9090
+    },
+    {
+      "set": "sinnoh-dp",
+      "index": 1,
+      "name": "Coal",
+      "gameIds": [
+        8,
+        21
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/sinnoh-dp-1.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "SteGriff/pokemon-badges",
+      "sourceCommit": "89fde1733f2f819e7d3fe8036e68a8ade4c49579",
+      "sourceUrl": "https://github.com/SteGriff/pokemon-badges/tree/89fde1733f2f819e7d3fe8036e68a8ade4c49579/svg",
+      "license": "CC-BY-3.0",
+      "attribution": "Stephen Griffiths, 2011",
+      "copiedExistingAsset": "sinnoh-1.png",
+      "sourceSha256": "125bb91dcc5bf4adcc989e27db26b220fb9df911d9a9530782a55af27bb5bf2a",
+      "transform": "None; byte-identical existing rendered asset",
+      "assetSha256": "125bb91dcc5bf4adcc989e27db26b220fb9df911d9a9530782a55af27bb5bf2a",
+      "bytes": 15201
+    },
+    {
+      "set": "sinnoh-dp",
+      "index": 2,
+      "name": "Forest",
+      "gameIds": [
+        8,
+        21
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/sinnoh-dp-2.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "SteGriff/pokemon-badges",
+      "sourceCommit": "89fde1733f2f819e7d3fe8036e68a8ade4c49579",
+      "sourceUrl": "https://github.com/SteGriff/pokemon-badges/tree/89fde1733f2f819e7d3fe8036e68a8ade4c49579/svg",
+      "license": "CC-BY-3.0",
+      "attribution": "Stephen Griffiths, 2011",
+      "copiedExistingAsset": "sinnoh-2.png",
+      "sourceSha256": "0c22e306f628bf5f50e7fbb5ffeb1e2ac9ad4b71cec257cfa71d47c843f7132e",
+      "transform": "None; byte-identical existing rendered asset",
+      "assetSha256": "0c22e306f628bf5f50e7fbb5ffeb1e2ac9ad4b71cec257cfa71d47c843f7132e",
+      "bytes": 13681
+    },
+    {
+      "set": "sinnoh-dp",
+      "index": 3,
+      "name": "Cobble",
+      "gameIds": [
+        8,
+        21
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/sinnoh-dp-3.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "SteGriff/pokemon-badges",
+      "sourceCommit": "89fde1733f2f819e7d3fe8036e68a8ade4c49579",
+      "sourceUrl": "https://github.com/SteGriff/pokemon-badges/tree/89fde1733f2f819e7d3fe8036e68a8ade4c49579/svg",
+      "license": "CC-BY-3.0",
+      "attribution": "Stephen Griffiths, 2011",
+      "copiedExistingAsset": "sinnoh-4.png",
+      "sourceSha256": "0ae8d211912c870a0e06c82957d5c8db9a614384cc9ca07a67ee616dacda8079",
+      "transform": "None; byte-identical existing rendered asset",
+      "assetSha256": "0ae8d211912c870a0e06c82957d5c8db9a614384cc9ca07a67ee616dacda8079",
+      "bytes": 13503
+    },
+    {
+      "set": "sinnoh-dp",
+      "index": 4,
+      "name": "Fen",
+      "gameIds": [
+        8,
+        21
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/sinnoh-dp-4.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "SteGriff/pokemon-badges",
+      "sourceCommit": "89fde1733f2f819e7d3fe8036e68a8ade4c49579",
+      "sourceUrl": "https://github.com/SteGriff/pokemon-badges/tree/89fde1733f2f819e7d3fe8036e68a8ade4c49579/svg",
+      "license": "CC-BY-3.0",
+      "attribution": "Stephen Griffiths, 2011",
+      "copiedExistingAsset": "sinnoh-5.png",
+      "sourceSha256": "7328d18837fe577f69dca14d749e3a1648e9ede067060b7344cecca5926212e7",
+      "transform": "None; byte-identical existing rendered asset",
+      "assetSha256": "7328d18837fe577f69dca14d749e3a1648e9ede067060b7344cecca5926212e7",
+      "bytes": 10365
+    },
+    {
+      "set": "sinnoh-dp",
+      "index": 5,
+      "name": "Relic",
+      "gameIds": [
+        8,
+        21
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/sinnoh-dp-5.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "SteGriff/pokemon-badges",
+      "sourceCommit": "89fde1733f2f819e7d3fe8036e68a8ade4c49579",
+      "sourceUrl": "https://github.com/SteGriff/pokemon-badges/tree/89fde1733f2f819e7d3fe8036e68a8ade4c49579/svg",
+      "license": "CC-BY-3.0",
+      "attribution": "Stephen Griffiths, 2011",
+      "copiedExistingAsset": "sinnoh-3.png",
+      "sourceSha256": "ae2a78bf62d5bb489a9ee603568b1372b33b692ac2c3bbda269f001baa7d5074",
+      "transform": "None; byte-identical existing rendered asset",
+      "assetSha256": "ae2a78bf62d5bb489a9ee603568b1372b33b692ac2c3bbda269f001baa7d5074",
+      "bytes": 16809
+    },
+    {
+      "set": "sinnoh-dp",
+      "index": 6,
+      "name": "Mine",
+      "gameIds": [
+        8,
+        21
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/sinnoh-dp-6.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "SteGriff/pokemon-badges",
+      "sourceCommit": "89fde1733f2f819e7d3fe8036e68a8ade4c49579",
+      "sourceUrl": "https://github.com/SteGriff/pokemon-badges/tree/89fde1733f2f819e7d3fe8036e68a8ade4c49579/svg",
+      "license": "CC-BY-3.0",
+      "attribution": "Stephen Griffiths, 2011",
+      "copiedExistingAsset": "sinnoh-6.png",
+      "sourceSha256": "b338c72908d7691327389b5bb60bbebf3a704e962baa0d7bd28002bd584295fc",
+      "transform": "None; byte-identical existing rendered asset",
+      "assetSha256": "b338c72908d7691327389b5bb60bbebf3a704e962baa0d7bd28002bd584295fc",
+      "bytes": 12177
+    },
+    {
+      "set": "sinnoh-dp",
+      "index": 7,
+      "name": "Icicle",
+      "gameIds": [
+        8,
+        21
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/sinnoh-dp-7.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "SteGriff/pokemon-badges",
+      "sourceCommit": "89fde1733f2f819e7d3fe8036e68a8ade4c49579",
+      "sourceUrl": "https://github.com/SteGriff/pokemon-badges/tree/89fde1733f2f819e7d3fe8036e68a8ade4c49579/svg",
+      "license": "CC-BY-3.0",
+      "attribution": "Stephen Griffiths, 2011",
+      "copiedExistingAsset": "sinnoh-7.png",
+      "sourceSha256": "829d973a402f8e91bd31a8a1d54c5b4dbe0d9dd0ed4956d88fdf44f21db57a86",
+      "transform": "None; byte-identical existing rendered asset",
+      "assetSha256": "829d973a402f8e91bd31a8a1d54c5b4dbe0d9dd0ed4956d88fdf44f21db57a86",
+      "bytes": 13656
+    },
+    {
+      "set": "sinnoh-dp",
+      "index": 8,
+      "name": "Beacon",
+      "gameIds": [
+        8,
+        21
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/sinnoh-dp-8.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "SteGriff/pokemon-badges",
+      "sourceCommit": "89fde1733f2f819e7d3fe8036e68a8ade4c49579",
+      "sourceUrl": "https://github.com/SteGriff/pokemon-badges/tree/89fde1733f2f819e7d3fe8036e68a8ade4c49579/svg",
+      "license": "CC-BY-3.0",
+      "attribution": "Stephen Griffiths, 2011",
+      "copiedExistingAsset": "sinnoh-8.png",
+      "sourceSha256": "e62f685f6a201d99e13123d3e62156304441bf371180b9a94c4aff49aa753d04",
+      "transform": "None; byte-identical existing rendered asset",
+      "assetSha256": "e62f685f6a201d99e13123d3e62156304441bf371180b9a94c4aff49aa753d04",
+      "bytes": 10987
+    },
+    {
+      "set": "unova2",
+      "index": 1,
+      "name": "Basic",
+      "gameIds": [
+        14
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/unova2-1.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "SteGriff/pokemon-badges",
+      "sourceCommit": "89fde1733f2f819e7d3fe8036e68a8ade4c49579",
+      "sourceUrl": "https://github.com/SteGriff/pokemon-badges/tree/89fde1733f2f819e7d3fe8036e68a8ade4c49579/svg",
+      "license": "CC-BY-3.0",
+      "attribution": "Stephen Griffiths, 2011",
+      "copiedExistingAsset": "unova-2.png",
+      "sourceSha256": "b2e3c5a88e37326bcaabf26fd32c628d81999c1b52c1598f5a631ddf51415a40",
+      "transform": "None; byte-identical existing rendered asset",
+      "assetSha256": "b2e3c5a88e37326bcaabf26fd32c628d81999c1b52c1598f5a631ddf51415a40",
+      "bytes": 4303
+    },
+    {
+      "set": "unova2",
+      "index": 2,
+      "name": "Toxic",
+      "gameIds": [
+        14
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/unova2-2.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 35,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/35.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "91f3f7cdf88ca34979e871d1bec23e65f2373bedabb16c328040bb0d461de737",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "d9d7696361daf4a1f99614092c410c537e76fd408b58a5dcd7933e51503ed951",
+      "bytes": 9768
+    },
+    {
+      "set": "unova2",
+      "index": 3,
+      "name": "Insect",
+      "gameIds": [
+        14
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/unova2-3.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "SteGriff/pokemon-badges",
+      "sourceCommit": "89fde1733f2f819e7d3fe8036e68a8ade4c49579",
+      "sourceUrl": "https://github.com/SteGriff/pokemon-badges/tree/89fde1733f2f819e7d3fe8036e68a8ade4c49579/svg",
+      "license": "CC-BY-3.0",
+      "attribution": "Stephen Griffiths, 2011",
+      "copiedExistingAsset": "unova-3.png",
+      "sourceSha256": "695e28022ee4389df2bc73b30c09dc348e88e2f37494996d9cdf19902387ed3a",
+      "transform": "None; byte-identical existing rendered asset",
+      "assetSha256": "695e28022ee4389df2bc73b30c09dc348e88e2f37494996d9cdf19902387ed3a",
+      "bytes": 10049
+    },
+    {
+      "set": "unova2",
+      "index": 4,
+      "name": "Bolt",
+      "gameIds": [
+        14
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/unova2-4.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "SteGriff/pokemon-badges",
+      "sourceCommit": "89fde1733f2f819e7d3fe8036e68a8ade4c49579",
+      "sourceUrl": "https://github.com/SteGriff/pokemon-badges/tree/89fde1733f2f819e7d3fe8036e68a8ade4c49579/svg",
+      "license": "CC-BY-3.0",
+      "attribution": "Stephen Griffiths, 2011",
+      "copiedExistingAsset": "unova-4.png",
+      "sourceSha256": "c13c8c940678d99eec27ad7a7680a0c5ffb9214fbadc96b4179580198d19c5b9",
+      "transform": "None; byte-identical existing rendered asset",
+      "assetSha256": "c13c8c940678d99eec27ad7a7680a0c5ffb9214fbadc96b4179580198d19c5b9",
+      "bytes": 9005
+    },
+    {
+      "set": "unova2",
+      "index": 5,
+      "name": "Quake",
+      "gameIds": [
+        14
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/unova2-5.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "SteGriff/pokemon-badges",
+      "sourceCommit": "89fde1733f2f819e7d3fe8036e68a8ade4c49579",
+      "sourceUrl": "https://github.com/SteGriff/pokemon-badges/tree/89fde1733f2f819e7d3fe8036e68a8ade4c49579/svg",
+      "license": "CC-BY-3.0",
+      "attribution": "Stephen Griffiths, 2011",
+      "copiedExistingAsset": "unova-5.png",
+      "sourceSha256": "1b2d2b2ad5ddd6a7956aa7b9be6389f4a30e61797bfdd29760d8713febe0a015",
+      "transform": "None; byte-identical existing rendered asset",
+      "assetSha256": "1b2d2b2ad5ddd6a7956aa7b9be6389f4a30e61797bfdd29760d8713febe0a015",
+      "bytes": 5754
+    },
+    {
+      "set": "unova2",
+      "index": 6,
+      "name": "Jet",
+      "gameIds": [
+        14
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/unova2-6.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "SteGriff/pokemon-badges",
+      "sourceCommit": "89fde1733f2f819e7d3fe8036e68a8ade4c49579",
+      "sourceUrl": "https://github.com/SteGriff/pokemon-badges/tree/89fde1733f2f819e7d3fe8036e68a8ade4c49579/svg",
+      "license": "CC-BY-3.0",
+      "attribution": "Stephen Griffiths, 2011",
+      "copiedExistingAsset": "unova-6.png",
+      "sourceSha256": "8fa2f4923fbdddcf372c78ba31bd8b2e9976ad89aba49bb846b2adba6aef61dd",
+      "transform": "None; byte-identical existing rendered asset",
+      "assetSha256": "8fa2f4923fbdddcf372c78ba31bd8b2e9976ad89aba49bb846b2adba6aef61dd",
+      "bytes": 9477
+    },
+    {
+      "set": "unova2",
+      "index": 7,
+      "name": "Legend",
+      "gameIds": [
+        14
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/unova2-7.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "SteGriff/pokemon-badges",
+      "sourceCommit": "89fde1733f2f819e7d3fe8036e68a8ade4c49579",
+      "sourceUrl": "https://github.com/SteGriff/pokemon-badges/tree/89fde1733f2f819e7d3fe8036e68a8ade4c49579/svg",
+      "license": "CC-BY-3.0",
+      "attribution": "Stephen Griffiths, 2011",
+      "copiedExistingAsset": "unova-8.png",
+      "sourceSha256": "55110aef4f05c277413b7d82a22eb32d033813f19227cf9c2113c5aa792e3649",
+      "transform": "None; byte-identical existing rendered asset",
+      "assetSha256": "55110aef4f05c277413b7d82a22eb32d033813f19227cf9c2113c5aa792e3649",
+      "bytes": 9147
+    },
+    {
+      "set": "unova2",
+      "index": 8,
+      "name": "Wave",
+      "gameIds": [
+        14
+      ],
+      "variant": null,
+      "asset": "android/app/src/main/assets/badges/unova2-8.png",
+      "comparisonSource": "https://bulbapedia.bulbagarden.net/wiki/Badge",
+      "visuallyVerified": true,
+      "source": "PokeAPI/sprites",
+      "sourceCommit": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+      "sourceId": 42,
+      "sourceUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/badges/42.png",
+      "license": "NOASSERTION; underlying Pokemon game artwork; user-accepted IP risk, no open image license claimed",
+      "sourceSha256": "2e872f6dd6dd1bc07400a201bf3cbc7a4e3dfeea8e494f2cb51503be5afb956c",
+      "transform": "Fit and pad 96x96, matching existing badge dimensions; no redesign",
+      "assetSha256": "d352e16cc3847c8867ced657f30e504a0ec552d63731b0d92f9ba02130b9c701",
+      "bytes": 7502
+    }
+  ]
+}

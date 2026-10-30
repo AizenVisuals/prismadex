@@ -1,0 +1,27 @@
+{
+  "trainerPNGs": 1500,
+  "trainerBytes": 1102285,
+  "artistNames": [
+    "Beliot419",
+    "Brumirage",
+    "Fifty Shades of Rez",
+    "Flamibane",
+    "Gnomowladny",
+    "Grapo",
+    "Horo",
+    "RADU",
+    "Selena",
+    "ZacWeavile",
+    "hyo-oppa",
+    "kyledove",
+    "wisteriapurple"
+  ],
+  "trainerEdits": false,
+  "existing37Changed": false,
+  "badgePNGs": 88,
+  "newBadgePNGs": 40,
+  "newBadgeBytes": 391258,
+  "pngSignaturesAndCRCs": "passed",
+  "sourceHashMatch": "passed",
+  "keyCoverage": "passed"
+}
