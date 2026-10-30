@@ -92,8 +92,12 @@ def main():
     meta_no_games = [c["id"] for c in catalog
                      if str(c["id"]) in metadata and not metadata[str(c["id"])].get("games")]
     ident_missing = [c["id"] for c in catalog if str(c["id"]) not in identities]
-    ident_no_canonical = [c["id"] for c in catalog
-                          if str(c["id"]) in identities and not identities[str(c["id"])].get("canonicalName")]
+    # identities.json is scoped to Champions forms by design (canonical/showdown
+    # mapping for the 354 roster entries); absence elsewhere is expected, not a gap.
+    # The meaningful checks are roster coverage and stray entries.
+    roster_pre = load("champions-roster.json").get("forms", {})
+    ident_roster_missing = [int(k) for k in roster_pre if k not in identities]
+    ident_stray = [int(k) for k in identities if k not in roster_pre]
     gen_dist = Counter()
     for c in catalog:
         m = metadata.get(str(c["id"]))
@@ -103,8 +107,11 @@ def main():
         "metadata_entries": len(metadata), "identities_entries": len(identities),
         "catalog_ids_missing_metadata": meta_missing,
         "catalog_ids_with_empty_games": len(meta_no_games),
-        "catalog_ids_missing_identities": ident_missing,
-        "identities_without_canonicalName": len(ident_no_canonical),
+        "identities_scope_note": "identities.json covers Champions roster forms only, by design",
+        "roster_ids_missing_identity_entry": ident_roster_missing,
+        "identity_entries_outside_roster": ident_stray,
+        "identities_without_canonicalName": [int(k) for k, v in identities.items()
+                                             if not v.get("canonicalName")],
         "generation_distribution": {str(k): v for k, v in sorted(gen_dist.items(), key=lambda x: (x[0] is None, x[0]))},
     }
 
@@ -145,10 +152,18 @@ def main():
         detail_fill[field] = {"filled": sum(1 for v in move_details.values() if v.get(field)),
                               "total": len(move_details)}
     detail_lang = {}
-    for lang in ("pt", "en", "es"):
-        detail_lang[lang] = sum(1 for v in move_details.values()
-                                if isinstance(v.get("descriptionTranslations"), dict)
-                                and v["descriptionTranslations"].get(lang))
+    loc = load("localized-descriptions.json")
+    distinct_texts = set()
+    for v in move_details.values():
+        for f in ("description", "summary", "championsDescription", "championsSummary"):
+            if v.get(f):
+                distinct_texts.add(v[f])
+    detail_lang = {
+        "distinct_texts": len(distinct_texts),
+        "with_pt_and_es": sum(1 for t in distinct_texts
+                              if t in loc and loc[t].get("pt") and loc[t].get("es")),
+        "without_translation": sorted(t for t in distinct_texts if t not in loc),
+    }
     champ_desc_missing = [i for i in champ_move_ids if not move_details.get(str(i), {}).get("championsDescription")]
     rep["moves"] = {
         "moves_entries": len(moves), "move_details_entries": len(move_details),
@@ -201,6 +216,9 @@ def main():
     for lang in ("pt", "en", "es"):
         ability_desc_lang[lang] = sum(1 for v in abilities.values()
                                       if isinstance(v.get("description"), dict) and v["description"].get(lang))
+    def akey(s):
+        return re.sub(r"[^a-z0-9]", "", (s or "").lower())
+    ability_keys = {akey(v["name"]) for v in abilities.values()} | {akey(v["slug"]) for v in abilities.values()}
     app_ability_names = set()
     for c in catalog:
         app_ability_names.update(c["abilities"])
@@ -210,8 +228,8 @@ def main():
             nm = ability_id_to_name.get(a.get("id")) or a.get("name")
             if nm:
                 app_ability_names.add(nm)
-    ability_names = {v["name"] for v in abilities.values()}
-    app_abilities_without_profile = sorted(app_ability_names - ability_names)
+    app_abilities_without_profile = sorted(a for a in app_ability_names if akey(a) not in ability_keys)
+    whitespace_abilities = sorted({a for c in catalog for a in c["abilities"] if a != a.strip()})
     rep["profiles_abilities"] = {
         "profile_entries": len(profiles), "ability_entries": len(abilities),
         "catalog_ids_without_profile": profile_missing,
@@ -223,6 +241,7 @@ def main():
         "ability_description_lang_fill": ability_desc_lang,
         "app_used_ability_names": len(app_ability_names),
         "app_used_abilities_without_profile_entry": app_abilities_without_profile,
+        "ability_strings_with_leading_trailing_whitespace": whitespace_abilities,
     }
 
     # ---- 7. Evolution families ----
@@ -373,8 +392,8 @@ def matrix(rep):
     lines.append("")
     lines.append("## Metadados / identidades")
     m = rep["metadata_identities"]
-    lines.append(f"- metadata: {m['metadata_entries']} entradas; sem metadados: {m['catalog_ids_missing_metadata'] or 'nenhum'}.")
-    lines.append(f"- Sem lista de jogos: {m['catalog_ids_with_empty_games']} ids. Sem identidade: {m['catalog_ids_missing_identities'] or 'nenhum'}.")
+    lines.append(f"- metadata: {m['metadata_entries']} entradas; sem metadados: {m['catalog_ids_missing_metadata'] or 'nenhum'} (formas adicionais carregam geração/jogos no próprio registro).")
+    lines.append(f"- Sem lista de jogos: {m['catalog_ids_with_empty_games']} ids. Identidades: {m['identities_entries']} entradas, escopo Champions por desenho; roster sem entrada: {m['roster_ids_missing_identity_entry'] or 'nenhum'}; fora do roster: {m['identity_entries_outside_roster'] or 'nenhum'}.")
     lines.append(f"- Distribuição por geração: {m['generation_distribution']}.")
     lines.append("")
     lines.append("## Champions")
@@ -396,7 +415,8 @@ def matrix(rep):
     lines.append(f"- Perfis: {pr['profile_entries']}; sem perfil: {len(pr['catalog_ids_without_profile'])} ids.")
     lines.append(f"- Preenchimento: {pr['profile_field_fill']}.")
     lines.append(f"- Formas não resolvidas: {len(pr['profiles_form_unresolved'])}; habilidades sem descrição: {pr['abilities_without_description']}.")
-    lines.append(f"- Habilidades usadas no app sem entrada de perfil: {pr['app_used_abilities_without_profile_entry'] or 'nenhuma'}.")
+    lines.append(f"- Habilidades usadas no app sem entrada de perfil (comparação normalizada): {pr['app_used_abilities_without_profile_entry'] or 'nenhuma'}. Strings com espaço nas bordas: {pr['ability_strings_with_leading_trailing_whitespace'] or 'nenhuma'}.")
+    lines.append(f"- Traduções de textos de golpes: {mv['detail_description_translations']['with_pt_and_es']}/{mv['detail_description_translations']['distinct_texts']} textos distintos com PT+ES.")
     lines.append("")
     lines.append("## Evolução / learnsets / arte / motor")
     ev = rep["evolution"]
