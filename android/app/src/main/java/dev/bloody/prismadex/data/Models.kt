@@ -62,6 +62,14 @@ data class UserState(
      *  No official badge names/counts exist in the bundled data, so entries
      *  are named by the user until verified badge data is imported. */
     val badges: Map<Int, List<String>> = emptyMap(),
+    /** Trainer card (Account tab): display name + chosen trainer sprite key
+     *  (empty = no sprite, honest placeholder). Stored locally only. */
+    val trainerName: String = "",
+    val trainerSprite: String = "",
+    /** Badge image sets: gameId -> earned badge indices (0..7) for games with
+     *  a verified 8-image set. Kept alongside [badges] (user-named entries),
+     *  which remains the fallback for games without an image set. */
+    val badgeSets: Map<Int, Set<Int>> = emptyMap(),
 ){
     val activeTeam:SavedTeam get()=teams.first{it.id==activeTeamId}
     val team:List<Int> get()=activeTeam.members
@@ -87,4 +95,32 @@ val SupportedGames=listOf(
     GameOption(23,"Scarlet / Violet",9),GameOption(24,"Legends: Z–A",9),
 )
 fun gameName(id:Int)=SupportedGames.firstOrNull{it.id==id}?.name?:"Jogo desconhecido"
+
+/** Verified 8-badge image sets (00:11/00:17/00:19). Prefix = asset folder
+ *  file stem in `assets/badges/<prefix>-<1..8>.png`. SteGriff CC BY 3.0
+ *  recreations for Kanto-Unova; PokeAPI/sprites files 70-77 for Paldea.
+ *  Kalos/Galar have NO verified set yet (recorded gap, do not substitute). */
+data class BadgeSet(val prefix: String, val gameIds: Set<Int>)
+val BadgeSets = listOf(
+    BadgeSet("kanto", setOf(1, 2, 7, 19)),
+    BadgeSet("johto", setOf(3, 4, 10)),
+    BadgeSet("hoenn", setOf(5, 6, 16)),
+    BadgeSet("sinnoh", setOf(8, 9, 21)),
+    BadgeSet("unova", setOf(11, 14)),
+    BadgeSet("paldea", setOf(23)),
+)
+val BadgeSetByGame: Map<Int, BadgeSet> = BadgeSets.flatMap { s -> s.gameIds.map { it to s } }.toMap()
+const val BadgeSetSize = 8
+
+/** Trainer sprite keys: static PNGs in `assets/trainers/<key>.png` from the
+ *  Showdown trainers listing, imported minimal-only under the user's
+ *  accepted IP risk (00:07/00:08). Exact filenames that do not exist
+ *  (leaf, florian, juliana, nemona, arven) are gaps, not aliases. */
+val TrainerSpriteKeys = listOf(
+    "red", "blue", "green", "ethan", "lyra", "kris", "silver",
+    "brendan", "may", "wally", "lucas", "dawn", "barry",
+    "hilbert", "hilda", "nate", "rosa", "calem", "serena", "shauna",
+    "elio", "selene", "hau", "chase", "elaine",
+    "victor", "gloria", "hop", "rei", "akari", "penny", "kieran",
+)
 fun Pokemon.availableIn(game:Int)=if(game==25)champions else game in games
