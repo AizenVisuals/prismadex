@@ -26,7 +26,7 @@ internal val statLabels=listOf("HP","Ataque","Defesa","Atq. esp.","Def. esp.","V
     var open by remember {mutableStateOf(false)}
     var query by remember {mutableStateOf("")}
     Box {
-        Surface(Modifier.fillMaxWidth().heightIn(min=48.dp).clickable {open=true},shape=RoundedCornerShape(18.dp),color=MaterialTheme.colorScheme.surfaceVariant.copy(alpha=.55f)) {
+        Surface(Modifier.fillMaxWidth().heightIn(min=48.dp).clickable {open=true},shape=RoundedCornerShape(18.dp),color=solidBlend(MaterialTheme.colorScheme.surfaceVariant,MaterialTheme.colorScheme.background,.55f)) {
             Row(Modifier.padding(16.dp),verticalAlignment=androidx.compose.ui.Alignment.CenterVertically){Column(Modifier.weight(1f)){LText(label,fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant);LText(value,modifier=Modifier.padding(top=5.dp),fontSize=15.sp)};LIcon(androidx.compose.material.icons.Icons.Rounded.ExpandMore,null)}
         }
         if(choices.size<=7)DropdownMenu(expanded=open,onDismissRequest={open=false},modifier=Modifier.heightIn(max=320.dp)){choices.forEach{(key,text)->DropdownMenuItem(text={LText(text,fontSize=14.sp)},onClick={onSelect(key);open=false})}}

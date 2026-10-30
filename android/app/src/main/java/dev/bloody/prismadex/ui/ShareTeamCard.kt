@@ -47,6 +47,7 @@ import java.io.FileOutputStream
  * - LEVEL: only Champions (gameId 25) fixes the level at 50
  *   ("nível 50", "IVs e nível não são editáveis neste modo",
  *   TrainingEditor.kt). Other games store no level, so the slot is empty.
+ * - SHINY: Build.shiny, chosen at add time from the detail star state; a shiny member draws art/shiny/<id>.webp, never a recolor. A missing shiny file leaves the circle empty, as with missing normal art.
  * - GENDER: no per-member gender is stored anywhere in SavedTeam/Build/
  *   Pokemon, and it cannot be derived truthfully from the species ratio.
  *   The top-left slot is therefore left blank. Adding real gender data
@@ -220,8 +221,9 @@ private fun renderTeamCard(context: Context, team: SavedTeam, slots: List<Pokemo
         val circleR = 120f
         val circleCy = top + 232f
         canvas.drawCircle(cx, circleCy, circleR, Paint(Paint.ANTI_ALIAS_FLAG).apply { color = circleColor })
+        val artPath = if (team.builds[p.id]?.shiny == true) "art/shiny/${p.id}.webp" else "art/${p.id}.webp"
         val art = runCatching {
-            context.assets.open("art/${p.id}.webp").use { BitmapFactory.decodeStream(it) }
+            context.assets.open(artPath).use { BitmapFactory.decodeStream(it) }
         }.getOrNull()
         if (art != null) {
             val artSize = 258f

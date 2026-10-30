@@ -21,7 +21,7 @@ class Store(context: Context, private val storageName: String = "prisma") {
     private val db = Accounts(app, "$storageName-accounts.sqlite3")
     private val repository = PokemonRepository(app)
     private val gate = Any()
-    private val themes = setOf("aurora", "carmine", "pearl", "ocean", "jade", "amber")
+    private val themes = ValidThemes
     private var attempts = mutableListOf<Long>()
 
     val currentEmail: String?
@@ -53,7 +53,14 @@ class Store(context: Context, private val storageName: String = "prisma") {
         require(state.teamView in setOf("list", "grid")) { "Visualização da equipe inválida." }
         require(state.badges.all { (gameId, names) -> SupportedGames.any { it.id == gameId } && names.size <= 100 && names.all { it.isNotBlank() && it.length <= 50 } }) { "Registro de insígnia inválido." }
         require(state.trainerName.length <= 40) { "Nome de treinador inválido." }
+        require(state.trainerCardTeamId.isBlank() || state.teams.any { it.id == state.trainerCardTeamId }) { "Equipe do cartão inválida." }
         require(state.trainerSprite.isBlank() || state.trainerSprite in TrainerSpriteKeys) { "Sprite de treinador inválido." }
+        require(state.trainerCardStyle in TrainerCardStyleKeys) { "Estilo do cartão inválido." }
+        require(state.trainerCardBackground in TrainerCardBackgroundKeys) { "Fundo do cartão inválido." }
+        require(state.kantoPostgameBadges.all{(game,indices)->game in setOf(3,4,10)&&indices.all{it in 0 until BadgeSetSize}}) { "Insígnias de Kanto inválidas." }
+        require(state.galarVersion in setOf("sword","shield")) { "Versão de Galar inválida." }
+        require(state.appIcon in AppIconKeys) { "Ícone do app inválido." }
+        require(state.galarBadgeSets.all { (version,indices)->version in setOf("sword","shield")&&indices.all{it in 0 until BadgeSetSize} }) { "Insígnias de Galar inválidas." }
         require(state.badgeSets.all { (gameId, indices) -> BadgeSetByGame[gameId] != null && indices.size <= BadgeSetSize && indices.all { it in 0 until BadgeSetSize } }) { "Registro de insígnia inválido." }
         require(state.teams.size in 1..100 && state.teams.map{it.id}.distinct().size==state.teams.size){"Use de 1 a 100 equipes."}
         require(state.teams.any{it.id==state.activeTeamId}){"Equipe ativa não encontrada."}
@@ -155,6 +162,7 @@ class Store(context: Context, private val storageName: String = "prisma") {
     }
 
     companion object {
+        private val ValidThemes = setOf("eevee", "vaporeon", "jolteon", "flareon", "espeon", "umbreon", "leafeon", "glaceon", "sylveon")
         internal fun encode(state: UserState): JSONObject = JSONObject().apply {
             put("schemaVersion",3)
             put("favorites", JSONArray(state.favorites.toList())); put("team", JSONArray(state.team))
@@ -169,14 +177,19 @@ class Store(context: Context, private val storageName: String = "prisma") {
             } })
             put("dummies", JSONArray().apply { state.dummies.forEach { d -> put(JSONObject().apply { put("id", d.id); put("label", d.label); put("pokemonId", d.pokemonId); put("build", encodeBuild(d.build)) }) } })
             put("badges", JSONObject().apply { state.badges.forEach { (gameId, names) -> put(gameId.toString(), JSONArray(names)) } })
-            put("trainerName", state.trainerName); put("trainerSprite", state.trainerSprite)
+            put("trainerName", state.trainerName); put("trainerSprite", state.trainerSprite); put("trainerCardTeamId", state.trainerCardTeamId)
+            put("trainerCardStyle", state.trainerCardStyle); put("trainerCardBackground", state.trainerCardBackground)
+            put("kantoPostgameBadges",JSONObject().apply{state.kantoPostgameBadges.forEach{(game,indices)->put(game.toString(),JSONArray(indices.sorted()))}})
+            put("galarVersion",state.galarVersion)
+            put("appIcon",state.appIcon)
+            put("galarBadgeSets",JSONObject().apply{state.galarBadgeSets.forEach{(version,indices)->put(version,JSONArray(indices.sorted()))}})
             put("badgeSets", JSONObject().apply { state.badgeSets.forEach { (gameId, indices) -> put(gameId.toString(), JSONArray(indices.sorted().toList())) } })
         }
         internal fun encodeBuild(build: Build) = JSONObject().apply {
             put("itemId", build.itemId ?: JSONObject.NULL); put("moves", JSONArray(build.moves))
-            put("nature", build.nature); put("ability", build.ability ?: JSONObject.NULL); put("sps", JSONArray(build.sps))
+            put("nature", build.nature); put("ability", build.ability ?: JSONObject.NULL); put("sps", JSONArray(build.sps)); put("gender", build.gender?.takeIf { it == "male" || it == "female" } ?: JSONObject.NULL); put("shiny", build.shiny)
         }
-        internal fun decodeBuild(build: JSONObject) = Build(build.nullableInt("itemId"), build.optJSONArray("moves")?.ints() ?: emptyList(), build.optString("nature", "Serious"), if(build.isNull("ability") || !build.has("ability")) null else build.getString("ability"), build.optJSONArray("sps")?.ints() ?: List(6) { 0 })
+        internal fun decodeBuild(build: JSONObject) = Build(build.nullableInt("itemId"), build.optJSONArray("moves")?.ints() ?: emptyList(), build.optString("nature", "Serious"), if(build.isNull("ability") || !build.has("ability")) null else build.getString("ability"), build.optJSONArray("sps")?.ints() ?: List(6) { 0 }, build.optString("gender").takeIf { it == "male" || it == "female" }, build.optBoolean("shiny", false))
         internal fun decode(json: JSONObject): UserState {
             val team = json.optJSONArray("team")?.ints()?.map(::canonicalPokemonId)?.distinct() ?: emptyList()
             val rawBuilds = json.optJSONObject("builds") ?: JSONObject()
@@ -193,9 +206,16 @@ class Store(context: Context, private val storageName: String = "prisma") {
             } else listOf(SavedTeam("default","Minha equipe",25,team,builds,json.optString("battleFormat","doubles")))
             val active=json.optString("activeTeamId","default").takeIf{id->teams.any{it.id==id}}?:teams.first().id
             return UserState(favorites=json.optJSONArray("favorites")?.ints()?.map(::canonicalPokemonId)?.toSet()?:emptySet(),teams=teams,activeTeamId=active,
-                theme=json.optString("theme","aurora"),layout=json.optString("layout","list"),teamView=json.optString("teamView","list"),
+                theme=json.optString("theme","eevee").takeIf { it in ValidThemes } ?: "eevee",layout=json.optString("layout","list"),teamView=json.optString("teamView","list"),
                 badges=(json.optJSONObject("badges")?.keys()?.asSequence()?.mapNotNull { key -> key.toIntOrNull()?.takeIf { id -> SupportedGames.any { it.id == id } }?.let { id -> id to (json.optJSONObject("badges")?.optJSONArray(key)?.strings().orEmpty().map { it.trim() }.filter { it.isNotEmpty() && it.length <= 50 }.distinct().take(100)) } }?.toMap() ?: emptyMap()),
                 trainerName=json.optString("trainerName","").trim().take(40),trainerSprite=json.optString("trainerSprite","").takeIf{it in TrainerSpriteKeys} ?: "",
+                trainerCardTeamId=json.optString("trainerCardTeamId","").takeIf { id -> id.isNotBlank() && teams.any { it.id == id } } ?: "",
+                trainerCardStyle=json.optString("trainerCardStyle","classico").takeIf { it in TrainerCardStyleKeys } ?: "classico",
+                trainerCardBackground=json.optString("trainerCardBackground","padrao").takeIf { it in TrainerCardBackgroundKeys } ?: "padrao",
+                kantoPostgameBadges=json.optJSONObject("kantoPostgameBadges")?.let{rows->listOf(3,4,10).mapNotNull{game->rows.optJSONArray(game.toString())?.ints()?.filter{it in 0 until BadgeSetSize}?.toSet()?.let{game to it}}.toMap()}.orEmpty(),
+                galarVersion=json.optString("galarVersion","sword").takeIf{it in setOf("sword","shield")}?:"sword",
+                appIcon=canonicalAppIcon(json.optString("appIcon","prisma")),
+                galarBadgeSets=json.optJSONObject("galarBadgeSets")?.let{rows->listOf("sword","shield").mapNotNull{version->rows.optJSONArray(version)?.ints()?.filter{it in 0 until BadgeSetSize}?.toSet()?.let{version to it}}.toMap()}.orEmpty(),
                 badgeSets=(json.optJSONObject("badgeSets")?.keys()?.asSequence()?.mapNotNull { key -> key.toIntOrNull()?.takeIf { id -> BadgeSetByGame.containsKey(id) }?.let { id -> id to (json.optJSONObject("badgeSets")?.optJSONArray(key)?.ints().orEmpty().filter { it in 0 until BadgeSetSize }.distinct().take(BadgeSetSize).toSet()) } }?.toMap() ?: emptyMap()),
                 dummies=json.optJSONArray("dummies")?.let { rows -> (0 until rows.length()).map { i -> rows.getJSONObject(i).let { d -> TrainingDummy(d.getString("id"), d.getString("label"), canonicalPokemonId(d.getInt("pokemonId")), decodeBuild(d.getJSONObject("build"))) } } } ?: emptyList(),
                 battleFormat=json.optString("battleFormat","doubles"),appearanceMode=json.optString("appearanceMode","system"))

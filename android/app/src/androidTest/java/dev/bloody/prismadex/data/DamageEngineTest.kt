@@ -38,7 +38,7 @@ class DamageEngineTest {
         try {
             val build=Build(247,listOf(53),"Modest","blaze",listOf(0,0,0,32,2,32))
             val dummy=TrainingDummy("target-1","Venusaur defensivo",3,Build(nature="Calm",sps=listOf(32,0,2,0,32,0)))
-            val state=UserState(teams=listOf(SavedTeam("default","Minha equipe",members=listOf(6),builds=mapOf(6 to build))),dummies=listOf(dummy),theme="carmine",appearanceMode="light")
+            val state=UserState(teams=listOf(SavedTeam("default","Minha equipe",members=listOf(6),builds=mapOf(6 to build))),dummies=listOf(dummy),theme="eevee",appearanceMode="light")
             store.save(state);assertEquals(state,store.load());assertEquals(1,store.load().team.size)
             val repository=PokemonRepository(context);val charizard=repository.loadCatalog().first{it.id==6}
             assertTrue(repository.validateBuild(charizard,build.copy(sps=listOf(32,32,32,0,0,0))).isFailure)

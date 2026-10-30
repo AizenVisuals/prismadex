@@ -106,7 +106,7 @@ private val conditionsSaver=listSaver<BattleConditions,Any>(
     }
     LazyColumn(Modifier.prismaViewport(),contentPadding=PaddingValues(start=22.dp,end=22.dp,top=16.dp,bottom=24.dp),verticalArrangement=Arrangement.spacedBy(18.dp)){
         item(key="intro"){LText("Compare seus sets",fontSize=22.sp,fontWeight=FontWeight.SemiBold)}
-        item(key="format"){Column(verticalArrangement=Arrangement.spacedBy(9.dp)){
+        item(key="format"){Column(verticalArrangement=Arrangement.spacedBy(8.dp)){
             FlowRow(horizontalArrangement=Arrangement.spacedBy(8.dp)){
                 FilterChip(format=="singles",{format="singles"},label={LText("Singles · individual")})
                 FilterChip(format=="doubles",{format="doubles"},label={LText("Doubles · duplas")})
@@ -195,8 +195,8 @@ private val conditionsSaver=listSaver<BattleConditions,Any>(
 
 @Composable private fun DamageResult(r:JSONObject,modifier:Modifier=Modifier){
     val ui=LocalUiStrings.current
-    Surface(modifier=modifier,shape=RoundedCornerShape(26.dp),color=MaterialTheme.colorScheme.primary.copy(alpha=.12f)){
-        Column(Modifier.padding(22.dp),verticalArrangement=Arrangement.spacedBy(13.dp)){
+    Surface(modifier=modifier,shape=RoundedCornerShape(26.dp),color=solidBlend(MaterialTheme.colorScheme.primary,MaterialTheme.colorScheme.background,.12f)){
+        Column(Modifier.padding(22.dp),verticalArrangement=Arrangement.spacedBy(12.dp)){
             LText("${r.optString("attackerName")} → ${r.optString("defenderName")} · ${r.optString("gameType")}",fontSize=13.sp,fontWeight=FontWeight.SemiBold)
             LText("DANO ESTIMADO",fontSize=13.sp,letterSpacing=1.5.sp,color=MaterialTheme.colorScheme.primary)
             LText("${r.getInt("min")}–${r.getInt("max")} HP",fontSize=30.sp,fontWeight=FontWeight.Bold)
@@ -207,7 +207,7 @@ private val conditionsSaver=listSaver<BattleConditions,Any>(
             for((key,title) in listOf("attackerStats" to "Atributos do atacante","defenderStats" to "Atributos do defensor")){
                 LText(title,fontSize=13.sp,fontWeight=FontWeight.SemiBold)
                 val stats=r.getJSONObject(key)
-                FlowRow(horizontalArrangement=Arrangement.spacedBy(13.dp),verticalArrangement=Arrangement.spacedBy(6.dp)){StatKeys.forEachIndexed{i,k->LText("${ui.text(statLabels[i])} ${stats.getInt(k)}",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)}}
+                FlowRow(horizontalArrangement=Arrangement.spacedBy(8.dp),verticalArrangement=Arrangement.spacedBy(8.dp)){StatKeys.forEachIndexed{i,k->LText("${ui.text(statLabels[i])} ${stats.getInt(k)}",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)}}
             }
             LText("Habilidades: ${r.optString("attackerAbility")} × ${r.optString("defenderAbility")}",fontSize=13.sp)
             val rolls=r.optJSONArray("rolls")
@@ -226,7 +226,7 @@ private val conditionsSaver=listSaver<BattleConditions,Any>(
     var items by remember(p?.id){mutableStateOf<List<HeldItem>>(emptyList())}
     LaunchedEffect(p){if(p!=null){moves=repo.movesFor(p);items=repo.heldItemsFor(p)}}
     LazyColumn(Modifier.prismaViewport(top=0.dp,bottom=0.dp).imePadding(),contentPadding=PaddingValues(top=8.dp,bottom=48.dp),verticalArrangement=Arrangement.spacedBy(18.dp)){
-        item{Column(Modifier.padding(horizontal=24.dp),verticalArrangement=Arrangement.spacedBy(13.dp)){
+        item{Column(Modifier.padding(horizontal=24.dp),verticalArrangement=Arrangement.spacedBy(12.dp)){
             IconButton(onClick=onBack){LIcon(Icons.AutoMirrored.Rounded.ArrowBack,"Voltar")}
             LText(if(existing==null)"Novo alvo\nde teste." else "Editar alvo\nde teste.",fontSize=30.sp,lineHeight=34.sp,fontWeight=FontWeight.Bold)
             LText("Configure um defensor sem ocupar vaga na equipe. Ele fica salvo no aparelho e pode ser reutilizado nas simulações.",fontSize=13.sp,lineHeight=19.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)

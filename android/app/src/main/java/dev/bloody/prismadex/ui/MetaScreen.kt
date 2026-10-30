@@ -55,7 +55,7 @@ import java.util.Locale
             error?.let{LText(it,fontSize=13.sp,color=MaterialTheme.colorScheme.error)}
         }}
         data?.let{s->
-            item(key="meta-source"){Surface(color=MaterialTheme.colorScheme.primary.copy(alpha=.1f),shape=RoundedCornerShape(22.dp)){Column(Modifier.padding(18.dp),verticalArrangement=Arrangement.spacedBy(9.dp)){
+            item(key="meta-source"){Surface(color=solidBlend(MaterialTheme.colorScheme.primary,MaterialTheme.colorScheme.background,.1f),shape=RoundedCornerShape(22.dp)){Column(Modifier.padding(18.dp),verticalArrangement=Arrangement.spacedBy(9.dp)){
                 LText("SMOGON · POKÉMON SHOWDOWN",fontSize=13.sp,fontWeight=FontWeight.SemiBold)
                 LText("${s.month} · ${s.formatCode.substringAfter("reg").uppercase(Locale.ROOT).let{"Reg. M-${it.last()}"}} · faixa 1630+",fontSize=13.sp)
                 LText("${s.battles} batalhas no relatório · ${LocalUiStrings.current.text(if(s.cached)"consulta salva" else "atualizado pela internet")}",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)

@@ -53,7 +53,7 @@ class NativeDataTest {
         val name = "instrumentation-${UUID.randomUUID()}"
         var store = Store(context, name)
         try {
-            val guest = UserState(favorites = setOf(25), theme = "pearl")
+            val guest = UserState(favorites = setOf(25), theme = "eevee")
             store.save(guest)
             assertTrue(store.register("first@example.com", "password123").isSuccess)
             assertEquals("first@example.com", store.currentEmail)

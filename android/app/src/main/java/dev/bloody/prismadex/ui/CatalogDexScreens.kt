@@ -59,13 +59,23 @@ import dev.bloody.prismadex.data.*
     val activeFilters = (if (type != null) 1 else 0) + (if (category != "all") 1 else 0) + (if (championsOnly) 1 else 0)
     if (showTypePicker) {
         ModalBottomSheet(onDismissRequest = { showTypePicker = false }) {
-            Column(Modifier.padding(start = 22.dp, end = 22.dp, bottom = 32.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            Column(Modifier.padding(start = 22.dp, end = 22.dp, bottom = 32.dp).verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 LText("Escolher tipo", fontSize = 20.sp, fontWeight = FontWeight.SemiBold)
-                LText("Todos os 18 tipos, sem precisar rolar a lista.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    FilterChip(type == null, { type = null; showTypePicker = false }, label = { LText("Todos") })
-                    typeNames.keys.toList().forEach { t ->
-                        FilterChip(type == t, { type = if (type == t) null else t; showTypePicker = false }, label = { LText(typeNames.getValue(t)) }, leadingIcon = { TypeSymbol(t) })
+                LText("Todos os 18 tipos, em grade de colunas iguais.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                // Type grid (08:11): equal-width 2-column grid - same chip
+                // width/height for every type, aligned rows, "Todos" first,
+                // then the 18 types in the app's established typeNames
+                // order. Two columns (not three) so the longest labels
+                // (Terrestre, Fantasma, Psíquico) never truncate at font
+                // scale 1.3; the sheet scrolls. Icon + name centered.
+                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    (listOf<String?>(null) + typeNames.keys.toList()).chunked(2).forEach { row ->
+                        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            row.forEach { t ->
+                                TypeGridChip(selected = type == t, label = if (t == null) "Todos" else typeNames.getValue(t), type = t, onClick = { type = if (t == null) null else if (type == t) null else t; showTypePicker = false }, modifier = Modifier.weight(1f))
+                            }
+                            if (row.size < 2) Spacer(Modifier.weight(1f))
+                        }
                     }
                 }
             }
@@ -226,5 +236,18 @@ import dev.bloody.prismadex.data.*
     }
     TextButton(onClick = { if (resolved != null) showSheet = true }, modifier = Modifier.heightIn(min = 48.dp), contentPadding = PaddingValues(horizontal = 0.dp)) {
         LText(name.replace('-', ' '), fontSize = 15.sp, color = MaterialTheme.colorScheme.primary)
+    }
+}
+
+/** Equal-width type-grid chip (08:11): 48dp tall, icon + name
+ * centered, selected state via primaryContainer + semibold label.
+ * Same width/height for every cell because the parent Row gives
+ * each chip weight(1f). */
+@Composable private fun TypeGridChip(selected: Boolean, label: String, type: String?, onClick: () -> Unit, modifier: Modifier = Modifier) {
+    Surface(onClick = onClick, shape = RoundedCornerShape(14.dp), color = if (selected) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surfaceVariant, modifier = modifier.height(48.dp)) {
+        Row(Modifier.fillMaxSize().padding(horizontal = 8.dp), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
+            if (type != null) { TypeSymbol(type); Spacer(Modifier.width(6.dp)) }
+            LText(label, fontSize = 14.sp, fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Normal, color = if (selected) MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.onSurfaceVariant, maxLines = 1)
+        }
     }
 }

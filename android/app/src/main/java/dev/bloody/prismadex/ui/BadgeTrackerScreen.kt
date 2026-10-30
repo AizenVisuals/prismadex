@@ -34,28 +34,49 @@ import dev.bloody.prismadex.data.*
  * missing Kalos/Galar images are a recorded gap (see research/BADGE-SOURCES.md).
  */
 @Composable internal fun BadgeTrackerScreen(state: UserState, onState: (UserState) -> Unit) {
-    var selectedGame by rememberSaveable { mutableIntStateOf(state.activeTeam.gameId) }
+    // Games without a verified badge image set are NOT listed (11:38):
+    // Colosseum, XD, Sun/Moon, Ultra Sun/Moon, Legends: Arceus,
+    // Legends: Z-A and Champions are removed from the selector. Only
+    // the 18 games in BadgeSetByGame appear, each with 8 images.
+    // Stored named entries for removed games are preserved untouched
+    // in Store; they are simply not reachable until a set exists.
+    val badgeGames = SupportedGames.filter { BadgeSetByGame.containsKey(it.id) }
+    var selectedGame by rememberSaveable { mutableIntStateOf(state.activeTeam.gameId.takeIf { BadgeSetByGame.containsKey(it) } ?: 1) }
     var newName by rememberSaveable(selectedGame) { mutableStateOf("") }
     var message by remember(selectedGame) { mutableStateOf<String?>(null) }
     val earned = state.badges[selectedGame].orEmpty()
-    val badgeSet = BadgeSetByGame[selectedGame]
-    val earnedSet = state.badgeSets[selectedGame].orEmpty()
-    val totalEarned = state.badges.values.sumOf { it.size } + state.badgeSets.values.sumOf { it.size }
-    val totalGames = (state.badges.filter { it.value.isNotEmpty() }.keys + state.badgeSets.filter { it.value.isNotEmpty() }.keys).distinct().size
+    // Galar (game 20) resolves through the shared version state, exactly
+    // as the trainer card does: Sword shows Fighting/Rock, Shield shows
+    // Ghost/Ice, and progress lives in galarBadgeSets per version. Using
+    // BadgeSetByGame here would always show Sword and store progress in
+    // badgeSets[20], where the card never looks. Any badgeSets[20] data
+    // saved by the old tracker is left untouched (not migrated: indices
+    // mean different badges per version, so migration would be wrong).
+    val badgeSet = state.cardBadgeSet(selectedGame)
+    val earnedSet = state.cardBadgeIndices(selectedGame)
+    val totalEarned = state.badges.values.sumOf { it.size } + state.badgeSets.values.sumOf { it.size } + state.galarBadgeSets.values.sumOf { it.size }
+    val totalGames = (state.badges.filter { it.value.isNotEmpty() }.keys + state.badgeSets.filter { it.value.isNotEmpty() }.keys + (if (state.galarBadgeSets.values.any { it.isNotEmpty() }) setOf(20) else emptySet())).distinct().size
     fun update(next: List<String>) {
         val badges = if (next.isEmpty()) state.badges - selectedGame else state.badges + (selectedGame to next)
         onState(state.copy(badges = badges))
     }
     fun updateSet(next: Set<Int>) {
-        val badgeSets = if (next.isEmpty()) state.badgeSets - selectedGame else state.badgeSets + (selectedGame to next)
-        onState(state.copy(badgeSets = badgeSets))
+        if (selectedGame == 20) {
+            val variant = if (state.galarVersion == "shield") "shield" else "sword"
+            val updated = if (next.isEmpty()) state.galarBadgeSets - variant else state.galarBadgeSets + (variant to next)
+            onState(state.copy(galarBadgeSets = updated))
+        } else {
+            val badgeSets = if (next.isEmpty()) state.badgeSets - selectedGame else state.badgeSets + (selectedGame to next)
+            onState(state.copy(badgeSets = badgeSets))
+        }
     }
     LazyColumn(Modifier.prismaViewport(), contentPadding = PaddingValues(start = 22.dp, end = 22.dp, top = 16.dp, bottom = 24.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         item {
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 LText("Insígnias por jogo", fontSize = 28.sp, lineHeight = 32.sp, fontWeight = FontWeight.Bold)
                 LText("Marque as insígnias que você já conquistou em cada jogo. Os registros ficam só neste aparelho.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                ChoiceField("JOGO", gameName(selectedGame), SupportedGames.map { it.id.toString() to it.name }) { selectedGame = it.toInt(); newName = "" }
+                ChoiceField("JOGO", gameName(selectedGame), badgeGames.map { it.id.toString() to it.name }) { selectedGame = it.toInt(); newName = "" }
+                if (selectedGame == 20) ChoiceField("VERSÃO DE GALAR", if (state.galarVersion == "shield") "Shield" else "Sword", listOf("sword" to "Sword", "shield" to "Shield")) { onState(state.copy(galarVersion = it)) }
                 if (badgeSet != null) {
                     LText("${earnedSet.size} de $BadgeSetSize insígnias em ${gameName(selectedGame)}", fontSize = 15.sp, fontWeight = FontWeight.SemiBold)
                     LText("Toque numa insígnia para marcar ou desmarcar. Só a imagem aparece — sem nome escrito.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
@@ -77,6 +98,14 @@ import dev.bloody.prismadex.data.*
                                 Surface(
                                     onClick = { updateSet(if (isEarned) earnedSet - idx else earnedSet + idx) },
                                     shape = RoundedCornerShape(18.dp),
+                                    // Identity, same selection language as
+                                    // the sprite picker: 2dp primary ring
+                                    // when earned, 1dp faint ring when not.
+                                    // Art stays greyscale when unearned.
+                                    border = androidx.compose.foundation.BorderStroke(
+                                        if (isEarned) 2.dp else 1.dp,
+                                        if (isEarned) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface.copy(.25f)
+                                    ),
                                     color = MaterialTheme.colorScheme.surface,
                                     modifier = Modifier.weight(1f).aspectRatio(1f).heightIn(min = 48.dp)
                                         .semantics { contentDescription = "Insígnia ${idx + 1} de $BadgeSetSize, ${if (isEarned) "conquistada" else "não conquistada"}" }

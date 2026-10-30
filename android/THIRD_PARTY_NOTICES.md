@@ -129,3 +129,22 @@ characters remain the property of their respective rights holders.
 
 The reproducible import, source locks, structured coverage audit and validator
 are in `scripts/data-import/`; downloaded translation models are not distributed.
+
+## Complete trainer catalog and gym badge variants (30 October 2026)
+
+1,500 unchanged trainer PNGs are bundled from the public Pokémon Showdown trainer
+listing, https://play.pokemonshowdown.com/sprites/trainers/ . Many are fan art.
+The listed artist must be credited and images must not be edited without
+permission. Per-file artist names, exact URLs, hashes and source notices are
+retained in `assets/trainers/credit-manifest.json`; the app displays the selected
+artist and source. No artist was inferred for uncredited entries. This is not a
+claim that the image collection is covered by Pokémon Showdown's software license.
+Underlying Pokémon IP remains associated with its respective rights holders.
+
+SteGriff's CC BY 3.0 badge recreations remain preferred for Kanto through Unova.
+Kalos, Galar's actual Sword/Shield variants and BW2's Toxic/Wave additions use
+PokeAPI/sprites commit `1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64` game-art PNGs
+under the user's accepted IP-risk decision. No blanket open-image license is
+claimed. Diamond/Pearl and BW2 ordering and separate Galar versions are recorded
+in `assets/badges/set-manifest.json`; original SteGriff attribution is preserved.
+Reproducible import and validation: `scripts/trainer-badge-import/`.

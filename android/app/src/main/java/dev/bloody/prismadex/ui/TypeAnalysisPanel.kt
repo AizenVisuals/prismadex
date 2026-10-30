@@ -23,7 +23,9 @@ private fun multiplierLabel(value:Double)=when(value){0.0->"0×";.25->"¼×";.5-
  val memberIds=remember(members){members.map{it.id}}
  // Expansion is keyed on the members shown, so swiping to another Pokémon resets to the
  // defaults for that Pokémon instead of carrying the previous detail's open groups over.
- var singleExpanded by remember(memberIds){mutableStateOf(setOf(4.0,2.0,0.0))}
+ // Single-Pokemon groups start COLLAPSED (08:06, detail only;
+ // the team view uses teamExpandedSections and is unaffected).
+ var singleExpanded by remember(memberIds){mutableStateOf(emptySet<Double>())}
  var teamExpandedSections by remember(memberIds){mutableStateOf(setOf(TeamSectionKind.SHARED_WEAKNESS))}
  var offenseExpanded by remember(memberIds){mutableStateOf(false)}
  var offensiveType by remember(memberIds){mutableStateOf<String?>(null)}

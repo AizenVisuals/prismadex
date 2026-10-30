@@ -13,12 +13,12 @@ import java.util.UUID
 class TeamLibraryTest{
     private val context get()=InstrumentationRegistry.getInstrumentation().targetContext
     @Test fun legacyTeamMigratesWithoutLosingBuildsOrPreferences(){
-        val old=JSONObject("""{"favorites":[6,150],"team":[6],"builds":{"6":{"itemId":247,"moves":[53],"ability":"blaze","nature":"Modest","sps":[0,0,0,32,0,0]}},"theme":"carmine","layout":"list","battleFormat":"singles","appearanceMode":"dark"}""")
+        val old=JSONObject("""{"favorites":[6,150],"team":[6],"builds":{"6":{"itemId":247,"moves":[53],"ability":"blaze","nature":"Modest","sps":[0,0,0,32,0,0]}},"theme":"eevee","layout":"list","battleFormat":"singles","appearanceMode":"dark"}""")
         val state=Store.decode(old)
         assertEquals(1,state.teams.size);assertEquals(25,state.activeTeam.gameId)
         assertEquals(listOf(6),state.team);assertEquals(listOf(53),state.builds.getValue(6).moves)
         assertEquals("Modest",state.builds.getValue(6).nature);assertEquals("singles",state.activeTeam.format)
-        assertEquals(setOf(6,150),state.favorites);assertEquals("carmine",state.theme)
+        assertEquals(setOf(6,150),state.favorites);assertEquals("eevee",state.theme)
         assertEquals(state,Store.decode(Store.encode(state)))
     }
     @Test fun teamViewPreferenceDefaultsToListAndSurvivesReopening()=runBlocking{

@@ -44,7 +44,7 @@ import kotlinx.coroutines.withContext
         items(matches,key={it.id}){item->Surface(shape=RoundedCornerShape(20.dp),color=MaterialTheme.colorScheme.surface){
             Column(Modifier.fillMaxWidth().padding(16.dp),verticalArrangement=Arrangement.spacedBy(10.dp)){
                 Row(verticalAlignment=Alignment.CenterVertically,horizontalArrangement=Arrangement.spacedBy(12.dp)){
-                    if(item.iconId!=null)ItemArt(item.iconId,item.name,Modifier.size(38.dp)) else LIcon(Icons.Rounded.Inventory2,item.name,Modifier.size(38.dp),tint=MaterialTheme.colorScheme.onSurfaceVariant)
+                    GeneralItemArt(item,Modifier.size(38.dp))
                     Column(Modifier.weight(1f)){Text(item.name,fontSize=16.sp,fontWeight=FontWeight.SemiBold);Text(referenceCategoryName(item.category,language),fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)}
                 }
                 item.description?.let{description->

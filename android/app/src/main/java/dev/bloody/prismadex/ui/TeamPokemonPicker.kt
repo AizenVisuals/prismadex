@@ -11,6 +11,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -18,10 +19,14 @@ import dev.bloody.prismadex.data.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-@Composable internal fun TeamPokemonPicker(catalog:List<Pokemon>,state:UserState,onAdd:(Pokemon)->Unit,onClose:()->Unit){
+@Composable internal fun TeamPokemonPicker(catalog:List<Pokemon>,state:UserState,onAdd:(Pokemon,Boolean)->Unit,onClose:()->Unit){
     var filter by remember{mutableStateOf(PokemonFilter())}
     var expanded by remember{mutableStateOf(false)}
-    val index by produceState<PokemonFilterIndex?>(null,catalog){value=withContext(Dispatchers.Default){PokemonFilterIndex(catalog)}}
+    // Regional-first order (11:56) also applies here: the picker lists the
+    // active team's regional Pokédex first, then the national remainder.
+    val context=LocalContext.current
+    val regionalDex by produceState<Map<Int, List<Int>>>(emptyMap(),catalog){value=withContext(Dispatchers.IO){RegionalDexData.get(context)}}
+    val index by produceState<PokemonFilterIndex?>(null,catalog,regionalDex){value=withContext(Dispatchers.Default){PokemonFilterIndex(catalog,regionalDex)}}
     val results by produceState<List<Pokemon>>(emptyList(),index,filter,state.activeTeam.gameId){value=withContext(Dispatchers.Default){index?.select(state.activeTeam.gameId,filter).orEmpty()}}
     val abilities=remember(catalog,state.activeTeam.gameId){catalog.filter{it.availableIn(state.activeTeam.gameId)}.flatMap{it.abilities}.distinct().sorted()}
     val team=state.team.mapNotNull{id->catalog.find{it.id==id}}
@@ -43,10 +48,19 @@ import kotlinx.coroutines.withContext
         if(results.isEmpty())item{LText("Nenhum Pokémon encontrado.",style=MaterialTheme.typography.bodyLarge);LText("Experimente outro nome ou filtro.",style=MaterialTheme.typography.bodySmall)}
         items(results,key={it.id}){p->
             val present=team.any{it.baseId==p.baseId};val allowed=!present&&team.size<6
+            // Shiny add (11:45): the sparkle sits DIRECTLY ABOVE the + and
+            // only appears when a real shiny asset exists for this record.
+            // Sparkle active = enters as shiny ("<nome> shiny adicionado");
+            // inactive = standard. Same yellow sparkle as the detail.
+            var shiny by remember(p.id){mutableStateOf(false)}
+            val shinyExists=rememberArtExists(shinyArtPath(p.id))
             Surface(shape=RoundedCornerShape(20.dp),color=MaterialTheme.colorScheme.surface){Row(Modifier.fillMaxWidth().padding(12.dp),verticalAlignment=Alignment.CenterVertically,horizontalArrangement=Arrangement.spacedBy(10.dp)){
                 PokemonArt(p.id,Modifier.size(60.dp),p.name)
                 Column(Modifier.weight(1f)){Text(p.name,fontSize=15.sp,fontWeight=FontWeight.SemiBold);LText("#${p.baseId.toString().padStart(4,'0')}",fontSize=12.sp,color=MaterialTheme.colorScheme.onSurfaceVariant);FlowRow(horizontalArrangement=Arrangement.spacedBy(4.dp)){p.types.forEach{TypePill(it)}};if(present)LText("Espécie já na equipe",style=MaterialTheme.typography.bodySmall)}
-                IconButton(enabled=allowed,onClick={onAdd(p)}){LIcon(Icons.Rounded.Add,"Adicionar ${p.name}")}
+                Column(horizontalAlignment=Alignment.CenterHorizontally){
+                    if(shinyExists==true)IconButton(enabled=allowed,onClick={shiny=!shiny},modifier=Modifier.size(48.dp)){ShinySparkleIcon(shiny,if(shiny)"Adicionar ${p.name} como shiny (selecionado)" else "Adicionar ${p.name} como shiny")}
+                    IconButton(enabled=allowed,onClick={onAdd(p,shiny&&shinyExists==true)}){LIcon(Icons.Rounded.Add,"Adicionar ${p.name}")}
+                }
             }}
         }
     }

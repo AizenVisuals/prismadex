@@ -20,7 +20,6 @@ import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.material.icons.rounded.CatchingPokemon
-import androidx.compose.material.icons.rounded.Star
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -51,11 +50,12 @@ import kotlinx.coroutines.withContext
 /**
  * Shiny art convention: a real shiny asset, when one exists, lives at
  * `art/shiny/<id>.webp` next to the normal `art/<id>.webp`. Coverage
- * 30/10/2026: 94 records have a real TonOfDirt726 shiny recolor (CC BY 3.0;
- * see research/SHINY-SOURCES.md) — 60 plain species + 34 form records
- * remapped by verified name + baseId. Every other record honestly
- * shows the unavailable state instead of a hue-shifted fake. Never fake a
- * shiny by recolouring normal art, never substitute another Pokémon's art.
+ * 30/10/2026: 1,330 records have a real shiny asset — 953 TonOfDirt726
+ * recolors + 377 PokeAPI official-artwork shiny, exact form only
+ * (per-record provider in assets/shiny-art-sources.json). Records
+ * without a verified static shiny honestly show the unavailable state
+ * instead of a hue-shifted fake. Never fake a shiny by recolouring
+ * normal art, never substitute another Pokémon's art.
  */
 internal fun shinyArtPath(id: Int): String = "art/shiny/$id.webp"
 
@@ -77,21 +77,35 @@ internal fun rememberArtExists(path: String): Boolean? {
  * and no asset exists, the same honest fallback marker as [PokemonArt]
  * (a Poké Ball icon, never another Pokémon's art, never a recolour).
  */
+private val viewerStdCache = object : android.util.LruCache<String, androidx.compose.ui.graphics.ImageBitmap>(12 * 1024 * 1024) {
+    override fun sizeOf(key: String, value: androidx.compose.ui.graphics.ImageBitmap) = value.width * value.height * 4
+}
+
+// Full-canvas HD bitmaps for the viewer only (art-hd/, 475/512 canvas).
+// The list/grid loaders never read these; the viewer shows the 256px
+// full bitmap first and upgrades to HD off the UI thread, keeping the
+// honest Poké Ball marker when neither exists.
+private val hdViewerCache = object : android.util.LruCache<String, androidx.compose.ui.graphics.ImageBitmap>(16 * 1024 * 1024) {
+    override fun sizeOf(key: String, value: androidx.compose.ui.graphics.ImageBitmap) = value.width * value.height * 4
+}
+
 @Composable
 internal fun ShinyArt(id: Int, shiny: Boolean, modifier: Modifier = Modifier, label: String? = null) {
-    if (!shiny) {
-        PokemonArt(id, modifier, label)
-        return
-    }
     val assets = LocalContext.current.assets
-    val path = shinyArtPath(id)
-    val image by produceState<androidx.compose.ui.graphics.ImageBitmap?>(null, path) {
+    val stdPath = if (shiny) shinyArtPath(id) else "art/$id.webp"
+    val hdPath = if (shiny) "art-hd/shiny/$id.webp" else "art-hd/$id.webp"
+    val image by produceState<androidx.compose.ui.graphics.ImageBitmap?>(viewerStdCache.get(stdPath), id, shiny) {
         value = withContext(Dispatchers.IO) {
-            runCatching { assets.open(path).use { BitmapFactory.decodeStream(it)?.asImageBitmap() } }.getOrNull()
+            viewerStdCache.get(stdPath)
+                ?: runCatching { assets.open(stdPath).use { BitmapFactory.decodeStream(it)?.asImageBitmap() } }.getOrNull()?.also { viewerStdCache.put(stdPath, it) }
         }
+        withContext(Dispatchers.IO) {
+            hdViewerCache.get(hdPath)
+                ?: runCatching { assets.open(hdPath).use { BitmapFactory.decodeStream(it)?.asImageBitmap() } }.getOrNull()?.also { hdViewerCache.put(hdPath, it) }
+        }?.let { value = it }
     }
     val ready = image
-    if (ready != null) Image(ready, label, modifier)
+    if (ready != null) Image(ready, label, modifier, contentScale = androidx.compose.ui.layout.ContentScale.Fit, alignment = Alignment.Center)
     else Box(modifier, contentAlignment = Alignment.Center) {
         LIcon(
             Icons.Rounded.CatchingPokemon, label,
@@ -163,12 +177,7 @@ internal fun ArtViewer(
                 horizontalArrangement = Arrangement.Center
             ) {
                 IconButton(onClick = { onShiny(!shiny) }, modifier = Modifier.size(48.dp)) {
-                    LIcon(
-                        Icons.Rounded.Star,
-                        if (shiny) "Ver arte normal de ${p.name}" else "Ver arte shiny de ${p.name}",
-                        tint = if (shiny) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant.copy(.55f),
-                        modifier = Modifier.size(26.dp)
-                    )
+                    ShinySparkleIcon(shiny, if (shiny) "Ver arte normal de ${p.name}" else "Ver arte shiny de ${p.name}")
                 }
             }
             Box(
