@@ -72,7 +72,7 @@ internal val AppThemes=listOf(
     ModalDrawerSheet(Modifier.widthIn(max=320.dp).fillMaxHeight(),drawerContainerColor=MaterialTheme.colorScheme.surface){
         Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState())){
         Column(Modifier.padding(24.dp)){
-            PrismaMark(Modifier.size(66.dp));LText("PrismaDex",fontSize=27.sp,fontWeight=FontWeight.Bold);LText("Seu laboratório Champions",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant,modifier=Modifier.padding(top=8.dp,bottom=10.dp))
+            PrismaMark(Modifier.size(66.dp));LText("PrismaDex",fontSize=27.sp,fontWeight=FontWeight.Bold);LText("Sua Pokédex completa",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant,modifier=Modifier.padding(top=8.dp,bottom=10.dp))
         }
         listOf(Triple("dex","Pokédex",Icons.Rounded.CatchingPokemon),Triple("favorites","Favoritos",Icons.Rounded.FavoriteBorder),Triple("team","TeamBuilder",Icons.Rounded.Hexagon),Triple("calc","Calculadora de dano",Icons.Rounded.AutoAwesome),Triple("meta","Meta online",Icons.Rounded.Public),Triple("items","Catálogo de itens",Icons.Rounded.Info),Triple("settings","Configurações e temas",Icons.Rounded.Settings),Triple("sources","Champions e fontes",Icons.Rounded.Info)).forEach{(key,title,icon)->NavigationDrawerItem(label={LText(title,fontSize=14.sp,lineHeight=18.sp,maxLines=2)},selected=selected==key,onClick={onNavigate(key)},icon={LIcon(icon,null)},modifier=Modifier.padding(horizontal=12.dp,vertical=2.dp))}
         Spacer(Modifier.height(24.dp));HorizontalDivider(Modifier.padding(horizontal=24.dp));NavigationDrawerItem(label={LText("Minha conta")},selected=false,onClick=onAccount,icon={LIcon(Icons.Rounded.PersonOutline,null)},modifier=Modifier.padding(12.dp))

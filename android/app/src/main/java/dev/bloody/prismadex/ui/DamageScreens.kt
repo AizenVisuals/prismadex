@@ -114,8 +114,8 @@ private val conditionsSaver=listSaver<BattleConditions,Any>(
             LText(if(format=="doubles")"Cálculo Doubles · redução de golpes em área e efeitos de aliados." else "Cálculo Singles · confronto individual, sem efeitos de aliados.",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
         }}
         if(attackers.isEmpty())item{Column(verticalArrangement=Arrangement.spacedBy(14.dp)){
-            LText("Monte um set Champions para começar. O atacante e o defensor podem vir de equipes diferentes.",fontSize=15.sp,lineHeight=22.sp)
-            ActionButton("Montar equipe Champions",Icons.Rounded.Add,true,onChoosePokemon)
+            LText("Monte um set para começar. O atacante e o defensor podem vir de equipes diferentes.",fontSize=15.sp,lineHeight=22.sp)
+            ActionButton("Montar equipe",Icons.Rounded.Add,true,onChoosePokemon)
             OutlinedButton(onClick={onDummy(null)},modifier=Modifier.fillMaxWidth()){LText("Criar alvo de teste")}
         }}
         else{
@@ -231,7 +231,7 @@ private val conditionsSaver=listSaver<BattleConditions,Any>(
             LText(if(existing==null)"Novo alvo\nde teste." else "Editar alvo\nde teste.",fontSize=30.sp,lineHeight=34.sp,fontWeight=FontWeight.Bold)
             LText("Configure um defensor sem ocupar vaga na equipe. Ele fica salvo no aparelho e pode ser reutilizado nas simulações.",fontSize=13.sp,lineHeight=19.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
             OutlinedTextField(label,{label=it.take(50)},label={LText("Nome do alvo")},placeholder={LText("Ex.: Venusaur defensivo")},singleLine=true,modifier=Modifier.fillMaxWidth(),shape=RoundedCornerShape(18.dp))
-            if(p==null){OutlinedTextField(query,{query=it},placeholder={LText("Buscar Pokémon Champions")},singleLine=true,modifier=Modifier.fillMaxWidth(),shape=RoundedCornerShape(18.dp))}
+            if(p==null){OutlinedTextField(query,{query=it},placeholder={LText("Buscar Pokémon")},singleLine=true,modifier=Modifier.fillMaxWidth(),shape=RoundedCornerShape(18.dp))}
             else{Row(verticalAlignment=Alignment.CenterVertically){PokemonArt(p.id,Modifier.size(80.dp),p.name);LText(p.name,Modifier.weight(1f),fontSize=18.sp,fontWeight=FontWeight.SemiBold);TextButton(onClick={pokemonId=null}){LText("Trocar")}}}
         }}
         if(p==null){items(catalog.filter{it.champions&&it.matchesQuery(query)}.sortedBy{it.baseId},key={it.id}){pokemon->Surface(onClick={pokemonId=pokemon.id;if(label.isBlank())label="${pokemon.name} · alvo"},shape=RoundedCornerShape(20.dp),color=MaterialTheme.colorScheme.surface,modifier=Modifier.padding(horizontal=24.dp)){Row(Modifier.fillMaxWidth().padding(12.dp),verticalAlignment=Alignment.CenterVertically){PokemonArt(pokemon.id,Modifier.size(56.dp),pokemon.name);LText(pokemon.name,Modifier.padding(start=14.dp),fontSize=15.sp)}}}}
