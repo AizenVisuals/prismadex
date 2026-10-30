@@ -4,12 +4,12 @@ import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.ExpandLess
 import androidx.compose.material.icons.rounded.ExpandMore
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -112,7 +112,7 @@ private fun teamSectionTitle(kind:TeamSectionKind)=when(kind){
   Row(Modifier.fillMaxWidth().padding(horizontal=14.dp,vertical=10.dp),verticalAlignment=Alignment.CenterVertically){
    LText(badge,fontSize=15.sp,fontWeight=FontWeight.Bold,color=badgeColor,modifier=Modifier.padding(end=10.dp))
    Column(Modifier.weight(1f)){LText(title,fontSize=15.sp,fontWeight=FontWeight.SemiBold);LText(countLabel,fontSize=12.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)}
-   LIcon(if(expanded)Icons.Rounded.ExpandLess else Icons.Rounded.ExpandMore,if(expanded)"Recolher $title" else "Expandir $title")
+   LIcon(Icons.Rounded.ExpandMore,if(expanded)"Recolher $title" else "Expandir $title",Modifier.rotate(if(expanded)180f else 0f))
   }
  }
 }

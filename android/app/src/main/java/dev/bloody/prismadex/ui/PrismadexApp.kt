@@ -28,6 +28,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.*
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalView
@@ -292,7 +293,7 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
                 Row(Modifier.fillMaxWidth(),verticalAlignment=Alignment.CenterVertically){
                     LText("${list.size} Pokémon e formas",Modifier.weight(1f),fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
                     FilterChip(alphabetical,{alphabetical=!alphabetical},label={LText(if(alphabetical)"Ordem: A–Z" else "Ordem: Nº")})
-                    TextButton(onClick={filtersExpanded=!filtersExpanded}){LText(if(activeFilterCount>0)"Filtros ($activeFilterCount)" else "Filtros");LIcon(if(filtersExpanded)Icons.Rounded.ExpandLess else Icons.Rounded.ExpandMore,null)}
+                    TextButton(onClick={filtersExpanded=!filtersExpanded}){LText(if(activeFilterCount>0)"Filtros ($activeFilterCount)" else "Filtros");LIcon(Icons.Rounded.ExpandMore,null,Modifier.rotate(if(filtersExpanded)180f else 0f))}
                     IconButton(onClick={onLayout(if(state.layout=="list")"grid" else "list")}){LIcon(if(state.layout=="list")Icons.Rounded.GridView else Icons.AutoMirrored.Rounded.List,if(state.layout=="list")"Mostrar em grade" else "Mostrar em lista")}
                 }
                 if(activeFilterCount>0&&!filtersExpanded){
