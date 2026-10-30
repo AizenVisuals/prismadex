@@ -565,7 +565,7 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
         if(state.activeTeam.gameId==25&&state.builds.values.mapNotNull{it.itemId}.let{it.distinct().size<it.size})item{LText("Regulamento M-C: itens segurados repetidos não são permitidos.",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.error)}
         item(key="battle-format"){Row(horizontalArrangement=Arrangement.spacedBy(9.dp)){FilterChip(state.activeTeam.format=="singles",{onState(state.updateTeam{it.copy(format="singles")})},label={LText("Singles · individual")});FilterChip(state.activeTeam.format=="doubles",{onState(state.updateTeam{it.copy(format="doubles")})},label={LText("Doubles · duplas")})}}
         item(key="team-view"){Column(verticalArrangement=Arrangement.spacedBy(8.dp)){Row(verticalAlignment=Alignment.CenterVertically,horizontalArrangement=Arrangement.spacedBy(9.dp)){FilterChip(state.teamView=="list",{onState(state.copy(teamView="list"))},label={LText("Lista")});FilterChip(state.teamView=="grid",{onState(state.copy(teamView="grid"))},label={LText("Grade · 6 de uma vez")});Spacer(Modifier.weight(1f));TextButton(onClick={shareScope.launch{shareError=runCatching{shareTeamCard(shareContext,state.activeTeam,catalog)}.exceptionOrNull()?.message}}){LText("Compartilhar")}};shareError?.let{LText("Não foi possível compartilhar: $it",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.error)};LText("A grade mostra os 6 parceiros de uma vez; a lista mostra os sets completos. A escolha fica salva neste aparelho.",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)}}
-        if(state.teamView=="grid"){item(key="team-grid"){TeamGrid(members,state,onOpen,onRemove,onArt)}}
+        if(state.teamView=="grid"){item(key="team-grid"){TeamGrid(members,state,onOpen,onRemove,onArt,onAdd)}}
         else{
         items(state.team,key={it}){id->catalog.find{it.id==id}?.let{p->val build=state.builds[id];var review by remember(id,build,state.activeTeam.gameId){mutableStateOf<String?>(null)};var itemName by remember(id,build,state.activeTeam.gameId){mutableStateOf<String?>(null)};var moveNames by remember(id,build,state.activeTeam.gameId){mutableStateOf<List<Move>>(emptyList())};LaunchedEffect(id,build,state.activeTeam.gameId){review=if(!p.availableIn(state.activeTeam.gameId))"Compatibilidade por revisar" else build?.let{repo.validateBuild(p,it,state.activeTeam.gameId).exceptionOrNull()?.message};itemName=repo.heldItemsFor(p,state.activeTeam.gameId).find{it.id==build?.itemId}?.name;moveNames=repo.movesFor(p,state.activeTeam.gameId).filter{it.id in (build?.moves?:emptyList())}};Surface(onClick={onOpen(p)},modifier=motionPlacement(LocalReduceMotion.current),shape=RoundedCornerShape(26.dp),color=MaterialTheme.colorScheme.surface){Column(Modifier.fillMaxWidth().padding(16.dp)){
             Row(verticalAlignment=Alignment.CenterVertically){Box(Modifier.size(72.dp).clickable{onArt(p)},contentAlignment=Alignment.Center){PokemonArt(id,Modifier.size(72.dp),p.name)};Column(Modifier.weight(1f).padding(start=10.dp)){LText(p.name,fontSize=19.sp,fontWeight=FontWeight.SemiBold);FlowRow(horizontalArrangement=Arrangement.spacedBy(5.dp),verticalArrangement=Arrangement.spacedBy(4.dp),modifier=Modifier.padding(top=9.dp)){p.types.forEach{TypePill(it,true)}}};Column(verticalArrangement=Arrangement.spacedBy(8.dp)){
@@ -586,14 +586,42 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
 }
 
 
-@Composable private fun TeamGrid(members:List<Pokemon>,state:UserState,onOpen:(Pokemon)->Unit,onRemove:(Pokemon)->Unit,onArt:(Pokemon)->Unit={}){
+@Composable private fun TeamGrid(members:List<Pokemon>,state:UserState,onOpen:(Pokemon)->Unit,onRemove:(Pokemon)->Unit,onArt:(Pokemon)->Unit={},onAdd:()->Unit={}){
     // Grid redesign (23:31): same clean language as the Pokédex list/grid
     // cards — solid type-colour fill, dark ink, art + name + type chips +
     // set summary. Same fields as the list rows; only the layout changes.
+    // Six slots always (3x2): empty slots open the picker.
     val ink=Color(0xFF1B1B26)
     Column(verticalArrangement=Arrangement.spacedBy(10.dp)){
-        members.chunked(2).forEach{row->Row(horizontalArrangement=Arrangement.spacedBy(10.dp)){row.forEach{p->Surface(onClick={onOpen(p)},shape=RoundedCornerShape(22.dp),color=typeColor(p.types.first()),modifier=Modifier.weight(1f)){Column(Modifier.padding(14.dp),verticalArrangement=Arrangement.spacedBy(8.dp)){Row(verticalAlignment=Alignment.CenterVertically){Box(Modifier.size(64.dp).clickable{onArt(p)},contentAlignment=Alignment.Center){PokemonArt(p.id,Modifier.size(64.dp),p.name)};Spacer(Modifier.weight(1f));IconButton(onClick={onRemove(p)},modifier=Modifier.size(48.dp)){LIcon(Icons.Rounded.Remove,"Remover ${p.name} da equipe",tint=MaterialTheme.colorScheme.error,modifier=Modifier.size(20.dp))}};LText(p.name,style=MaterialTheme.typography.titleMedium,color=ink,maxLines=1,overflow=TextOverflow.Ellipsis);FlowRow(horizontalArrangement=Arrangement.spacedBy(5.dp),verticalArrangement=Arrangement.spacedBy(4.dp)){p.types.forEach{TypeChipOnColor(it)}};val build=state.builds[p.id];LText(if(build==null)"Sem set" else "${build.moves.size}/4 golpes${if(build.itemId!=null)" · com item" else ""}",style=MaterialTheme.typography.bodySmall,color=ink.copy(.78f))}}};if(row.size==1)Spacer(Modifier.weight(1f))}}
-        if(members.size<6)LText("${members.size}/6 parceiros · use \"Escolher parceiro\" abaixo para completar a equipe.",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
+        (0 until 3).forEach{r->
+            Row(horizontalArrangement=Arrangement.spacedBy(10.dp)){
+                (0 until 2).forEach{c->
+                    val p=members.getOrNull(r*2+c)
+                    if(p==null){
+                        Surface(onClick=onAdd,shape=RoundedCornerShape(22.dp),border=BorderStroke(1.dp,MaterialTheme.colorScheme.onSurface.copy(.25f)),color=MaterialTheme.colorScheme.surface.copy(.45f),modifier=Modifier.weight(1f).fillMaxHeight()){
+                            Column(Modifier.fillMaxWidth().padding(14.dp),horizontalAlignment=Alignment.CenterHorizontally,verticalArrangement=Arrangement.Center){
+                                LIcon(Icons.Rounded.Add,"Escolher parceiro",tint=MaterialTheme.colorScheme.primary,modifier=Modifier.size(28.dp))
+                                LText("Escolher parceiro",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
+                            }
+                        }
+                    }else{
+                        Surface(onClick={onOpen(p)},shape=RoundedCornerShape(22.dp),color=typeColor(p.types.first()),modifier=Modifier.weight(1f)){
+                            Column(Modifier.padding(14.dp),verticalArrangement=Arrangement.spacedBy(8.dp)){
+                                Row(verticalAlignment=Alignment.CenterVertically){
+                                    Box(Modifier.size(64.dp).clickable{onArt(p)},contentAlignment=Alignment.Center){PokemonArt(p.id,Modifier.size(64.dp),p.name)}
+                                    Spacer(Modifier.weight(1f))
+                                    IconButton(onClick={onRemove(p)},modifier=Modifier.size(48.dp)){LIcon(Icons.Rounded.Remove,"Remover ${p.name} da equipe",tint=MaterialTheme.colorScheme.error,modifier=Modifier.size(20.dp))}
+                                }
+                                LText(p.name,style=MaterialTheme.typography.titleMedium,color=ink,maxLines=1,overflow=TextOverflow.Ellipsis)
+                                FlowRow(horizontalArrangement=Arrangement.spacedBy(5.dp),verticalArrangement=Arrangement.spacedBy(4.dp)){p.types.forEach{TypeChipOnColor(it)}}
+                                val build=state.builds[p.id]
+                                LText(if(build==null)"Sem set" else "${build.moves.size}/4 golpes${if(build.itemId!=null)" · com item" else ""}",style=MaterialTheme.typography.bodySmall,color=ink.copy(.78f))
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

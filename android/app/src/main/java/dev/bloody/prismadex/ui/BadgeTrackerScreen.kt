@@ -44,8 +44,8 @@ import dev.bloody.prismadex.data.*
                 LText("Insígnias por jogo", fontSize = 28.sp, lineHeight = 32.sp, fontWeight = FontWeight.Bold)
                 LText("Marque as insígnias que você já conquistou em cada jogo. Os registros ficam só neste aparelho.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 ChoiceField("JOGO", gameName(selectedGame), SupportedGames.map { it.id.toString() to it.name }) { selectedGame = it.toInt(); newName = "" }
-                LText("${earned.size} insígnias registradas em ${gameName(selectedGame)}", fontSize = 15.sp, fontWeight = FontWeight.SemiBold)
-                if (totalEarned > 0) LText("Total: $totalEarned insígnias em $totalGames ${if (totalGames == 1) "jogo" else "jogos"}.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                LText("${earned.size} ${if (earned.size == 1) "insígnia registrada" else "insígnias registradas"} em ${gameName(selectedGame)}", fontSize = 15.sp, fontWeight = FontWeight.SemiBold)
+                if (totalEarned > 0) LText("Total: $totalEarned ${if (totalEarned == 1) "insígnia" else "insígnias"} em $totalGames ${if (totalGames == 1) "jogo" else "jogos"}.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 LText("Nomes e quantidades oficiais de insígnias ainda não estão na base local. Registre com o nome que você conhece; nada aqui é uma lista oficial.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
         }

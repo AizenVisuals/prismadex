@@ -62,7 +62,7 @@ import dev.bloody.prismadex.data.*
   s.abilities.forEach{a->Column{
    Row(verticalAlignment=Alignment.CenterVertically){
     AbilityNameButton(a.name,catalog,onOpenPokemon)
-    if(a.isHidden==true)LText("Habilidade oculta",fontSize=12.sp,color=MaterialTheme.colorScheme.primary)
+    if(a.isHidden==true){Spacer(Modifier.width(8.dp));LText("Habilidade oculta",fontSize=12.sp,color=MaterialTheme.colorScheme.primary)}
    }
    a.description?.let{Text(it.text(language),fontSize=13.sp,lineHeight=19.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)}
   }}

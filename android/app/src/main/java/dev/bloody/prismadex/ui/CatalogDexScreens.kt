@@ -4,6 +4,7 @@ package dev.bloody.prismadex.ui
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -62,9 +63,9 @@ import dev.bloody.prismadex.data.*
                 LText("${shown.size} de ${moves.size} golpes · catálogo geral", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 OutlinedTextField(value = query, onValueChange = { query = it }, placeholder = { LText("Buscar golpe", style = MaterialTheme.typography.bodyLarge) }, leadingIcon = { LIcon(Icons.Rounded.Search, null) }, trailingIcon = { if (query.isNotEmpty()) IconButton(onClick = { query = "" }) { LIcon(Icons.Rounded.Close, "Limpar busca") } }, singleLine = true, shape = RoundedCornerShape(20.dp), modifier = Modifier.fillMaxWidth())
                 LText("TIPO", fontSize = 13.sp, letterSpacing = 1.7.sp, color = MaterialTheme.colorScheme.primary)
-                FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    FilterChip(type == null, { type = null }, label = { LText("Todos") })
-                    typeNames.keys.forEach { t -> FilterChip(type == t, { type = if (type == t) null else t }, label = { LText(typeNames.getValue(t)) }, leadingIcon = { TypeSymbol(t) }) }
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.fillMaxWidth()) {
+                    item { FilterChip(type == null, { type = null }, label = { LText("Todos") }) }
+                    items(typeNames.keys.toList()) { t -> FilterChip(type == t, { type = if (type == t) null else t }, label = { LText(typeNames.getValue(t)) }, leadingIcon = { TypeSymbol(t) }) }
                 }
                 FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     listOf("all" to "Todas as classes", "physical" to "Físico", "special" to "Especial", "status" to "Status").forEach { (key, label) ->
