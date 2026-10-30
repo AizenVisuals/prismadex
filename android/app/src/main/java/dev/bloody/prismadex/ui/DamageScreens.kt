@@ -136,14 +136,14 @@ private val conditionsSaver=listSaver<BattleConditions,Any>(
                 FilterChip(conditions.critical,{updateConditions(conditions.copy(critical=!conditions.critical))},label={LText("Acerto crítico")})
                 OutlinedButton(onClick={advanced=!advanced},modifier=Modifier.fillMaxWidth()){LText(if(advanced)"Recolher condições da batalha" else "Condições da batalha e modificadores")}
             }}
-            item(key="conditions"){AnimatedVisibility(advanced,enter=expandVertically(tween(220))+fadeIn(),exit=shrinkVertically(tween(160))+fadeOut()){ConditionsEditor(conditions){updateConditions(it)}}}
+            item(key="conditions"){AnimatedVisibility(advanced,enter=expandEnter(LocalReduceMotion.current),exit=shrinkExit(LocalReduceMotion.current)){ConditionsEditor(conditions){updateConditions(it)}}}
             item(key="calculate"){Column(verticalArrangement=Arrangement.spacedBy(12.dp)){
                 ActionButton(if(busy)"Calculando no aparelho…" else "Calcular dano",Icons.Rounded.AutoAwesome,!busy&&moves.isNotEmpty()&&defender!=null){calculate()}
                 if(busy)LinearProgressIndicator(Modifier.fillMaxWidth())
                 error?.let{LText(it,color=MaterialTheme.colorScheme.error,fontSize=13.sp,lineHeight=18.sp)}
                 LText("Motor Showdown · modo Champions. Nível 50, SP, naturezas, habilidades, itens e variação de dano. Acerto do golpe e decisões do adversário não são uma previsão.",fontSize=13.sp,lineHeight=17.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
             }}
-            result?.let{r->item(key="result"){DamageResult(r,Modifier.animateItem())}}
+            result?.let{r->item(key="result"){DamageResult(r,motionPlacement(LocalReduceMotion.current))}}
         }
         if(state.dummies.isNotEmpty()){
             item(key="dummy-heading"){LText("ALVOS SALVOS · ${state.dummies.size}/50",fontSize=13.sp,letterSpacing=1.5.sp,color=MaterialTheme.colorScheme.primary)}

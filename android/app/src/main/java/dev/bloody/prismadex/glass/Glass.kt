@@ -3,6 +3,7 @@ package dev.bloody.prismadex.glass
 import android.os.Build
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
+import dev.bloody.prismadex.ui.LocalReduceMotion
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -62,7 +63,7 @@ fun LiquidGlass(
     val interaction = remember { MutableInteractionSource() }
     val pressed by interaction.collectIsPressedAsState()
     val scale by animateFloatAsState(
-        targetValue = if (pressed) .965f else 1f,
+        targetValue = if (pressed && !LocalReduceMotion.current) .965f else 1f,
         animationSpec = spring(dampingRatio = .78f, stiffness = 550f),
         label = "glass press"
     )

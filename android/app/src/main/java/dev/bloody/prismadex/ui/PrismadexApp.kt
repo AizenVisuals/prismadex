@@ -153,7 +153,7 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
     val drawerState=rememberDrawerState(DrawerValue.Closed)
     MaterialTheme(colorScheme=colors){
         val backdrop=rememberPrismaBackdrop()
-        CompositionLocalProvider(LocalPrismaBackdrop provides backdrop, LocalContentColor provides colors.onBackground){
+        CompositionLocalProvider(LocalPrismaBackdrop provides backdrop, LocalContentColor provides colors.onBackground, LocalReduceMotion provides rememberReduceMotion()){
             ModalNavigationDrawer(drawerState=drawerState,gesturesEnabled=drawerState.isOpen,drawerContent={AppDrawer(screen,onNavigate={key->selectedId=null;showDummy=false;screen=key;scope.launch{drawerState.close()}},onAccount={showAccount=true;scope.launch{drawerState.close()}})}){
             BoxWithConstraints(Modifier.fillMaxSize().background(bg).windowInsetsPadding(WindowInsets.safeDrawing).clipToBounds()){
                 val expanded=maxWidth>=600.dp
@@ -168,14 +168,17 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
                 else{
                     val target=if(showTeamPicker)"team-picker" else if(showAccount)"account" else if(showDummy)"dummy/${editingDummyId?:"new"}" else selectedId?.let{"pokemon/$it"}?:screen
                     BackHandler(showTeamPicker||drawerState.isOpen||showAccount||showDummy||selectedId!=null||screen!="dex"){when{showTeamPicker->showTeamPicker=false;drawerState.isOpen->scope.launch{drawerState.close()};showAccount->showAccount=false;showDummy->showDummy=false;selectedId!=null->closePokemon();else->screen="dex"}}
+                    val reduceMotion=LocalReduceMotion.current
                     Box(Modifier.fillMaxSize().prismaBackdrop(backdrop)){
                         AnimatedContent(targetState=target,transitionSpec={
+                            if(reduceMotion)(fadeIn(tween(120)) togetherWith fadeOut(tween(120)))
+                            else{
                             val browsing=initialState.startsWith("pokemon/")&&targetState.startsWith("pokemon/")
                             val opening=targetState.startsWith("pokemon/")||targetState=="account"
                             if(browsing)(slideInHorizontally(tween(280,easing=FastOutSlowInEasing)){it*detailDirection}+fadeIn(tween(180))) togetherWith (slideOutHorizontally(tween(280,easing=FastOutSlowInEasing)){-it*detailDirection}+fadeOut(tween(180)))
                             else
                             if(opening)(slideInHorizontally(tween(330,easing=FastOutSlowInEasing)){it/5}+fadeIn(tween(240))) togetherWith (fadeOut(tween(160))+scaleOut(tween(300),targetScale=.97f))
-                            else (fadeIn(tween(220))+slideInHorizontally(tween(300)){ -it/12}) togetherWith fadeOut(tween(150))
+                            else (fadeIn(tween(220))+slideInHorizontally(tween(300)){ -it/12}) togetherWith fadeOut(tween(150))}
                         },label="native screen navigation"){route->
                             screenStates.SaveableStateProvider(route){when{
                                 route=="team-picker"->TeamPokemonPicker(catalog,state,onAdd={p->if(p.id !in state.team)toggleTeam(p)},onClose={showTeamPicker=false})
@@ -288,7 +291,7 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
                     IconButton(onClick={onLayout(if(state.layout=="list")"grid" else "list")}){LIcon(if(state.layout=="list")Icons.Rounded.GridView else Icons.AutoMirrored.Rounded.List,if(state.layout=="list")"Mostrar em grade" else "Mostrar em lista")}
                 }
                 if(!favoritesOnly){FlowRow(horizontalArrangement=Arrangement.spacedBy(8.dp)){FilterChip(selectedGame==25,{selectedGame=25},label={LText("Champions")},leadingIcon={LIcon(Icons.Rounded.AutoAwesome,null,Modifier.size(16.dp))});FilterChip(selectedGame==0,{selectedGame=0},label={LText("Nacional")});IconButton(onClick={alphabetical=!alphabetical}){LIcon(Icons.Rounded.SortByAlpha,"Alternar ordenação alfabética")}}}
-                AnimatedVisibility(filtersExpanded){Column(verticalArrangement=Arrangement.spacedBy(12.dp)){
+                AnimatedVisibility(filtersExpanded,enter=expandEnter(LocalReduceMotion.current),exit=shrinkExit(LocalReduceMotion.current)){Column(verticalArrangement=Arrangement.spacedBy(12.dp)){
                 ChoiceField("JOGO",if(selectedGame==0)"Nacional · todos os jogos" else gameName(selectedGame),listOf("0" to "Nacional · todos os jogos")+SupportedGames.map{it.id.toString() to it.name}){selectedGame=it.toInt()}
                 ChoiceField("GERAÇÃO DA ESPÉCIE",if(generation==0)"Todas as gerações" else "Geração $generation",listOf("0" to "Todas as gerações")+(1..9).map{it.toString() to "Geração $it"}){generation=it.toInt()}
                 LazyRow(horizontalArrangement=Arrangement.spacedBy(8.dp)){
@@ -301,7 +304,7 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
             }
         }
         if(!favoritesOnly&&selectedGame==0&&generation==0&&type==null)item(span={GridItemSpan(maxLineSpan)},key="announced"){AnnouncedPokemonSection(query)}
-        items(list,key={it.id},contentType={state.layout}){p->PokemonCard(p,state.layout,p.id in state.favorites,{onOpen(p,list,selectedGame.takeIf{it>0}?:23)},{onFavorite(p)},Modifier.animateItem())}
+        items(list,key={it.id},contentType={state.layout}){p->PokemonCard(p,state.layout,p.id in state.favorites,{onOpen(p,list,selectedGame.takeIf{it>0}?:23)},{onFavorite(p)},motionPlacement(LocalReduceMotion.current))}
         if(list.isEmpty())item(span={GridItemSpan(maxLineSpan)},key="empty"){EmptyState(if(favoritesOnly&&query.isBlank())"Seus parceiros favoritos vivem aqui." else "Nenhum Pokémon encontrado.",if(favoritesOnly&&query.isBlank())"Toque no coração na Pokédex para adicionar favoritos." else "Experimente outro nome ou filtro.")}
     }
 }
@@ -345,7 +348,7 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
 }
 
 @Composable private fun PokemonCard(p:Pokemon,layout:String,favorite:Boolean,onOpen:()->Unit,onFavorite:()->Unit,modifier:Modifier=Modifier){
-    val interaction=remember{MutableInteractionSource()};val pressed by interaction.collectIsPressedAsState();val scale by animateFloatAsState(if(pressed).975f else 1f,spring(.8f,600f),label="card touch")
+    val interaction=remember{MutableInteractionSource()};val pressed by interaction.collectIsPressedAsState();val scale by animateFloatAsState(pressTarget(pressed,LocalReduceMotion.current,.975f),spring(.8f,600f),label="card touch")
     val shape=RoundedCornerShape(25.dp)
     Box(modifier.fillMaxWidth().graphicsLayer{scaleX=scale;scaleY=scale}.clip(shape).background(Brush.linearGradient(listOf(typeColor(p.types.first()).copy(.075f),MaterialTheme.colorScheme.surface))).border(1.dp,Color.White.copy(.07f),shape)){
         if(layout=="list"){
@@ -394,7 +397,7 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
         if(tab!="build")item(key="browse-controls"){
             PokemonBrowseControls(previousId?.let{id->catalog.find{it.id==id}},nextId?.let{id->catalog.find{it.id==id}},canBrowse,onBrowse)
         }
-        if(tab!="build")item(key="portrait"){Box(Modifier.fillMaxWidth().height(268.dp).background(Brush.radialGradient(listOf(typeColor(p.types.first()).copy(.16f),Color.Transparent)))){PokemonArt(p.id,Modifier.fillMaxSize().padding(18.dp),p.name)}}
+        if(tab!="build")item(key="portrait"){val reduceMotion=LocalReduceMotion.current;AnimatedVisibility(visible=true,enter=if(reduceMotion)fadeIn(tween(120)) else fadeIn(tween(240))+scaleIn(tween(280,easing=FastOutSlowInEasing),initialScale=.96f),exit=ExitTransition.None){Box(Modifier.fillMaxWidth().height(268.dp).background(Brush.radialGradient(listOf(typeColor(p.types.first()).copy(.16f),Color.Transparent)))){PokemonArt(p.id,Modifier.fillMaxSize().padding(18.dp),p.name)}}}
         item(key="identity"){Column(Modifier.padding(horizontal=24.dp)){
             LText("#${p.baseId.toString().padStart(4,'0')}  /  ${LocalUiStrings.current.text(if(p.isMega)"MEGA EVOLUÇÃO" else "POKÉDEX")}",fontSize=13.sp,letterSpacing=1.8.sp,color=MaterialTheme.colorScheme.primary)
             LText(p.name,fontSize=if(tab=="build")24.sp else 30.sp,fontWeight=FontWeight.Bold,lineHeight=34.sp,letterSpacing=(-1).sp,modifier=Modifier.padding(top=8.dp,bottom=12.dp))
@@ -464,7 +467,7 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
             Row(Modifier.fillMaxWidth().padding(18.dp),verticalAlignment=Alignment.CenterVertically){ItemArt(selectedItem,items.find{it.id==selectedItem}?.name,Modifier.size(40.dp));Column(Modifier.weight(1f).padding(horizontal=14.dp)){LText(items.find{it.id==selectedItem}?.name?:if(selectedItem!=null)"Item indisponível · selecione outro" else if(p.isMega&&game==25)"Escolha a Mega Stone" else "Sem item",fontSize=14.sp);LText("Toque para escolher",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)};LIcon(Icons.Rounded.ExpandMore,"Escolher item")}
         }
         items.find{it.id==selectedItem}?.let{item->Text(descriptionText(item.description),fontSize=14.sp,lineHeight=21.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)}
-        AnimatedVisibility(picking=="items",enter=expandVertically(tween(240))+fadeIn(),exit=shrinkVertically(tween(180))+fadeOut()){
+        AnimatedVisibility(picking=="items",enter=expandEnter(LocalReduceMotion.current),exit=shrinkExit(LocalReduceMotion.current)){
             Column(verticalArrangement=Arrangement.spacedBy(8.dp)){
                 OutlinedTextField(searchItem,{searchItem=it},singleLine=true,placeholder={LText("Buscar item segurado")},modifier=Modifier.fillMaxWidth(),shape=RoundedCornerShape(18.dp))
                 if(!p.isMega||game!=25)TextButton(onClick={selectedItem=null;picking=""}){LText("Usar sem item")}
@@ -479,7 +482,7 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
             IconButton(onClick={selectedMoves=selectedMoves-id}){LIcon(Icons.Rounded.Close,"Remover ${move?.name?:"golpe antigo"}",Modifier.size(20.dp))}
         }}
         OutlinedButton(onClick={picking=if(picking=="moves")"" else "moves"},modifier=Modifier.fillMaxWidth(),shape=RoundedCornerShape(18.dp)){LIcon(Icons.Rounded.Add,null,Modifier.size(18.dp));LText("Escolher golpes",Modifier.padding(8.dp))}
-        AnimatedVisibility(picking=="moves",enter=expandVertically(tween(240))+fadeIn(),exit=shrinkVertically(tween(180))+fadeOut()){
+        AnimatedVisibility(picking=="moves",enter=expandEnter(LocalReduceMotion.current),exit=shrinkExit(LocalReduceMotion.current)){
             Column(verticalArrangement=Arrangement.spacedBy(8.dp)){
                 OutlinedTextField(searchMove,{searchMove=it},singleLine=true,placeholder={LText("Buscar golpe do jogo")},modifier=Modifier.fillMaxWidth(),shape=RoundedCornerShape(18.dp))
                 LazyColumn(Modifier.heightIn(max=320.dp)){items(moves.filter{it.name.contains(searchMove,true)},key={it.id}){move->Row(Modifier.fillMaxWidth().clip(RoundedCornerShape(14.dp)).clickable(enabled=move.id in selectedMoves||selectedMoves.size<4){selectedMoves=if(move.id in selectedMoves)selectedMoves-move.id else selectedMoves+move.id}.padding(vertical=6.dp),verticalAlignment=Alignment.CenterVertically){Checkbox(move.id in selectedMoves,null,enabled=move.id in selectedMoves||selectedMoves.size<4);TypeSymbol(move.type);Column(Modifier.weight(1f).padding(start=9.dp)){LText(move.name,fontSize=14.sp);LText("${move.power?.takeIf{it>0}?:"—"} · ${move.accuracy?.let{"$it%"}?:"—"} · ${move.pp?:"—"} PP",fontSize=12.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)};IconButton(onClick={inspectedMove=move}){LIcon(Icons.Rounded.Info,"Informações de ${move.name}",Modifier.size(20.dp))}}}}
@@ -498,7 +501,7 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
         item(key="library"){TeamLibraryHeader(state,onState)}
         if(state.activeTeam.gameId==25&&state.builds.values.mapNotNull{it.itemId}.let{it.distinct().size<it.size})item{LText("Regulamento M-C: itens segurados repetidos não são permitidos.",fontSize=13.sp,color=MaterialTheme.colorScheme.error)}
         item(key="battle-format"){Row(horizontalArrangement=Arrangement.spacedBy(9.dp)){FilterChip(state.activeTeam.format=="singles",{onState(state.updateTeam{it.copy(format="singles")})},label={LText("Singles")});FilterChip(state.activeTeam.format=="doubles",{onState(state.updateTeam{it.copy(format="doubles")})},label={LText("Doubles")})}}
-        items(state.team,key={it}){id->catalog.find{it.id==id}?.let{p->val build=state.builds[id];var review by remember(id,build,state.activeTeam.gameId){mutableStateOf<String?>(null)};var itemName by remember(id,build,state.activeTeam.gameId){mutableStateOf<String?>(null)};var moveNames by remember(id,build,state.activeTeam.gameId){mutableStateOf<List<Move>>(emptyList())};LaunchedEffect(id,build,state.activeTeam.gameId){review=if(!p.availableIn(state.activeTeam.gameId))"Compatibilidade por revisar" else build?.let{repo.validateBuild(p,it,state.activeTeam.gameId).exceptionOrNull()?.message};itemName=repo.heldItemsFor(p,state.activeTeam.gameId).find{it.id==build?.itemId}?.name;moveNames=repo.movesFor(p,state.activeTeam.gameId).filter{it.id in (build?.moves?:emptyList())}};Surface(onClick={onOpen(p)},modifier=Modifier.animateItem(),shape=RoundedCornerShape(26.dp),color=MaterialTheme.colorScheme.surface){Column(Modifier.fillMaxWidth().padding(16.dp)){
+        items(state.team,key={it}){id->catalog.find{it.id==id}?.let{p->val build=state.builds[id];var review by remember(id,build,state.activeTeam.gameId){mutableStateOf<String?>(null)};var itemName by remember(id,build,state.activeTeam.gameId){mutableStateOf<String?>(null)};var moveNames by remember(id,build,state.activeTeam.gameId){mutableStateOf<List<Move>>(emptyList())};LaunchedEffect(id,build,state.activeTeam.gameId){review=if(!p.availableIn(state.activeTeam.gameId))"Compatibilidade por revisar" else build?.let{repo.validateBuild(p,it,state.activeTeam.gameId).exceptionOrNull()?.message};itemName=repo.heldItemsFor(p,state.activeTeam.gameId).find{it.id==build?.itemId}?.name;moveNames=repo.movesFor(p,state.activeTeam.gameId).filter{it.id in (build?.moves?:emptyList())}};Surface(onClick={onOpen(p)},modifier=motionPlacement(LocalReduceMotion.current),shape=RoundedCornerShape(26.dp),color=MaterialTheme.colorScheme.surface){Column(Modifier.fillMaxWidth().padding(16.dp)){
             Row(verticalAlignment=Alignment.CenterVertically){PokemonArt(id,Modifier.size(72.dp),p.name);Column(Modifier.weight(1f).padding(start=10.dp)){LText(p.name,fontSize=19.sp,fontWeight=FontWeight.SemiBold);FlowRow(horizontalArrangement=Arrangement.spacedBy(5.dp),verticalArrangement=Arrangement.spacedBy(4.dp),modifier=Modifier.padding(top=9.dp)){p.types.forEach{TypePill(it,true)}}};Column(verticalArrangement=Arrangement.spacedBy(8.dp)){
                 IconButton(onClick={onOpen(p)},modifier=Modifier.size(48.dp)){LIcon(Icons.Rounded.Edit,"Editar set",tint=MaterialTheme.colorScheme.primary,modifier=Modifier.size(22.dp))}
                 IconButton(onClick={onRemove(p)},modifier=Modifier.size(48.dp)){LIcon(Icons.Rounded.Remove,"Remover ${p.name} da equipe",tint=MaterialTheme.colorScheme.error,modifier=Modifier.size(22.dp))}
@@ -554,7 +557,7 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
 }
 
 @Composable internal fun ActionButton(text:String,icon:ImageVector,enabled:Boolean=true,onClick:()->Unit){
-    val interaction=remember{MutableInteractionSource()};val pressed by interaction.collectIsPressedAsState();val scale by animateFloatAsState(if(pressed).96f else 1f,spring(.75f,500f),label="action touch")
+    val interaction=remember{MutableInteractionSource()};val pressed by interaction.collectIsPressedAsState();val scale by animateFloatAsState(pressTarget(pressed,LocalReduceMotion.current,.96f),spring(.75f,500f),label="action touch")
     val shape=RoundedCornerShape(20.dp);val accent=MaterialTheme.colorScheme.primary
     Row(Modifier.fillMaxWidth().graphicsLayer{scaleX=scale;scaleY=scale;alpha=if(enabled)1f else .4f}.clip(shape).background(Brush.linearGradient(listOf(accent.copy(.30f),accent.copy(.09f),accent.copy(.18f)))).border(1.dp,Brush.linearGradient(listOf(Color.White.copy(.5f),accent.copy(.15f),Color.White.copy(.25f))),shape).clickable(interaction,null,enabled=enabled,onClick=onClick).heightIn(min=54.dp).padding(horizontal=18.dp,vertical=14.dp),verticalAlignment=Alignment.CenterVertically,horizontalArrangement=Arrangement.Center){LIcon(icon,null,Modifier.size(20.dp),tint=accent);Spacer(Modifier.width(10.dp));LText(text,fontSize=14.sp,fontWeight=FontWeight.SemiBold)}
 }

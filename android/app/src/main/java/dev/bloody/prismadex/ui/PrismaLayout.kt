@@ -35,7 +35,7 @@ internal val LocalPrismaLayout=staticCompositionLocalOf{PrismaLayout()}
             destinations.forEach{(key,label,icon)->PrismaDestination(key==selected,label,icon,Modifier.weight(1f).fillMaxWidth(),vertical=true){onNavigate(key)}}
         }else Row(Modifier.fillMaxSize().padding(6.dp)){
             destinations.forEach{(key,label,icon)->
-                val weight by animateFloatAsState(if(compactLabels&&key==selected)1.75f else 1f,tween(220),label="navigation width")
+                val weight by animateFloatAsState(if(compactLabels&&key==selected)1.75f else 1f,if(LocalReduceMotion.current)snap() else tween(220),label="navigation width")
                 PrismaDestination(key==selected,label,icon,Modifier.weight(weight).fillMaxHeight()){onNavigate(key)}
             }
         }
@@ -53,7 +53,7 @@ internal val LocalPrismaLayout=staticCompositionLocalOf{PrismaLayout()}
         .then(if(!showLabel)Modifier.semantics{contentDescription=name} else Modifier)
         .padding(horizontal=2.dp,vertical=4.dp),horizontalAlignment=Alignment.CenterHorizontally,verticalArrangement=Arrangement.Center){
         LIcon(icon,null,Modifier.size(23.dp),tint=tint)
-        AnimatedVisibility(showLabel,enter=fadeIn(tween(150))+expandVertically(tween(220)),exit=fadeOut(tween(120))+shrinkVertically(tween(180))){
+        AnimatedVisibility(showLabel,enter=expandEnter(LocalReduceMotion.current),exit=shrinkExit(LocalReduceMotion.current)){
             Column{Spacer(Modifier.height(3.dp));LText(label,Modifier.fillMaxWidth(),fontSize=12.sp,lineHeight=16.sp,textAlign=androidx.compose.ui.text.style.TextAlign.Center,color=tint,maxLines=1,overflow=androidx.compose.ui.text.style.TextOverflow.Ellipsis)}
         }
     }
