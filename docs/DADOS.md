@@ -5,6 +5,7 @@ Consulta de Champions revisada em 28/10/2026. Não há atualização automática
 | Recorte | Espécies | Registros com formas |
 |---|---:|---:|
 | Nacional | 1.025 | 1.306 |
+| Total combinado (data.json + 51 formas adicionais validadas) | 1.025 | 1.357 |
 | Seleção Champions revisada | 231 | 354 |
 | Entradas diretamente relacionadas à lista oficial M-C | 231 | 262 |
 | Formas/variantes suplementares da referência de batalha | — | 92 |
@@ -25,3 +26,5 @@ Existem 166 itens e 515 definições de golpes específicos de Champions. Formas
 Ainda faltam validação de todas as combinações competitivas, cobertura histórica completa e atualização por novos regulamentos. O catálogo nacional é consulta adicional, não uma promessa de que toda espécie possa ser usada em Champions.
 
 Na 0.5.0, cada um dos 166 itens recebe seu próprio sprite offline, mapeado pelo nome canônico e mantendo o ID salvo. Os 515 golpes de Champions passam a expor descrição, resumo, prioridade, alvo e propriedades. Os 17 textos específicos de Champions têm prioridade sobre a descrição geral do mesmo golpe. Fontes e versões estão nos [avisos técnicos](../android/THIRD_PARTY_NOTICES.md). Descrições originais permanecem em inglês, com indicação visível; a tradução da interface não é apresentada como tradução oficial do jogo.
+
+Auditoria de cobertura em 29/10/2026 (`research/expansao-audit-coverage.json`, script `scripts/audit/expansao-audit.py`): 1.357 registros sem IDs duplicados; altura preenchida em 1.353 registros (4 formas não resolvidas sem fato exato na fonte: 20077, 20079, 20201, 20202); peso preenchido em todos; 1 registro sem habilidades (310318, Magearna Original Mega — sem relações de habilidade na fonte fixada); 935 golpes com detalhe, incluindo Vice Grip (id 11, completado a partir de Showdown/PokeAPI fixados); descrições em 1.154 de 2.223 itens gerais (609 Showdown + 545 PokeAPI `item_prose`, traduzidas localmente; 1.069 sem descrição em nenhuma das fontes fixadas); arte local para 1.353 registros (4 formas de deslocamento de Koraidon/Miraidon sem arte importada por falta de permissão verificada, com placeholder). Os 17 textos específicos de Champions e os 515 golpes de Champions com detalhe foram verificados na mesma auditoria. Na expansão 0.6.0, 279 campos de altura/peso nulos foram preenchidos a partir dos perfis de forma exata verificados, sem sobrescrever nenhum valor existente.
