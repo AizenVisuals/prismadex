@@ -1,19 +1,44 @@
 package dev.bloody.prismadex.ui
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.ExpandMore
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import dev.bloody.prismadex.data.*
 
-@Composable internal fun SpeciesProfileSection(p:Pokemon){
+/**
+ * Reading used for the 23:27 direction ("Biologia" and "Referência Nacional"
+ * become buttons, abilities too): the two wordings in this file are the
+ * section header "Biologia e referência nacional" and the subheader
+ * "Habilidades da referência nacional". Both are now tappable buttons that
+ * expand/collapse the information below them (expanded by default, so no
+ * information is hidden on first view), and every ability name is a button
+ * that opens that ability's detail sheet. All fields shown before are
+ * still shown, from the same bundled data.
+ */
+@Composable internal fun SpeciesProfileSection(p:Pokemon,catalog:List<Pokemon> = emptyList(),onOpenPokemon: ((Pokemon) -> Unit)? = null){
  val context=LocalContext.current;val repo=remember{SpeciesProfileRepository(context)}
  val profile by produceState<SpeciesProfile?>(null,p.id){value=repo.profile(p)}
  val language=LocalUiStrings.current.language
+ var biologyExpanded by rememberSaveable(p.id){mutableStateOf(true)}
+ var abilitiesExpanded by rememberSaveable(p.id){mutableStateOf(true)}
  profile?.let{s->Column(verticalArrangement=Arrangement.spacedBy(10.dp)){
- LText("Biologia e referência nacional",fontSize=18.sp)
+ Surface(onClick={biologyExpanded=!biologyExpanded},shape=RoundedCornerShape(16.dp),color=MaterialTheme.colorScheme.surface,modifier=Modifier.fillMaxWidth()){
+  Row(Modifier.fillMaxWidth().heightIn(min=48.dp).padding(horizontal=14.dp,vertical=12.dp),verticalAlignment=Alignment.CenterVertically){
+   LText("Biologia e referência nacional",Modifier.weight(1f),fontSize=18.sp,fontWeight=FontWeight.SemiBold)
+   LIcon(Icons.Rounded.ExpandMore,if(biologyExpanded)"Recolher biologia e referência nacional" else "Expandir biologia e referência nacional",Modifier.rotate(if(biologyExpanded)180f else 0f),tint=MaterialTheme.colorScheme.primary)
+  }
+ }
+ if(biologyExpanded)Column(verticalArrangement=Arrangement.spacedBy(10.dp)){
  s.category?.let{Text(it.text(language),fontSize=15.sp)}
  LText("Grupos de ovos",fontSize=13.sp);Text(s.eggGroups.joinToString(" · "){it.text(language)},fontSize=14.sp)
  s.formGender?.let{LText(if(it=="female")"Forma feminina" else "Forma masculina",fontSize=14.sp)}
@@ -26,9 +51,23 @@ import dev.bloody.prismadex.data.*
  if(s.isLegendary)LText("Lendário",fontSize=13.sp)
  if(s.isMythical)LText("Mítico",fontSize=13.sp)
  if(s.isBaby)LText("Pokémon bebê",fontSize=13.sp)
- LText("Habilidades da referência nacional",fontSize=17.sp)
- s.abilities.forEach{a->Text(a.name,fontSize=15.sp);if(a.isHidden==true)LText("Habilidade oculta",fontSize=12.sp,color=MaterialTheme.colorScheme.primary);a.description?.let{Text(it.text(language),fontSize=13.sp,lineHeight=19.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)}}
- LText("Estas informações gerais não substituem as habilidades ou regras de Champions no seu set.",fontSize=12.sp,lineHeight=18.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
+ }
+ Surface(onClick={abilitiesExpanded=!abilitiesExpanded},shape=RoundedCornerShape(16.dp),color=MaterialTheme.colorScheme.surface,modifier=Modifier.fillMaxWidth()){
+  Row(Modifier.fillMaxWidth().heightIn(min=48.dp).padding(horizontal=14.dp,vertical=12.dp),verticalAlignment=Alignment.CenterVertically){
+   LText("Habilidades da referência nacional",Modifier.weight(1f),fontSize=17.sp,fontWeight=FontWeight.SemiBold)
+   LIcon(Icons.Rounded.ExpandMore,if(abilitiesExpanded)"Recolher habilidades da referência nacional" else "Expandir habilidades da referência nacional",Modifier.rotate(if(abilitiesExpanded)180f else 0f),tint=MaterialTheme.colorScheme.primary)
+  }
+ }
+ if(abilitiesExpanded)Column(verticalArrangement=Arrangement.spacedBy(4.dp)){
+  s.abilities.forEach{a->Column{
+   Row(verticalAlignment=Alignment.CenterVertically){
+    AbilityNameButton(a.name,catalog,onOpenPokemon)
+    if(a.isHidden==true)LText("Habilidade oculta",fontSize=12.sp,color=MaterialTheme.colorScheme.primary)
+   }
+   a.description?.let{Text(it.text(language),fontSize=13.sp,lineHeight=19.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)}
+  }}
+  LText("Estas informações gerais não substituem as habilidades ou regras de Champions no seu set.",fontSize=12.sp,lineHeight=18.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
+ }
  }}
 }
 
