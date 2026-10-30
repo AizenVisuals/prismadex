@@ -50,9 +50,10 @@ import kotlinx.coroutines.withContext
 
 /**
  * Shiny art convention: a real shiny asset, when one exists, lives at
- * `art/shiny/<id>.webp` next to the normal `art/<id>.webp`. Coverage today
- * is ZERO (audited 29/10/2026: no `art/shiny/` folder, no shiny file in
- * `assets/art/`, no shiny reference in code) — so the Shiny option honestly
+ * `art/shiny/<id>.webp` next to the normal `art/<id>.webp`. Coverage
+ * 30/10/2026: 94 records have a real TonOfDirt726 shiny recolor (CC BY 3.0;
+ * see research/SHINY-SOURCES.md) — 60 plain species + 34 form records
+ * remapped by verified name + baseId. Every other record honestly
  * shows the unavailable state instead of a hue-shifted fake. Never fake a
  * shiny by recolouring normal art, never substitute another Pokémon's art.
  */
