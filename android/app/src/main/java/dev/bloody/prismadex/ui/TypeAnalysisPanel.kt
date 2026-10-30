@@ -12,7 +12,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import dev.bloody.prismadex.data.*
 
 private fun multiplierLabel(value:Double)=when(value){0.0->"0×";.25->"¼×";.5->"½×";else->"${value.toInt()}×"}
@@ -30,10 +29,10 @@ private fun multiplierLabel(value:Double)=when(value){0.0->"0×";.25->"¼×";.5-
  var offensiveType by remember(memberIds){mutableStateOf<String?>(null)}
  var selected by remember(memberIds){mutableStateOf<String?>(null)}
  Column(verticalArrangement=Arrangement.spacedBy(10.dp)){
- LText(if(team)"Análise defensiva" else "Efetividade por tipo",fontSize=18.sp,fontWeight=FontWeight.SemiBold)
- LText("Tipagem moderna: não inclui habilidades, itens, clima ou regras históricas.",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
- if(team)LText("↑ Fraquezas · ↓ Resistências · 0× Imunidades",fontSize=12.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
- if(members.isEmpty())LText("Adicione Pokémon para analisar a equipe.",fontSize=14.sp)
+ LText(if(team)"Análise defensiva" else "Efetividade por tipo",style=MaterialTheme.typography.titleMedium)
+ LText("Tipagem moderna: não inclui habilidades, itens, clima ou regras históricas.",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
+ if(team)LText("↑ Fraquezas · ↓ Resistências · 0× Imunidades",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
+ if(members.isEmpty())LText("Adicione Pokémon para analisar a equipe.",style=MaterialTheme.typography.bodyMedium)
  else if(!team){
   val groups=remember(members){TypeAnalysis.singleGroups(members.single())}
   groups.forEach{group->
@@ -68,11 +67,11 @@ private fun multiplierLabel(value:Double)=when(value){0.0->"0×";.25->"¼×";.5-
     Column(verticalArrangement=Arrangement.spacedBy(8.dp),modifier=Modifier.padding(bottom=6.dp)){
      section.rows.forEach{row->
       OutlinedButton(onClick={selected=if(selected==row.type)null else row.type},modifier=Modifier.fillMaxWidth().heightIn(min=48.dp),contentPadding=PaddingValues(horizontal=12.dp,vertical=8.dp)){
-       TypeSymbol(row.type);Spacer(Modifier.width(8.dp));LText(typeNames[row.type]?:row.type,Modifier.weight(1f),fontSize=14.sp)
-       Text("${row.weakCount} ↑ · ${row.resistantCount} ↓ · ${row.immuneCount} 0×",fontSize=13.sp)
+       TypeSymbol(row.type);Spacer(Modifier.width(8.dp));LText(typeNames[row.type]?:row.type,Modifier.weight(1f),style=MaterialTheme.typography.bodyMedium)
+       Text("${row.weakCount} ↑ · ${row.resistantCount} ↓ · ${row.immuneCount} 0×",style=MaterialTheme.typography.bodySmall)
       }
-      if(row.weakCount>=3)LText("Fraqueza compartilhada: ${row.weakCount} integrantes",fontSize=13.sp,color=MaterialTheme.colorScheme.error)
-      if(selected==row.type){row.members.forEach{match->LText("${members.first{it.id==match.pokemonId}.name} · ${multiplierLabel(match.multiplier)}",fontSize=14.sp)};if(!row.hasDefensiveAnswer)LText("Sem resistência ou imunidade por tipagem.",fontSize=13.sp)}
+      if(row.weakCount>=3)LText("Fraqueza compartilhada: ${row.weakCount} integrantes",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.error)
+      if(selected==row.type){row.members.forEach{match->LText("${members.first{it.id==match.pokemonId}.name} · ${multiplierLabel(match.multiplier)}",style=MaterialTheme.typography.bodyMedium)};if(!row.hasDefensiveAnswer)LText("Sem resistência ou imunidade por tipagem.",style=MaterialTheme.typography.bodySmall)}
      }
     }
    }
@@ -88,12 +87,12 @@ private fun multiplierLabel(value:Double)=when(value){0.0->"0×";.25->"¼×";.5-
    )
    AnimatedVisibility(offenseExpanded,enter=expandEnter(LocalReduceMotion.current),exit=shrinkExit(LocalReduceMotion.current)){
     Column(verticalArrangement=Arrangement.spacedBy(10.dp),modifier=Modifier.padding(bottom=6.dp)){
-     FlowRow(horizontalArrangement=Arrangement.spacedBy(8.dp)){TypeAnalysis.offense(moves).forEach{row->AssistChip(onClick={offensiveType=if(offensiveType==row.defendingType)null else row.defendingType},label={Text("${typeNames[row.defendingType]} ${row.bestMultiplier?.let(::multiplierLabel)?:"—"}",fontSize=12.sp)},leadingIcon={TypeSymbol(row.defendingType)})}}
-     offensiveType?.let{type->moves.filter{it.category!="status"}.distinctBy{it.id}.forEach{move->Text("${move.name} · ${multiplierLabel(typeMultiplier(move.type,listOf(type)))}",fontSize=13.sp)}}
+     FlowRow(horizontalArrangement=Arrangement.spacedBy(8.dp)){TypeAnalysis.offense(moves).forEach{row->AssistChip(onClick={offensiveType=if(offensiveType==row.defendingType)null else row.defendingType},label={Text("${typeNames[row.defendingType]} ${row.bestMultiplier?.let(::multiplierLabel)?:"—"}",style=MaterialTheme.typography.labelMedium)},leadingIcon={TypeSymbol(row.defendingType)})}}
+     offensiveType?.let{type->moves.filter{it.category!="status"}.distinctBy{it.id}.forEach{move->Text("${move.name} · ${multiplierLabel(typeMultiplier(move.type,listOf(type)))}",style=MaterialTheme.typography.bodySmall)}}
     }
    }
   } else {
-   LText("Escolha golpes de dano nos sets para analisar a cobertura.",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
+   LText("Escolha golpes de dano nos sets para analisar a cobertura.",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
   }
  }
  }
@@ -110,8 +109,8 @@ private fun teamSectionTitle(kind:TeamSectionKind)=when(kind){
 @Composable private fun EffectivenessGroupHeader(title:String,badge:String,badgeColor:androidx.compose.ui.graphics.Color,countLabel:String,expanded:Boolean,onToggle:()->Unit){
  Surface(onClick=onToggle,modifier=Modifier.fillMaxWidth().heightIn(min=56.dp),shape=RoundedCornerShape(18.dp),color=MaterialTheme.colorScheme.surface){
   Row(Modifier.fillMaxWidth().padding(horizontal=14.dp,vertical=10.dp),verticalAlignment=Alignment.CenterVertically){
-   LText(badge,fontSize=15.sp,fontWeight=FontWeight.Bold,color=badgeColor,modifier=Modifier.padding(end=10.dp))
-   Column(Modifier.weight(1f)){LText(title,fontSize=15.sp,fontWeight=FontWeight.SemiBold);LText(countLabel,fontSize=12.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)}
+   LText(badge,style=MaterialTheme.typography.titleSmall,fontWeight=FontWeight.Bold,color=badgeColor,modifier=Modifier.padding(end=10.dp))
+   Column(Modifier.weight(1f)){LText(title,style=MaterialTheme.typography.titleSmall);LText(countLabel,style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)}
    LIcon(Icons.Rounded.ExpandMore,if(expanded)"Recolher $title" else "Expandir $title",Modifier.rotate(if(expanded)180f else 0f))
   }
  }

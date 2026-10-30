@@ -50,7 +50,7 @@ import java.util.Locale
         item(key="meta-heading"){Column(verticalArrangement=Arrangement.spacedBy(10.dp)){
             LText("Entenda o meta.\nPrepare a resposta.",fontSize=29.sp,lineHeight=34.sp,fontWeight=FontWeight.Bold)
             LText("Fontes online, com período e formato identificados. A última consulta fica disponível offline.",fontSize=13.sp,lineHeight=18.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
-            Row(horizontalArrangement=Arrangement.spacedBy(9.dp)){FilterChip(format=="singles",{onFormat("singles")},label={LText("Singles")});FilterChip(format=="doubles",{onFormat("doubles")},label={LText("Doubles")});IconButton(onClick={refresh++},enabled=!loading){LIcon(Icons.Rounded.Refresh,"Atualizar Meta")}}
+            Row(horizontalArrangement=Arrangement.spacedBy(9.dp)){FilterChip(format=="singles",{onFormat("singles")},label={LText("Singles · individual")});FilterChip(format=="doubles",{onFormat("doubles")},label={LText("Doubles · duplas")});IconButton(onClick={refresh++},enabled=!loading){LIcon(Icons.Rounded.Refresh,"Atualizar Meta")}}
             if(loading)LinearProgressIndicator(Modifier.fillMaxWidth())
             error?.let{LText(it,fontSize=13.sp,color=MaterialTheme.colorScheme.error)}
         }}

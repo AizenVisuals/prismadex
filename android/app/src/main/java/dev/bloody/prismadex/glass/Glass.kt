@@ -53,6 +53,7 @@ fun LiquidGlass(
     modifier: Modifier = Modifier,
     radius: Dp = 24.dp,
     tint: Color = androidx.compose.material3.MaterialTheme.colorScheme.surface.copy(alpha = .32f),
+    highlightStrength: Float = 1f,
     onClick: (() -> Unit)? = null,
     content: @Composable BoxScope.() -> Unit
 ) {
@@ -83,7 +84,7 @@ fun LiquidGlass(
                     )
                 }
             },
-            highlight = { Highlight(width = .6f.dp, alpha = if(light).42f else .48f) },
+            highlight = { Highlight(width = .6f.dp, alpha = ((if(light).42f else .48f) * highlightStrength).coerceAtMost(.8f)) },
             shadow = { Shadow(radius = 16.dp, color = Color.Black.copy(alpha = if(light).14f else .3f)) },
             backdropScale = .25f,
             onDrawSurface = { drawRect(tint) }
