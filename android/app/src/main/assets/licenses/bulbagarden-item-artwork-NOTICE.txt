@@ -1,0 +1,9 @@
+Additional general item artwork in general-item-art/ is original Pokémon game artwork obtained from public file pages on Bulbagarden Archives, starting from:
+https://archives.bulbagarden.net/wiki/Category:Item_artwork
+https://archives.bulbagarden.net/wiki/Category:Bag_sprites
+
+Pokémon, names and original game artwork belong to their respective rightsholders, including The Pokémon Company, Nintendo, Creatures and GAME FREAK. Hosting on Bulbagarden Archives does not grant a blanket permissive or redistribution license for the underlying game artwork. No such license is asserted by PrismaDex.
+
+Individual source file-page URLs, original image URLs, original file hashes and locally optimized asset hashes are recorded in general-item-art-map.json. Existing held-item icons remain unchanged and retain their separate source notices.
+
+The new assets were imported only where an exact unique English item name matched a recognized file name, or one of eight reviewed ordinary/Hisui Ball slugs identified the exact SV/LA variant. Ambiguous item identities, generic machine-type icons and unrelated game/anime/TCG images were not guessed or bulk imported. Display size is bounded and image decoding remains local/offline.

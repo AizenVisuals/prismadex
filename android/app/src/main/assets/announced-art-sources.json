@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-10-30",
+  "scope": "announced Gen 10 starters artwork only; no text/data changes to announced-pokemon.json",
+  "provider": "Universo Nintendo (fan site)",
+  "providerUrl": "https://universonintendo.com/universo-pokemon/",
+  "records": {
+    "browt": {
+      "name": "Browt",
+      "sourcePage": "https://universonintendo.com/universo-pokemon/",
+      "sourceUrl": "https://universonintendo.com/wp-content/uploads/2026/03/Browt.png",
+      "sourceSha256": "2d78aadf651fa424469f79f619a7fa0d208255d1e2abdf5c690d0600dd3c4e16",
+      "sourceSizeBytes": 83771,
+      "sourceFormat": "PNG 448x448 RGBA, static, single frame",
+      "sourceTrim448": "328x368+60+37",
+      "asset": "announced-art/browt.webp",
+      "assetSha256": "e921028db9eb37a4832a86e08e0673ab22760331d3da46802c95ddee11f3e91e",
+      "assetSizeBytes": 12836,
+      "conversion": "ImageMagick crop to alpha trim box, uniform resize to fit 256x256, WebP quality 90, no distortion, no recolor, no edit",
+      "ipNote": "Artwork of Nintendo, Game Freak and The Pokemon Company, reproduced from a fan site (Universo Nintendo) with no open redistribution licence claimed. Outside the Showdown/PokeAPI-only IP-risk acceptance. Play Store acceptance not guaranteed."
+    },
+    "pombon": {
+      "name": "Pombon",
+      "sourcePage": "https://universonintendo.com/universo-pokemon/",
+      "sourceUrl": "https://universonintendo.com/wp-content/uploads/2026/03/Pombon.png",
+      "sourceSha256": "3160e88193f2316a0ae4eafbb165c5e3a21766771a05f1079ee91cd6059d7c2c",
+      "sourceSizeBytes": 95381,
+      "sourceFormat": "PNG 448x448 RGBA, static, single frame",
+      "sourceTrim448": "333x399+52+26",
+      "asset": "announced-art/pombon.webp",
+      "assetSha256": "da3d5cd90a597eee9f37bbacfd53713ae7f5b1863e52d03d0095f82cfcbcd898",
+      "assetSizeBytes": 13766,
+      "conversion": "ImageMagick crop to alpha trim box, uniform resize to fit 256x256, WebP quality 90, no distortion, no recolor, no edit",
+      "ipNote": "Artwork of Nintendo, Game Freak and The Pokemon Company, reproduced from a fan site (Universo Nintendo) with no open redistribution licence claimed. Outside the Showdown/PokeAPI-only IP-risk acceptance. Play Store acceptance not guaranteed."
+    },
+    "gecqua": {
+      "name": "Gecqua",
+      "sourcePage": "https://universonintendo.com/universo-pokemon/",
+      "sourceUrl": "https://universonintendo.com/wp-content/uploads/2026/03/Gecqua.png",
+      "sourceSha256": "fafd1f7ecb6a581275f6f0913bf263612d016a39942e4b2bc2c72eb301b221cd",
+      "sourceSizeBytes": 105135,
+      "sourceFormat": "PNG 448x448 RGBA, static, single frame",
+      "sourceTrim448": "427x346+15+51",
+      "asset": "announced-art/gecqua.webp",
+      "assetSha256": "944654e687e53230a499d45c40ba941e3f02ede2be4c9d3aa76e8ab9247073ba",
+      "assetSizeBytes": 14836,
+      "conversion": "ImageMagick crop to alpha trim box, uniform resize to fit 256x256, WebP quality 90, no distortion, no recolor, no edit",
+      "ipNote": "Artwork of Nintendo, Game Freak and The Pokemon Company, reproduced from a fan site (Universo Nintendo) with no open redistribution licence claimed. Outside the Showdown/PokeAPI-only IP-risk acceptance. Play Store acceptance not guaranteed."
+    }
+  }
+}

@@ -2588,5 +2588,70 @@
     "Poder, precisão e PP da referência geral; atributos escalares e categoria adaptados ao jogo. Efeitos textuais, alvo e flags são referência geral e ainda não certificados por versão.",
     "Power, accuracy, PP and category are adapted to the game. Effect text, targets and flags are general references and are not yet verified per version.",
     "Poder, precisión, PP y categoría se adaptan al juego. Los textos de efectos, objetivos y flags son referencias generales aún no verificadas por versión."
+  ],
+  [
+    "Buscar personagem",
+    "Search trainer",
+    "Buscar personaje"
+  ],
+  [
+    "GÊNERO DO PARCEIRO",
+    "PARTNER GENDER",
+    "GÉNERO DEL COMPAÑERO"
+  ],
+  [
+    "Não definido",
+    "Not set",
+    "Sin definir"
+  ],
+  [
+    "Masculino",
+    "Male",
+    "Masculino"
+  ],
+  [
+    "Feminino",
+    "Female",
+    "Femenino"
+  ],
+  [
+    "Arte de treinador: {0}",
+    "Trainer art: {0}",
+    "Arte de entrenador: {0}"
+  ],
+  [
+    "Fonte e créditos do personagem",
+    "Character source and credits",
+    "Fuente y créditos del personaje"
+  ],
+  [
+    "VERSÃO DAS INSÍGNIAS",
+    "BADGE VERSION",
+    "VERSIÓN DE LAS MEDALLAS"
+  ],
+  [
+    "Kanto · pós-jogo",
+    "Kanto · post-game",
+    "Kanto · posjuego"
+  ],
+  [
+    "{0} personagens",
+    "{0} characters",
+    "{0} personajes"
+  ],
+  [
+    "Nenhum personagem encontrado.",
+    "No character found.",
+    "No se encontraron personajes."
+  ],
+  [
+    "Quando fica irritado ou ataca — inclusive durante o Z-Move Soul-Stealing 7-Star Strike —, o espírito de luta de Marshadow começa a arder e ele assume a forma Zenith: capacete, saliências dos pulsos e gola se inflamam como chamas verdes e amarelas, e os olhos também se inflamam, sem mudar de cor.",
+    "When angered or attacking — including during its Z-Move, Soul-Stealing 7-Star Strike — Marshadow's fighting spirit begins to burn and it takes on its Zenith form: its headgear, wrist bumps, and collar flare up like green and yellow flames, and its eyes flare up too, without changing color.",
+    "Cuando se enfada o ataca — incluso durante su movimiento Z, Soul-Stealing 7-Star Strike —, el espíritu de lucha de Marshadow empieza a arder y adopta la forma Zenith: su casco, las protuberancias de las muñecas y el cuello se inflaman como llamas verdes y amarillas, y sus ojos también se inflaman, sin cambiar de color."
+  ],
+  [
+    "É só uma transformação visual em batalha: não há stats, tipos ou habilidade próprios do Zenith — valem os dados desta mesma ficha. Na versão shiny, as chamas do Zenith ficam roxas.",
+    "It is only a visual transformation in battle: Zenith has no stats, types, or Ability of its own — the data on this same record applies. In its Shiny version, Zenith's flames turn purple.",
+    "Es solo una transformación visual en combate: Zenith no tiene estadísticas, tipos ni habilidad propios; valen los datos de esta misma ficha. En su versión variocolor, las llamas de Zenith se vuelven moradas."
   ]
 ]
