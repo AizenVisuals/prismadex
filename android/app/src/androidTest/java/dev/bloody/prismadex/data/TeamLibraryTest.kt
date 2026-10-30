@@ -21,6 +21,18 @@ class TeamLibraryTest{
         assertEquals(setOf(6,150),state.favorites);assertEquals("carmine",state.theme)
         assertEquals(state,Store.decode(Store.encode(state)))
     }
+    @Test fun teamViewPreferenceDefaultsToListAndSurvivesReopening()=runBlocking{
+        val legacy=JSONObject("{\"theme\":\"aurora\",\"layout\":\"grid\"}")
+        assertEquals("list",Store.decode(legacy).teamView)
+        assertEquals("list",UserState().teamView)
+        val name="team-view-${UUID.randomUUID()}";var store=Store(context,name)
+        try{
+            val state=UserState(teams=listOf(SavedTeam("g","Grade",23,listOf(25))),activeTeamId="g",teamView="grid")
+            store.save(state);store.close();store=Store(context,name)
+            assertEquals("grid",store.load().teamView)
+            assertEquals(state,Store.decode(Store.encode(state)))
+        }finally{store.close();context.deleteDatabase("$name-accounts.sqlite3");context.getSharedPreferences("$name-session",0).edit().clear().commit()}
+    }
     @Test fun multipleTeamsHaveIndependentSetsAndSurviveReopening()=runBlocking{
         val name="team-library-${UUID.randomUUID()}";var store=Store(context,name)
         try{

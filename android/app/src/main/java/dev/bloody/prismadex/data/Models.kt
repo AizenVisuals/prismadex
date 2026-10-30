@@ -57,6 +57,7 @@ data class UserState(
     val dummies: List<TrainingDummy> = emptyList(),
     val battleFormat: String = "doubles",
     val appearanceMode: String = "system",
+    val teamView: String = "list",
 ){
     val activeTeam:SavedTeam get()=teams.first{it.id==activeTeamId}
     val team:List<Int> get()=activeTeam.members

@@ -50,6 +50,7 @@ class Store(context: Context, private val storageName: String = "prisma") {
         require(state.battleFormat in setOf("singles", "doubles")) { "Formato inválido." }
         require(state.theme in themes) { "Tema inválido." }
         require(state.layout in setOf("grid", "list")) { "Layout inválido." }
+        require(state.teamView in setOf("list", "grid")) { "Visualização da equipe inválida." }
         require(state.teams.size in 1..100 && state.teams.map{it.id}.distinct().size==state.teams.size){"Use de 1 a 100 equipes."}
         require(state.teams.any{it.id==state.activeTeamId}){"Equipe ativa não encontrada."}
         require(state.dummies.size<=50 && state.dummies.map{it.id}.distinct().size==state.dummies.size){"Use até 50 alvos de teste."}
@@ -158,7 +159,7 @@ class Store(context: Context, private val storageName: String = "prisma") {
                 put("id",team.id);put("name",team.name);put("gameId",team.gameId);put("format",team.format)
                 put("members",JSONArray(team.members));put("builds",JSONObject().apply{team.builds.forEach{(id,b)->put(id.toString(),encodeBuild(b))}})
             })}})
-            put("theme", state.theme); put("layout", state.layout); put("battleFormat", state.battleFormat); put("appearanceMode", state.appearanceMode)
+            put("theme", state.theme); put("layout", state.layout); put("battleFormat", state.battleFormat); put("appearanceMode", state.appearanceMode); put("teamView", state.teamView)
             put("builds", JSONObject().apply { state.builds.forEach { (id, build) ->
                 put(id.toString(), encodeBuild(build))
             } })
@@ -185,7 +186,7 @@ class Store(context: Context, private val storageName: String = "prisma") {
             } else listOf(SavedTeam("default","Minha equipe",25,team,builds,json.optString("battleFormat","doubles")))
             val active=json.optString("activeTeamId","default").takeIf{id->teams.any{it.id==id}}?:teams.first().id
             return UserState(favorites=json.optJSONArray("favorites")?.ints()?.map(::canonicalPokemonId)?.toSet()?:emptySet(),teams=teams,activeTeamId=active,
-                theme=json.optString("theme","aurora"),layout=json.optString("layout","grid"),
+                theme=json.optString("theme","aurora"),layout=json.optString("layout","grid"),teamView=json.optString("teamView","list"),
                 dummies=json.optJSONArray("dummies")?.let { rows -> (0 until rows.length()).map { i -> rows.getJSONObject(i).let { d -> TrainingDummy(d.getString("id"), d.getString("label"), canonicalPokemonId(d.getInt("pokemonId")), decodeBuild(d.getJSONObject("build"))) } } } ?: emptyList(),
                 battleFormat=json.optString("battleFormat","doubles"),appearanceMode=json.optString("appearanceMode","system"))
         }
