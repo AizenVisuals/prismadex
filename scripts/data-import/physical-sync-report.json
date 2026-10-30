@@ -1,0 +1,2002 @@
+{
+  "source": "species-profiles.json (pinned PokeAPI, formResolved only)",
+  "heightWeightFills": [
+    {
+      "id": 722,
+      "name": "Rowlet",
+      "field": "height",
+      "value": 0.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 723,
+      "name": "Dartrix",
+      "field": "height",
+      "value": 0.7,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 725,
+      "name": "Litten",
+      "field": "height",
+      "value": 0.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 726,
+      "name": "Torracat",
+      "field": "height",
+      "value": 0.7,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 728,
+      "name": "Popplio",
+      "field": "height",
+      "value": 0.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 729,
+      "name": "Brionne",
+      "field": "height",
+      "value": 0.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 731,
+      "name": "Pikipek",
+      "field": "height",
+      "value": 0.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 732,
+      "name": "Trumbeak",
+      "field": "height",
+      "value": 0.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 734,
+      "name": "Yungoos",
+      "field": "height",
+      "value": 0.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 735,
+      "name": "Gumshoos",
+      "field": "height",
+      "value": 0.7,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 736,
+      "name": "Grubbin",
+      "field": "height",
+      "value": 0.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 737,
+      "name": "Charjabug",
+      "field": "height",
+      "value": 0.5,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 738,
+      "name": "Vikavolt",
+      "field": "height",
+      "value": 1.5,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 739,
+      "name": "Crabrawler",
+      "field": "height",
+      "value": 0.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 741,
+      "name": "Oricorio",
+      "field": "height",
+      "value": 0.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 742,
+      "name": "Cutiefly",
+      "field": "height",
+      "value": 0.1,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 743,
+      "name": "Ribombee",
+      "field": "height",
+      "value": 0.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 744,
+      "name": "Rockruff",
+      "field": "height",
+      "value": 0.5,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 746,
+      "name": "Wishiwashi",
+      "field": "height",
+      "value": 0.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 747,
+      "name": "Mareanie",
+      "field": "height",
+      "value": 0.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 749,
+      "name": "Mudbray",
+      "field": "height",
+      "value": 1.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 751,
+      "name": "Dewpider",
+      "field": "height",
+      "value": 0.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 753,
+      "name": "Fomantis",
+      "field": "height",
+      "value": 0.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 754,
+      "name": "Lurantis",
+      "field": "height",
+      "value": 0.9,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 755,
+      "name": "Morelull",
+      "field": "height",
+      "value": 0.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 756,
+      "name": "Shiinotic",
+      "field": "height",
+      "value": 1.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 757,
+      "name": "Salandit",
+      "field": "height",
+      "value": 0.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 759,
+      "name": "Stufful",
+      "field": "height",
+      "value": 0.5,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 760,
+      "name": "Bewear",
+      "field": "height",
+      "value": 2.1,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 761,
+      "name": "Bounsweet",
+      "field": "height",
+      "value": 0.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 762,
+      "name": "Steenee",
+      "field": "height",
+      "value": 0.7,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 764,
+      "name": "Comfey",
+      "field": "height",
+      "value": 0.1,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 767,
+      "name": "Wimpod",
+      "field": "height",
+      "value": 0.5,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 769,
+      "name": "Sandygast",
+      "field": "height",
+      "value": 0.5,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 770,
+      "name": "Palossand",
+      "field": "height",
+      "value": 1.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 771,
+      "name": "Pyukumuku",
+      "field": "height",
+      "value": 0.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 772,
+      "name": "Type: Null",
+      "field": "height",
+      "value": 1.9,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 773,
+      "name": "Silvally",
+      "field": "height",
+      "value": 2.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 774,
+      "name": "Minior",
+      "field": "height",
+      "value": 0.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 775,
+      "name": "Komala",
+      "field": "height",
+      "value": 0.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 776,
+      "name": "Turtonator",
+      "field": "height",
+      "value": 2.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 777,
+      "name": "Togedemaru",
+      "field": "height",
+      "value": 0.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 779,
+      "name": "Bruxish",
+      "field": "height",
+      "value": 0.9,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 781,
+      "name": "Dhelmise",
+      "field": "height",
+      "value": 3.9,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 782,
+      "name": "Jangmo-o",
+      "field": "height",
+      "value": 0.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 783,
+      "name": "Hakamo-o",
+      "field": "height",
+      "value": 1.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 785,
+      "name": "Tapu Koko",
+      "field": "height",
+      "value": 1.8,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 786,
+      "name": "Tapu Lele",
+      "field": "height",
+      "value": 1.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 787,
+      "name": "Tapu Bulu",
+      "field": "height",
+      "value": 1.9,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 788,
+      "name": "Tapu Fini",
+      "field": "height",
+      "value": 1.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 789,
+      "name": "Cosmog",
+      "field": "height",
+      "value": 0.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 790,
+      "name": "Cosmoem",
+      "field": "height",
+      "value": 0.1,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 791,
+      "name": "Solgaleo",
+      "field": "height",
+      "value": 3.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 792,
+      "name": "Lunala",
+      "field": "height",
+      "value": 4.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 793,
+      "name": "Nihilego",
+      "field": "height",
+      "value": 1.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 794,
+      "name": "Buzzwole",
+      "field": "height",
+      "value": 2.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 795,
+      "name": "Pheromosa",
+      "field": "height",
+      "value": 1.8,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 796,
+      "name": "Xurkitree",
+      "field": "height",
+      "value": 3.8,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 797,
+      "name": "Celesteela",
+      "field": "height",
+      "value": 9.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 798,
+      "name": "Kartana",
+      "field": "height",
+      "value": 0.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 799,
+      "name": "Guzzlord",
+      "field": "height",
+      "value": 5.5,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 800,
+      "name": "Necrozma",
+      "field": "height",
+      "value": 2.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 801,
+      "name": "Magearna",
+      "field": "height",
+      "value": 1.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 802,
+      "name": "Marshadow",
+      "field": "height",
+      "value": 0.7,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 803,
+      "name": "Poipole",
+      "field": "height",
+      "value": 0.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 804,
+      "name": "Naganadel",
+      "field": "height",
+      "value": 3.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 805,
+      "name": "Stakataka",
+      "field": "height",
+      "value": 5.5,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 806,
+      "name": "Blacephalon",
+      "field": "height",
+      "value": 1.8,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 807,
+      "name": "Zeraora",
+      "field": "height",
+      "value": 1.5,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 808,
+      "name": "Meltan",
+      "field": "height",
+      "value": 0.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 809,
+      "name": "Melmetal",
+      "field": "height",
+      "value": 2.5,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 810,
+      "name": "Grookey",
+      "field": "height",
+      "value": 0.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 811,
+      "name": "Thwackey",
+      "field": "height",
+      "value": 0.7,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 813,
+      "name": "Scorbunny",
+      "field": "height",
+      "value": 0.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 814,
+      "name": "Raboot",
+      "field": "height",
+      "value": 0.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 816,
+      "name": "Sobble",
+      "field": "height",
+      "value": 0.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 817,
+      "name": "Drizzile",
+      "field": "height",
+      "value": 0.7,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 819,
+      "name": "Skwovet",
+      "field": "height",
+      "value": 0.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 820,
+      "name": "Greedent",
+      "field": "height",
+      "value": 0.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 821,
+      "name": "Rookidee",
+      "field": "height",
+      "value": 0.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 822,
+      "name": "Corvisquire",
+      "field": "height",
+      "value": 0.8,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 824,
+      "name": "Blipbug",
+      "field": "height",
+      "value": 0.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 825,
+      "name": "Dottler",
+      "field": "height",
+      "value": 0.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 826,
+      "name": "Orbeetle",
+      "field": "height",
+      "value": 0.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 827,
+      "name": "Nickit",
+      "field": "height",
+      "value": 0.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 829,
+      "name": "Gossifleur",
+      "field": "height",
+      "value": 0.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 830,
+      "name": "Eldegoss",
+      "field": "height",
+      "value": 0.5,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 831,
+      "name": "Wooloo",
+      "field": "height",
+      "value": 0.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 832,
+      "name": "Dubwool",
+      "field": "height",
+      "value": 1.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 833,
+      "name": "Chewtle",
+      "field": "height",
+      "value": 0.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 834,
+      "name": "Drednaw",
+      "field": "height",
+      "value": 1.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 835,
+      "name": "Yamper",
+      "field": "height",
+      "value": 0.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 836,
+      "name": "Boltund",
+      "field": "height",
+      "value": 1.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 837,
+      "name": "Rolycoly",
+      "field": "height",
+      "value": 0.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 838,
+      "name": "Carkol",
+      "field": "height",
+      "value": 1.1,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 839,
+      "name": "Coalossal",
+      "field": "height",
+      "value": 2.8,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 840,
+      "name": "Applin",
+      "field": "height",
+      "value": 0.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 843,
+      "name": "Silicobra",
+      "field": "height",
+      "value": 2.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 845,
+      "name": "Cramorant",
+      "field": "height",
+      "value": 0.8,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 846,
+      "name": "Arrokuda",
+      "field": "height",
+      "value": 0.5,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 847,
+      "name": "Barraskewda",
+      "field": "height",
+      "value": 1.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 848,
+      "name": "Toxel",
+      "field": "height",
+      "value": 0.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 850,
+      "name": "Sizzlipede",
+      "field": "height",
+      "value": 0.7,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 851,
+      "name": "Centiskorch",
+      "field": "height",
+      "value": 3.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 852,
+      "name": "Clobbopus",
+      "field": "height",
+      "value": 0.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 854,
+      "name": "Sinistea",
+      "field": "height",
+      "value": 0.1,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 856,
+      "name": "Hatenna",
+      "field": "height",
+      "value": 0.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 857,
+      "name": "Hattrem",
+      "field": "height",
+      "value": 0.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 859,
+      "name": "Impidimp",
+      "field": "height",
+      "value": 0.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 860,
+      "name": "Morgrem",
+      "field": "height",
+      "value": 0.8,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 862,
+      "name": "Obstagoon",
+      "field": "height",
+      "value": 1.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 864,
+      "name": "Cursola",
+      "field": "height",
+      "value": 1.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 868,
+      "name": "Milcery",
+      "field": "height",
+      "value": 0.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 872,
+      "name": "Snom",
+      "field": "height",
+      "value": 0.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 873,
+      "name": "Frosmoth",
+      "field": "height",
+      "value": 1.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 874,
+      "name": "Stonjourner",
+      "field": "height",
+      "value": 2.5,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 875,
+      "name": "Eiscue",
+      "field": "height",
+      "value": 1.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 878,
+      "name": "Cufant",
+      "field": "height",
+      "value": 1.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 879,
+      "name": "Copperajah",
+      "field": "height",
+      "value": 3.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 880,
+      "name": "Dracozolt",
+      "field": "height",
+      "value": 1.8,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 881,
+      "name": "Arctozolt",
+      "field": "height",
+      "value": 2.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 882,
+      "name": "Dracovish",
+      "field": "height",
+      "value": 2.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 883,
+      "name": "Arctovish",
+      "field": "height",
+      "value": 2.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 884,
+      "name": "Duraludon",
+      "field": "height",
+      "value": 1.8,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 885,
+      "name": "Dreepy",
+      "field": "height",
+      "value": 0.5,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 886,
+      "name": "Drakloak",
+      "field": "height",
+      "value": 1.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 888,
+      "name": "Zacian",
+      "field": "height",
+      "value": 2.8,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 889,
+      "name": "Zamazenta",
+      "field": "height",
+      "value": 2.9,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 890,
+      "name": "Eternatus",
+      "field": "height",
+      "value": 20.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 891,
+      "name": "Kubfu",
+      "field": "height",
+      "value": 0.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 892,
+      "name": "Urshifu",
+      "field": "height",
+      "value": 1.9,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 893,
+      "name": "Zarude",
+      "field": "height",
+      "value": 1.8,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 894,
+      "name": "Regieleki",
+      "field": "height",
+      "value": 1.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 894,
+      "name": "Regieleki",
+      "field": "weight",
+      "value": 145.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 895,
+      "name": "Regidrago",
+      "field": "height",
+      "value": 2.1,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 895,
+      "name": "Regidrago",
+      "field": "weight",
+      "value": 200.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 896,
+      "name": "Glastrier",
+      "field": "height",
+      "value": 2.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 896,
+      "name": "Glastrier",
+      "field": "weight",
+      "value": 800.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 897,
+      "name": "Spectrier",
+      "field": "height",
+      "value": 2.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 897,
+      "name": "Spectrier",
+      "field": "weight",
+      "value": 44.5,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 898,
+      "name": "Calyrex",
+      "field": "height",
+      "value": 1.1,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 898,
+      "name": "Calyrex",
+      "field": "weight",
+      "value": 7.7,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 901,
+      "name": "Ursaluna",
+      "field": "height",
+      "value": 2.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 905,
+      "name": "Enamorus",
+      "field": "height",
+      "value": 1.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20021,
+      "name": "Pom-Pom Oricorio",
+      "field": "height",
+      "value": 0.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20022,
+      "name": "Pa'u Oricorio",
+      "field": "height",
+      "value": 0.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20023,
+      "name": "Sensu Oricorio",
+      "field": "height",
+      "value": 0.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20030,
+      "name": "School Wishiwashi",
+      "field": "height",
+      "value": 8.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20059,
+      "name": "Core Minior",
+      "field": "height",
+      "value": 0.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20080,
+      "name": "Dusk Mane Necrozma",
+      "field": "height",
+      "value": 3.8,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20081,
+      "name": "Dawn Wings Necrozma",
+      "field": "height",
+      "value": 4.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20082,
+      "name": "Ultra Necrozma",
+      "field": "height",
+      "value": 7.5,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20151,
+      "name": "Alolan Exeggutor",
+      "field": "height",
+      "value": 10.9,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20152,
+      "name": "Alolan Vulpix",
+      "field": "height",
+      "value": 0.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20154,
+      "name": "Alolan Sandshrew",
+      "field": "height",
+      "value": 0.7,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20155,
+      "name": "Alolan Sandslash",
+      "field": "height",
+      "value": 1.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20156,
+      "name": "Alolan Meowth",
+      "field": "height",
+      "value": 0.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20158,
+      "name": "Alolan Marowak",
+      "field": "height",
+      "value": 1.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20160,
+      "name": "Alolan Rattata",
+      "field": "height",
+      "value": 0.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20161,
+      "name": "Alolan Raticate",
+      "field": "height",
+      "value": 0.7,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20162,
+      "name": "Alolan Grimer",
+      "field": "height",
+      "value": 0.7,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20163,
+      "name": "Alolan Muk",
+      "field": "height",
+      "value": 1.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20164,
+      "name": "Alolan Diglett",
+      "field": "height",
+      "value": 0.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20165,
+      "name": "Alolan Dugtrio",
+      "field": "height",
+      "value": 0.7,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20166,
+      "name": "Alolan Geodude",
+      "field": "height",
+      "value": 0.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20167,
+      "name": "Alolan Graveler",
+      "field": "height",
+      "value": 1.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20168,
+      "name": "Alolan Golem",
+      "field": "height",
+      "value": 1.7,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20203,
+      "name": "Zygarde 10%",
+      "field": "height",
+      "value": 1.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20205,
+      "name": "Complete Zygarde",
+      "field": "height",
+      "value": 4.5,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20206,
+      "name": "Ash's Greninja",
+      "field": "height",
+      "value": 1.5,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200301,
+      "name": "Galarian Zigzagoon",
+      "field": "height",
+      "value": 0.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200302,
+      "name": "Galarian Linoone",
+      "field": "height",
+      "value": 0.5,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200303,
+      "name": "Galarian Weezing",
+      "field": "height",
+      "value": 3.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200304,
+      "name": "Galarian Ponyta",
+      "field": "height",
+      "value": 0.8,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200305,
+      "name": "Galarian Rapidash",
+      "field": "height",
+      "value": 1.7,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200306,
+      "name": "Galarian Meowth",
+      "field": "height",
+      "value": 0.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200307,
+      "name": "Galarian Farfetch’d",
+      "field": "height",
+      "value": 0.8,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200308,
+      "name": "Galarian Mr. Mime",
+      "field": "height",
+      "value": 1.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200309,
+      "name": "Galarian Corsola",
+      "field": "height",
+      "value": 0.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200311,
+      "name": "Galarian Darumaka",
+      "field": "height",
+      "value": 0.7,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200312,
+      "name": "Galarian Darmanitan",
+      "field": "height",
+      "value": 1.7,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200313,
+      "name": "Galarian Yamask",
+      "field": "height",
+      "value": 0.5,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200314,
+      "name": "Galarian Zen Mode Darmanitan",
+      "field": "height",
+      "value": 1.7,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200315,
+      "name": "Galarian Slowpoke",
+      "field": "height",
+      "value": 1.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200315,
+      "name": "Galarian Slowpoke",
+      "field": "weight",
+      "value": 36.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200317,
+      "name": "Galarian Articuno",
+      "field": "height",
+      "value": 1.7,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200317,
+      "name": "Galarian Articuno",
+      "field": "weight",
+      "value": 50.9,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200318,
+      "name": "Galarian Zapdos",
+      "field": "height",
+      "value": 1.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200318,
+      "name": "Galarian Zapdos",
+      "field": "weight",
+      "value": 58.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200319,
+      "name": "Galarian Moltres",
+      "field": "height",
+      "value": 2.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200319,
+      "name": "Galarian Moltres",
+      "field": "weight",
+      "value": 66.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200401,
+      "name": "Gigantamax Drednaw",
+      "field": "height",
+      "value": 24.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200401,
+      "name": "Gigantamax Drednaw",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200402,
+      "name": "Gigantamax Corviknight",
+      "field": "height",
+      "value": 14.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200402,
+      "name": "Gigantamax Corviknight",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200403,
+      "name": "Gigantamax Alcremie",
+      "field": "height",
+      "value": 30.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200403,
+      "name": "Gigantamax Alcremie",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200404,
+      "name": "Gigantamax Hatterene",
+      "field": "height",
+      "value": 26.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200404,
+      "name": "Gigantamax Hatterene",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200405,
+      "name": "Gigantamax Coalossal",
+      "field": "height",
+      "value": 42.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200405,
+      "name": "Gigantamax Coalossal",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200406,
+      "name": "Gigantamax Centiskorch",
+      "field": "height",
+      "value": 75.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200406,
+      "name": "Gigantamax Centiskorch",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200407,
+      "name": "Gigantamax Grimmsnarl",
+      "field": "height",
+      "value": 32.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200407,
+      "name": "Gigantamax Grimmsnarl",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200408,
+      "name": "Gigantamax Flapple",
+      "field": "height",
+      "value": 24.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200408,
+      "name": "Gigantamax Flapple",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200409,
+      "name": "Gigantamax Copperajah",
+      "field": "height",
+      "value": 23.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200409,
+      "name": "Gigantamax Copperajah",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200410,
+      "name": "Gigantamax Duraludon",
+      "field": "height",
+      "value": 43.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200410,
+      "name": "Gigantamax Duraludon",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200411,
+      "name": "Gigantamax Charizard",
+      "field": "height",
+      "value": 28.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200411,
+      "name": "Gigantamax Charizard",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200412,
+      "name": "Gigantamax Butterfree",
+      "field": "height",
+      "value": 17.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200412,
+      "name": "Gigantamax Butterfree",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200413,
+      "name": "Gigantamax Pikachu",
+      "field": "height",
+      "value": 21.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200413,
+      "name": "Gigantamax Pikachu",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200414,
+      "name": "Gigantamax Eevee",
+      "field": "height",
+      "value": 18.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200414,
+      "name": "Gigantamax Eevee",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200415,
+      "name": "Gigantamax Meowth",
+      "field": "height",
+      "value": 33.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200415,
+      "name": "Gigantamax Meowth",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200416,
+      "name": "Gigantamax Machamp",
+      "field": "height",
+      "value": 25.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200416,
+      "name": "Gigantamax Machamp",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200417,
+      "name": "Gigantamax Kingler",
+      "field": "height",
+      "value": 19.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200417,
+      "name": "Gigantamax Kingler",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200418,
+      "name": "Gigantamax Lapras",
+      "field": "height",
+      "value": 24.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200418,
+      "name": "Gigantamax Lapras",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200419,
+      "name": "Gigantamax Garbodor",
+      "field": "height",
+      "value": 21.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200419,
+      "name": "Gigantamax Garbodor",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200420,
+      "name": "Gigantamax Gengar",
+      "field": "height",
+      "value": 20.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200420,
+      "name": "Gigantamax Gengar",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200421,
+      "name": "Gigantamax Snorlax",
+      "field": "height",
+      "value": 35.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200421,
+      "name": "Gigantamax Snorlax",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200422,
+      "name": "Gigantamax Melmetal",
+      "field": "height",
+      "value": 25.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200422,
+      "name": "Gigantamax Melmetal",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200423,
+      "name": "Gigantamax Orbeetle",
+      "field": "height",
+      "value": 14.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200423,
+      "name": "Gigantamax Orbeetle",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200424,
+      "name": "Gigantamax Appletun",
+      "field": "height",
+      "value": 24.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200424,
+      "name": "Gigantamax Appletun",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200425,
+      "name": "Gigantamax Sandaconda",
+      "field": "height",
+      "value": 22.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200425,
+      "name": "Gigantamax Sandaconda",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200426,
+      "name": "Gigantamax Toxtricity",
+      "field": "height",
+      "value": 24.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200426,
+      "name": "Gigantamax Toxtricity",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200427,
+      "name": "Gigantamax Venusaur",
+      "field": "height",
+      "value": 24.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200427,
+      "name": "Gigantamax Venusaur",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200428,
+      "name": "Gigantamax Blastoise",
+      "field": "height",
+      "value": 25.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200428,
+      "name": "Gigantamax Blastoise",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200429,
+      "name": "Gigantamax Rillaboom",
+      "field": "height",
+      "value": 28.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200429,
+      "name": "Gigantamax Rillaboom",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200430,
+      "name": "Gigantamax Cinderace",
+      "field": "height",
+      "value": 27.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200430,
+      "name": "Gigantamax Cinderace",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200431,
+      "name": "Gigantamax Inteleon",
+      "field": "height",
+      "value": 40.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200431,
+      "name": "Gigantamax Inteleon",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200432,
+      "name": "Gigantamax Single Strike Urshifu",
+      "field": "height",
+      "value": 29.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200432,
+      "name": "Gigantamax Single Strike Urshifu",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200433,
+      "name": "Gigantamax Rapid Strike Urshifu",
+      "field": "height",
+      "value": 26.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200433,
+      "name": "Gigantamax Rapid Strike Urshifu",
+      "field": "weight",
+      "value": 1000.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200501,
+      "name": "Hisuian Growlithe",
+      "field": "height",
+      "value": 0.8,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200503,
+      "name": "Hisuian Voltorb",
+      "field": "height",
+      "value": 0.5,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200504,
+      "name": "Hisuian Electrode",
+      "field": "height",
+      "value": 1.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200506,
+      "name": "Hisuian Qwilfish",
+      "field": "height",
+      "value": 0.5,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200507,
+      "name": "Hisuian Sneasel",
+      "field": "height",
+      "value": 0.9,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200509,
+      "name": "Hisuian Lilligant",
+      "field": "height",
+      "value": 1.2,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200510,
+      "name": "Hisuian Zorua",
+      "field": "height",
+      "value": 0.7,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200512,
+      "name": "Hisuian Braviary",
+      "field": "height",
+      "value": 1.7,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 200513,
+      "name": "Hisuian Sliggoo",
+      "field": "height",
+      "value": 0.7,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20010804,
+      "name": "Noice Face Eiscue",
+      "field": "height",
+      "value": 1.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20010805,
+      "name": "Crowned Sword Zacian",
+      "field": "height",
+      "value": 2.8,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20010806,
+      "name": "Crowned Shield Zamazenta",
+      "field": "height",
+      "value": 2.9,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20010807,
+      "name": "Eternamax Eternatus",
+      "field": "height",
+      "value": 100.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20010808,
+      "name": "Rapid Strike Urshifu",
+      "field": "height",
+      "value": 1.9,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20010809,
+      "name": "Ice Rider Calyrex",
+      "field": "height",
+      "value": 2.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20010809,
+      "name": "Ice Rider Calyrex",
+      "field": "weight",
+      "value": 809.1,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20010810,
+      "name": "Shadow Rider Calyrex",
+      "field": "height",
+      "value": 2.4,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20010810,
+      "name": "Shadow Rider Calyrex",
+      "field": "weight",
+      "value": 53.6,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20010901,
+      "name": "Origin Dialga",
+      "field": "height",
+      "value": 7.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20010902,
+      "name": "Origin Palkia",
+      "field": "height",
+      "value": 6.3,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20010903,
+      "name": "White-Striped Basculin",
+      "field": "height",
+      "value": 1.0,
+      "source": "species-profiles.json exact-form fact"
+    },
+    {
+      "id": 20010905,
+      "name": "Therian Enamorus",
+      "field": "height",
+      "value": 1.6,
+      "source": "species-profiles.json exact-form fact"
+    }
+  ],
+  "abilityWhitespaceFixes": [
+    {
+      "id": 20166,
+      "name": "Alolan Geodude",
+      "before": [
+        "galvanize ",
+        "sturdy",
+        "magnet-pull"
+      ],
+      "after": [
+        "galvanize",
+        "sturdy",
+        "magnet-pull"
+      ]
+    },
+    {
+      "id": 20167,
+      "name": "Alolan Graveler",
+      "before": [
+        "galvanize ",
+        "sturdy",
+        "magnet-pull"
+      ],
+      "after": [
+        "galvanize",
+        "sturdy",
+        "magnet-pull"
+      ]
+    },
+    {
+      "id": 20168,
+      "name": "Alolan Golem",
+      "before": [
+        "galvanize ",
+        "sturdy",
+        "magnet-pull"
+      ],
+      "after": [
+        "galvanize",
+        "sturdy",
+        "magnet-pull"
+      ]
+    }
+  ]
+}
