@@ -76,6 +76,43 @@ class PokemonRepository(context: Context) {
         }.sortedBy { it.name }
     }
 
+    /** Every move in the general bundled catalogue (referenceGame 0), sorted by name. No learnset filtering. */
+    suspend fun allMoves(): List<Move> = withContext(Dispatchers.IO) {
+        rawMoves.keys().asSequence().mapNotNull { key ->
+            val id = key.toIntOrNull() ?: return@mapNotNull null
+            val row = rawMoves.optJSONObject(key) ?: return@mapNotNull null
+            val details = moveDetails.optJSONObject(key)
+            val flags = details?.optJSONObject("flags")
+            Move(id, row.getString("name"), row.optString("type"), row.optString("category"),
+                row.nullableInt("power"), row.nullableInt("accuracy"), row.nullableInt("pp"),
+                details?.optString("description") ?: "", details?.optString("summary") ?: "",
+                details?.optInt("priority") ?: 0, details?.optString("target") ?: "normal",
+                flags?.keys()?.asSequence()?.filter { flags.optInt(it) > 0 }?.toSet() ?: emptySet(), 0)
+        }.sortedBy { it.name }.toList()
+    }
+
+    /** True when the move has a Champions definition in the bundled data. */
+    suspend fun isChampionsMove(moveId: Int): Boolean = withContext(Dispatchers.IO) {
+        championsMoveData.has(moveId.toString())
+    }
+
+    /** Ids of all moves with a Champions definition in the bundled data. */
+    suspend fun championsMoveIds(): Set<Int> = withContext(Dispatchers.IO) {
+        championsMoveData.keys().asSequence().mapNotNull { it.toIntOrNull() }.toSet()
+    }
+
+    /** One pass over the Champions learnsets: moveId -> sorted pokemonIds that learn it. */
+    suspend fun championsLearnersByMove(): Map<Int, List<Int>> = withContext(Dispatchers.IO) {
+        val byMove = mutableMapOf<Int, MutableList<Int>>()
+        championsLearnsets.keys().forEach { key ->
+            val pokemonId = key.toIntOrNull() ?: return@forEach
+            championsLearnsets.optJSONArray(key)?.ints()?.forEach { moveId ->
+                byMove.getOrPut(moveId) { mutableListOf() }.add(pokemonId)
+            }
+        }
+        byMove.mapValues { it.value.sorted() }
+    }
+
     suspend fun heldItemsFor(p: Pokemon, game:Int=25): List<HeldItem> = withContext(Dispatchers.IO) {
         if (game!=25 || !p.champions) return@withContext emptyList()
         val species = speciesById[p.id] ?: p.baseId

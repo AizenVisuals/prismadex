@@ -51,6 +51,20 @@ class TeamLibraryTest{
             assertEquals(second,store.load())
         }finally{store.close();context.deleteDatabase("$name-accounts.sqlite3");context.getSharedPreferences("$name-session",0).edit().clear().commit()}
     }
+    @Test fun badgesSurviveSaveAndReload()=runBlocking{
+        val legacy=JSONObject("{\"theme\":\"aurora\"}")
+        assertEquals(emptyMap<Int,List<String>>(),Store.decode(legacy).badges)
+        val name="badges-${UUID.randomUUID()}";var store=Store(context,name)
+        try{
+            val state=UserState(badges=mapOf(1 to listOf("Insígnia Rocha","Insígnia Cascata"),23 to listOf("Insígnia Teste")))
+            store.save(state);store.close();store=Store(context,name)
+            assertEquals(state.badges,store.load().badges)
+            assertEquals(state,Store.decode(Store.encode(state)))
+            val invalid=state.copy(badges=mapOf(99 to listOf("X")))
+            assertTrue(runCatching{store.save(invalid)}.isFailure)
+            assertEquals(state.badges,store.load().badges)
+        }finally{store.close();context.deleteDatabase("$name-accounts.sqlite3");context.getSharedPreferences("$name-session",0).edit().clear().commit()}
+    }
     @Test fun filtersUseExplicitVersionsAndGenerationRatherThanLearnsets()=runBlocking{
         val repo=PokemonRepository(context);val rows=repo.loadCatalog().associateBy{it.id}
         assertEquals(25,SupportedGames.size);assertEquals((1..25).toSet(),SupportedGames.map{it.id}.toSet())

@@ -51,6 +51,7 @@ class Store(context: Context, private val storageName: String = "prisma") {
         require(state.theme in themes) { "Tema inválido." }
         require(state.layout in setOf("grid", "list")) { "Layout inválido." }
         require(state.teamView in setOf("list", "grid")) { "Visualização da equipe inválida." }
+        require(state.badges.all { (gameId, names) -> SupportedGames.any { it.id == gameId } && names.size <= 100 && names.all { it.isNotBlank() && it.length <= 50 } }) { "Registro de insígnia inválido." }
         require(state.teams.size in 1..100 && state.teams.map{it.id}.distinct().size==state.teams.size){"Use de 1 a 100 equipes."}
         require(state.teams.any{it.id==state.activeTeamId}){"Equipe ativa não encontrada."}
         require(state.dummies.size<=50 && state.dummies.map{it.id}.distinct().size==state.dummies.size){"Use até 50 alvos de teste."}
@@ -164,6 +165,7 @@ class Store(context: Context, private val storageName: String = "prisma") {
                 put(id.toString(), encodeBuild(build))
             } })
             put("dummies", JSONArray().apply { state.dummies.forEach { d -> put(JSONObject().apply { put("id", d.id); put("label", d.label); put("pokemonId", d.pokemonId); put("build", encodeBuild(d.build)) }) } })
+            put("badges", JSONObject().apply { state.badges.forEach { (gameId, names) -> put(gameId.toString(), JSONArray(names)) } })
         }
         internal fun encodeBuild(build: Build) = JSONObject().apply {
             put("itemId", build.itemId ?: JSONObject.NULL); put("moves", JSONArray(build.moves))
@@ -187,6 +189,7 @@ class Store(context: Context, private val storageName: String = "prisma") {
             val active=json.optString("activeTeamId","default").takeIf{id->teams.any{it.id==id}}?:teams.first().id
             return UserState(favorites=json.optJSONArray("favorites")?.ints()?.map(::canonicalPokemonId)?.toSet()?:emptySet(),teams=teams,activeTeamId=active,
                 theme=json.optString("theme","aurora"),layout=json.optString("layout","list"),teamView=json.optString("teamView","list"),
+                badges=(json.optJSONObject("badges")?.keys()?.asSequence()?.mapNotNull { key -> key.toIntOrNull()?.takeIf { id -> SupportedGames.any { it.id == id } }?.let { id -> id to (json.optJSONObject("badges")?.optJSONArray(key)?.strings().orEmpty().map { it.trim() }.filter { it.isNotEmpty() && it.length <= 50 }.distinct().take(100)) } }?.toMap() ?: emptyMap()),
                 dummies=json.optJSONArray("dummies")?.let { rows -> (0 until rows.length()).map { i -> rows.getJSONObject(i).let { d -> TrainingDummy(d.getString("id"), d.getString("label"), canonicalPokemonId(d.getInt("pokemonId")), decodeBuild(d.getJSONObject("build"))) } } } ?: emptyList(),
                 battleFormat=json.optString("battleFormat","doubles"),appearanceMode=json.optString("appearanceMode","system"))
         }

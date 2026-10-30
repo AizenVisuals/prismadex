@@ -1,6 +1,7 @@
 @file:OptIn(androidx.compose.foundation.layout.ExperimentalLayoutApi::class, androidx.compose.material3.ExperimentalMaterial3Api::class)
 package dev.bloody.prismadex.ui
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -10,6 +11,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -34,7 +36,7 @@ private val moveTargets=mapOf(
 )
 private val moveFlags=mapOf("contact" to "Contato físico", "sound" to "Sonoro", "bite" to "Mordida", "punch" to "Punho", "bullet" to "Projétil", "powder" to "Pó", "pulse" to "Pulso", "wind" to "Vento", "slicing" to "Corte", "protect" to "Bloqueável por Protect", "authentic" to "Ignora Substitute", "defrost" to "Descongela o usuário", "dance" to "Dança")
 
-@Composable internal fun MoveInfoSheet(move: Move, onDismiss: () -> Unit) {
+@Composable internal fun MoveInfoSheet(move: Move, onDismiss: () -> Unit, learners: List<dev.bloody.prismadex.data.Pokemon> = emptyList(), onOpenLearner: ((dev.bloody.prismadex.data.Pokemon) -> Unit)? = null) {
     var original by androidx.compose.runtime.remember(move.id){androidx.compose.runtime.mutableStateOf(false)}
     ModalBottomSheet(onDismissRequest=onDismiss,containerColor=MaterialTheme.colorScheme.background) {
         Column(Modifier.fillMaxWidth().heightIn(max=620.dp).verticalScroll(rememberScrollState()).padding(horizontal=24.dp).padding(bottom=32.dp),verticalArrangement=Arrangement.spacedBy(20.dp)) {
@@ -61,6 +63,12 @@ private val moveFlags=mapOf("contact" to "Contato físico", "sound" to "Sonoro",
             if(flags.isNotEmpty())Column(verticalArrangement=Arrangement.spacedBy(8.dp)){
                 LText("Propriedades",fontSize=17.sp,fontWeight=FontWeight.SemiBold)
                 FlowRow(horizontalArrangement=Arrangement.spacedBy(8.dp),verticalArrangement=Arrangement.spacedBy(4.dp)){flags.forEach{Surface(shape=androidx.compose.foundation.shape.RoundedCornerShape(12.dp),color=MaterialTheme.colorScheme.surfaceVariant){LText(it,Modifier.padding(horizontal=12.dp,vertical=8.dp),fontSize=13.sp)}}}
+            }
+            if(learners.isNotEmpty())Column(verticalArrangement=Arrangement.spacedBy(8.dp)){
+                LText("Pokémon que aprendem · Champions",fontSize=17.sp,fontWeight=FontWeight.SemiBold)
+                LText("${learners.size} Pokémon na lista Champions.",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
+                learners.take(24).forEach{p->Row(Modifier.fillMaxWidth().heightIn(min=48.dp).clip(androidx.compose.foundation.shape.RoundedCornerShape(14.dp)).clickable(enabled=onOpenLearner!=null){onOpenLearner?.invoke(p);onDismiss()}.padding(vertical=6.dp),verticalAlignment=Alignment.CenterVertically,horizontalArrangement=Arrangement.spacedBy(10.dp)){PokemonArt(p.id,Modifier.size(40.dp),p.name);LText(p.name,Modifier.weight(1f),fontSize=15.sp)}}
+                if(learners.size>24)LText("Mostrando 24 de ${learners.size}.",fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
             }
             LText(if(move.referenceGame==25)"Referência Champions do Showdown · base 1242c1e2. O texto específico de Champions tem prioridade sobre a descrição geral." else "Descrição da referência geral atual. Efeitos, alvo e prioridade podem variar nos jogos antigos.",fontSize=13.sp,lineHeight=19.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
         }

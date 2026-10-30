@@ -43,7 +43,7 @@ private val conditionsSaver=listSaver<BattleConditions,Any>(
 
 @Composable internal fun DamageScreen(catalog:List<Pokemon>,state:UserState,repo:PokemonRepository,engine:DamageEngine,onSelectTeam:(String)->Unit,onEdit:(Pokemon,String?)->Unit,onDummy:(String?)->Unit,onDeleteDummy:(String)->Unit,requestedDefender:String?=null,onDefenderConsumed:()->Unit={},onChoosePokemon:()->Unit={}){
     var inspectedMove by remember{mutableStateOf<Move?>(null)}
-    inspectedMove?.let{MoveInfoSheet(it){inspectedMove=null}}
+    inspectedMove?.let{MoveInfoSheet(it,onDismiss={inspectedMove=null})}
     var deletingDummy by rememberSaveable{mutableStateOf<String?>(null)}
     state.dummies.find{it.id==deletingDummy}?.let{d->AlertDialog(onDismissRequest={deletingDummy=null},title={LText("Excluir alvo ${d.label}?")},text={LText("Este alvo e sua configuração serão removidos do aparelho.")},confirmButton={TextButton(onClick={onDeleteDummy(d.id);deletingDummy=null}){LText("Excluir",color=MaterialTheme.colorScheme.error)}},dismissButton={TextButton(onClick={deletingDummy=null}){LText("Cancelar")}})}
     val scope=rememberCoroutineScope()

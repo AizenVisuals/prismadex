@@ -35,12 +35,22 @@ data class SpeciesProfile(
 /** National reference, separate from current game/Champions build legality and effects. */
 class SpeciesProfileRepository(context: Context) {
     private val assets = context.applicationContext.assets
-    private data class Snapshot(val profiles: Map<Int, SpeciesProfile>, val abilities: Map<String, AbilityProfile>)
+    private data class Snapshot(val profiles: Map<Int, SpeciesProfile>, val abilities: Map<String, AbilityProfile>, val abilityList: List<AbilityProfile>)
     suspend fun profile(pokemon: Pokemon): SpeciesProfile? = withContext(Dispatchers.IO) {
         load().profiles[pokemon.id]
     }
     suspend fun ability(name: String): AbilityProfile? = withContext(Dispatchers.IO) {
         load().abilities[abilityKey(name)]
+    }
+    /** All abilities in the bundled catalogue, deduplicated by id (or slug when id is absent), sorted by name. */
+    suspend fun allAbilities(): List<AbilityProfile> = withContext(Dispatchers.IO) {
+        load().abilityList
+    }
+    /** (pokemonId, isHidden) pairs for every profile carrying [abilityId], sorted by pokemonId. */
+    suspend fun abilityLearners(abilityId: Int): List<Pair<Int, Boolean?>> = withContext(Dispatchers.IO) {
+        load().profiles.values.flatMap { profile ->
+            profile.abilities.filter { it.id == abilityId }.map { profile.pokemonId to it.isHidden }
+        }.sortedBy { it.first }
     }
     private suspend fun load(): Snapshot {
         cache?.let { return it }
@@ -62,6 +72,7 @@ class SpeciesProfileRepository(context: Context) {
             require(root.getInt("schemaVersion") == 1 && abilityRoot.getInt("schemaVersion") == 1)
             val abilities = mutableMapOf<Int, AbilityProfile>()
             val lookup = mutableMapOf<String, AbilityProfile>()
+            val seenByIdOrSlug = linkedMapOf<String, AbilityProfile>()
             val rawAbilities = abilityRoot.getJSONObject("abilities")
             rawAbilities.keys().forEach { key ->
                 val row = rawAbilities.getJSONObject(key)
@@ -69,6 +80,7 @@ class SpeciesProfileRepository(context: Context) {
                 ability.id?.let { abilities[it] = ability }
                 lookup[abilityKey(ability.name)] = ability
                 lookup[abilityKey(ability.slug)] = ability
+                seenByIdOrSlug.putIfAbsent(ability.id?.toString() ?: "slug:${ability.slug}", ability)
             }
             val rawProfiles = root.getJSONObject("profiles")
             val profiles = rawProfiles.keys().asSequence().associate { key ->
@@ -96,7 +108,7 @@ class SpeciesProfileRepository(context: Context) {
                 require(profile.genderRateEighths == null || profile.genderRateEighths in -1..8)
                 profile.pokemonId to profile
             }
-            return Snapshot(profiles, lookup)
+            return Snapshot(profiles, lookup, seenByIdOrSlug.values.sortedBy { it.name })
         }
     }
 }

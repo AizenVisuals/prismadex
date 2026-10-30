@@ -58,6 +58,10 @@ data class UserState(
     val battleFormat: String = "doubles",
     val appearanceMode: String = "system",
     val teamView: String = "list",
+    /** Badge tracker: gameId -> user-named earned badges, stored locally only.
+     *  No official badge names/counts exist in the bundled data, so entries
+     *  are named by the user until verified badge data is imported. */
+    val badges: Map<Int, List<String>> = emptyMap(),
 ){
     val activeTeam:SavedTeam get()=teams.first{it.id==activeTeamId}
     val team:List<Int> get()=activeTeam.members
