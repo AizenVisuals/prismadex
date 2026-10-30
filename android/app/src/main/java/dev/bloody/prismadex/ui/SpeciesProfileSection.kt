@@ -5,7 +5,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.ExpandMore
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
@@ -20,8 +19,9 @@ import dev.bloody.prismadex.data.*
  * become buttons, abilities too): the two wordings in this file are the
  * section header "Biologia e referência nacional" and the subheader
  * "Habilidades da referência nacional". Both are now tappable buttons that
- * expand/collapse the information below them (expanded by default, so no
- * information is hidden on first view), and every ability name is a button
+ * expand/collapse the information below them (CLOSED by default per the
+ * 00:37 direction: a fresh detail open always shows the closed headers),
+ * and every ability name is a button
  * that opens that ability's detail sheet. All fields shown before are
  * still shown, from the same bundled data.
  */
@@ -29,8 +29,8 @@ import dev.bloody.prismadex.data.*
  val context=LocalContext.current;val repo=remember{SpeciesProfileRepository(context)}
  val profile by produceState<SpeciesProfile?>(null,p.id){value=repo.profile(p)}
  val language=LocalUiStrings.current.language
- var biologyExpanded by rememberSaveable(p.id){mutableStateOf(true)}
- var abilitiesExpanded by rememberSaveable(p.id){mutableStateOf(true)}
+ var biologyExpanded by remember(p.id){mutableStateOf(false)}
+ var abilitiesExpanded by remember(p.id){mutableStateOf(false)}
  profile?.let{s->Column(verticalArrangement=Arrangement.spacedBy(10.dp)){
  Surface(onClick={biologyExpanded=!biologyExpanded},shape=RoundedCornerShape(16.dp),color=MaterialTheme.colorScheme.surface,modifier=Modifier.fillMaxWidth()){
   Row(Modifier.fillMaxWidth().heightIn(min=48.dp).padding(horizontal=14.dp,vertical=12.dp),verticalAlignment=Alignment.CenterVertically){
