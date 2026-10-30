@@ -39,4 +39,27 @@ class TypeAnalysisTest {
         assertTrue(TypeAnalysis.team(emptyList()).all{it.members.isEmpty()&&!it.hasDefensiveAnswer})
     }
     @Test(expected=IllegalArgumentException::class) fun unknownTypeDoesNotSilentlyBecomeNeutral(){typeMultiplier("mystery",listOf("fire"))}
+    @Test fun singleGroupsOrderWorstFirstAndCoverAllTypesOnce(){
+        val groups=TypeAnalysis.singleGroups(pokemon(722,"grass","flying"))
+        assertEquals(listOf(4.0,2.0,0.5,0.25,0.0,1.0),groups.map{it.multiplier})
+        assertEquals(listOf("ice"),groups.single{it.multiplier==4.0}.types)
+        assertEquals(listOf("fire","flying","poison","rock"),groups.single{it.multiplier==2.0}.types)
+        assertEquals(listOf("water","fighting"),groups.single{it.multiplier==0.5}.types)
+        assertEquals(listOf("grass","steel"),groups.single{it.multiplier==0.25}.types)
+        assertEquals(listOf("ground"),groups.single{it.multiplier==0.0}.types)
+        assertEquals(18,groups.sumOf{it.types.size})
+        assertEquals(18,groups.flatMap{it.types}.distinct().size)
+        groups.forEach{g->g.types.forEach{t->assertEquals(g.multiplier,typeMultiplier(t,listOf("grass","flying")),0.0)}}
+    }
+    @Test fun teamSectionsPartitionRowsBySharedWeakness(){
+        val team=listOf(pokemon(1,"fire","flying"),pokemon(2,"fire"),pokemon(3,"ice"),pokemon(4,"bug"),pokemon(5,"ground"),pokemon(6,"steel"))
+        val sections=TypeAnalysis.teamSections(TypeAnalysis.team(team))
+        assertEquals(listOf(TeamSectionKind.SHARED_WEAKNESS,TeamSectionKind.WEAKNESS,TeamSectionKind.NO_WEAKNESS),sections.map{it.kind})
+        assertTrue(sections.single{it.kind==TeamSectionKind.SHARED_WEAKNESS}.rows.any{it.type=="rock"&&it.weakCount==4})
+        assertEquals(18,sections.sumOf{it.rows.size})
+        assertEquals(18,sections.flatMap{it.rows}.map{it.type}.distinct().size)
+        assertTrue(sections.single{it.kind==TeamSectionKind.SHARED_WEAKNESS}.rows.all{it.weakCount>=3})
+        assertTrue(sections.single{it.kind==TeamSectionKind.WEAKNESS}.rows.all{it.weakCount in 1..2})
+        assertTrue(sections.single{it.kind==TeamSectionKind.NO_WEAKNESS}.rows.all{it.weakCount==0})
+    }
 }

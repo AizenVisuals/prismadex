@@ -56,3 +56,31 @@ object TypeAnalysis {
         return targets.map{target->OffensivePokemonCoverage(target.id,attacks.maxOfOrNull{typeMultiplier(it.type,target.types)},attacks.filter{typeMultiplier(it.type,target.types)>1.0}.map{it.id})}
     }
 }
+
+/** Presentation grouping only: the multipliers come from [TypeAnalysis.team] unchanged.
+ *  Single-Pokémon groups are ordered worst-first (4x, 2x, 1/2x, 1/4x, 0x) with neutral last;
+ *  types inside a group keep [AnalysisTypes] order. Empty groups are omitted. */
+data class SingleEffectivenessGroup(val multiplier:Double,val types:List<String>)
+enum class TeamSectionKind { SHARED_WEAKNESS, WEAKNESS, NO_WEAKNESS }
+data class TeamEffectivenessSection(val kind:TeamSectionKind,val rows:List<TeamTypeMatchup>)
+object EffectivenessGrouping {
+    private val singleOrder=listOf(4.0,2.0,0.5,0.25,0.0,1.0)
+    fun singleGroups(pokemon:Pokemon):List<SingleEffectivenessGroup>{
+        val rows=TypeAnalysis.team(listOf(pokemon))
+        return singleOrder.mapNotNull{multiplier->
+            val types=rows.filter{it.members.single().multiplier==multiplier}.map{it.type}
+            if(types.isEmpty())null else SingleEffectivenessGroup(multiplier,types)
+        }
+    }
+    fun teamSections(rows:List<TeamTypeMatchup>):List<TeamEffectivenessSection>{
+        val sections=listOf(
+            TeamEffectivenessSection(TeamSectionKind.SHARED_WEAKNESS,rows.filter{it.weakCount>=3}),
+            TeamEffectivenessSection(TeamSectionKind.WEAKNESS,rows.filter{it.weakCount in 1..2}),
+            TeamEffectivenessSection(TeamSectionKind.NO_WEAKNESS,rows.filter{it.weakCount==0})
+        )
+        return sections.filter{it.rows.isNotEmpty()}
+    }
+}
+// Backwards-compatible accessors on the existing object; grouping lives in EffectivenessGrouping.
+fun TypeAnalysis.singleGroups(pokemon:Pokemon)=EffectivenessGrouping.singleGroups(pokemon)
+fun TypeAnalysis.teamSections(rows:List<TeamTypeMatchup>)=EffectivenessGrouping.teamSections(rows)
