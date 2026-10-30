@@ -1,0 +1,31 @@
+{
+  "moveId": 11,
+  "moveName": "Vice Grip",
+  "showdownCommit": "1242c1e2d9763ba5b85d33f13aecb89bae19ae3d",
+  "showdownLicense": "MIT",
+  "showdownMovesTs": {
+    "file": "cache/showdown-moves.ts",
+    "sha256": "43b516fdc01721f53f01de555479dd3d248e5e29d2a6f5072a7bd4a3585a5027"
+  },
+  "showdownMoveTextTs": {
+    "file": "cache/showdown-move-text.ts",
+    "sha256": "811028921074d1fd8ea8798bc0f0e29602a59f639e58bdf53b0eedf3fdcf54e5"
+  },
+  "pokeapiCommit": "2bf639e5572812a67d2b94903fdcb9d095f5aeb2",
+  "pokeapiLicense": "BSD-3-Clause",
+  "pokeapiMovesCsv": {
+    "file": "cache/moves.csv",
+    "sha256": "8aafd37bf78f19471495c05b201545180f50f0a08a2a2a844d69f9837dd39ac9"
+  },
+  "pokeapiMoveEffectProseCsv": {
+    "file": "cache/move_effect_prose.csv",
+    "sha256": "f6d9bf0d28433a010a8b8b6a0a14d1ef72fbfcb997717f71b0e34483b7ee9697"
+  },
+  "crossChecks": [
+    "showdown num/accuracy/basePower/pp/priority/category/type/target == moves.json row 11",
+    "pokeapi moves.csv row 11 agrees on power/pp/accuracy/priority/effect_id 1",
+    "pokeapi effect 1 prose: no additional effect",
+    "showdown text has shortDesc only, no desc; Pound convention applied"
+  ],
+  "translation": "No additional effect. already translated (pt/es) in localized-descriptions.json"
+}
