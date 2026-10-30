@@ -39,6 +39,7 @@ import dev.bloody.prismadex.data.*
     var type by rememberSaveable { mutableStateOf<String?>(null) }
     var category by rememberSaveable { mutableStateOf("all") }
     var championsOnly by rememberSaveable { mutableStateOf(false) }
+    var showTypePicker by rememberSaveable { mutableStateOf(false) }
     var moves by remember { mutableStateOf<List<Move>>(emptyList()) }
     var learnersByMove by remember { mutableStateOf<Map<Int, List<Int>>>(emptyMap()) }
     var championsIds by remember { mutableStateOf<Set<Int>>(emptySet()) }
@@ -56,13 +57,30 @@ import dev.bloody.prismadex.data.*
         }
     }
     val activeFilters = (if (type != null) 1 else 0) + (if (category != "all") 1 else 0) + (if (championsOnly) 1 else 0)
+    if (showTypePicker) {
+        ModalBottomSheet(onDismissRequest = { showTypePicker = false }) {
+            Column(Modifier.padding(start = 22.dp, end = 22.dp, bottom = 32.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                LText("Escolher tipo", fontSize = 20.sp, fontWeight = FontWeight.SemiBold)
+                LText("Todos os 18 tipos, sem precisar rolar a lista.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    FilterChip(type == null, { type = null; showTypePicker = false }, label = { LText("Todos") })
+                    typeNames.keys.toList().forEach { t ->
+                        FilterChip(type == t, { type = if (type == t) null else t; showTypePicker = false }, label = { LText(typeNames.getValue(t)) }, leadingIcon = { TypeSymbol(t) })
+                    }
+                }
+            }
+        }
+    }
     LazyColumn(Modifier.prismaViewport(), contentPadding = PaddingValues(start = 22.dp, end = 22.dp, top = 16.dp, bottom = 24.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         item {
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 LText("Dex de golpes", fontSize = 28.sp, lineHeight = 32.sp, fontWeight = FontWeight.Bold)
                 LText("${shown.size} de ${moves.size} golpes · catálogo geral", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 OutlinedTextField(value = query, onValueChange = { query = it }, placeholder = { LText("Buscar golpe", style = MaterialTheme.typography.bodyLarge) }, leadingIcon = { LIcon(Icons.Rounded.Search, null) }, trailingIcon = { if (query.isNotEmpty()) IconButton(onClick = { query = "" }) { LIcon(Icons.Rounded.Close, "Limpar busca") } }, singleLine = true, shape = RoundedCornerShape(20.dp), modifier = Modifier.fillMaxWidth())
-                LText("TIPO", fontSize = 13.sp, letterSpacing = 1.7.sp, color = MaterialTheme.colorScheme.primary)
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    LText("TIPO", Modifier.weight(1f), fontSize = 13.sp, letterSpacing = 1.7.sp, color = MaterialTheme.colorScheme.primary)
+                    TextButton(onClick = { showTypePicker = true }, modifier = Modifier.heightIn(min = 48.dp)) { LText("Todos os tipos") }
+                }
                 LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.fillMaxWidth()) {
                     item { FilterChip(type == null, { type = null }, label = { LText("Todos") }) }
                     items(typeNames.keys.toList()) { t -> FilterChip(type == t, { type = if (type == t) null else t }, label = { LText(typeNames.getValue(t)) }, leadingIcon = { TypeSymbol(t) }) }

@@ -192,7 +192,7 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
                                     previousId=adjacentPokemonId(detailOrder.toList(),p.id,-1),nextId=adjacentPokemonId(detailOrder.toList(),p.id,1),
                                     canBrowse=pendingBuild==null,onBrowse={browseDetail(it)},onRelated={related->detailOrder=catalog.sortedWith(compareBy({it.baseId},{it.id})).map{it.id}.toIntArray();browseDetail(related.id)})}
 
-                                route=="team"->TeamScreen(catalog,repo,state,onRemove={requestRemoval(it)},onOpen={detailGame=state.activeTeam.gameId;detailOrder=state.team.toIntArray();selectedId=it.id;detailTab="build"},onAdd={showTeamPicker=true},onCalculate={screen="calc"},onState={persist(it)},creating=showCreateTeam,onCreatingChange={showCreateTeam=it},onArt={artViewerId=it.id})
+                                route=="team"->TeamScreen(catalog,repo,state,onRemove={requestRemoval(it)},onOpen={detailGame=state.activeTeam.gameId;detailOrder=state.team.toIntArray();selectedId=it.id;detailTab="build"},onAdd={showTeamPicker=true},onCalculate={screen="calc"},onState={persist(it)},creating=showCreateTeam,onCreatingChange={showCreateTeam=it})
                                 route=="meta"->MetaScreen(catalog,state.battleFormat,onFormat={persist(state.copy(battleFormat=it))},onOpen={openDetail(it,catalog.sortedWith(compareBy({p->p.baseId},{p->p.id})))})
                                 route=="items"->ItemCatalogScreen()
                                 route=="abilities"->AbilitiesDexScreen(catalog,onOpenPokemon={openDetail(it,catalog.sortedWith(compareBy({p->p.baseId},{p->p.id})))})
@@ -200,7 +200,7 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
                                 route=="badges"->BadgeTrackerScreen(state,onState={persist(it)})
                                 route=="settings"->SettingsScreen(state,email,onState={persist(it)},onAccount={showAccount=true},onSources={screen="sources"})
                                 route=="sources"->SourcesScreen(catalog)
-                                else->DexScreen(catalog,state,route=="favorites",requestedGame=requestedGame,onGameConsumed={requestedGame=null},onOpen={p,order,game->openDetail(p,order,game)},onFavorite={favorite(it)},onLayout={persist(state.copy(layout=it))},onArt={artViewerId=it.id})
+                                else->DexScreen(catalog,state,route=="favorites",requestedGame=requestedGame,onGameConsumed={requestedGame=null},onOpen={p,order,game->openDetail(p,order,game)},onFavorite={favorite(it)},onLayout={persist(state.copy(layout=it))})
                             }}
                         }
                     }
@@ -268,7 +268,7 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
     }
 }
 
-@Composable internal fun DexScreen(catalog:List<Pokemon>,state:UserState,favoritesOnly:Boolean,onOpen:(Pokemon,List<Pokemon>,Int)->Unit,onFavorite:(Pokemon)->Unit,onLayout:(String)->Unit,requestedGame:Int?=null,onGameConsumed:()->Unit={},onArt:(Pokemon)->Unit={}){
+@Composable internal fun DexScreen(catalog:List<Pokemon>,state:UserState,favoritesOnly:Boolean,onOpen:(Pokemon,List<Pokemon>,Int)->Unit,onFavorite:(Pokemon)->Unit,onLayout:(String)->Unit,requestedGame:Int?=null,onGameConsumed:()->Unit={}){
     var query by rememberSaveable(favoritesOnly){mutableStateOf("")}
     var selectedGame by rememberSaveable{mutableStateOf(0)}
     var generation by rememberSaveable{mutableStateOf(0)}
@@ -326,7 +326,7 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
             }
         }
         if(!favoritesOnly&&selectedGame==0&&generation==0&&type==null)item(span={GridItemSpan(maxLineSpan)},key="announced"){AnnouncedPokemonSection(query)}
-        items(list,key={it.id},contentType={state.layout}){p->PokemonCard(p,state.layout,p.id in state.favorites,{onOpen(p,list,selectedGame.takeIf{it>0}?:23)},{onFavorite(p)},onArt={onArt(p)},motionPlacement(LocalReduceMotion.current))}
+        items(list,key={it.id},contentType={state.layout}){p->PokemonCard(p,state.layout,p.id in state.favorites,{onOpen(p,list,selectedGame.takeIf{it>0}?:23)},{onFavorite(p)},motionPlacement(LocalReduceMotion.current))}
         if(list.isEmpty())item(span={GridItemSpan(maxLineSpan)},key="empty"){Column(horizontalAlignment=Alignment.CenterHorizontally){EmptyState(if(favoritesOnly&&query.isBlank())"Seus parceiros favoritos vivem aqui." else "Nenhum Pokémon encontrado.",if(favoritesOnly&&query.isBlank())"Toque no coração na Pokédex para adicionar favoritos." else "Experimente outro nome ou filtro.");if(query.isNotBlank()||activeFilterCount>0)TextButton(onClick={clearAll()}){LText("Limpar tudo")}}}
     }
 }
@@ -378,7 +378,7 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
     }
 }
 
-@Composable private fun PokemonCard(p:Pokemon,layout:String,favorite:Boolean,onOpen:()->Unit,onFavorite:()->Unit,onArt:()->Unit={},modifier:Modifier=Modifier){
+@Composable private fun PokemonCard(p:Pokemon,layout:String,favorite:Boolean,onOpen:()->Unit,onFavorite:()->Unit,modifier:Modifier=Modifier){
     val interaction=remember{MutableInteractionSource()};val pressed by interaction.collectIsPressedAsState();val scale by animateFloatAsState(pressTarget(pressed,LocalReduceMotion.current,.975f),spring(.8f,600f),label="card touch")
     val shape=RoundedCornerShape(25.dp)
     val ink=Color(0xFF1B1B26)
@@ -392,9 +392,8 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
                     LText("#${p.baseId.toString().padStart(4,'0')}",fontSize=13.sp,color=ink.copy(.72f))
                     LText(p.name,fontSize=20.sp,lineHeight=24.sp,fontWeight=FontWeight.Bold,color=ink,maxLines=1,overflow=TextOverflow.Ellipsis)
                     FlowRow(horizontalArrangement=Arrangement.spacedBy(4.dp),verticalArrangement=Arrangement.spacedBy(4.dp)){p.types.forEach{TypeChipOnColor(it)}}
-                    if(!p.champions)LText("Compatibilidade por verificar",fontSize=13.sp,color=ink.copy(.78f))
                 }
-                Box(Modifier.size(100.dp).clickable{onArt()},contentAlignment=Alignment.Center){PokemonArt(p.id,Modifier.size(100.dp),p.name)}
+                Box(Modifier.size(100.dp),contentAlignment=Alignment.Center){PokemonArt(p.id,Modifier.size(100.dp),p.name)}
                 IconButton(onClick=onFavorite,modifier=Modifier.size(48.dp)){LIcon(if(favorite)Icons.Rounded.Favorite else Icons.Rounded.FavoriteBorder,"Favoritar ${p.name}",tint=ink,modifier=Modifier.size(20.dp))}
             }
         }
@@ -408,14 +407,12 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
             Column(Modifier.fillMaxWidth().padding(12.dp),verticalArrangement=Arrangement.spacedBy(8.dp)){
                 Row(Modifier.padding(end=40.dp).heightIn(min=24.dp),verticalAlignment=Alignment.CenterVertically,horizontalArrangement=Arrangement.spacedBy(4.dp)){
                     LText("#${p.baseId.toString().padStart(4,'0')}",fontSize=13.sp,lineHeight=18.sp,color=ink.copy(.72f))
-                    if(!p.champions)LIcon(Icons.Rounded.Info,"Compatibilidade com Champions por verificar",Modifier.size(16.dp),tint=ink.copy(.72f))
                 }
-                Box(Modifier.align(Alignment.CenterHorizontally).size(104.dp).clickable{onArt()},contentAlignment=Alignment.Center){PokemonArt(p.id,Modifier.size(104.dp),p.name)}
+                Box(Modifier.align(Alignment.CenterHorizontally).size(104.dp),contentAlignment=Alignment.Center){PokemonArt(p.id,Modifier.size(104.dp),p.name)}
                 LText(p.name,fontSize=15.sp,lineHeight=20.sp,fontWeight=FontWeight.SemiBold,color=ink,minLines=2,maxLines=2,overflow=TextOverflow.Ellipsis)
                 Box(Modifier.fillMaxWidth().heightIn(min=60.dp),contentAlignment=Alignment.TopStart){
                     FlowRow(horizontalArrangement=Arrangement.spacedBy(4.dp),verticalArrangement=Arrangement.spacedBy(4.dp)){p.types.forEach{TypeChipOnColor(it)}}
                 }
-                if(!p.champions)LText("Compatibilidade por verificar",fontSize=12.sp,color=ink.copy(.78f))
             }
             IconButton(onClick=onFavorite,modifier=Modifier.align(Alignment.TopEnd).size(48.dp)){LIcon(if(favorite)Icons.Rounded.Favorite else Icons.Rounded.FavoriteBorder,"Favoritar ${p.name}",tint=ink,modifier=Modifier.size(19.dp))}
         }
@@ -457,10 +454,7 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
                         }
                         Box(Modifier.size(132.dp).clickable{onArtViewer(p)},contentAlignment=Alignment.Center){ShinyArt(p.id,shinyArt,Modifier.size(132.dp),p.name)}
                     }
-                    Row(horizontalArrangement=Arrangement.spacedBy(8.dp)){
-                        FilterChip(!shinyArt,{onShinyArt(false)},label={LText("Normal")})
-                        FilterChip(shinyArt,{onShinyArt(true)},label={LText("Shiny")})
-                    }
+                    IconButton(onClick={onShinyArt(!shinyArt)},modifier=Modifier.size(48.dp)){LIcon(Icons.Rounded.Star,if(shinyArt)"Ver arte normal de ${p.name}" else "Ver arte shiny de ${p.name}",tint=if(shinyArt)MaterialTheme.colorScheme.primary else ink.copy(.45f),modifier=Modifier.size(24.dp))}
                     if(shinyArt&&shinyExists==false)LText("Arte shiny não disponível para este Pokémon.",fontSize=13.sp,color=ink.copy(.78f))
                     LText(when(p.championsSource){"official-regulation"->"Espécie/forma na lista oficial M-C · verificada em 28/10/2026.";"showdown-form"->"Forma de batalha ou variante · referência Champions do Showdown.";else->"Compatibilidade desta forma com Champions ainda por verificar."},fontSize=13.sp,color=ink.copy(.78f))
                 }
@@ -555,7 +549,7 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
     }
 }
 
-@Composable private fun TeamScreen(catalog:List<Pokemon>,repo:PokemonRepository,state:UserState,onRemove:(Pokemon)->Unit,onOpen:(Pokemon)->Unit,onAdd:()->Unit,onCalculate:()->Unit,onState:(UserState)->Unit,creating:Boolean,onCreatingChange:(Boolean)->Unit,onArt:(Pokemon)->Unit={}){
+@Composable private fun TeamScreen(catalog:List<Pokemon>,repo:PokemonRepository,state:UserState,onRemove:(Pokemon)->Unit,onOpen:(Pokemon)->Unit,onAdd:()->Unit,onCalculate:()->Unit,onState:(UserState)->Unit,creating:Boolean,onCreatingChange:(Boolean)->Unit){
     val members=remember(catalog,state.team){catalog.filter{it.id in state.team}}
     val shareScope=rememberCoroutineScope();val shareContext=LocalContext.current;var shareError by remember{mutableStateOf<String?>(null)}
     var coverageMoves by remember{mutableStateOf<List<Move>>(emptyList())}
@@ -565,10 +559,10 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
         if(state.activeTeam.gameId==25&&state.builds.values.mapNotNull{it.itemId}.let{it.distinct().size<it.size})item{LText("Regulamento M-C: itens segurados repetidos não são permitidos.",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.error)}
         item(key="battle-format"){Row(horizontalArrangement=Arrangement.spacedBy(9.dp)){FilterChip(state.activeTeam.format=="singles",{onState(state.updateTeam{it.copy(format="singles")})},label={LText("Singles · individual")});FilterChip(state.activeTeam.format=="doubles",{onState(state.updateTeam{it.copy(format="doubles")})},label={LText("Doubles · duplas")})}}
         item(key="team-view"){Column(verticalArrangement=Arrangement.spacedBy(8.dp)){Row(verticalAlignment=Alignment.CenterVertically,horizontalArrangement=Arrangement.spacedBy(9.dp)){FilterChip(state.teamView=="list",{onState(state.copy(teamView="list"))},label={LText("Lista")});FilterChip(state.teamView=="grid",{onState(state.copy(teamView="grid"))},label={LText("Grade · 6 de uma vez")});Spacer(Modifier.weight(1f));TextButton(onClick={shareScope.launch{shareError=runCatching{shareTeamCard(shareContext,state.activeTeam,catalog)}.exceptionOrNull()?.message}}){LText("Compartilhar")}};shareError?.let{LText("Não foi possível compartilhar: $it",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.error)};LText("A grade mostra os 6 parceiros de uma vez; a lista mostra os sets completos. A escolha fica salva neste aparelho.",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)}}
-        if(state.teamView=="grid"){item(key="team-grid"){TeamGrid(members,state,onOpen,onRemove,onArt,onAdd)}}
+        if(state.teamView=="grid"){item(key="team-grid"){TeamGrid(members,state,onOpen,onRemove,onAdd)}}
         else{
         items(state.team,key={it}){id->catalog.find{it.id==id}?.let{p->val build=state.builds[id];var review by remember(id,build,state.activeTeam.gameId){mutableStateOf<String?>(null)};var itemName by remember(id,build,state.activeTeam.gameId){mutableStateOf<String?>(null)};var moveNames by remember(id,build,state.activeTeam.gameId){mutableStateOf<List<Move>>(emptyList())};LaunchedEffect(id,build,state.activeTeam.gameId){review=if(!p.availableIn(state.activeTeam.gameId))"Compatibilidade por revisar" else build?.let{repo.validateBuild(p,it,state.activeTeam.gameId).exceptionOrNull()?.message};itemName=repo.heldItemsFor(p,state.activeTeam.gameId).find{it.id==build?.itemId}?.name;moveNames=repo.movesFor(p,state.activeTeam.gameId).filter{it.id in (build?.moves?:emptyList())}};Surface(onClick={onOpen(p)},modifier=motionPlacement(LocalReduceMotion.current),shape=RoundedCornerShape(26.dp),color=MaterialTheme.colorScheme.surface){Column(Modifier.fillMaxWidth().padding(16.dp)){
-            Row(verticalAlignment=Alignment.CenterVertically){Box(Modifier.size(72.dp).clickable{onArt(p)},contentAlignment=Alignment.Center){PokemonArt(id,Modifier.size(72.dp),p.name)};Column(Modifier.weight(1f).padding(start=10.dp)){LText(p.name,fontSize=19.sp,fontWeight=FontWeight.SemiBold);FlowRow(horizontalArrangement=Arrangement.spacedBy(5.dp),verticalArrangement=Arrangement.spacedBy(4.dp),modifier=Modifier.padding(top=9.dp)){p.types.forEach{TypePill(it,true)}}};Column(verticalArrangement=Arrangement.spacedBy(8.dp)){
+            Row(verticalAlignment=Alignment.CenterVertically){Box(Modifier.size(72.dp),contentAlignment=Alignment.Center){PokemonArt(id,Modifier.size(72.dp),p.name)};Column(Modifier.weight(1f).padding(start=10.dp)){LText(p.name,fontSize=19.sp,fontWeight=FontWeight.SemiBold);FlowRow(horizontalArrangement=Arrangement.spacedBy(5.dp),verticalArrangement=Arrangement.spacedBy(4.dp),modifier=Modifier.padding(top=9.dp)){p.types.forEach{TypePill(it,true)}}};Column(verticalArrangement=Arrangement.spacedBy(8.dp)){
                 IconButton(onClick={onOpen(p)},modifier=Modifier.size(48.dp)){LIcon(Icons.Rounded.Edit,"Editar set",tint=MaterialTheme.colorScheme.primary,modifier=Modifier.size(22.dp))}
                 IconButton(onClick={onRemove(p)},modifier=Modifier.size(48.dp)){LIcon(Icons.Rounded.Remove,"Remover ${p.name} da equipe",tint=MaterialTheme.colorScheme.error,modifier=Modifier.size(22.dp))}
             }}
@@ -586,7 +580,7 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
 }
 
 
-@Composable private fun TeamGrid(members:List<Pokemon>,state:UserState,onOpen:(Pokemon)->Unit,onRemove:(Pokemon)->Unit,onArt:(Pokemon)->Unit={},onAdd:()->Unit={}){
+@Composable private fun TeamGrid(members:List<Pokemon>,state:UserState,onOpen:(Pokemon)->Unit,onRemove:(Pokemon)->Unit,onAdd:()->Unit={}){
     // Grid redesign (23:31): same clean language as the Pokédex list/grid
     // cards — solid type-colour fill, dark ink, art + name + type chips +
     // set summary. Same fields as the list rows; only the layout changes.
@@ -608,7 +602,7 @@ private val bitmapCache=object:LruCache<Int,ImageBitmap>(18*1024*1024){override 
                         Surface(onClick={onOpen(p)},shape=RoundedCornerShape(22.dp),color=typeColor(p.types.first()),modifier=Modifier.weight(1f)){
                             Column(Modifier.padding(14.dp),verticalArrangement=Arrangement.spacedBy(8.dp)){
                                 Row(verticalAlignment=Alignment.CenterVertically){
-                                    Box(Modifier.size(64.dp).clickable{onArt(p)},contentAlignment=Alignment.Center){PokemonArt(p.id,Modifier.size(64.dp),p.name)}
+                                    Box(Modifier.size(64.dp),contentAlignment=Alignment.Center){PokemonArt(p.id,Modifier.size(64.dp),p.name)}
                                     Spacer(Modifier.weight(1f))
                                     IconButton(onClick={onRemove(p)},modifier=Modifier.size(48.dp)){LIcon(Icons.Rounded.Remove,"Remover ${p.name} da equipe",tint=MaterialTheme.colorScheme.error,modifier=Modifier.size(20.dp))}
                                 }

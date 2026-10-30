@@ -20,7 +20,7 @@ import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.material.icons.rounded.CatchingPokemon
-import androidx.compose.material3.FilterChip
+import androidx.compose.material.icons.rounded.Star
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -109,7 +109,8 @@ internal fun ShinyArt(id: Int, shiny: Boolean, modifier: Modifier = Modifier, la
  * toggle is the same state as the detail page. Missing art (normal or
  * shiny) renders an honest empty state, never another Pokémon's art.
  * Zoom is gesture-driven only (no animated zoom), so reduce-motion needs
- * no special handling here.
+ * no special handling here. The shiny control is a single star icon only
+ * (00:02): same Normal/Shiny state as the detail page, no label clutter.
  */
 @Composable
 internal fun ArtViewer(
@@ -160,9 +161,14 @@ internal fun ArtViewer(
                 Modifier.fillMaxWidth().padding(top = 4.dp, bottom = 8.dp),
                 horizontalArrangement = Arrangement.Center
             ) {
-                FilterChip(!shiny, { onShiny(false) }, label = { LText("Normal") })
-                Spacer(Modifier.width(8.dp))
-                FilterChip(shiny, { onShiny(true) }, label = { LText("Shiny") })
+                IconButton(onClick = { onShiny(!shiny) }, modifier = Modifier.size(48.dp)) {
+                    LIcon(
+                        Icons.Rounded.Star,
+                        if (shiny) "Ver arte normal de ${p.name}" else "Ver arte shiny de ${p.name}",
+                        tint = if (shiny) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant.copy(.55f),
+                        modifier = Modifier.size(26.dp)
+                    )
+                }
             }
             Box(
                 Modifier.weight(1f).fillMaxWidth()
