@@ -53,7 +53,7 @@ data class UserState(
     val teams:List<SavedTeam> = listOf(SavedTeam("default","Minha equipe")),
     val activeTeamId:String="default",
     val theme: String = "aurora",
-    val layout: String = "grid",
+    val layout: String = "list",
     val dummies: List<TrainingDummy> = emptyList(),
     val battleFormat: String = "doubles",
     val appearanceMode: String = "system",

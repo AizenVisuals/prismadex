@@ -186,7 +186,7 @@ class Store(context: Context, private val storageName: String = "prisma") {
             } else listOf(SavedTeam("default","Minha equipe",25,team,builds,json.optString("battleFormat","doubles")))
             val active=json.optString("activeTeamId","default").takeIf{id->teams.any{it.id==id}}?:teams.first().id
             return UserState(favorites=json.optJSONArray("favorites")?.ints()?.map(::canonicalPokemonId)?.toSet()?:emptySet(),teams=teams,activeTeamId=active,
-                theme=json.optString("theme","aurora"),layout=json.optString("layout","grid"),teamView=json.optString("teamView","list"),
+                theme=json.optString("theme","aurora"),layout=json.optString("layout","list"),teamView=json.optString("teamView","list"),
                 dummies=json.optJSONArray("dummies")?.let { rows -> (0 until rows.length()).map { i -> rows.getJSONObject(i).let { d -> TrainingDummy(d.getString("id"), d.getString("label"), canonicalPokemonId(d.getInt("pokemonId")), decodeBuild(d.getJSONObject("build"))) } } } ?: emptyList(),
                 battleFormat=json.optString("battleFormat","doubles"),appearanceMode=json.optString("appearanceMode","system"))
         }
